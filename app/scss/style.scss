@@ -20,8 +20,19 @@ a, a:visited {
       text-decoration: underline;
    }
 }
+button.btn:disabled {
+   background-color: #EDEDED;
+   color: #333;
 
-a.btn {
+   &:hover {
+      background-color: #EDEDED;
+      color: #333;
+      cursor: auto;
+   }
+}
+
+a.btn,
+button.btn {
    height: 48px;
    border-radius: 24px;
    padding: 0 50px;
@@ -657,5 +668,54 @@ h2 {
          }
       }
 
+   }
+}
+
+.check-adress {
+   background-color: #fff;
+
+   .wrapper {
+      display: flex;
+      align-items: center;
+      padding: 75px 30px 78px;
+   }
+
+   h2 {
+      max-width: 410px;
+      margin-right: 50px;
+      flex-shrink: 0;
+   }
+
+   input {
+      line-height: 48px;
+      padding: 0 24px;
+      border: 1px solid #DDDDDD;
+      margin-right: 58px;
+      max-width: 442px;
+      width: 100%;
+   }
+   
+   @media (max-width: 1023px) {
+      .wrapper {
+         flex-wrap: wrap;
+         padding: 73px 30px 100px;
+      }
+
+      h2 {
+         margin-bottom: 42px;
+         margin-right: 0;
+         flex-shrink: 1;
+         font-size: 28px;
+      }
+
+      input {
+         max-width: none;
+         margin-bottom: 41px;
+         margin-right: 0;
+      }
+
+      .btn {
+         margin: 0 auto;
+      }
    }
 }
