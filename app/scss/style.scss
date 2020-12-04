@@ -51,6 +51,12 @@ h1 {
    text-transform: uppercase;
 }
 
+h2 {
+   font-size: 32px;
+   font-weight: 700;
+   line-height: 40px;
+}
+
 .wrapper {
    max-width: 1420px;
    padding: 0 30px;
@@ -124,6 +130,7 @@ h1 {
 
       &__phone {
          margin-right: 20px;
+
          a {
             display: block;
             font-size: 0;
@@ -151,7 +158,7 @@ h1 {
    }
 }
 
-.section-1 {
+.head-banner {
    background-color: var(--mf-green);
 
    .section-row {
@@ -160,7 +167,7 @@ h1 {
       justify-content: space-between;
       padding-top: 7px;
       height: 380px;
-      background:  url('../img/pic/sec1x2.png') 94% 100% / auto calc(100% - 5px) no-repeat;
+      background: url('../img/pic/sec1x2.png') 94% 100% / auto calc(100% - 5px) no-repeat;
    }
 
    &__col1 {
@@ -190,10 +197,11 @@ h1 {
 
    @media (max-width: 1100px) {
       .section-row {
-         background:  url('../img/pic/sec1x2.png') 100% 100% / auto calc(100% - 5px) no-repeat;
+         background: url('../img/pic/sec1x2.png') 100% 100% / auto calc(100% - 5px) no-repeat;
       }
       &__col1 {
          width: 40%;
+
          h1 {
             font-size: 48px;
          }
@@ -202,19 +210,20 @@ h1 {
    @media (min-width: 768px) and (max-width: 980px) {
       .section-row {
          height: 350px;
-         background:  url('../img/pic/sec1x2.png') 100% 100% / 395px no-repeat;
+         background: url('../img/pic/sec1x2.png') 100% 100% / 395px no-repeat;
       }
    }
    @media (max-width: 767px) {
       .section-row {
          align-items: flex-start;
          height: 520px;
-         background:  url('../img/pic/sec1x2.png') 100% 100% / 80% no-repeat;
+         background: url('../img/pic/sec1x2.png') 100% 100% / 80% no-repeat;
          padding-top: 59px;
       }
       &__col1 {
          width: 100%;
          margin-top: 0;
+
          h1 {
             font-size: 40px;
          }
@@ -222,7 +231,7 @@ h1 {
    }
    @media (max-width: 500px) {
       .section-row {
-         background:  url('../img/pic/sec1x2.png') 100% 100% / contain no-repeat;
+         background: url('../img/pic/sec1x2.png') 100% 100% / contain no-repeat;
       }
       &__col1 {
          h1 {
@@ -232,7 +241,7 @@ h1 {
    }
 }
 
-.section-2 {
+.tariffs {
    background-color: #EDEDED;
    padding: 36px 0 38px;
    overflow: hidden;
@@ -435,7 +444,7 @@ h1 {
                   font-size: 18px;
                   line-height: 24px;
                   font-weight: 700;
-                  text-decoration: 2px red line-through;
+                  text-decoration: 2px #EF0000 line-through;
                }
 
                .new-price {
@@ -483,6 +492,92 @@ h1 {
       .wrapper {
          padding: 0 40px;
          margin-left: -20px;
+      }
+   }
+}
+
+.mf-tv {
+   background-color: var(--mf-green);
+
+   .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 0;
+   }
+
+   &__text {
+      color: #fff;
+      max-width: 440px;
+      padding-top: 99px;
+      padding-bottom: 73px;
+
+      h2 {
+         margin-bottom: 23px;
+      }
+      p {
+         font-size: 15px;
+         line-height: 24px;
+         margin-bottom: 58px;
+      }
+      .app-tv {
+         a {
+            margin-right: 14px;
+
+            &:last-child {
+               margin-right: 0;
+            }
+
+            img {
+               width: 40%;
+            }
+         }
+      }
+   }
+
+   &__img {
+      flex-grow: 1;
+      white-space: nowrap;
+      font-size: 0;
+      margin-left: 78px;
+
+      &:before {
+         content: '';
+         height: 100%;
+         display: inline-block;
+         vertical-align: middle;
+      }
+      img {
+         width: 100%;
+         vertical-align: middle;
+      }
+   }
+
+   @media (min-width: 768px) and (max-width: 1023px){
+      &__text {
+         max-width: 335px;
+      }
+      &__img {
+         margin-left: 0;
+      }
+   }
+   @media (max-width: 767px) {
+      .wrapper {
+         flex-wrap: wrap;
+         padding-top: 64px;
+         padding-bottom: 33px;
+      }
+      &__text {
+         max-width: none;
+         margin-bottom: 55px;
+         padding-bottom: 0;
+         .app-tv {
+            text-align: center;
+         }
+      }
+      &__img {
+         width: 100%;
+         padding: 0;
+         margin-left: 0;
       }
    }
 }
