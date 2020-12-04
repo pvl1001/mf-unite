@@ -19,7 +19,7 @@ $( document ).ready( function () {
             settings: {
                slidesToShow: 3,
                arrows: false,
-               dots: true
+               dots: true,
             }
          }, {
             breakpoint: 950,
