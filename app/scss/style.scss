@@ -20,6 +20,7 @@ a, a:visited {
       text-decoration: underline;
    }
 }
+
 button.btn:disabled {
    background-color: #EDEDED;
    color: #333;
@@ -628,10 +629,12 @@ h2 {
 
    &__header {
       padding: 62px 0 45px;
+
       img {
          display: inline-block;
          margin-bottom: 24px;
       }
+
       p {
          font-size: 32px;
          font-weight: 700;
@@ -654,10 +657,12 @@ h2 {
    @media (max-width: 767px) {
       &__header {
          padding: 80px 0 40px;
+
          img {
             width: 100%;
             max-width: 240px;
          }
+
          p {
             font-size: 20px;
          }
@@ -666,12 +671,13 @@ h2 {
       &__content {
          &_item:first-child,
          &_item:last-child {
-         display: none;
+            display: none;
          }
       }
 
       &__footer {
          padding-bottom: 50px;
+
          &_copyright {
             display: none;
          }
@@ -680,6 +686,7 @@ h2 {
 
    &__footer {
       padding: 58px 0 15px;
+
       p {
          font-size: 15px;
          line-height: 24px;
@@ -687,9 +694,11 @@ h2 {
          margin: 0 auto 30px;
          letter-spacing: -0.2px;
       }
+
       .btn {
          margin-bottom: 50px;
       }
+
       &_copyright {
          color: #8D8D8D;
          font-size: 10px;
@@ -826,31 +835,40 @@ h2 {
                   &.cpu {
                      background: #fff url('../img/svg/cpu-24.svg') center / 26px no-repeat;
                   }
+
                   &.zone {
                      background: #fff url('../img/svg/zone-24.svg') center / 24px no-repeat;
                   }
+
                   &.hertz {
                      background: #fff url('../img/svg/hertz_24.svg') center / 24px no-repeat;
                   }
+
                   &.speed {
                      background: #fff url('../img/svg/speed-2.svg') center / 24px no-repeat;
                   }
+
                   &.antennas {
                      background: #fff url('../img/svg/Router_3.svg') center / 22px no-repeat;
                   }
+
                   &.mobile-internet {
                      background: #fff url('../img/svg/4g.svg') center / 28px no-repeat;
                   }
-                  &.upgrade  {
+
+                  &.upgrade {
                      background: #fff url('../img/svg/Change-sim-card_32.svg') center / 28px no-repeat;
                   }
-                  &.pult  {
+
+                  &.pult {
                      background: #fff url('../img/svg/pult.svg') center / 13.6px no-repeat;
                   }
-                  &.wi-fi  {
+
+                  &.wi-fi {
                      background: #fff url('../img/svg/wi-fi.svg') center / 19px no-repeat;
                   }
-                  &.family  {
+
+                  &.family {
                      background: #fff url('../img/svg/Family_32.svg') center / 24px no-repeat;
                   }
                }
@@ -877,6 +895,7 @@ h2 {
                   line-height: 28px;
                   margin-bottom: 4px;
                }
+
                a {
                   font-size: 15px;
                   line-height: 20px;
@@ -901,7 +920,7 @@ h2 {
       }
    }
 
-   @media (min-width: 768px) and (max-width:1023px) {
+   @media (min-width: 768px) and (max-width: 1023px) {
       .wrapper {
          padding: 80px 0 47px;
       }
@@ -936,6 +955,7 @@ h2 {
                }
             }
          }
+
          &__img {
             width: 50%;
             flex-grow: 0;
@@ -984,11 +1004,241 @@ h2 {
                }
             }
          }
+
          &__img {
             width: 100%;
             margin-top: 0;
             padding: 0 53px 94px;
             margin-right: 0;
+         }
+      }
+   }
+}
+
+.app {
+   position: relative;
+   min-height: 200px;
+   color: #fff;
+
+   &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0;
+      left: 0;
+      background-color: var(--mf-green);
+      z-index: -1;
+   }
+
+   &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0;
+      right: 0;
+      background-color: var(--mf-fiolet);
+      z-index: -1;
+   }
+
+   .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .app-title {
+         display: none;
+         width: 100%;
+         padding-top: 78px;
+      }
+   }
+
+   &__green {
+      padding: 93px 0 113px;
+      width: calc(50% - 135px);
+
+      h2 {
+         margin-bottom: 41px;
+         max-width: 400px;
+      }
+
+      .app-item {
+         display: flex;
+         align-items: center;
+         margin-bottom: 37px;
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+
+         &__icon {
+            width: 56px;
+            height: 56px;
+            margin-right: 20px;
+            border-radius: 50%;
+            flex-shrink: 0;
+
+            &_mess {
+               background: #fff url('../img/svg/mess.svg') center / 28px no-repeat;
+            }
+            &_support-ava {
+               background: #fff url('../img/svg/Support-avatar_32.svg') center / 32px no-repeat;
+            }
+            &_balance {
+               background: #fff url('../img/svg/Balance_32.svg') center / 28px no-repeat;
+            }
+         }
+
+         &__text {
+            p {
+               font-size: 20px;
+               line-height: 28px;
+               margin-bottom: 3px;
+            }
+            span {
+               font-size: 15px;
+               line-height: 20px;
+            }
+         }
+      }
+   }
+
+   &__iphone {
+      left: calc(50% - 135px);
+
+      img {
+         width: 270px;
+      }
+   }
+
+   &__fiolet {
+      width: calc(50% - 135px);
+      padding-left: 7%;
+
+      p {
+         font-size: 15px;
+         line-height: 20px;
+         margin-bottom: 60px;
+         max-width: 402px;
+      }
+
+      .app-apps {
+         a {
+            max-width: 176px;
+            display: inline-block;
+
+            &:first-child {
+               margin-right: 15px;
+               margin-bottom: 17px;
+            }
+
+            img {
+               width: 100%;
+            }
+         }
+      }
+   }
+
+   @media (min-width:768px) and (max-width:1024px) {
+
+      .wrapper {
+         flex-wrap: wrap;
+         align-items: flex-start;
+         padding-bottom: 58px;
+
+         .app-title {
+            display: block;
+
+            h2 {
+               width: 45%;
+            }
+         }
+      }
+
+      &__green {
+         width: calc(50% - 115px);
+         padding-top: 52px;
+         padding-bottom: 0;
+
+         h2 {
+            display: none;
+         }
+
+         .app-item {
+            align-items: flex-start;
+         }
+      }
+
+      &__iphone {
+         left: calc(50% - 115px);
+
+         img {
+            width: 230px;
+         }
+      }
+
+      &__fiolet {
+         width: calc(50% - 115px);
+         padding-top: 55px;
+      }
+   }
+
+   @media (max-width:767px) {
+      &:before,
+      &:after {
+         display: none;
+      }
+
+      .wrapper {
+         padding: 0;
+         flex-wrap: wrap;
+      }
+
+      h2 {
+         font-size: 28px;
+         margin-bottom: 50px;
+      }
+
+      &__green {
+         background-color: var(--mf-green);
+         width: 100%;
+         padding: 60px 30px 300px;
+
+         .app-item {
+            align-items: flex-start;
+            margin-bottom: 46px;
+         }
+      }
+
+      &__iphone {
+         width: 100%;
+         text-align: center;
+         margin-top: -279px;
+         position: relative;
+         left: auto;
+      }
+
+      &__fiolet {
+         width: 100%;
+         background-color: var(--mf-fiolet);
+         margin-top: -279px;
+         padding: 279px 30px 111px;
+
+         p {
+            max-width: none;
+         }
+
+         .app-apps {
+            a {
+               width: calc(50% - 10px);
+               margin: 0 !important;
+               max-width: none;
+
+               &:last-child {
+                  float: right;
+               }
+            }
          }
       }
    }
