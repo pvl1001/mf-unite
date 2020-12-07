@@ -3,7 +3,7 @@
 @@include( 'slick.js' )
 
 $( document ).ready( function () {
-   $( '.slider' ).slick( {
+   $( '.tariffs .slider' ).slick( {
       infinite: false,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -34,6 +34,21 @@ $( document ).ready( function () {
                slidesToShow: 1,
                arrows: false,
                dots: true
+            }
+         }
+      ]
+   } );
+
+   $( '.equipment__slider' ).slick( {
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      responsive: [
+         {
+            breakpoint: 1500,
+            settings: {
+               arrows: false
             }
          }
       ]
