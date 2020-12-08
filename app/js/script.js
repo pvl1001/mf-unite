@@ -55,13 +55,17 @@ $(document).ready(function () {
    });
 })
 
-function toPlug() {
+function toPlug() { // click "подключить"
    $('html,body').animate({
       scrollTop:
          $('.tariffs').offset().top + "px"
    }, {
       duration: 300
    })
+}
+
+function openModal() {
+
 }
 
 
