@@ -1308,7 +1308,7 @@ h2 {
    }
 
    h2 {
-      margin-bottom: 50px;
+      margin-bottom: 29px;
    }
 
    .accordion {
@@ -1327,7 +1327,7 @@ h2 {
       }
 
       &__header {
-         padding: 15px 35px 15px 0;
+         padding: 15.5px 35px 15.5px 0;
          cursor: pointer;
          position: relative;
 
@@ -1378,4 +1378,57 @@ h2 {
          font-size: 28px;
       }
    }
+}
+
+.footer {
+   background-color: #EDEDED;
+   color: #999999;
+   font-size: 12px;
+   line-height: 14px;
+
+   .wrapper {
+      display: flex;
+      padding-top: 48px;
+      padding-bottom: 47px;
+   }
+
+   .copyright {
+      margin-right: 50px;
+      min-width: 185px;
+
+      &__age {
+         width: 37px;
+         height: 37px;
+         border-radius: 50%;
+         background-color: #D8D8D8;
+         font-weight: 500;
+         line-height: 37px;
+         text-align: center;
+         flex-shrink: 0;
+         margin-right: 8px;
+         display: inline-block;
+      }
+      &__text {
+         display: inline-block;
+         white-space: nowrap;
+         line-height: 37px;
+      }
+   }
+
+   &__transfer {
+      margin-right: 42px;
+      max-width: 531px;
+   }
+
+   &__policy {
+      margin-right: 67px;
+      max-width: 338px;
+
+      a {
+         text-decoration: underline;
+         color: inherit;
+      }
+   }
+
+   //@media ()
 }
