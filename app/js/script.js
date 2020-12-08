@@ -1,9 +1,9 @@
-@@include( 'jquery-3.5.1.min.js' )
-@@include( 'bootstrap.js' )
-@@include( 'slick.js' )
+@@include('jquery-3.5.1.min.js')
+@@include('bootstrap.js')
+@@include('slick.js')
 
-$( document ).ready( function () {
-   $( '.tariffs .slider' ).slick( {
+$(document).ready(function () {
+   $('.tariffs .slider').slick({
       infinite: false,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -37,9 +37,9 @@ $( document ).ready( function () {
             }
          }
       ]
-   } );
+   });
 
-   $( '.equipment__slider' ).slick( {
+   $('.equipment__slider').slick({
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -52,7 +52,16 @@ $( document ).ready( function () {
             }
          }
       ]
-   } );
-} )
+   });
+})
+
+function toPlug() {
+   $('html,body').animate({
+      scrollTop:
+         $('.tariffs').offset().top + "px"
+   }, {
+      duration: 300
+   })
+}
 
 

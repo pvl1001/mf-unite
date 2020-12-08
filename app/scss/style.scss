@@ -139,7 +139,6 @@ h2 {
    max-width: 1420px;
    padding: 0 30px;
    margin: 0 auto;
-   //border: 1px solid red;
 }
 
 .header {
@@ -1116,6 +1115,10 @@ h2 {
       width: calc(50% - 135px);
       padding-left: 7%;
 
+      .app__iphone {
+         display: none;
+      }
+
       p {
          font-size: 15px;
          line-height: 20px;
@@ -1140,7 +1143,7 @@ h2 {
       }
    }
 
-   @media (min-width:768px) and (max-width:1024px) {
+   @media (min-width:1024px) and (max-width:1150px) {
 
       .wrapper {
          flex-wrap: wrap;
@@ -1151,7 +1154,7 @@ h2 {
             display: block;
 
             h2 {
-               width: 45%;
+               width: 400px;
             }
          }
       }
@@ -1181,6 +1184,60 @@ h2 {
       &__fiolet {
          width: calc(50% - 115px);
          padding-top: 55px;
+      }
+   }
+
+   @media (min-width:768px) and (max-width:1023px) {
+      &:before,
+      &:after {
+         display: none;
+      }
+
+      .wrapper {
+         padding: 0;
+         flex-wrap: wrap;
+      }
+
+      h2 {
+         font-size: 28px;
+         margin-bottom: 50px;
+         max-width: none;
+      }
+
+      &__green {
+         background-color: var(--mf-green);
+         width: 100%;
+         padding: 60px 30px 82px;
+
+         .app-item {
+            align-items: flex-start;
+            margin-bottom: 46px;
+         }
+      }
+
+      &__iphone {
+         display: none;
+
+      }
+
+      &__fiolet {
+         width: 100%;
+         background-color: var(--mf-fiolet);
+         padding: 88px 330px 50px 30px;
+         min-height: 440px;
+
+         .app__iphone {
+            display: block;
+            width: 274px;
+            margin-top: -255px;
+            position: absolute;
+            right: 30px;
+            left: auto;
+         }
+
+         p {
+            max-width: none;
+         }
       }
    }
 
