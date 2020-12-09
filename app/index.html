@@ -16,12 +16,13 @@
       <header class="header">
          <div class="wrapper">
             <div class="header__logo">
-               <a href="#"></a>
+               <a href="/"></a>
             </div>
             <div class="header__phone">
                <a href="tel:8 800 55-00-001">8 800 55-00-001</a>
             </div>
-            <div class="header__city">
+            <div class="header__city" data-toggle="modal"
+                 data-target="#citySelection">
                <span>Москва и область</span>
             </div>
          </div>
@@ -415,6 +416,10 @@
       <h2>Проверьте возможность подключения</h2>
       <input placeholder="Ваш адрес" type="text">
       <button class="btn" disabled type="submit">Проверить</button>
+   </div>
+   <div class="check-adress__success success-check">
+      <img src="img/svg/success.svg" alt="img">
+      <p>Ура! Вы в зоне покрытия!</p>
    </div>
 </section>
 
@@ -870,6 +875,7 @@
       </div>
    </div>
 </footer>
+
 @@include('_modals.html')
 
 <script src="js/script.min.js"></script>
