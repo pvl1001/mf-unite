@@ -1,0 +1,243 @@
+body {
+   font-family: 'MegaFon Graphik LC', sans-serif;
+   color: #333333;
+
+   /* хром, сафари */
+   &::-webkit-scrollbar {
+      width: 0;
+   }
+}
+
+a, a:visited {
+   color: var(--text-blue);
+
+   &:hover {
+      text-decoration: underline;
+   }
+}
+
+button.btn:disabled {
+   background-color: #EDEDED;
+   color: #333;
+
+   &:hover {
+      background-color: #EDEDED;
+      color: #333;
+      cursor: auto;
+   }
+}
+
+a.btn,
+div.btn,
+button.btn {
+   height: 48px;
+   border-radius: 24px;
+   padding: 0 50px;
+   font-size: 15px;
+   color: #FFFFFF;
+   display: inline-flex;
+   align-items: center;
+   transition: 0s;
+   background-color: var(--mf-green);
+
+   &:hover {
+      background-color: #00EE6F;
+   }
+}
+
+a.btn.btn-fiolet {
+   background-color: var(--mf-fiolet);
+
+   &:hover {
+      background-color: #B808D4;
+   }
+}
+
+h1 {
+   font-size: 56px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+h2 {
+   font-size: 32px;
+   font-weight: 700;
+   line-height: 40px;
+}
+
+h3 {
+   font-size: 20px;
+   line-height: 28px;
+   font-weight: 500;
+}
+
+p {
+   font-weight: 500;
+}
+
+label {
+   display: flex;
+   cursor: pointer;
+}
+
+input {
+   line-height: 48px;
+   padding: 0 24px;
+   border: 1px solid #DDDDDD;
+}
+
+.switch {
+   position: relative;
+   display: inline-block;
+   width: 40px;
+   height: 20px;
+   box-sizing: border-box;
+
+   input {
+      display: none;
+   }
+
+   span {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      transition: .3s;
+      border: 1px solid #DDDDDD;
+   }
+
+   span:before {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: -1px;
+      bottom: -1px;
+      background-color: #fff;
+      transition: .3s;
+      border: 1px solid #DDDDDD;
+   }
+
+   input:checked + span {
+      background-color: var(--mf-green);
+   }
+
+   input:focus + span {
+      box-shadow: 0 0 1px #19181F;
+   }
+
+   input:checked + span:before {
+      transform: translateX(20px);
+   }
+
+   /* Rounded sliders */
+   span.round {
+      border-radius: 34px;
+   }
+
+   span.round:before {
+      border-radius: 50%;
+   }
+}
+
+.price {
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   white-space: nowrap;
+
+   span {
+      font-size: 12px;
+      line-height: 22px;
+   }
+
+   .old-price {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      text-decoration: 2px #EF0000 line-through;
+   }
+
+   .new-price {
+      font-size: 32px;
+      line-height: 32px;
+      color: var(--mf-green);
+      font-weight: 700;
+      margin: 0 5px;
+   }
+}
+
+.slider {
+
+   .slick-track, .slick-list {
+      display: flex;
+   }
+
+   .slick-slide > div {
+      height: 100%;
+   }
+
+   .slick-arrow {
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--mf-fiolet) url('../img/svg/arrow_slider.svg') center / 14px no-repeat;
+      position: absolute;
+      top: 42%;
+
+      &:not(.slick-disabled):hover {
+         background-color: #B808D4;
+      }
+
+      &.slick-prev {
+         left: -50px;
+         transform: rotate(90deg);
+      }
+
+      &.slick-next {
+         right: -50px;
+         transform: rotate(-90deg);
+      }
+
+      &.slick-disabled {
+         opacity: .3;
+      }
+   }
+
+   .slick-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+
+      li {
+         font-size: 0;
+         width: 8px;
+         height: 8px;
+         border-radius: 50%;
+         background-color: #DBDBDB;
+         margin-right: 6px;
+         cursor: pointer;
+
+         &:last-child {
+            margin-right: 0;
+         }
+
+         &.slick-active {
+            width: 12px;
+            height: 12px;
+            background-color: var(--mf-fiolet);
+         }
+      }
+   }
+}
+
+.wrapper {
+   max-width: 1420px;
+   padding: 0 30px;
+   margin: 0 auto;
+}

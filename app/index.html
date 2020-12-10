@@ -45,7 +45,7 @@
             <div class="card__title">
                <p>Объединяй!</p>
                <p>Два интернета</p>
-               <span data-target="#tariffForTheir" data-toggle="modal">Подробнее</span>
+               <span data-target="#tariffTwoWeb" data-toggle="modal">Подробнее</span>
             </div>
             <div class="card__info">
                <div class="card__info_block info-card">
@@ -89,7 +89,7 @@
                   <span>в месяц</span>
                </div>
                <div class="card__price_btn">
-                  <a href="#" class="btn">Заказать</a>
+                  <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
                </div>
             </div>
             <div class="card__mark mark-blue">
@@ -101,7 +101,7 @@
             <div class="card__title">
                <p>Объединяй!</p>
                <p>Эконом</p>
-               <span>Подробнее</span>
+               <span data-target="#tariffconomic" data-toggle="modal">Подробнее</span>
             </div>
             <div class="card__info">
                <div class="card__info_block info-card">
@@ -160,11 +160,11 @@
             <div class="card__title">
                <p>Объединяй!</p>
                <p>Хит</p>
-               <span>Подробнее</span>
+               <span data-target="#tariffHit" data-toggle="modal">Подробнее</span>
             </div>
             <div class="card__info">
                <div class="card__info_block info-card">
-                  <p class="info-card__title">Домашний интернет</p>
+                  <p class="info-card__title">Домашний интернет и ТВ</p>
                   <div class="info-card__desc">
                      <div class="info-card__desc_icon">
                         <img src="./img/svg/wi-fi.svg" alt="img">
@@ -227,7 +227,7 @@
             </div>
             <div class="card__info">
                <div class="card__info_block info-card">
-                  <p class="info-card__title">Домашний интернет</p>
+                  <p class="info-card__title">Домашний интернет и ТВ</p>
                   <div class="info-card__desc">
                      <div class="info-card__desc_icon">
                         <img src="./img/svg/wi-fi.svg" alt="img">
@@ -523,26 +523,33 @@
                </div>
             </div>
             <div class="unite-checkbox">
-               <label class="unite-checkbox__hire">
-                  <div class="switch">
-                     <input type="checkbox">
-                     <span class="round"></span>
-                  </div>
-                  <div class="switch-text">
-                     <p>Аренда Wi-Fi роутера</p>
-                     <span>55 ₽ в месяц</span>
-                  </div>
-               </label>
-               <label class="unite-checkbox__hire">
-                  <div class="switch">
-                     <input type="checkbox">
-                     <span class="round"></span>
-                  </div>
-                  <div class="switch-text">
-                     <p>Покупка Wi-Fi роутера</p>
-                     <span>7050 ₽</span>
-                  </div>
-               </label>
+
+               <div class="unite-checkbox__hire">
+                  <label>
+                     <div class="switch">
+                        <input type="checkbox">
+                        <span class="round"></span>
+                     </div>
+                     <div class="switch-text">
+                        <p>Аренда Wi-Fi роутера</p>
+                        <span>55 ₽ в месяц</span>
+                     </div>
+                  </label>
+               </div>
+
+               <div class="unite-checkbox__hire">
+                  <label>
+                     <div class="switch">
+                        <input type="checkbox">
+                        <span class="round"></span>
+                     </div>
+                     <div class="switch-text">
+                        <p>Покупка Wi-Fi роутера</p>
+                        <span>7050 ₽</span>
+                     </div>
+                  </label>
+               </div>
+
             </div>
             <div class="unite-order">
                <a href="#" class="btn">Заказать</a>
