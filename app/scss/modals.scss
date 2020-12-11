@@ -585,6 +585,10 @@
 }
 
 .order-modal {
+   button.btn {
+      width: 170px;
+      justify-content: center;
+   }
 
    .modal-content h2 {
       margin-bottom: 15px;
@@ -628,6 +632,46 @@
       }
    }
 
+   .order-opportunity {
+      display: none;
+
+      h2 {
+         margin-bottom: 14px;
+      }
+      .order-modal__inputs {
+         margin-bottom: 40px;
+
+         input {
+            width: 480px;
+            margin-right: 0;
+         }
+
+         label {
+            display: none;
+         }
+
+         input.valid {
+            border: 1px solid var(--mf-green);
+            background: url('../img/svg/check.svg') calc(100% - 20px) 50% / 15px no-repeat;
+
+            + label {
+               display: block;
+               color: var(--mf-green);
+            }
+         }
+
+         input.error {
+            border: 1px solid #F62434;
+            background: none;
+
+            + label + label {
+               display: block;
+               color: #F62434;
+            }
+         }
+      }
+   }
+
    @media (min-width:1024px) and (max-width: 1100px) {
       .modal-content {
          padding: 60px 275px !important;
@@ -662,12 +706,21 @@
             margin-right: 0;
          }
       }
+
+      .order-opportunity .order-modal__input {
+         width: 100%;
+
+         input {
+            width: 100%;
+         }
+      }
    }
 
    @media (max-width:767px) {
       &__inputs {
          flex-wrap: wrap;
       }
+
       &__input {
          width: 100%;
 
@@ -680,6 +733,14 @@
          }
          &:last-child {
             margin-right: 0;
+         }
+      }
+
+      .order-opportunity .order-modal__input {
+         width: 100%;
+
+         input {
+            width: 100%;
          }
       }
    }

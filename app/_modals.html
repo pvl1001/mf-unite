@@ -1042,7 +1042,7 @@
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+      <div class="modal-content requisition">
          <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
 
          <h2>Заявка на подключение</h2>
@@ -1055,15 +1055,31 @@
 
                <div class="order-modal__input">
                   <div class="order-modal__input-title">Имя</div>
-                  <input  type="text" name="name" id="validationCustom02">
+                  <input type="text" name="name" id="validationCustom02">
                </div>
             </div>
 
             <div class="order-modal__select-date">
-               <span>Выберите дату и время подключения</span>
+               <span onclick="fixDate()">Выберите дату и время подключения</span>
             </div>
 
             <button type="submit" class="btn">Отправить</button>
+         </form>
+      </div>
+      <div class="modal-content order-opportunity">
+         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+         <button onclick="back()" class="back">Назад</button>
+
+         <h2>Проверьте возможность подключения</h2>
+         <form class="needs-validation" id="orderOpportunity">
+            <div class="order-modal__inputs">
+               <div class="order-modal__input">
+                  <input onkeyup="valid(event)" type="text" class="test" name="address" placeholder="Ваш адрес">
+                  <label>Ура! Вы в зоне покрытия!</label>
+                  <label>К сожалению, Вы вне зоны покрытия</label>
+               </div>
+            </div>
+            <button disabled type="submit" id="btnCheck" class="btn">Проверить</button>
          </form>
       </div>
    </div>

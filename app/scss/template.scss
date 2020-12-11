@@ -16,17 +16,6 @@ a, a:visited {
    }
 }
 
-button.btn:disabled {
-   background-color: #EDEDED;
-   color: #333;
-
-   &:hover {
-      background-color: #EDEDED;
-      color: #333;
-      cursor: auto;
-   }
-}
-
 a.btn,
 div.btn,
 button.btn {
@@ -51,6 +40,27 @@ a.btn.btn-fiolet {
    &:hover {
       background-color: #B808D4;
    }
+}
+
+button.btn:disabled {
+   background-color: #EDEDED;
+   color: #333;
+
+   &:hover {
+      background-color: #EDEDED;
+      color: #333;
+      cursor: auto;
+   }
+}
+
+button.back {
+   width: 70px;
+   height: 21px;
+   background: url('../img/svg/back.svg') 0 50% / 20px no-repeat;
+   position: absolute;
+   top: 25px;
+   left: 30px;
+   text-align: right;
 }
 
 h1 {
@@ -241,10 +251,20 @@ input {
    padding: 0 30px;
    margin: 0 auto;
 }
+
 form {
    input {
       position: relative;
       padding-right: 40px;
+
+       + label,
+       + label+label{
+         display: none;
+         position: absolute;
+         font-size: 12px;
+         font-weight: 400;
+         color: var(--mf-green);
+      }
 
       &::placeholder {
          color: #33333380;
@@ -262,15 +282,17 @@ form {
    input.valid {
       border: 1px solid var(--mf-green);
       background: url('../img/svg/check.svg') calc(100% - 20px) 50% / 15px no-repeat;
+
+      + label {
+         display: block;
+         color: var(--mf-green);
+      }
    }
    input.error {
       border: 1px solid #F62434;
       background: url('../img/svg/invalid.svg') calc(100% - 23px) 50% / 13px no-repeat;
 
-      + label.error {
-         position: absolute;
-         font-size: 12px;
-         font-weight: 400;
+      + label {
          display: block;
          color: #F62434;
       }
