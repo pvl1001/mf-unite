@@ -241,3 +241,38 @@ input {
    padding: 0 30px;
    margin: 0 auto;
 }
+form {
+   input {
+      position: relative;
+      padding-right: 40px;
+
+      &::placeholder {
+         color: #33333380;
+      }
+
+      &:focus {
+         border: 1px solid #333333;
+
+         &::placeholder {
+            color: #333333;
+         }
+      }
+   }
+
+   input.valid {
+      border: 1px solid var(--mf-green);
+      background: url('../img/svg/check.svg') calc(100% - 20px) 50% / 15px no-repeat;
+   }
+   input.error {
+      border: 1px solid #F62434;
+      background: url('../img/svg/invalid.svg') calc(100% - 23px) 50% / 13px no-repeat;
+
+      + label.error {
+         position: absolute;
+         font-size: 12px;
+         font-weight: 400;
+         display: block;
+         color: #F62434;
+      }
+   }
+}

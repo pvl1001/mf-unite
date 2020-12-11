@@ -1,6 +1,8 @@
 @@include('jquery-3.5.1.min.js')
 @@include('bootstrap.js')
 @@include('slick.js')
+@@include('jquery.mask.js')
+@@include('jquery.validate.js')
 
 $(document).ready(function () {
    $('.tariffs .slider').slick({
@@ -53,6 +55,30 @@ $(document).ready(function () {
          }
       ]
    });
+
+   $('input[name="phone"]').mask('+7 (000) 000 - 00 - 00', {placeholder: "+7 (   )     -    -   "});
+
+   $('#orderForm').validate({
+      rules: {
+         phone: {
+            required: true,
+            minlength: 22
+         },
+         name: {
+            required: true
+         }
+      },
+      messages: {
+         phone: {
+            required: 'Заполните поле!',
+            minlength: 'Заполните поле!'
+         },
+         name: {
+            required: 'Заполните поле!'
+         }
+      }
+   })
+
 })
 
 function toPlug() { // click "подключить"
@@ -64,8 +90,6 @@ function toPlug() { // click "подключить"
    })
 }
 
-function openModal() {
 
-}
 
 
