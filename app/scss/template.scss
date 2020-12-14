@@ -96,6 +96,90 @@ input {
    border: 1px solid #DDDDDD;
 }
 
+input[data-provide="datepicker"] {
+   background: url('../img/svg/Calendar_16.svg') calc(100% - 21px) 50% / 14px no-repeat;
+}
+
+.dropdown-menu {
+   font-size: 18px;
+   padding: 45px 5px 20px;
+
+   &:before, &:after {
+      display: none;
+   }
+
+   .datepicker-switch {
+      font-size: 20px;
+      color: var(--mf-green);
+      font-weight: 500;
+   }
+
+   .dow {
+      color: #DDDDDD;
+      font-size: 15px;
+      font-weight: 500;
+   }
+
+   .prev, .next {
+      font-size: 0;
+      background: url('../img/svg/arrow-green-l.svg') center / 10px no-repeat;
+
+      &:hover {
+         background: #eee url('../img/svg/arrow-green-l.svg') center / 10px no-repeat;
+      }
+   }
+
+   .next {
+      background: url('../img/svg/arrow.green-r.svg') center / 10px no-repeat;
+
+      &:hover {
+         background: #eee url('../img/svg/arrow.green-r.svg') center / 10px no-repeat;
+      }
+   }
+
+   .table-condensed thead > tr:nth-child(2){
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 10px 5px 0 17px;
+
+      th {
+         display: flex;
+         align-items: center;
+
+         &:nth-child(2) {
+            order: 1;
+            pointer-events: none;
+         }
+         &:nth-child(1) {
+            margin-left: auto;
+            order: 2;
+         }
+         &:nth-child(3) {
+            order: 3;
+         }
+      }
+   }
+
+   table tr td, .datepicker table tr th {
+      width: 47px;
+      height: 40px;
+   }
+
+   .active.day {
+      color: var(--mf-green) !important;
+      border: 0 !important;
+      background-color: transparent !important;
+
+      &:hover {
+         background-color: #eee !important;
+      }
+   }
+}
+
 .switch {
    position: relative;
    display: inline-block;

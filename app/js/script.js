@@ -3,6 +3,7 @@
 @@include( 'slick.js' )
 @@include( 'jquery.mask.js' )
 @@include( 'jquery.validate.js' )
+@@include( 'datepicker.js' )
 
 $( document ).ready( function () {
    $( '.tariffs .slider' ).slick( {
@@ -79,26 +80,12 @@ $( document ).ready( function () {
       }
    } )
 
-   // $( '#orderOpportunity' ).validate( {
-   //    rules: {
-   //       address: {
-   //          required: true,
-   //       }
-   //    },
-   //    messages: {
-   //       address: {
-   //          required: ' '
-   //       }
-   //    },
-   //    success: function (label) {
-   //       label.addClass( "valid" ).text( "Ура! Вы в зоне покрытия!" )
-   //       $('#btnCheck').removeAttr('disabled').text('Далее')
-   //    },
-   //    submitHandler: function() {
-   //       alert()
-   //    },
-   // } )
-
+   $('.datepicker').datepicker({
+      format: 'dd MM yyyy',
+      language: 'ru',
+      orientation: 'bottom',
+      maxViewMode: 'days'
+   })
 } )
 
 function toPlug() { // click "подключить"
@@ -110,30 +97,45 @@ function toPlug() { // click "подключить"
    } )
 }
 
-function fixDate() { // клик "Выбрать дату"
-   $('.order-opportunity').addClass('d-flex')
-   $('.requisition').addClass('d-none')
+function nextForm(open, close) { // popUp вперед
+   event.preventDefault()
+   $(close).removeClass('d-flex')
+   $(open).addClass('d-flex')
+   $(close).addClass('d-none')
 }
 
-function back() {
-   $('.order-opportunity').removeClass('d-flex')
-   $('.requisition').removeClass('d-none')
+function backForm(close, open) { // popUp назад
+   $(close).removeClass('d-flex')
+   $(open).addClass('d-flex')
 }
 
-function valid(e) {
+function valid(e) { // popUp "Проверить возможность подключения"
    if(e.target.value === 'test') {
       console.log(e.path[0])
       e.path[0].classList.add('valid')
       e.path[0].classList.remove('error')
-      $('#btnCheck').attr('disabled', false).text('Далее')
-   } else if (e.target.value === '') {
+      $('#btnFormNext').show()
+         .attr('disabled', false)
+         .text('Далее')
+      $('.order-opportunity__offer').hide()
+      $('#btnFormCheck').css('display', '')
+   }
+   else if (e.target.value === '') {
       e.path[0].classList.remove('valid')
       e.path[0].classList.remove('error')
-      $('#btnCheck').attr('disabled', true).text('Проверить')
-   } else {
+      $('#btnFormNext').show()
+         .attr('disabled', true)
+         .text('Проверить')
+      $('.order-opportunity__offer').hide()
+      $('#btnFormCheck').css('display', '')
+   }
+   else {
       e.path[0].classList.remove('valid')
       e.path[0].classList.add('error')
-      $('#btnCheck').attr('disabled', false).text('Подробнее')
+      $('#btnFormNext').hide()
+      $('#btnFormCheck').css('display', 'inline-flex')
+      $('.order-opportunity__offer').show()
+      $('.order-opportunity__offer b').text(e.target.value)
    }
 }
 

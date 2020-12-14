@@ -638,8 +638,16 @@
       h2 {
          margin-bottom: 14px;
       }
+
+      &__offer {
+         display: none;
+         margin-top: 50px;
+         margin-bottom: -10px;
+      }
+
       .order-modal__inputs {
          margin-bottom: 40px;
+         flex-wrap: wrap;
 
          input {
             width: 480px;
@@ -669,6 +677,24 @@
                color: #F62434;
             }
          }
+      }
+
+      #btnFormCheck {
+         display: none;
+      }
+   }
+
+   .order-date {
+      display: none;
+
+      h2 {
+         margin-bottom: 5px;
+      }
+
+      h2 + p {
+         font-size: 15px;
+         font-weight: 400;
+         margin-bottom: 25px;
       }
    }
 
