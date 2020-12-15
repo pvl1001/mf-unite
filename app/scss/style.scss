@@ -5,6 +5,7 @@
 @import 'colors';
 @import 'template';
 @import 'modals';
+@import 'tail-select';
 
 .header {
    height: 70px;
@@ -1068,6 +1069,22 @@
 
                   &.family {
                      background: #fff url('../img/svg/Family_32.svg') center / 24px no-repeat;
+                  }
+
+                  &.google-play {
+                     background: #fff url('../img/svg/google-play.svg') center / 21.5px no-repeat;
+                  }
+
+                  &.mic {
+                     background: #fff url('../img/svg/mic.svg') center / 14.4px no-repeat;
+                  }
+
+                  &.crystal {
+                     background: #fff url('../img/svg/crystal.svg') center / 24px no-repeat;
+                  }
+
+                  &.chromecast {
+                     background: #fff url('../img/svg/chromecast.svg') center / 24px no-repeat;
                   }
                }
 

@@ -4,6 +4,7 @@
 @@include( 'jquery.mask.js' )
 @@include( 'jquery.validate.js' )
 @@include( 'datepicker.js' )
+@@include( 'tail-select.js' )
 
 $( document ).ready( function () {
    $( '.tariffs .slider' ).slick( {
@@ -77,15 +78,30 @@ $( document ).ready( function () {
          name: {
             required: 'Заполните поле!'
          }
+      },
+      submitHandler: function (form) {
+         nextForm('.order-thx','.requisition')
+         // отправить форму
       }
    } )
 
-   $('.datepicker').datepicker({
+   $( '#orderOpportunity .datepicker' ).datepicker( { // календарь заявки
       format: 'dd MM yyyy',
       language: 'ru',
       orientation: 'bottom',
-      maxViewMode: 'days'
-   })
+      maxViewMode: 'days',
+      autoclose: true,
+      startView: 0
+   } )
+
+   tail.select( '#mf-select', { // select заявки
+      animate: false,
+      locale: 'ru',
+      placeholder: 'Время',
+      multiShowCount: false,
+      width: '230px'
+   } )
+
 } )
 
 function toPlug() { // click "подключить"
@@ -99,45 +115,54 @@ function toPlug() { // click "подключить"
 
 function nextForm(open, close) { // popUp вперед
    event.preventDefault()
-   $(close).removeClass('d-flex')
-   $(open).addClass('d-flex')
-   $(close).addClass('d-none')
+   $( close ).removeClass( 'd-flex' )
+   $( open ).addClass( 'd-flex' )
+   $( close ).addClass( 'd-none' )
+}
+
+function onRequisition(open, close) { // подтвердить заявку на подключение
+   let date = document.querySelector('.datepicker').value
+   let time = document.querySelector('.label-inner').innerHTML
+   let text = document.getElementById('selectDate')
+   if(date && time !== 'Время') {
+      nextForm( open, close )
+      text.innerHTML = date + ', ' + time
+   }
+
 }
 
 function backForm(close, open) { // popUp назад
-   $(close).removeClass('d-flex')
-   $(open).addClass('d-flex')
+   $( close ).removeClass( 'd-flex' )
+   $( open ).addClass( 'd-flex' )
 }
 
 function valid(e) { // popUp "Проверить возможность подключения"
-   if(e.target.value === 'test') {
-      console.log(e.path[0])
-      e.path[0].classList.add('valid')
-      e.path[0].classList.remove('error')
-      $('#btnFormNext').show()
-         .attr('disabled', false)
-         .text('Далее')
-      $('.order-opportunity__offer').hide()
-      $('#btnFormCheck').css('display', '')
-   }
-   else if (e.target.value === '') {
-      e.path[0].classList.remove('valid')
-      e.path[0].classList.remove('error')
-      $('#btnFormNext').show()
-         .attr('disabled', true)
-         .text('Проверить')
-      $('.order-opportunity__offer').hide()
-      $('#btnFormCheck').css('display', '')
-   }
-   else {
-      e.path[0].classList.remove('valid')
-      e.path[0].classList.add('error')
-      $('#btnFormNext').hide()
-      $('#btnFormCheck').css('display', 'inline-flex')
-      $('.order-opportunity__offer').show()
-      $('.order-opportunity__offer b').text(e.target.value)
+   if (e.target.value === 'test') { // адрес совпадает
+      e.path[0].classList.add( 'valid' )
+      e.path[0].classList.remove( 'error' )
+      $( '#btnFormNext' ).show()
+         .attr( 'disabled', false )
+         .text( 'Далее' )
+      $( '.order-opportunity__offer' ).hide()
+      $( '#btnFormCheck' ).css( 'display', '' )
+   } else if (e.target.value === '') {
+      e.path[0].classList.remove( 'valid' )
+      e.path[0].classList.remove( 'error' )
+      $( '#btnFormNext' ).show()
+         .attr( 'disabled', true )
+         .text( 'Проверить' )
+      $( '.order-opportunity__offer' ).hide()
+      $( '#btnFormCheck' ).css( 'display', '' )
+   } else {
+      e.path[0].classList.remove( 'valid' )
+      e.path[0].classList.add( 'error' )
+      $( '#btnFormNext' ).hide()
+      $( '#btnFormCheck' ).css( 'display', 'inline-flex' )
+      $( '.order-opportunity__offer' ).show()
+      $( '.order-opportunity__offer b' ).text( e.target.value )
    }
 }
+
 
 
 

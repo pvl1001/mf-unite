@@ -98,11 +98,24 @@ input {
 
 input[data-provide="datepicker"] {
    background: url('../img/svg/Calendar_16.svg') calc(100% - 21px) 50% / 14px no-repeat;
+   border-radius: 0;
+
+   &::placeholder {
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+   }
+
+   &:focus {
+      border-color: #ddd;
+   }
 }
 
-.dropdown-menu {
+.datepicker.dropdown-menu {
    font-size: 18px;
    padding: 45px 5px 20px;
+   border-radius: 0;
+   margin-top: 10px;
 
    &:before, &:after {
       display: none;
@@ -156,6 +169,7 @@ input[data-provide="datepicker"] {
          }
          &:nth-child(1) {
             margin-left: auto;
+            margin-right: 10px;
             order: 2;
          }
          &:nth-child(3) {
@@ -177,6 +191,14 @@ input[data-provide="datepicker"] {
       &:hover {
          background-color: #eee !important;
       }
+   }
+
+   @media (max-height: 700px) {
+      position: fixed;
+      top: auto !important;
+      left: 10px !important;
+      bottom: 10px !important;
+      right: 10px !important;
    }
 }
 
