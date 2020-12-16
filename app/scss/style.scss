@@ -592,7 +592,38 @@
       }
    }
 
-   @media (max-width: 1023px) {
+   @media (min-width: 1024px) and (max-width: 1300px) {
+      h2 {
+         margin-right: 90px;
+      }
+
+      input {
+         margin-right: 20px;
+      }
+   }
+
+   @media (min-width:768px) and (max-width: 1023px) {
+      .wrapper {
+         flex-wrap: wrap;
+         padding: 73px 30px 100px;
+      }
+
+      h2 {
+         margin-bottom: 42px;
+         margin-right: 0;
+         flex-shrink: 1;
+         font-size: 28px;
+      }
+
+      input {
+         max-width: none;
+         width: calc(100% - 191px);
+         margin-right: 10px;
+      }
+
+   }
+
+   @media (max-width:767px) {
       .wrapper {
          flex-wrap: wrap;
          padding: 73px 30px 100px;
@@ -640,9 +671,17 @@
          input {
             width: 100%;
             margin-right: 20px;
-            border: 1px solid #731982;
+
+            &:focus {
+               border: 1px solid #731982;
+            }
          }
       }
+
+      p {
+         font-weight: 400;
+      }
+
    }
 
    .unite-row,
@@ -816,9 +855,16 @@
 
    @media (min-width: 1024px) and (max-width: 1300px) {
 
-      .to-plug-items .item-to-plug {
-         width: 100%;
+      &__to-plug {
+         p {
+            padding-right: 0;
+         }
+
+         .to-plug-items .item-to-plug {
+            width: 100%;
+         }
       }
+
 
       .unite-row,
       .unite-info-row {
@@ -836,10 +882,12 @@
 
       .unite-checkbox {
          flex-wrap: wrap;
+         padding-left: 15px;
+         margin-bottom: 44px;
 
          .unite-checkbox__hire {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 13px;
 
             &:last-child {
                margin-bottom: 0;
@@ -849,6 +897,7 @@
 
       .unite-order {
          flex-wrap: wrap;
+         padding-left: 15px;
 
          .btn {
             order: 1;
@@ -863,12 +912,29 @@
    }
 
    @media (min-width: 768px) and (max-width: 1023px) {
+      .unite-address {
+
+         &__input {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            input {
+               margin: 0 0 28px;
+            }
+         }
+
+      }
+
       .unite-row {
          flex-wrap: wrap;
 
          > div {
             width: 100%;
          }
+      }
+
+      &__to-plug {
+         padding: 50px 0 80px;
       }
    }
 
