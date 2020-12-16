@@ -3,9 +3,9 @@ body {
    color: #333333;
 
    /* хром, сафари */
-   &::-webkit-scrollbar {
-      width: 0;
-   }
+   //&::-webkit-scrollbar {
+   //   width: 0;
+   //}
 }
 
 a, a:visited {
