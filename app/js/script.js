@@ -5,6 +5,7 @@
 @@include( 'jquery.validate.js' )
 @@include( 'datepicker.js' )
 @@include( 'tail-select.js' )
+@@include( 'data.json' )
 
 $( document ).ready( function () {
    $( '.tariffs .slider' ).slick( {
@@ -80,7 +81,7 @@ $( document ).ready( function () {
          }
       },
       submitHandler: function (form) {
-         nextForm('.order-thx','.requisition')
+         nextForm( '.order-thx', '.requisition' )
          // отправить форму
       }
    } )
@@ -102,7 +103,52 @@ $( document ).ready( function () {
       width: '230px'
    } )
 
-} )
+
+   let groupName = '', name = [];
+   for (let i = 1; i < 11; i++) {
+
+      if (dataEconomic[i]) {
+         // dataEconomic[i].forEach( function (index, el) {
+         //    console.log( index, el )
+         // } )
+
+         groupName +=
+            `<a href="#collapseChannelGroup${i}"
+               data-toggle="collapse"
+               class="collapse-channel__group-toggle"
+               >
+               <div class="collapse-channel__group-wrapper">
+                  <span class="collapse-channel__group-name">${dataEconomic[i][0].groupName}</span>
+                  <span class="collapse-channel__group-count">${dataEconomic[i].length}</span>
+               </div>
+            </a>
+            <ul class="collapse-channel__group-list collapse" id="collapseChannelGroup${i}"></ul>`
+
+         dataEconomic[i].forEach( function (el, index) {
+            name[i] +=
+               `<li class="collapse-channel__group-channelName">${ el.name }</li>`
+            console.log(name[i])
+         } )
+         $( '.collapse-channel__channel-group' ).html( groupName );
+         $( '.collapse-channel__group-list' ).html( name[i] );
+      }
+
+
+   }
+
+   // for (let i = 1; i < 11; i++) {
+   //    if (dataEconomic[i]) {
+   //       dataEconomic[i].forEach( function (el, index) {
+   //           name[i] +=
+   //             `<li class="collapse-channel__group-channelName">${ el.name }</li>`
+   //          $( '.collapse-channel__group-list' ).html( name[i] );
+   //          console.log(name[i])
+   //
+   //       } )
+   //    }
+   // }
+
+   } )
 
 function toPlug() { // click "подключить"
    $( 'html,body' ).animate( {
@@ -121,10 +167,10 @@ function nextForm(open, close) { // popUp вперед
 }
 
 function onRequisition(open, close) { // подтвердить заявку на подключение
-   let date = document.querySelector('.datepicker').value
-   let time = document.querySelector('.label-inner').innerHTML
-   let text = document.getElementById('selectDate')
-   if(date && time !== 'Время') {
+   let date = document.querySelector( '.datepicker' ).value
+   let time = document.querySelector( '.label-inner' ).innerHTML
+   let text = document.getElementById( 'selectDate' )
+   if (date && time !== 'Время') {
       nextForm( open, close )
       text.innerHTML = date + ', ' + time
    }

@@ -265,6 +265,7 @@
                font-weight: 500;
             }
 
+
             &__desc {
                font-size: 15px;
                font-weight: 500;
@@ -287,6 +288,10 @@
                   + div {
                      margin-bottom: 8px;
                   }
+               }
+
+               &.desk-channels {
+                  margin-bottom: 0;
                }
 
                &.desk-channels a {
@@ -343,6 +348,62 @@
                background-color: #F62434;
             }
          }
+      }
+   }
+
+   .collapse-channel {
+      font-size: 15px;
+
+      &__channels {
+         padding-top: 20px;
+         margin-bottom: 0;
+      }
+
+      &__group-wrapper {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         position: relative;
+         padding-right: 25px;
+         line-height: 40px;
+
+         &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: inline-block;
+            width: 10px;
+            height: 100%;
+            background: url('../img/svg/arrow.svg') center / contain no-repeat;
+            transform: rotate(180deg);
+         }
+      }
+
+      &__group-count {
+         font-size: 14px;
+         color: rgba(51, 51, 51, .5)
+      }
+
+      &__group-toggle.collapsed {
+         .collapse-channel__group-wrapper:before {
+            transform: rotate(0deg);
+         }
+      }
+
+      &__group-toggle {
+         color: #333;
+
+         &:hover {
+            text-decoration: none;
+            color: #333;
+         }
+      }
+
+      &__group-list {
+         color: rgba(51, 51, 51, .3);
+         line-height: 24px;
+         padding-left: 20px;
       }
    }
 
@@ -602,7 +663,7 @@
       }
    }
 
-   @media (min-width:768px) and (max-width: 1023px) {
+   @media (min-width: 768px) and (max-width: 1023px) {
       .wrapper {
          flex-wrap: wrap;
          padding: 73px 30px 100px;
@@ -623,7 +684,7 @@
 
    }
 
-   @media (max-width:767px) {
+   @media (max-width: 767px) {
       .wrapper {
          flex-wrap: wrap;
          padding: 73px 30px 100px;

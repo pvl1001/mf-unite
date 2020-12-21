@@ -110,7 +110,7 @@ function images() { //сжатие изображений
 }
 
 function fonts() { // шрифтов
-    src(path.src.fonts)
+    return src(path.src.fonts)
        .pipe(dest(path.build.fonts))
 }
 
