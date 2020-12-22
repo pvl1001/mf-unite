@@ -322,17 +322,14 @@ function valid(e) {
 // popUp дополнительные опции
 function totalPrice(id, index) {
    let newPrice = Number( $( `${id} .new-price` ).text() )
-
    let optionPrice = $( `${id} .item-option__text .item-option__num` )
-
    let inputs = $( `${id} input` )
+
    inputs[index].checked === true ?
       newPrice += Number( optionPrice[index].innerHTML ) :
       newPrice -= Number( optionPrice[index].innerHTML )
 
    $( `${id} .new-price` ).text( newPrice )
-
-   console.log()
 }
 
 
