@@ -5,6 +5,7 @@
 @@include( './plugins/jquery.validate.js' )
 @@include( './plugins/datepicker.js' )
 @@include( './plugins/tail-select.js' )
+@@include( './plugins/jquery.autocomplete.js' )
 
 const dataPrice = [
    {
@@ -32,6 +33,55 @@ $( document ).ready( function () {
    $.getJSON( '../json/data.json', function (data) {
       console.log( data )
    } )
+
+   // $(".unite-check-address input").suggestions({
+   //    token: "68a47848976500adfed47cf9b0297414febf19c5",
+   //    type: "ADDRESS",
+   //    /* Вызывается, когда пользователь выбирает одну из подсказок */
+   //    onSelect: function(suggestion) {
+   //       console.log(suggestion);
+   //    }
+   // });
+
+   let autocomplete = [
+      'Победы',
+      'Ломоносов',
+      'Москва',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+      'Санкт-Петербург',
+   ]
+
+   $('.unite-check-address input').autocomplete({
+      width: 'auto',
+      lookup: function (query, done) {
+         // Do Ajax call or lookup locally, when done,
+         // call the callback and pass your results:
+         var result = {
+            suggestions: [
+               { "value": "г Москва, ул Вавилова, д 31 к 1", "aoguid": "3c90a257-e159-4b4d-8edc-47086e2f07cd" },
+               { "value": "United Kingdom",       "data": "UK" },
+               { "value": "United States",        "data": "US" }
+            ]
+         };
+
+         done(result);
+      },
+      onSelect: function (suggestion) {
+         console.log(suggestion);
+      }
+   })
 
 //    let cardTariff
 //    dataPrice.forEach(tariff => {

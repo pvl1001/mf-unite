@@ -713,25 +713,28 @@
    }
 }
 
+.unite.unite-check-address {
+   padding: 40px 0 80px;
+}
+
 .unite {
    background-color: var(--mf-green);
    padding: 46px 0 94px;
 
    .unite-address {
       text-align: center;
-      margin-bottom: 40px;
       color: #fff;
       font-size: 15px;
       line-height: 24px;
 
       &__title {
+         display: block;
          font-size: 20px;
          margin-bottom: 30px;
       }
 
       &__input {
          display: flex;
-         margin-bottom: 40px;
 
          input {
             width: 100%;
@@ -743,7 +746,8 @@
          }
       }
 
-      p {
+      &__offer {
+         display: none;
          font-weight: 400;
       }
 

@@ -414,3 +414,28 @@ form {
       }
    }
 }
+
+.autocomplete-suggestions {
+   background-color: #fff;
+   border: 1px solid #ccc;
+   cursor: default;
+   overflow: auto;
+
+   .autocomplete-suggestion {
+      padding: 5px;
+      overflow: hidden;
+      border-bottom: 1px solid #e1e1e1;
+      margin-bottom: 4px;
+      line-height: 22px;
+
+      &:hover {
+         background-color: #57068c;
+         color: #fff;
+      }
+
+      strong {
+         font-weight: normal;
+         color: #3399FF;
+      }
+   }
+}
