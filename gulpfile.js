@@ -9,14 +9,16 @@ let path = {
         css: project_folder + '/css/',
         js: project_folder + '/js/',
         img: project_folder + '/img/',
-        fonts: project_folder + '/fonts/'
+        fonts: project_folder + '/fonts/',
+        data: project_folder + '/json/',
     },
     src: {
         html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
         css: source_folder + '/scss/style.scss',
         js: source_folder + '/js/script.js',
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-        fonts: source_folder + '/fonts/*'
+        fonts: source_folder + '/fonts/*',
+        data: source_folder + '/json/*',
     },
     watch: {
         html: source_folder + '/**/*.html',
@@ -114,6 +116,11 @@ function fonts() { // шрифтов
        .pipe(dest(path.build.fonts))
 }
 
+function data() { // json
+    return src(path.src.data)
+       .pipe(dest(path.build.data))
+}
+
 function cb() {}
 
 function watchFile() { //динамические изменения страницы
@@ -127,9 +134,10 @@ function clean() { //удаление лишних html
     return del(path.clean)
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts))
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, data))
 let watch = gulp.parallel(build, watchFile, browserSync)
 
+exports.data = data
 exports.fonts = fonts
 exports.images = images
 exports.js = js

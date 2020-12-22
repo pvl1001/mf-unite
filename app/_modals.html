@@ -542,6 +542,8 @@
    </div>
 </div>
 
+<!--тарифы-->
+
 <div class="modal fade tariff-modal tariff-two-web" id="tariffTwoWeb" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -602,12 +604,12 @@
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input type="checkbox">
+                        <input onchange="totalPrice('#tariffTwoWeb', 0)" type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
                         <p>Аренда Wi-Fi роутера <br> (1 Гбит/с)</p>
-                        <span>0 ₽ в месяц</span>
+                        <span class="item-option__num">88</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
@@ -640,8 +642,9 @@
             </div>
 
             <div class="price">
-               <div><span class="old-price">700 ₽</span>
-                  <span class="new-price">350 ₽</span>
+               <div>
+                  <span class="old-price">700 ₽</span>
+                  <span class="new-price">350</span><span>₽</span>
                   <span>в месяц</span>
                </div>
             </div>
@@ -735,24 +738,24 @@
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input type="checkbox">
+                        <input onchange="totalPrice('#tariffconomic', 0)" type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
                         <p>Аренда ТВ-приставки</p>
-                        <span>0 ₽ в месяц</span>
+                        <span class="item-option__num">99</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input type="checkbox">
+                        <input onchange="totalPrice('#tariffconomic', 1)" type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
-                        <p>Аренда Wi-Fi роутера (1 Гбит/с)</p>
-                        <span>0 ₽ в месяц</span>
+                        <p>Аренда Wi-Fi роутера (100 Мбит/с)</p>
+                        <span class="item-option__num">55</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
@@ -782,7 +785,7 @@
 
             <div class="price">
                <div><span class="old-price">600 ₽</span>
-                  <span class="new-price">300 ₽</span>
+                  <span class="new-price">300</span><span>₽</span>
                   <span>в месяц</span></div>
             </div>
 
@@ -875,24 +878,24 @@
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input type="checkbox">
+                        <input onchange="totalPrice('#tariffHit', 0)" type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
                         <p>Аренда ТВ-приставки</p>
-                        <span>0 ₽ в месяц</span>
+                        <span class="item-option__num">0</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input type="checkbox">
+                        <input onchange="totalPrice('#tariffHit', 1)" type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
                         <p>Аренда Wi-Fi роутера (1 Гбит/с)</p>
-                        <span>0 ₽ в месяц</span>
+                        <span class="item-option__num">88</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
@@ -921,7 +924,7 @@
 
             <div class="price">
                <div><span class="old-price">800 ₽</span>
-                  <span class="new-price">400 ₽</span>
+                  <span class="new-price">400</span><span>₽</span>
                   <span>в месяц</span></div>
             </div>
 
@@ -1013,24 +1016,24 @@
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input type="checkbox">
+                        <input onchange="totalPrice('#tariffForTheir', 0)" type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
                         <p>Аренда ТВ-приставки</p>
-                        <span>0 ₽ в месяц</span>
+                        <span class="item-option__num">0</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input type="checkbox">
+                        <input onchange="totalPrice('#tariffForTheir', 1)" type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
                         <p>Аренда Wi-Fi роутера (1 Гбит/с)</p>
-                        <span>0 ₽ в месяц</span>
+                        <span class="item-option__num">0</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
@@ -1059,7 +1062,7 @@
 
             <div class="price">
                <div><span class="old-price">1500 ₽</span>
-                  <span class="new-price">750 ₽</span>
+                  <span class="new-price">750</span><span>₽</span>
                   <span>в месяц</span></div>
             </div>
 
@@ -1152,12 +1155,12 @@
                <div class="options-row__item item-option">
                   <label>
                      <div class="switch">
-                        <input checked type="checkbox">
+                        <input onchange="totalPrice('#tariffAround', 0)" checked type="checkbox">
                         <span class="round"></span>
                      </div>
                      <div class="item-option__text">
                         <p>Аренда 4G Wi-Fi роутера </p>
-                        <span>100 ₽ в месяц</span>
+                        <span class="item-option__num">100</span><span> ₽ в месяц</span>
                      </div>
                   </label>
                </div>
@@ -1188,7 +1191,7 @@
             <div class="price">
                <div>
 <!--                  <span class="old-price">1500 ₽</span>-->
-                  <span class="new-price">1700 ₽</span>
+                  <span class="new-price">1700</span><span>₽</span>
                   <span>в месяц</span></div>
             </div>
 
@@ -1198,6 +1201,8 @@
       </div>
    </div>
 </div>
+
+<!--/тарифы-->
 
 <div class="modal fade tariff-modal order-modal" id="order" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
