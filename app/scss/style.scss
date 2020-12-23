@@ -714,10 +714,24 @@
 }
 
 .unite.unite-check-address {
+   display: block;
    padding: 40px 0 80px;
+
+   .success-check {
+      display: none;
+      text-align: center;
+      background-color: var(--mf-green);
+      padding: 32px 0 35px;
+      color: #fff;
+
+      p {
+         margin-top: 11px;
+      }
+   }
 }
 
 .unite {
+   display: none;
    background-color: var(--mf-green);
    padding: 46px 0 94px;
 
@@ -735,10 +749,12 @@
 
       &__input {
          display: flex;
+         justify-content: center;
 
          input {
-            width: 100%;
+            width: 60%;
             margin-right: 20px;
+            margin-left: 180px;
 
             &:focus {
                border: 1px solid #731982;
@@ -747,6 +763,7 @@
       }
 
       &__offer {
+         padding-top: 20px;
          display: none;
          font-weight: 400;
       }
@@ -934,7 +951,6 @@
          }
       }
 
-
       .unite-row,
       .unite-info-row {
          flex-wrap: wrap;
@@ -988,6 +1004,7 @@
             justify-content: center;
 
             input {
+               width: 100%;
                margin: 0 0 28px;
             }
          }
@@ -1015,6 +1032,7 @@
             justify-content: center;
 
             input {
+               width: 100%;
                margin: 0 0 28px;
             }
          }

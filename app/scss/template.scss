@@ -34,7 +34,7 @@ button.btn {
    }
 }
 
-a.btn.btn-fiolet {
+.btn.btn-fiolet {
    background-color: var(--mf-fiolet);
 
    &:hover {
@@ -294,6 +294,14 @@ input[data-provide="datepicker"] {
       color: var(--mf-green);
       font-weight: 700;
       margin: 0 5px;
+   }
+
+   .new-price + span {
+      font-size: 32px;
+      line-height: 32px;
+      color: var(--mf-green);
+      font-weight: 700;
+      margin-right: 5px;
    }
 }
 
