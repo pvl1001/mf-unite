@@ -8,6 +8,7 @@
 @@include( './plugins/jquery.autocomplete.js' )
 @@include( './plugins_config.js' )
 @@include( './service.js' )
+@@include( './tv_channels.js' )
 
 const dataPrice = [
    {
