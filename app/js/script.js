@@ -107,8 +107,8 @@ function totalPrice(id, index) {
    $( `${id} .new-price` ).text( newPrice )
 }
 
-// проверить адрес
-let address
+// autocomplete проверки адреса
+let setAddress = {}
 
 $( '.unite-check-address input' ).autocomplete( {
    width: 'auto',
@@ -118,30 +118,34 @@ $( '.unite-check-address input' ).autocomplete( {
    type: 'POST',
 
    onSelect: function (suggestion) {
-      address = suggestion
-      // console.log( suggestion );
+      setAddress = {
+         house_guid: suggestion.data.aoguid,
+         address: suggestion.data.address
+      }
    },
 } )
 
+// проверка адреса при клике 'проверить'
 $( '#formCheckAddress' ).submit( function (event) {
    event.preventDefault();
    getAddress()
+} )
+
+function checkAddress(data) {
+   console.log(data)
    let inputText = $( 'input' ).val()
-   if (inputText === "test") {
+   if(data.result === 1) { // подключение возможно
       $( '.unite-address__offer' ).hide()
+      $( '#unite' ).hide()
       $( '.success-check' ).show();
-   } else if (!inputText) {
-      $( '.success-check' ).hide();
-      $( '.unite-address__offer' ).hide()
-   } else {
+      $( '.success-check b' ).text(inputText);
+   } else if (data.result === 0){
       $( '.success-check' ).hide();
       $( '.unite-address__offer' ).show()
-      $( '.unite' ).show()
+      $( '#unite' ).show()
       $( '.unite-address__offer b' ).text( inputText )
    }
-
-   console.log(address.data)
-} )
+}
 
 
 

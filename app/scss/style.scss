@@ -715,17 +715,18 @@
 
 .unite.unite-check-address {
    display: block;
-   padding: 40px 0 80px;
+   padding: 40px 0 54px;
 
    .success-check {
       display: none;
       text-align: center;
       background-color: var(--mf-green);
-      padding: 32px 0 35px;
+      padding: 32px 0 0;
       color: #fff;
 
       p {
          margin-top: 11px;
+         font-weight: 400;
       }
    }
 }
@@ -733,7 +734,7 @@
 .unite {
    display: none;
    background-color: var(--mf-green);
-   padding: 46px 0 94px;
+   padding: 40px 0 0;
 
    .unite-address {
       text-align: center;
@@ -763,7 +764,7 @@
       }
 
       &__offer {
-         padding-top: 20px;
+         padding-top: 40px;
          display: none;
          font-weight: 400;
       }
@@ -997,6 +998,8 @@
    }
 
    @media (min-width: 768px) and (max-width: 1023px) {
+      padding: 0;
+
       .unite-address {
 
          &__input {
@@ -1020,7 +1023,7 @@
       }
 
       &__to-plug {
-         padding: 50px 0 80px;
+         padding: 50px 0;
       }
    }
 
@@ -1041,9 +1044,6 @@
             display: block;
          }
 
-         br {
-            display: none;
-         }
       }
 
       &__unite {
