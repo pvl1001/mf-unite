@@ -67,30 +67,53 @@ function backForm(close, open) {
 }
 
 // popUp "Проверить возможность подключения"
-function valid(e) {
-   if (e.target.value === 'test') { // адрес совпадает
-      e.path[0].classList.add( 'valid' )
-      e.path[0].classList.remove( 'error' )
-      $( '#btnFormNext' ).show()
+function validAddressPopUp(data, event) {
+   if (data.result === 1) { // адрес совпадает
+      $( '.order-modal__input input[name=address]' )
+         .addClass( 'valid' )
+         .removeClass( 'error' )
+      $( '#btnFormNext' )
+         .show()
          .attr( 'disabled', false )
          .text( 'Далее' )
       $( '.order-opportunity__offer' ).hide()
       $( '#btnFormCheck' ).css( 'display', '' )
-   } else if (e.target.value === '') {
-      e.path[0].classList.remove( 'valid' )
-      e.path[0].classList.remove( 'error' )
-      $( '#btnFormNext' ).show()
+   } else if (data.result === 0) {
+      $( '.order-modal__input input[name=address]' )
+         .removeClass( 'valid' )
+         .addClass( 'error' )
+      $( '#btnFormNext' ).hide()
+      $( '#btnFormCheck' ).css( 'display', 'inline-flex' )
+      $( '.order-opportunity__offer' ).show()
+      $( '.order-opportunity__offer b' ).text( setAddress.address )
+   } else if (event) {
+      $( '.order-modal__input input[name=address]' )
+         .removeClass( 'valid' )
+         .removeClass( 'error' )
+      $( '#btnFormNext' )
+         .show()
          .attr( 'disabled', true )
          .text( 'Проверить' )
       $( '.order-opportunity__offer' ).hide()
       $( '#btnFormCheck' ).css( 'display', '' )
-   } else {
-      e.path[0].classList.remove( 'valid' )
-      e.path[0].classList.add( 'error' )
-      $( '#btnFormNext' ).hide()
-      $( '#btnFormCheck' ).css( 'display', 'inline-flex' )
-      $( '.order-opportunity__offer' ).show()
-      $( '.order-opportunity__offer b' ).text( e.target.value )
+   }
+}
+
+// Проверить возможность подключения
+function validAddress(data, event) {
+   let inputText = $( 'input' ).val()
+   if (data.result === 1) { // подключение возможно
+      $( '.unite-address__offer' ).hide()
+      $( '#unite' ).hide()
+      $( '.success-check' ).show();
+      $( '.success-check b' ).text( inputText );
+   } else if (data.result === 0) {
+      $( '.success-check' ).hide();
+      $( '.unite-address__offer' ).show()
+      $( '#unite' ).show()
+      $( '.unite-address__offer b' ).text( inputText )
+   } else if (event) {
+      $( '.success-check' ).hide();
    }
 }
 
@@ -110,7 +133,7 @@ function totalPrice(id, index) {
 // autocomplete проверки адреса
 let setAddress = {}
 
-$( '.unite-check-address input' ).autocomplete( {
+$( 'input[name=address]' ).autocomplete( {
    width: 'auto',
    minChars: 3,
    deferRequestBy: 200,
@@ -122,29 +145,21 @@ $( '.unite-check-address input' ).autocomplete( {
          house_guid: suggestion.data.aoguid,
          address: suggestion.data.address
       }
+      if ($( '#order' ).hasClass( 'show' )) getAddress()
    },
 } )
 
 // проверка адреса при клике 'проверить'
-$( '#formCheckAddress' ).submit( function (event) {
+$( 'form[name=address]' ).submit( function (event) {
    event.preventDefault();
    getAddress()
 } )
 
+// проверка адреса popUp/главная
 function checkAddress(data) {
-   console.log(data)
-   let inputText = $( 'input' ).val()
-   if(data.result === 1) { // подключение возможно
-      $( '.unite-address__offer' ).hide()
-      $( '#unite' ).hide()
-      $( '.success-check' ).show();
-      $( '.success-check b' ).text(inputText);
-   } else if (data.result === 0){
-      $( '.success-check' ).hide();
-      $( '.unite-address__offer' ).show()
-      $( '#unite' ).show()
-      $( '.unite-address__offer b' ).text( inputText )
-   }
+   ($( '#order' ).hasClass( 'show' )) ?
+      validAddressPopUp( data ) :
+      validAddress( data )
 }
 
 

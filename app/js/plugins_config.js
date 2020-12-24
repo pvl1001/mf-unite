@@ -97,6 +97,7 @@ $( function () {
 //
 //    })
 
+   // слайдер
    $( '.tariffs .slider' ).slick( {
       infinite: false,
       slidesToShow: 4,
@@ -133,6 +134,7 @@ $( function () {
       ]
    } );
 
+   // слайдер
    $( '.equipment__slider' ).slick( {
       infinite: false,
       slidesToShow: 1,
@@ -148,8 +150,10 @@ $( function () {
       ]
    } );
 
+   // маска
    $( 'input[name="phone"]' ).mask( '+7 (000) 000 - 00 - 00', {placeholder: "+7 (   )     -    -   "} );
 
+   // валидация формы
    $( '#orderForm' ).validate( {
       rules: {
          phone: {
@@ -175,15 +179,18 @@ $( function () {
       }
    } )
 
+   // календарь
    $( '#orderOpportunity .datepicker' ).datepicker( { // календарь заявки
       format: 'dd MM yyyy',
       language: 'ru',
       orientation: 'bottom',
       maxViewMode: 'days',
       autoclose: true,
-      startView: 0
+      startDate: '0',
+      endDate: '+14d'
    } )
 
+   // селект времени
    tail.select( '#mf-select', { // select заявки
       animate: false,
       locale: 'ru',

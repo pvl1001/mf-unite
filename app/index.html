@@ -448,8 +448,8 @@
    <div class="wrapper">
       <div class="unite-address">
          <p class="unite-address__title">Проверьте возможность подключения в вашем городе</p>
-         <form id="formCheckAddress" class="unite-address__input">
-            <input type="text" name="address" placeholder="Ваш адрес">
+         <form name="address" class="unite-address__input">
+            <input onkeyup="validAddress('', event)" type="text" name="address" placeholder="Ваш адрес">
             <button type="submit" class="btn btn-fiolet">Проверить</button>
          </form>
          <p class="unite-address__offer">
@@ -462,7 +462,6 @@
          </div>
       </div>
    </div>
-
    <div class="unite" id="unite">
       <div class="wrapper">
          <div class="unite-row">
@@ -590,9 +589,7 @@
          </div>
       </div>
    </div>
-
 </section>
-
 
 <section class="amediateka">
    <div class="amediateka__header">

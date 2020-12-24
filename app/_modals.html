@@ -1,3 +1,4 @@
+<!--Подробнее-->
 <div class="modal fade performance" id="performance0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
@@ -32,7 +33,6 @@
       </div>
    </div>
 </div>
-
 <div class="modal fade performance" id="performance1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
@@ -66,7 +66,6 @@
       </div>
    </div>
 </div>
-
 <div class="modal fade performance" id="performance2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
@@ -101,7 +100,6 @@
       </div>
    </div>
 </div>
-
 <div class="modal fade performance" id="performance3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
@@ -135,6 +133,7 @@
    </div>
 </div>
 
+<!--Выбор города-->
 <div class="modal fade city-selection" id="citySelection" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -543,7 +542,6 @@
 </div>
 
 <!--тарифы-->
-
 <div class="modal fade tariff-modal tariff-two-web" id="tariffTwoWeb" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -655,7 +653,6 @@
       </div>
    </div>
 </div>
-
 <div class="modal fade tariff-modal" id="tariffconomic" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -795,7 +792,6 @@
       </div>
    </div>
 </div>
-
 <div class="modal fade tariff-modal" id="tariffHit" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -933,7 +929,6 @@
       </div>
    </div>
 </div>
-
 <div class="modal fade tariff-modal" id="tariffForTheir" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -1072,7 +1067,6 @@
       </div>
    </div>
 </div>
-
 <div class="modal fade tariff-modal" id="tariffAround" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -1190,7 +1184,7 @@
 
             <div class="price">
                <div>
-<!--                  <span class="old-price">1500 ₽</span>-->
+                  <!--                  <span class="old-price">1500 ₽</span>-->
                   <span class="new-price">1700</span><span>₽</span>
                   <span>в месяц</span></div>
             </div>
@@ -1202,8 +1196,7 @@
    </div>
 </div>
 
-<!--/тарифы-->
-
+<!--Заказать-->
 <div class="modal fade tariff-modal order-modal" id="order" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -1239,15 +1232,16 @@
          <button onclick="backForm('.order-opportunity', '.requisition')" class="back">Назад</button>
 
          <h2>Проверьте возможность подключения</h2>
-         <form>
+         <form name="address">
             <div class="order-modal__inputs">
                <div class="order-modal__input">
-                  <input onkeyup="valid(event)" type="text" class="test" name="address" placeholder="Ваш адрес">
-                  <label>Ура! Вы в зоне покрытия!</label>
+                  <input onkeyup="validAddressPopUp('',event)" type="text" name="address" placeholder="Ваш адрес">
+                  <label>Подключение по адресу возможно!</label>
                   <label>К сожалению, Вы вне зоны покрытия</label>
                </div>
                <p class="order-opportunity__offer">
-                  По вашему адресу: <b>г. Москва, ул. Дубининская 10 к2</b> доступно специальное предложение
+                  По вашему адресу: <b>адрес</b> доступно подключение беспроводного интернета
+                  Объединяй! Везде
                </p>
             </div>
             <button onclick="nextForm('.order-date' ,'.order-opportunity')" disabled id="btnFormNext" class="btn">
@@ -1269,18 +1263,10 @@
                   <input placeholder="Выберите дату" data-provide="datepicker" class="datepicker">
                   <select id="mf-select">
                      <option></option>
-                     <option>с 9:00 до 10:00</option>
-                     <option>с 10:00 до 11:00</option>
-                     <option>с 11:00 до 12:00</option>
-                     <option>с 12:00 до 13:00</option>
-                     <option>с 13:00 до 14:00</option>
-                     <option>с 14:00 до 15:00</option>
-                     <option>с 15:00 до 16:00</option>
-                     <option>с 16:00 до 17:00</option>
-                     <option>с 17:00 до 18:00</option>
-                     <option>с 18:00 до 19:00</option>
-                     <option>с 19:00 до 20:00</option>
-                     <option>с 20:00 до 21:00</option>
+                     <option>Утро (9:00-12:00)</option>
+                     <option>День (12:00-16:00)</option>
+                     <option>Вечер (16:00-20:00)</option>
+                     <option>Другое</option>
                   </select>
                </div>
 
