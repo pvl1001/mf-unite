@@ -56,21 +56,30 @@ function hbs() {
          ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
          batch: ['./app/components'],
          helpers: {
+
+            // сравнение каналов (выделение цветом)
             activeName(name, tariff) {
                let tariffArr = eval(`${'dataTariffs.' + tariff}`)
                for (let el of tariffArr) {
-                  for (let nameJson of el.groupData) {
-                     if (name === nameJson.name) {
-                        return true
-                     }
-                  }
+                  for (let nameJson of el.groupData)
+                     if (name === nameJson.name) return true
                }
             },
+
+            // сравнение каналов (число каналов группы)
             countChannel(index, tariff) {
                let tariffArr = eval(`${'dataTariffs.' + tariff}`)
                if (tariffArr[index])
                   return tariffArr[index].groupData.length
                else return 0
+            },
+
+            // общее количество каналов
+            totalChannel(tariff) {
+               let tariffArr = eval(`${'dataTariffs.' + tariff}`)
+               let count = 0
+               for (let el of tariffArr) count += el.groupData.length
+               return count
             }
          }
       }
@@ -177,7 +186,7 @@ function clean() { //удаление лишних html
 }
 
 let build = gulp.series(clean, gulp.parallel(js, css, images, fonts, data, hbs))
-let watch = gulp.parallel(build, watchFile, browserSync, hbs)
+let watch = gulp.parallel(build, watchFile, browserSync)
 
 exports.hbs = hbs
 exports.data = data
