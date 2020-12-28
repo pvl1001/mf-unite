@@ -389,9 +389,9 @@
          color: rgba(51, 51, 51, .5)
       }
 
-      &__group-toggle.collapsed {
+      &__group-toggle[aria-expanded=false] {
          .collapse-channel__group-wrapper:before {
-            transform: rotate(0deg);
+            transform: none;
          }
       }
 

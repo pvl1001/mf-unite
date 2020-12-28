@@ -5,6 +5,7 @@
    <meta name="viewport"
          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="shortcut icon" href="#" type="image/x-icon">
    <link rel="stylesheet" href="css/style.min.css">
    <link rel="stylesheet" href="fonts/fonts.css">
    <title>MF</title>
@@ -116,83 +117,47 @@
                      <div class="info-card__desc_icon">
                         <img src="./img/svg/tv.svg" alt="img">
                      </div>
-                     <a href="#collapseChannel" data-toggle="collapse">50 каналов</a>
+                     <a href="#collapseChannel"
+                        data-toggle="collapse"
+                        aria-controls="collapseChannel collapseChannel1 collapseChannel2"
+                        data-target=".multi-collapse">
+                        50 каналов
+                     </a>
                   </div>
-                  <div class="collapse collapse-channel" id="collapseChannel">
+                  <div class="collapse multi-collapse collapse-channel"
+                       aria-controls="collapseChannel"
+                       id="collapseChannel">
 
                      <ul class="collapse-channel__channels">
                         <li class="collapse-channel__channel-group">
-                           <!--                           <a href="#collapseChannelGroup"-->
-                           <!--                              data-toggle="collapse"-->
-                           <!--                              class="collapse-channel__group-toggle"-->
-                           <!--                           >-->
-                           <!--                              <div class="collapse-channel__group-wrapper">-->
-                           <!--                                 <span class="collapse-channel__group-name">HD</span>-->
-                           <!--                                 <span class="collapse-channel__group-count">7</span>-->
-                           <!--                              </div>-->
-                           <!--                           </a>-->
-                           <!--                           <ul class="collapse-channel__group-list collapse"-->
-                           <!--                               id="collapseChannelGroup">-->
-                           <!--                              <li class="collapse-channel__group-channelName">A1</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Animal Planet HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">BOLT</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Blue Hustler HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Bollywood HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Discovery Channel HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Erox HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Europa Plus TV</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Eurosport 1 HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Eurosport 2 HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">FOX HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Fan</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Fightbox HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Fox Life HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">History HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">KBS World</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Kаzаkh TV</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">M-1 Global</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">MEZZO LIVE HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">MTV HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">MTV Live HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Nat Geo Wild HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">National Geographic HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Paramount Comedy HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName collapse-channel__group-channelName_enabled">RT</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">RTG HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName collapse-channel__group-channelName_enabled">RTД HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName collapse-channel__group-channelName_enabled">SOCHI LIVE</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Science Channel HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Sony Channel HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Spike</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Star Cinema</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Star Family</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">TLC HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Travel and Adventure HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">В мире животных</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Дом Кино Премиум</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Еда Премиум</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">ЖАРА</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName collapse-channel__group-channelName_enabled">Известия</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">КИНО ТВ HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">КХЛ HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName collapse-channel__group-channelName_enabled">Капитан Фантастика</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Киносерия</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Киноужас</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">МАТЧ! HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">МИР PREMIUM</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Моторспорт ТВ</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Моя планета HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Мульт HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Наша Сибирь</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName collapse-channel__group-channelName_enabled">Россия HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Русская ночь</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Русский роман HD</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">СТС Kids</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName collapse-channel__group-channelName_enabled">Телеканал 360°</li>-->
-                           <!--                              <li class="collapse-channel__group-channelName">Хабар 24</li>-->
-                           <!--                           </ul>-->
+                           {{#each forTheir}}
+                              <a href="#collapseChannelGroup{{@index}}"
+                                 data-toggle="collapse"
+                                 class="collapse-channel__group-toggle"
+                                 aria-controls="collapseChannelGroup{{@index}} collapseChannelGroup1{{@index}} collapseChannelGroup2{{@index}}"
+                                 data-target=".multi-collapse-gr{{@index}}"
+                                 aria-expanded="false"
+                              >
+                                 <div class="collapse-channel__group-wrapper">
+                                    <span class="collapse-channel__group-name">{{group}}</span>
+                                    <span class="collapse-channel__group-count">
+                                       {{countChannel @index "economic"}}
+                                    </span>
+                                 </div>
+                              </a>
+                              <ul class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
+                                  id="collapseChannelGroup{{@index}}">
+                                 {{#each groupData}}
+                                    <li class="collapse-channel__group-channelName {{#if
+                                       (activeName name "economic")}}text-green{{/if}}">
+                                       {{name}}
+                                    </li>
+                                 {{/each}}
+                              </ul>
+                           {{/each}}
                         </li>
                      </ul>
+
                   </div>
                </div>
                <div class="card__info_block info-card">
@@ -251,7 +216,48 @@
                      <div class="info-card__desc_icon">
                         <img src="./img/svg/tv.svg" alt="img">
                      </div>
-                     <a href="#">160 каналов</a>
+
+                     <a href="#collapseChannel1"
+                        data-toggle="collapse"
+                        aria-controls="collapseChannel collapseChannel1 collapseChannel2"
+                        data-target=".multi-collapse">
+                        160 каналов
+                     </a>
+
+                  </div>
+                  <div data-toggle="collapse"
+                       aria-controls="collapseChannel1"
+                       class="collapse multi-collapse collapse-channel"
+                       id="collapseChannel1"
+                  >
+                     <ul class="collapse-channel__channels">
+                        <li class="collapse-channel__channel-group">
+                           {{#each forTheir}}
+                              <a href="#collapseChannelGroup1{{@index}}"
+                                 data-toggle="collapse"
+                                 class="collapse-channel__group-toggle"
+                                 aria-controls="collapseChannelGroup{{@index}} collapseChannelGroup1{{@index}} collapseChannelGroup2{{@index}}"
+                                 data-target=".multi-collapse-gr{{@index}}"
+                                 aria-expanded="false"
+                              >
+                                 <div class="collapse-channel__group-wrapper">
+                                    <span class="collapse-channel__group-name">{{group}}</span>
+                                    <span class="collapse-channel__group-count">
+                                       {{countChannel @index "hit"}}
+                                    </span>
+                                 </div>
+                              </a>
+                              <ul class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
+                                  id="collapseChannelGroup1{{@index}}">
+                                 {{#each groupData}}
+                                    <li class="collapse-channel__group-channelName {{#if
+                                       (activeName name "hit")}}text-green{{/if}}">{{name}}</li>
+                                 {{/each}}
+                              </ul>
+                           {{/each}}
+                        </li>
+                     </ul>
+
                   </div>
                </div>
                <div class="card__info_block info-card">
@@ -324,7 +330,43 @@
                      <div class="info-card__desc_icon">
                         <img src="./img/svg/tv.svg" alt="img">
                      </div>
-                     <a href="#">236 каналов</a>
+                     <a href="#collapseChannel2"
+                        data-toggle="collapse"
+                        aria-controls="collapseChannel collapseChannel1 collapseChannel2"
+                        data-target=".multi-collapse">
+                        236 каналов
+                     </a>
+                  </div>
+                  <div href="#collapseChannel4"
+                       data-toggle="collapse"
+                       aria-controls="collapseChannel2"
+                       class="collapse multi-collapse collapse-channel"
+                       id="collapseChannel2">
+
+                     <ul class="collapse-channel__channels">
+                        <li class="collapse-channel__channel-group">
+                           {{#each forTheir}}
+                              <a href="#collapseChannelGroup2{{@index}}"
+                                 data-toggle="collapse"
+                                 class="collapse-channel__group-toggle"
+                                 aria-controls="collapseChannelGroup{{@index}} collapseChannelGroup1{{@index}} collapseChannelGroup2{{@index}}"
+                                 data-target=".multi-collapse-gr{{@index}}"
+                                 aria-expanded="false"
+                              >
+                                 <div class="collapse-channel__group-wrapper">
+                                    <span class="collapse-channel__group-name">{{group}}</span>
+                                    <span class="collapse-channel__group-count">{{groupData.length}}</span>
+                                 </div>
+                              </a>
+                              <ul class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
+                                  id="collapseChannelGroup2{{@index}}">
+                                 {{#each groupData}}
+                                    <li class="collapse-channel__group-channelName text-green">{{name}}</li>
+                                 {{/each}}
+                              </ul>
+                           {{/each}}
+                        </li>
+                     </ul>
 
                   </div>
                </div>
@@ -401,7 +443,15 @@
                      <div class="info-card__desc_icon">
                         <img src="./img/svg/tv.svg" alt="img">
                      </div>
-                     <a href="#">61 канал</a>
+                     <a href="#" data-toggle="collapse">61 канал</a>
+                  </div>
+                  <div class="collapse collapse-channel" id="">
+
+                     <ul class="collapse-channel__channels">
+
+                        <!--                        <li class="collapse-channel__channel-group">-->
+                        <!--                        </li>-->
+                     </ul>
                   </div>
                </div>
                <div class="card__info_block info-card">
@@ -660,18 +710,6 @@
       </div>
    </div>
 </section>
-
-<!--<section class="check-adress">-->
-<!--   <div class="wrapper">-->
-<!--      <h2>Проверьте возможность подключения</h2>-->
-<!--      <input placeholder="Ваш адрес" type="text">-->
-<!--      <button class="btn" disabled type="submit">Проверить</button>-->
-<!--   </div>-->
-<!--   <div class="check-adress__success success-check">-->
-<!--      <img src="img/svg/success.svg" alt="img">-->
-<!--      <p>Ура! Вы в зоне покрытия!</p>-->
-<!--   </div>-->
-<!--</section>-->
 
 <section class="equipment">
    <div class="wrapper">
@@ -1212,7 +1250,6 @@
             </div>
          </div>
 
-
       </div>
    </div>
 </section>
@@ -1239,9 +1276,8 @@
    </div>
 </footer>
 
-@@include('_modals.html')
+{{> modals}}
 
 <script src="js/script.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
 </body>
 </html>

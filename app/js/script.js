@@ -8,28 +8,7 @@
 @@include( './plugins/jquery.autocomplete.js' )
 @@include( './plugins_config.js' )
 @@include( './service.js' )
-@@include( './tv_channels.js' )
 
-const dataPrice = [
-   {
-      name: 'Два интернета',
-      title: 'Домашний интернет',
-      speed: '50 Мбит/c',
-      min: '600',
-      oldPrice: 700,
-      newPrice: 350,
-   },
-   {
-      name: 'Эконом',
-      title: 'Домашний интернет и ТВ',
-      channels: 50,
-      speed: '50 Мбит/c',
-      min: '600',
-      oldPrice: 700,
-      newPrice: 350,
-   },
-
-]
 
 // click "подключить"
 function toPlug() {
