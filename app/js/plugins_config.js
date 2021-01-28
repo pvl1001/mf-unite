@@ -63,7 +63,6 @@ $( function () {
    )
 
    $( '#orderForm' ).validate( {
-      // onfocusout: false,
       rules: {
          phone: {
             required: true,
@@ -71,7 +70,7 @@ $( function () {
          },
          name: 'required',
          address: {
-            required: true,
+            // required: true,
             select: true
          }
       },
@@ -84,7 +83,7 @@ $( function () {
             required: 'Заполните поле!'
          },
          address: {
-            required: 'Выберите адрес дома из выпадающего списка!',
+            // required: 'Выберите адрес дома из выпадающего списка!',
             select: 'Выберите адрес дома из выпадающего списка!'
          },
       },

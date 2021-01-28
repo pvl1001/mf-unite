@@ -116,17 +116,23 @@ let setAddress = {}
 
 $( 'input[name=address]' ).autocomplete( {
    width: 'auto',
-   minChars: 3,
+   minChars: 1,
    deferRequestBy: 200,
    serviceUrl: 'https://api.wifire.ru/api/address/check_address_dadata',
    type: 'POST',
 
    onSelect: function (suggestion) {
+
+      setTimeout(()=> { // проверка адреса подключения
+         $('#orderForm').validate().element('#addressOrder')
+      },350)
+
       setAddress = {
          house_guid: suggestion.data.aoguid,
          address: suggestion.data.address
       }
-      if ($( '#order' ).hasClass( 'show' )) getAddress()
+      // при выборе даты и времени
+      if ($( '.order-opportunity' ).hasClass( 'd-flex' )) getAddress()
    },
 } )
 
