@@ -67,7 +67,8 @@ $( function () {
             required: true
          },
          address: {
-            required: true
+            required: true,
+            minlength: 3,
          }
       },
       messages: {
@@ -79,7 +80,8 @@ $( function () {
             required: 'Заполните поле!'
          },
          address: {
-            required: 'Выберите адрес дома из выпадающего списка!'
+            required: 'Выберите адрес дома из выпадающего списка!',
+            minlength: 'Выберите адрес дома из выпадающего списка!'
          },
       },
       submitHandler: function (form) {
