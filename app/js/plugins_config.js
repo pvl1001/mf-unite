@@ -65,6 +65,9 @@ $( function () {
          },
          name: {
             required: true
+         },
+         address: {
+            required: true
          }
       },
       messages: {
@@ -74,7 +77,10 @@ $( function () {
          },
          name: {
             required: 'Заполните поле!'
-         }
+         },
+         address: {
+            required: 'Выберите адрес дома из выпадающего списка!'
+         },
       },
       submitHandler: function (form) {
          nextForm( '.order-thx', '.requisition' )

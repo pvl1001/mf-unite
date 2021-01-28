@@ -82,6 +82,7 @@ function validAddressPopUp(data, event) {
 // Проверить возможность подключения
 function validAddress(data, event) {
    let inputText = $( 'input' ).val()
+   console.log(data.result)
    if (data.result === 1) { // подключение возможно
       $( '.unite-address__offer' ).hide()
       $( '#unite' ).hide()

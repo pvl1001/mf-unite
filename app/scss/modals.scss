@@ -620,6 +620,15 @@
       }
    }
 
+   .order-modal__input_address {
+      max-width: 480px;
+      margin-bottom: 40px;
+
+      input {
+         width: 100%;
+      }
+   }
+
    &__select-date {
       margin-bottom: 14px;
 
