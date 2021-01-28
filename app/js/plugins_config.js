@@ -57,18 +57,22 @@ $( function () {
    $( 'input[name="phone"]' ).mask( '+7 (000) 000 - 00 - 00', {placeholder: "+7 (   )     -    -   "} );
 
    // валидация формы
+   $.validator.addMethod( "select", function (value, element) { // валидация address
+         return setAddress.address === value
+      }
+   )
+
    $( '#orderForm' ).validate( {
+      // onfocusout: false,
       rules: {
          phone: {
             required: true,
             minlength: 22,
          },
-         name: {
-            required: true
-         },
+         name: 'required',
          address: {
             required: true,
-            minlength: 3,
+            select: true
          }
       },
       messages: {
@@ -81,7 +85,7 @@ $( function () {
          },
          address: {
             required: 'Выберите адрес дома из выпадающего списка!',
-            minlength: 'Выберите адрес дома из выпадающего списка!'
+            select: 'Выберите адрес дома из выпадающего списка!'
          },
       },
       submitHandler: function (form) {
