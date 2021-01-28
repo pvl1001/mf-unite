@@ -125,7 +125,7 @@ $( 'input[name=address]' ).autocomplete( {
 
       setTimeout(()=> { // проверка адреса подключения
          $('#orderForm').validate().element('#addressOrder')
-      },350)
+      },0)
 
       setAddress = {
          house_guid: suggestion.data.aoguid,
