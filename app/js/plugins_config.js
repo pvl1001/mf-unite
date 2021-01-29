@@ -8,30 +8,27 @@ $( function () {
       dots: true,
       responsive: [
          {
-            breakpoint: 1500,
-            settings: {
-               arrows: false
-            }
-         }, {
             breakpoint: 1300,
             settings: {
                slidesToShow: 3,
+            }
+         },{
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 3,
                arrows: false,
-               dots: true,
             }
          }, {
             breakpoint: 950,
             settings: {
                slidesToShow: 2,
                arrows: false,
-               dots: true
             }
          }, {
             breakpoint: 650,
             settings: {
                slidesToShow: 1,
                arrows: false,
-               dots: true
             }
          }
       ]
@@ -45,7 +42,7 @@ $( function () {
       dots: true,
       responsive: [
          {
-            breakpoint: 1500,
+            breakpoint: 1024,
             settings: {
                arrows: false
             }

@@ -224,7 +224,8 @@
    overflow: hidden;
 
    .wrapper {
-      max-width: 1440px;
+      max-width: 1540px;
+      padding: 0 80px;
    }
 
    .slider {
@@ -445,7 +446,7 @@
       }
    }
 
-   @media (max-width: 1024px) {
+   @media (max-width: 1023px) {
       .slider .slick-list {
          overflow: visible;
       }
@@ -1156,8 +1157,8 @@
    background-color: #EDEDED;
 
    .wrapper {
-      max-width: 1360px;
-      padding: 80px 0 63px;
+      max-width: 1520px;
+      padding: 80px 80px 63px;
    }
 
    .slick-arrow {
