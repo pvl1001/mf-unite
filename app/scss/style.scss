@@ -260,7 +260,7 @@
             }
 
             span {
-               color: var(--text-blue);
+               color: var(--mf-blue);
                font-size: 15px;
                cursor: pointer;
 
@@ -380,7 +380,7 @@
             border-radius: 2px;
 
             &.mark-blue {
-               background-color: var(--text-blue);
+               background-color: var(--mf-blue);
             }
 
             &.mark-red {
@@ -1193,7 +1193,7 @@
          }
 
          p {
-            max-width: 410px;
+            max-width: 490px;
             font-size: 15px;
             line-height: 20px;
             margin-bottom: 42px;
@@ -1274,6 +1274,14 @@
                   &.chromecast {
                      background: #fff url('../img/svg/chromecast.svg') center / 24px no-repeat;
                   }
+
+                  &.settings {
+                     background: #fff url('../img/svg/Settings_24.svg') center / 24px no-repeat;
+                  }
+
+                  &.control {
+                     background: #fff url('../img/svg/Block_24.svg') center / 17px no-repeat;
+                  }
                }
 
                &_text {
@@ -1326,6 +1334,12 @@
             max-height: 100%;
             max-width: 100%;
          }
+      }
+   }
+
+   @media (min-width: 1024px) and (max-width: 1300px) {
+      .slide-equipment__text {
+         padding-left: 30px;
       }
    }
 
@@ -1714,6 +1728,121 @@
    }
 }
 
+.megadisk {
+   padding-top: 80px;
+   padding-bottom: 80px;
+
+   .megadisk__container {
+      max-width: 1360px;
+      height: 440px;
+      padding-left: 80px;
+      background-color: #EDEDED;
+      display: flex;
+      align-items: center;
+   }
+
+   .megadisk__block {
+      width: 50%;
+   }
+
+   .megadisk__img img {
+      width: 81%;
+      margin-top: 17%;
+      margin-left: -10px;
+   }
+
+
+   .megadisk__text {
+      padding-left: 28px;
+      padding-bottom: 40px;
+   }
+
+   .megadisk__title {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 25px;
+
+      img {
+         margin-right: 10px;
+      }
+   }
+
+   .megadisk__free {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+      margin-bottom: 25px;
+   }
+
+   .megadisk__desc {
+      max-width: 470px;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 500;
+      margin-bottom: 40px;
+   }
+
+   a:hover {
+      color: var(--mf-blue);
+   }
+
+   @media (max-width: 1100px) {
+      padding: 0;
+
+      .megadisk__container {
+         padding-left: 50px;
+      }
+
+      .megadisk__text {
+         padding-left: 8px;
+      }
+
+      .megadisk__img img {
+         width: 77%;
+         margin-top: 12%;
+         margin-left: 0;
+      }
+
+
+   }
+
+   @media (max-width: 1023px) {
+      .megadisk__container {
+         height: 480px;
+      }
+
+      .megadisk__img img {
+         width: 100%;
+         margin-top: 18%;
+         margin-left: -20px;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .megadisk__container {
+         padding: 80px 32px 0;
+         flex-wrap: wrap;
+         height: auto;
+      }
+
+      .megadisk__block {
+         width: 100%;
+      }
+
+      .megadisk__img {
+         text-align: center;
+         order: 1;
+
+         img {
+            margin: 0;
+         }
+      }
+   }
+
+}
+
 .about-tariffs {
    .wrapper {
       padding-top: 60px;
@@ -1774,7 +1903,7 @@
          }
 
          a:hover {
-            color: var(--text-blue);
+            color: var(--mf-blue);
          }
       }
    }

@@ -1,7 +1,7 @@
 :root {
    --mf-green: #00b956;
    --mf-fiolet: #731982;
-   --text-blue: #34AAF2;
+   --mf-blue: #34AAF2;
 }
 
 .text-green {
@@ -13,5 +13,5 @@
 }
 
 .text-blue {
-   color: var(--text-blue)
+   color: var(--mf-blue)
 }

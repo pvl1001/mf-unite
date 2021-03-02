@@ -122,6 +122,7 @@ $( 'input[name=address]' ).autocomplete( {
    type: 'POST',
 
    onSelect: function (suggestion) {
+      console.log(suggestion)
 
       setTimeout(()=> { // проверка адреса подключения
          $('#orderForm').validate().element('#addressOrder')
