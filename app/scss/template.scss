@@ -8,8 +8,11 @@ body {
    //}
 }
 
-a, a:visited {
+a,
+a:visited,
+.link {
    color: var(--mf-blue);
+   cursor: pointer;
 
    &:hover {
       text-decoration: underline;
