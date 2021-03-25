@@ -387,6 +387,16 @@
                background-color: #F62434;
             }
          }
+
+         .price__icon {
+            flex: 0 0 20px;
+            height: 20px;
+            display: inline-block;
+            background: url('../img/svg/info.svg') center / 16px no-repeat;
+            align-self: center;
+            margin-left: 5px;
+            cursor: pointer;
+         }
       }
    }
 
@@ -1869,7 +1879,7 @@
       }
 
       &__header {
-         padding: 15.5px 35px 15.5px 0;
+         padding: 15.5px 40px 15.5px 0;
          cursor: pointer;
          position: relative;
 

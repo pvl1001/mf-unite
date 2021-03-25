@@ -10,14 +10,20 @@
 @@include( './service.js' )
 
 
-// click "подключить"
-function toPlug() {
+// Скролл по якорю
+function toPlug(scrollTo) {
    $( 'html,body' ).animate( {
       scrollTop:
-         $( '.tariffs' ).offset().top + "px"
+         $( scrollTo ).offset().top + "px"
    }, {
-      duration: 300
+      duration: 500
    } )
+      .promise().done(() => {
+      if (scrollTo === '.about-tariffs') {
+         $( '#collapse1' ).collapse('show')
+      }
+   })
+
 }
 
 // popUp вперед
@@ -82,7 +88,7 @@ function validAddressPopUp(data, event) {
 // Проверить возможность подключения
 function validAddress(data, event) {
    let inputText = $( 'input' ).val()
-   console.log(data.result)
+   // console.log( data.result )
    if (data.result === 1) { // подключение возможно
       $( '.unite-address__offer' ).hide()
       $( '#unite' ).hide()
@@ -122,11 +128,11 @@ $( 'input[name=address]' ).autocomplete( {
    type: 'POST',
 
    onSelect: function (suggestion) {
-      console.log(suggestion)
+      // console.log( suggestion )
 
-      setTimeout(()=> { // проверка адреса подключения
-         $('#orderForm').validate().element('#addressOrder')
-      },0)
+      setTimeout( () => { // проверка адреса подключения
+         $( '#orderForm' ).validate().element( '#addressOrder' )
+      }, 0 )
 
       setAddress = {
          house_guid: suggestion.data.aoguid,
@@ -149,6 +155,16 @@ function checkAddress(data) {
       validAddressPopUp( data ) :
       validAddress( data )
 }
+
+// let test = {
+//    test: get() {
+//       return 1
+//    }
+// }
+
+// console.log(function () {
+//    return !true ? 'test' : 'test2'
+// })
 
 
 

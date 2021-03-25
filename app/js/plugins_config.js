@@ -12,7 +12,7 @@ $( function () {
             settings: {
                slidesToShow: 3,
             }
-         },{
+         }, {
             breakpoint: 1024,
             settings: {
                slidesToShow: 3,
@@ -54,7 +54,7 @@ $( function () {
    $( 'input[name="phone"]' ).mask( '+7 (000) 000 - 00 - 00', {placeholder: "+7 (   )     -    -   "} );
 
    // валидация формы
-   $.validator.addMethod( "select", function (value, element) { // валидация address
+   $.validator.addMethod( "select", function (value) { // валидация address
          return setAddress.address === value
       }
    )
@@ -84,7 +84,7 @@ $( function () {
             select: 'Выберите адрес дома из выпадающего списка!'
          },
       },
-      submitHandler: function (form) {
+      submitHandler: function () {
          nextForm( '.order-thx', '.requisition' )
          // отправить форму
       }
@@ -109,5 +109,31 @@ $( function () {
       multiShowCount: false,
       width: '230px'
    } )
+
+   // popper tippy
+
+   const maxWidth = () => window.innerWidth > 767 ? 'none' : 250
+   const placement = () => window.innerWidth > 767 ? 'right' : 'auto'
+
+   tippy( '.price__icon_all', {
+      content: '<span class="link" onclick="toPlug(`.about-tariffs`)">Скидка</span> на абонентскую плату при подключении с 16.12.2019 г.',
+      interactive: true,
+      placement: placement(),
+      maxWidth: maxWidth(),
+      allowHTML: true,
+      theme: 'light',
+      hideOnClick: false,
+      // trigger: 'click',
+   } )
+   tippy( '.price__icon_two-web', {
+      content: '<span class="link" onclick="toPlug(`.about-tariffs`)">Скидка</span> на абонентскую плату при подключении с 29.04.2020 г.',
+      interactive: true,
+      placement: placement(),
+      maxWidth: maxWidth(),
+      allowHTML: true,
+      theme: 'light',
+      hideOnClick: false,
+   } )
+
 
 } )

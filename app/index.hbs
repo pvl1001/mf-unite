@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport"
@@ -8,6 +8,8 @@
    <link rel="shortcut icon" href="#" type="image/x-icon">
    <link rel="stylesheet" href="css/style.min.css">
    <link rel="stylesheet" href="fonts/fonts.css">
+   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css"
+   />
    <title>MF</title>
 </head>
 <body>
@@ -32,7 +34,7 @@
          <div class="head-banner__col1">
             <h1>Тарифы «Объединяй!»</h1>
             <p>Подключите мобильную связь, домашний интернет, цифровое ТВ и оплачивайте один счет</p>
-            <a onclick="toPlug()" class="btn btn-fiolet">Подключить</a>
+            <a onclick="toPlug('.tariffs')" class="btn btn-fiolet">Подключить</a>
          </div>
          <div class="head-banner__img-wrapp">
             <picture>
@@ -96,6 +98,7 @@
                   <span class="old-price">700 ₽</span>
                   <span class="new-price">350</span> <span>₽</span>
                   <span>в месяц</span>
+                  <span class="price__icon price__icon_two-web"></span>
                </div>
                <div class="card__price_btn">
                   <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
@@ -198,6 +201,7 @@
                   <span class="old-price">600 ₽</span>
                   <span class="new-price">300</span><span>₽</span>
                   <span>в месяц</span>
+                  <span class="price__icon price__icon_all"></span>
                </div>
                <div class="card__price_btn">
                   <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
@@ -309,6 +313,7 @@
                   <span class="old-price">800 ₽</span>
                   <span class="new-price">400</span> <span>₽</span>
                   <span>в месяц</span>
+                  <span class="price__icon price__icon_all"></span>
                </div>
                <div class="card__price_btn">
                   <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
@@ -425,6 +430,7 @@
                   <span class="old-price">1500 ₽</span>
                   <span class="new-price">750</span> <span>₽</span>
                   <span>в месяц</span>
+                  <span class="price__icon price__icon_all"></span>
                </div>
                <div class="card__price_btn">
                   <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
@@ -492,6 +498,7 @@
                   <!--                  <span class="old-price">700 ₽</span>-->
                   <span class="new-price">1600</span><span>₽</span>
                   <span>в месяц</span>
+                  <span class="price__icon price__icon_all"></span>
                </div>
                <div class="card__price_btn">
                   <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
@@ -1324,6 +1331,8 @@
 
 {{> modals}}
 
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 <script src="js/script.min.js"></script>
 </body>
 </html>

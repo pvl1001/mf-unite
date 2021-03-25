@@ -269,7 +269,7 @@ input[data-provide="datepicker"] {
    justify-content: center;
    white-space: nowrap;
 
-   span {
+   > span {
       font-size: 12px;
       line-height: 22px;
    }
@@ -448,5 +448,18 @@ form {
          font-weight: normal;
          color: #3399FF;
       }
+   }
+}
+
+.tippy-box {
+   border-radius: 0;
+   font-size: 15px;
+
+   .tippy-content {
+      padding: 10px 16px;
+   }
+
+   @media (max-width: 767px) {
+      white-space: normal;
    }
 }
