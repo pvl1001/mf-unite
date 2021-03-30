@@ -112,7 +112,7 @@ $( function () {
 
    // popper tippy
 
-   const maxWidth = () => window.innerWidth >= 830 ? '50vh' : 275
+   const maxWidth = () => window.innerWidth >= 830 ? 'none' : 275
    const placement = () => window.innerWidth >= 830 ? 'right' : 'top'
 
    tippy( '.price__icon_all', {
