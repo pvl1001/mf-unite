@@ -112,8 +112,8 @@ $( function () {
 
    // popper tippy
 
-   const maxWidth = () => window.innerWidth > 767 ? 'none' : 250
-   const placement = () => window.innerWidth > 767 ? 'right' : 'auto'
+   const maxWidth = () => window.innerWidth >= 830 ? '50vh' : 275
+   const placement = () => window.innerWidth >= 830 ? 'right' : 'top'
 
    tippy( '.price__icon_all', {
       content: '<span class="link" onclick="toPlug(`.about-tariffs`)">Скидка</span> на абонентскую плату при подключении с 16.12.2019 г.',

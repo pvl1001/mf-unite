@@ -94,7 +94,7 @@ label {
 }
 
 input {
-   line-height: 48px;
+   height: 48px;
    padding: 0 24px;
    border: 1px solid #DDDDDD;
 }
@@ -454,12 +454,13 @@ form {
 .tippy-box {
    border-radius: 0;
    font-size: 15px;
+   width: 100vh;
 
    .tippy-content {
       padding: 10px 16px;
    }
 
-   @media (max-width: 767px) {
+   @media (max-width: 830px) {
       white-space: normal;
    }
 }
