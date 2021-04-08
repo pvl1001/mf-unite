@@ -1,0 +1,146 @@
+<section class="unite unite-check-address">
+   <div class="wrapper">
+      <div class="unite-address">
+         <p class="unite-address__title">Проверьте возможность подключения в вашем городе</p>
+         <form name="address" class="unite-address__input">
+            <input onkeyup="validAddress('', event)" type="text" name="address" placeholder="Ваш адрес">
+            <button type="submit" class="btn btn-fiolet">Проверить</button>
+         </form>
+         <p class="unite-address__offer">
+            К сожалению, мы пока не можем подключить ваш дом к домашнему интернету. <br>
+            Но по адресу <b>адрес</b> доступно специальное предложение на беспроводной интернет:
+         </p>
+         <div class="success-check">
+            <img src="img/svg/success.svg" alt="img">
+            <p>Подключение по адресу <b>адрес</b> возможно!</p>
+         </div>
+      </div>
+   </div>
+   <div class="unite" id="unite">
+      <div class="wrapper">
+         <div class="unite-row">
+            <div class="unite__to-plug">
+               <h2>Подключи беспроводной интернет со скидкой 40%</h2>
+               <p>
+                  Пользуйтесь самым быстрым интернетом дома, даже когда недоступен проводной интернет. Берите роутер с
+                  собой и пользуйтесь Wi-Fi дома, на даче или у друзей.
+               </p>
+               <div class="to-plug-items">
+
+                  <div class="to-plug-items__item item-to-plug">
+                     <div class="item-to-plug__icon item-to-plug__icon_wi-fi"></div>
+                     <div class="item-to-plug__text">
+                        LTE Wi-Fi роутер <br> в комплекте (1 Гбит/с)
+                     </div>
+                  </div>
+
+                  <div class="to-plug-items__item item-to-plug">
+                     <div class="item-to-plug__icon item-to-plug__icon_hertz"></div>
+                     <div class="item-to-plug__text">
+                        Уверенный сигнал <br> и большая зона покрытия
+                     </div>
+                  </div>
+
+                  <div class="to-plug-items__item item-to-plug">
+                     <div class="item-to-plug__icon item-to-plug__icon_speed"></div>
+                     <div class="item-to-plug__text">
+                        Скорость до 150 Мбит/с,<br> Wi-Fi 2,4 GHz и 5 GHz
+                     </div>
+                  </div>
+
+                  <div class="to-plug-items__item item-to-plug">
+                     <div class="item-to-plug__icon item-to-plug__icon_socket"></div>
+                     <div class="item-to-plug__text">
+                        Простое подключение <br> до 50 пользователей
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="unite__unite">
+
+               <h2>Объединяй! Везде</h2>
+               <div class="unite-info-row">
+                  <div class="unite-info">
+                     <p class="unite-info__title">Домашний интернет и ТВ</p>
+                     <div class="unite-info__desc">
+                        <div class="unite-info__desc_icon">
+                           <img src="./img/svg/wi-fi.svg" alt="img">
+                        </div>
+                        150 Мбит/с
+                     </div>
+                     <div class="unite-info__desc desk-channels">
+                        <div class="unite-info__desc_icon">
+                           <img src="./img/svg/tv.svg" alt="img">
+                        </div>
+                        <a href="#">61 каналов</a>
+                     </div>
+                  </div>
+                  <div class="unite-info">
+                     <div class="unite-info">
+                        <p class="unite-info__title">Мобильная связь</p>
+                        <div class="unite-info__desc desk-mobile">
+                           <div class="unite-info__desc_icon">
+                              <img src="./img/svg/mobile.svg" alt="img">
+                           </div>
+                           <div>
+                              <p>1100 минут</p>
+                              <p>Безлимит на МегаФон России</p>
+                           </div>
+                        </div>
+                        <div class="unite-info__desc">
+                           <div class="unite-info__desc_icon">
+                              <img src="./img/svg/4g.svg" alt="img">
+                           </div>
+                           Безлимитный интернет
+                        </div>
+                        <div class="unite-info__desc">
+                           <div class="unite-info__desc_icon">
+                              <img src="./img/svg/bonus.svg" alt="img">
+                           </div>
+                           Скидка 40% на SIM-карты
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="unite-checkbox">
+
+                  <div class="unite-checkbox__hire">
+                     <label>
+                        <div class="switch">
+                           <input checked onchange="totalPrice('#unite', 0)" type="checkbox">
+                           <span class="round"></span>
+                        </div>
+                        <div class="switch-text">
+                           <p>Аренда Wi-Fi роутера</p>
+                           <span class="item-option__num">100</span> <span>₽ в месяц</span>
+                        </div>
+                     </label>
+                  </div>
+
+                  <!--               <div class="unite-checkbox__hire">-->
+                  <!--                  <label>-->
+                  <!--                     <div class="switch">-->
+                  <!--                        <input type="checkbox">-->
+                  <!--                        <span class="round"></span>-->
+                  <!--                     </div>-->
+                  <!--                     <div class="switch-text">-->
+                  <!--                        <p>Покупка Wi-Fi роутера</p>-->
+                  <!--                        <span>7050 ₽</span>-->
+                  <!--                     </div>-->
+                  <!--                  </label>-->
+                  <!--               </div>-->
+
+               </div>
+               <div class="unite-order">
+                  <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
+                  <div class="price">
+                     <span class="old-price">1600 ₽</span>
+                     <span class="new-price">1060</span> <span>₽</span>
+                     <span>в месяц</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
