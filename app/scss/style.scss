@@ -785,7 +785,7 @@
 
 .unite.unite-check-address {
    display: block;
-   padding: 40px 0 54px;
+   //padding: 40px 0 54px;
 
    .success-check {
       display: none;
@@ -806,6 +806,35 @@
    background-color: var(--mf-green);
    padding: 40px 0 0;
 
+   .unite {
+      padding-bottom: 63px;
+      background: transparent linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0% 0% no-repeat padding-box;
+   }
+
+   &__links {
+      display: inline-flex;
+      flex-direction: column;
+      font-size: 12px;
+      padding-left: 58px;
+      margin-bottom: 37px;
+
+      a {
+         line-height: 16px;
+         margin-bottom: 5px;
+
+         &:hover {
+            text-decoration: none;
+         }
+      }
+
+      span {
+         text-decoration: underline;
+         color: var(--mf-blue);
+         cursor: pointer;
+         line-height: 20px;
+      }
+   }
+
    .unite-address {
       text-align: center;
       color: #fff;
@@ -821,6 +850,7 @@
       &__input {
          display: flex;
          justify-content: center;
+         padding-bottom: 54px;
 
          input {
             width: 60%;
@@ -834,7 +864,8 @@
       }
 
       &__offer {
-         padding-top: 40px;
+         margin-top: -14px;
+         padding-bottom: 40px;
          display: none;
          font-weight: 400;
       }
@@ -847,23 +878,30 @@
       margin-bottom: 40px;
 
       > div {
-         width: 50%;
+         width: 49%;
+
+         &:first-child {
+            margin-right: 25px;
+         }
 
          h2 {
-            padding-bottom: 22px;
+            padding-bottom: 24px;
          }
       }
    }
 
    &__to-plug {
       color: #fff;
-      padding: 50px 100px 0 0;
+      padding: 50px 0 0 0;
+
+      h2 {
+         max-width: 600px;
+      }
 
       p {
          margin-bottom: 39px;
          font-size: 15px;
          line-height: 24px;
-         padding-right: 50px;
       }
 
       .to-plug-items {
@@ -906,7 +944,7 @@
    }
 
    &__unite {
-      padding: 50px 50px 60px;
+      padding: 46px 50px 60px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 1px 4px #0000004D;
@@ -973,7 +1011,7 @@
 
       .unite-checkbox {
          display: flex;
-         margin-bottom: 27px;
+         margin-bottom: 5px;
 
          &__hire {
             display: flex;
@@ -981,6 +1019,7 @@
 
             .switch {
                margin-right: 18px;
+               margin-top: 3px;
             }
 
             .switch-text {
@@ -1012,6 +1051,10 @@
 
    @media (min-width: 1024px) and (max-width: 1300px) {
 
+      &__links {
+         padding-left: 63px;
+      }
+
       &__to-plug {
          p {
             padding-right: 0;
@@ -1038,8 +1081,7 @@
 
       .unite-checkbox {
          flex-wrap: wrap;
-         padding-left: 15px;
-         margin-bottom: 44px;
+         padding-left: 5px;
 
          .unite-checkbox__hire {
             width: 100%;
@@ -1068,7 +1110,7 @@
    }
 
    @media (min-width: 768px) and (max-width: 1023px) {
-      padding: 0;
+      //padding: 0;
 
       .unite-address {
 
