@@ -35,6 +35,10 @@ button.btn {
    &:hover {
       background-color: #00EE6F;
    }
+
+   &:focus {
+      box-shadow: none;
+   }
 }
 
 .btn.btn-fiolet {
@@ -454,13 +458,26 @@ form {
 .tippy-box {
    border-radius: 0;
    font-size: 15px;
+   font-weight: 400;
    //width: 100vh;
 
    .tippy-content {
       padding: 10px 16px;
    }
 
-   @media (max-width: 830px) {
+   @media (max-width: 1150px) {
       white-space: normal;
    }
+}
+
+.price__icon {
+   flex: 0 0 20px;
+   width: 20px;
+   height: 20px;
+   display: inline-block;
+   background: url('../img/svg/info.svg') center / 16px no-repeat;
+   align-self: center;
+   margin-left: 5px;
+   cursor: pointer;
+   font-weight: 400;
 }

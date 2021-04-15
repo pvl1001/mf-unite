@@ -111,7 +111,6 @@ $( function () {
    } )
 
    // popper tippy
-
    const maxWidth = () => window.innerWidth >= 830 ? 'none' : 275
    const placement = () => window.innerWidth >= 830 ? 'right' : 'top'
 
@@ -134,6 +133,5 @@ $( function () {
       theme: 'light',
       hideOnClick: false,
    } )
-
 
 } )

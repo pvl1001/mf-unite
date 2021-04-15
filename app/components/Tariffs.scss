@@ -129,6 +129,38 @@
                   }
                }
 
+               &_icon.wi-fi:before {
+                  content: url("../img/svg/wi-fi.svg");
+                  top: -2px;
+               }
+               &_icon.mobile:before {
+                  content: url("../img/svg/mobile.svg");
+                  left: 5px;
+               }
+               &_icon.web-4g:before {
+                  content: url("../img/svg/4g.svg");
+                  top: -3px;
+                  left: 1px;
+               }
+               &_icon.bonus:before {
+                  content: url("../img/svg/bonus.svg");
+                  top: -7px;
+                  left: 2px;
+               }
+               &_icon.tv:before {
+                  content: url("../img/svg/tv.svg");
+                  top: -5px;
+               }
+               &_icon.tv-box:before {
+                  content: url("../img/svg/TV2.svg");
+                  top: -2px;
+               }
+               &_icon.router:before {
+                  content: url("../img/svg/Router_3.svg");
+                  top: -2px;
+                  left: 1px;
+               }
+
                &:last-child {
                   margin-bottom: 0;
                }

@@ -1,197 +1,39 @@
 <section class="equipment">
    <div class="wrapper">
       <div class="equipment__slider slider">
-         <div class="equipment__slide slide-equipment">
-            <div class="slide-equipment__text">
-               <h2>Android TV</h2>
-               <p>
-                  Мощное «железо» для любых задач. Играйте в игры, смотрите видео, слушайте музыку и общайтесь с
-                  друзьями без каких-либо ограничений.
-                  Наслаждайтесь непревзойденным и реалистичным качеством картинки.
-               </p>
-               <div class="equipment-params">
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon google-play"></div>
-                     <div class="equipment-params__item_text">Google Play <br> 1000+ приложений</div>
-                  </div>
+         {{#each performance}}
+            <div class="equipment__slide slide-equipment">
+               <div class="slide-equipment__text">
+                  <h2>{{name}}</h2>
+                  <p>
+                     {{text}}
+                  </p>
+                  <div class="equipment-params">
 
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon mic"></div>
-                     <div class="equipment-params__item_text">Голосовое <br> управление</div>
+                     {{#each icons}}
+                        <div class="equipment-params__item">
+                           <div class="equipment-params__item_icon {{icon}}"></div>
+                           <div class="equipment-params__item_text">{{{text}}}</div>
+                        </div>
+                     {{/each}}
                   </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon crystal"></div>
-                     <div class="equipment-params__item_text">Поддержка <br> 4K UHD и HDR</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon chromecast"></div>
-                     <div class="equipment-params__item_text">Google <br> Chromecast</div>
-                  </div>
-               </div>
-               <div class="equipment-order">
-                  <a data-toggle="modal" data-target="#order" class="btn btn-fiolet">Заказать</a>
-                  <div class="equipment-order__text">
-                     <p>88 ₽/мес</p>
-                     <a href="#">Скачать подробную информацию</a>
-                     <div data-toggle="modal"
-                          data-target="#performance0">
-                        Технические характеристики
+                  <div class="equipment-order">
+                     <a data-toggle="modal" data-target="#order" class="btn btn-fiolet">Заказать</a>
+                     <div class="equipment-order__text">
+                        <p>{{price}} ₽/мес</p>
+                        <a href="#">Скачать подробную информацию</a>
+                        <div data-toggle="modal"
+                             data-target="#{{id}}">
+                           Технические характеристики
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="slide-equipment__img">
-               <img src="img/pic/pristavka.png" alt="img"/>
-            </div>
-         </div>
-         <div class="equipment__slide slide-equipment">
-            <div class="slide-equipment__text">
-               <h2>Роутер FR100</h2>
-               <p>
-                  Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим
-                  бесплатно.
-               </p>
-               <div class="equipment-params">
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon speed"></div>
-                     <div class="equipment-params__item_text">Скорость <br> до 100 Мбит/с</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon hertz"></div>
-                     <div class="equipment-params__item_text">Диапазон частот <br> 2,4 и 5 Ггц</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon mobile-internet"></div>
-                     <div class="equipment-params__item_text">Возможность <br> подключения 4G</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon zone"></div>
-                     <div class="equipment-params__item_text">Зона покрытия <br> до 70 м2</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon settings"></div>
-                     <div class="equipment-params__item_text">Легкость <br> настройки</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon control"></div>
-                     <div class="equipment-params__item_text">Родительский <br> контроль</div>
-                  </div>
-               </div>
-               <div class="equipment-order">
-                  <a data-toggle="modal" data-target="#order" class="btn btn-fiolet">Заказать</a>
-                  <div class="equipment-order__text">
-                     <p>88 ₽/мес</p>
-                     <a href="#">Скачать подробную информацию</a>
-                     <div data-toggle="modal"
-                          data-target="#performance1">
-                        Технические характеристики
-                     </div>
-                  </div>
+               <div class="slide-equipment__img">
+                  <img src="img/pic/{{img}}" alt="img"/>
                </div>
             </div>
-            <div class="slide-equipment__img">
-               <img src="img/pic/router_i@2x.png" alt="img"/>
-            </div>
-         </div>
-         <div class="equipment__slide slide-equipment">
-            <div class="slide-equipment__text">
-               <h2>Роутер FR1000-1</h2>
-               <p>
-                  Высокоскоростной Wi-Fi роутер для стабильного интернета. Ловит в любом уголке вашего дома. Привезем и
-                  настроим бесплатно.
-               </p>
-               <div class="equipment-params">
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon speed"></div>
-                     <div class="equipment-params__item_text">Скорость <br> До 1 Гбит/с</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon hertz"></div>
-                     <div class="equipment-params__item_text">Диапазон частот <br> 2,4 и 5 Ггц</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon mobile-internet"></div>
-                     <div class="equipment-params__item_text">Возможность <br> подключения 4G</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon zone"></div>
-                     <div class="equipment-params__item_text">Зона покрытия <br> до 70 м2</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon control"></div>
-                     <div class="equipment-params__item_text">Родительский <br> контроль</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon antennas"></div>
-                     <div class="equipment-params__item_text">4 внешние антенны <br> MU-MIMO</div>
-                  </div>
-               </div>
-               <div class="equipment-order">
-                  <a data-toggle="modal" data-target="#order" class="btn btn-fiolet">Заказать</a>
-                  <div class="equipment-order__text">
-                     <p>88 ₽/мес</p>
-                     <a href="#">Скачать подробную информацию</a>
-                     <div data-toggle="modal"
-                          data-target="#performance2">
-                        Технические характеристики
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="slide-equipment__img">
-               <img src="img/pic/router2.png" alt="img"/>
-            </div>
-         </div>
-         <div class="equipment__slide slide-equipment">
-            <div class="slide-equipment__text">
-               <h2>ТВ-приставка МегаФон ТВ</h2>
-               <p>
-                  Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.
-               </p>
-               <div class="equipment-params">
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon pult"></div>
-                     <div class="equipment-params__item_text">В комплекте <br> Bluetooth-пульт</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon wi-fi"></div>
-                     <div class="equipment-params__item_text">Подключается <br> через Wi-Fi</div>
-                  </div>
-
-                  <div class="equipment-params__item">
-                     <div class="equipment-params__item_icon family"></div>
-                     <div class="equipment-params__item_text">Функция <br> «Родительский контроль»</div>
-                  </div>
-               </div>
-               <div class="equipment-order">
-                  <a data-toggle="modal" data-target="#order" class="btn btn-fiolet">Заказать</a>
-                  <div class="equipment-order__text">
-                     <p>99 ₽/мес</p>
-                     <a href="#">Скачать подробную информацию</a>
-                     <div data-toggle="modal"
-                          data-target="#performance3">
-                        Технические характеристики
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="slide-equipment__img">
-               <img src="img/pic/mediaCenter.png" alt="img"/>
-            </div>
-         </div>
+         {{/each}}
       </div>
    </div>
 </section>

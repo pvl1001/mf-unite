@@ -5,27 +5,21 @@ let fs = require('fs')
 
 let path = {
    build: {
-      // html: project_folder + '/',
       css: project_folder + '/css/',
       js: project_folder + '/js/',
       img: project_folder + '/img/',
       fonts: project_folder + '/fonts/',
-      data: project_folder + '/json/',
    },
    src: {
-      // html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
       css: source_folder + '/scss/style.scss',
       js: source_folder + '/js/script.js',
       img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
       fonts: source_folder + '/fonts/*',
-      data: source_folder + '/json/*',
    },
    watch: {
-      // html: source_folder + '/**/*.html',
       css: source_folder + '/**/**/*.scss',
       js: source_folder + '/js/**/*.js',
       img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-      data: source_folder + '/json/*.json',
       hbs: source_folder + '/**/*.hbs'
    },
    clean: './' + project_folder + '/'
@@ -55,42 +49,24 @@ function hbs() {
       options = {
          ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
          batch: ['./app/components'],
-         helpers: {
-
-            // сравнение каналов (выделение цветом)
-            activeName(name, tariff) {
-               let tariffArr = eval(`${'dataTariffs.' + tariff}`)
-               for (let el of tariffArr) {
-                  for (let nameJson of el.groupData)
-                     if (name === nameJson.name) return true
-               }
-            },
-
-            // сравнение каналов (число каналов группы)
-            countChannel(index, tariff) {
-               let tariffArr = eval(`${'dataTariffs.' + tariff}`)
-               if (tariffArr[index])
-                  return tariffArr[index].groupData.length
-               else return 0
-            },
-
-            // общее количество каналов
-            totalChannel(tariff) {
-               let tariffArr = eval(`${'dataTariffs.' + tariff}`)
-               let count = 0
-               for (let el of tariffArr) count += el.groupData.length
-               return count
-            }
-         }
+         helpers: require('./app/js/helpers')
       }
 
    return gulp.src('app/index.hbs')
       .pipe(gulp_data(function () { // подключить json
-         return dataTariffs = require('./app/json/data.json')
+         const tariffs = require( './app/json/tariffs' )
+         const performance = require( './app/json/performance' )
+         const info = require( './app/json/info' )
+         const cities = require( './app/json/cities' )
+         const unite = require( './app/json/unite' )
+
+         return {tariffs, performance, info, cities, unite}
       }))
       .pipe(handlebars(templateData, options))
       .pipe(rename('index.html'))
-      .pipe(gulp.dest('dist'));
+      .pipe(fileinclude())
+      .pipe(gulp.dest('dist'))
+      .pipe(browsersync.stream())
 }
 
 function browserSync() {
@@ -102,13 +78,6 @@ function browserSync() {
       notify: false
    })
 }
-
-// function html() { // работа с html
-//    return src(path.src.html)
-//       .pipe(fileinclude())
-//       .pipe(dest(path.build.html))
-//       .pipe(browsersync.stream())
-// }
 
 function css() { // работа с scss
    return src(path.src.css)
@@ -164,20 +133,13 @@ function fonts() { // шрифтов
       .pipe(dest(path.build.fonts))
 }
 
-function data() { // json
-   return src(path.src.data)
-      .pipe(dest(path.build.data))
-}
-
 function cb() {
 }
 
 function watchFile() { //динамические изменения страницы
-   // gulp.watch([path.watch.html], html)
    gulp.watch([path.watch.css], css)
    gulp.watch([path.watch.js], js)
    gulp.watch([path.watch.img], images)
-   gulp.watch([path.watch.data], data)
    gulp.watch([path.watch.hbs], hbs)
 }
 
@@ -185,16 +147,14 @@ function clean() { //удаление лишних html
    return del(path.clean)
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, images, fonts, data, hbs))
+let build = gulp.series(clean, gulp.parallel(js, css, images, fonts, hbs))
 let watch = gulp.parallel(build, watchFile, browserSync)
 
 exports.hbs = hbs
-exports.data = data
 exports.fonts = fonts
 exports.images = images
 exports.js = js
 exports.css = css
-// exports.html = html
 exports.build = build
 exports.watch = watch
 exports.default = watch

@@ -12,19 +12,28 @@
 
 // Скролл по якорю
 function toPlug(scrollTo) {
+   $( '.modal' ).modal( 'hide' )
    $( 'html,body' ).animate( {
       scrollTop:
          $( scrollTo ).offset().top + "px"
    }, {
       duration: 500
    } )
-      .promise().done(() => {
+      .promise().done( () => {
       if (scrollTo === '.about-tariffs') {
-         $( '#collapse1' ).collapse('show')
+         $( '#collapse00' ).collapse( 'show' )
       }
-   })
+   } )
 
 }
+
+$(document).on('show.bs.modal', '.modal', function (event) {
+   let zIndex = 1040 + (10 * $('.modal:visible').length);
+   $(this).css('z-index', zIndex);
+   setTimeout(function() {
+      $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+   }, 0);
+});
 
 // popUp вперед
 function nextForm(open, close) {
@@ -104,17 +113,22 @@ function validAddress(data, event) {
    }
 }
 
-// popUp дополнительные опции
+// popUp расчет по радио-переключателю
 function totalPrice(id, index) {
-   let newPrice = Number( $( `${id} .new-price` ).text() )
-   let optionPrice = $( `${id} .item-option__num` )
-   let inputs = $( `${id} input` )
+   let newPrice = (`${id} .new-price`),
+      newPriceNum = Number( $( newPrice ).text() ),
+      optionPrice = $( `${id} .item-option__num` ),
+      inputs = $( `${id} input` )
 
-   inputs[index].checked === true ?
-      newPrice += Number( optionPrice[index].innerHTML ) :
-      newPrice -= Number( optionPrice[index].innerHTML )
+   if (inputs.length > 1)
+      inputs[index].checked === true ?
+         newPriceNum += Number( optionPrice[index].innerHTML ) :
+         newPriceNum -= Number( optionPrice[index].innerHTML )
+   else inputs[0].checked === true ?
+      newPriceNum += Number( optionPrice[0].innerHTML ) :
+      newPriceNum -= Number( optionPrice[0].innerHTML )
 
-   $( `${id} .new-price` ).text( newPrice )
+   $( newPrice ).text( newPriceNum )
 }
 
 // autocomplete проверки адреса
@@ -155,16 +169,6 @@ function checkAddress(data) {
       validAddressPopUp( data ) :
       validAddress( data )
 }
-
-// let test = {
-//    test: get() {
-//       return 1
-//    }
-// }
-
-// console.log(function () {
-//    return !true ? 'test' : 'test2'
-// })
 
 
 

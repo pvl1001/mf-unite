@@ -1,39 +1,39 @@
-<!--Подробнее-->
-<div class="modal fade performance" id="performance0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+<!--Подробнее Модемы-->
+{{#each performance}}
+   <div class="modal fade performance" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
 
-         <div class="modal-wrapper">
-            <div class="performance__text">
-               <h2>Android TV</h2>
-               <h3>Характеристики:</h3>
-               <ul>
-                  <li>Dualband Wi-Fi 2,4+5 ГГц</li>
-                  <li>Android TV (Google Play, YouTube, Google Chromecast, Google Ассистент)</li>
-                  <li>Версия Android 9 или выше</li>
-                  <li>Поддержка 4K UHD видео</li>
-                  <li>Подписка на видео МегаФон ТВ в подарок</li>
-               </ul>
-            </div>
+            <div class="modal-wrapper">
+               <div class="performance__text">
+                  <h2>{{name}}</h2>
+                  <h3>Характеристики:</h3>
+                  <ul>
+                     {{#each params}}
+                        <li>{{this}}</li>
+                     {{/each}}
+                  </ul>
+               </div>
 
-            <div class="performance__img">
-               <img src="img/pic/pristavka.png" alt="img"/>
-            </div>
+               <div class="performance__img">
+                  <img src="img/pic/{{img}}" alt="img"/>
+               </div>
 
-            <div class="modal-order">
-               <a href="#" class="btn">Заказать</a>
-               <div class="modal-order__text">
-                  <p>88 ₽/мес</p>
-                  <a href="#">Скачать подробную информацию</a>
+               <div class="modal-order">
+                  <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
+                  <div class="modal-order__text">
+                     <p>{{price}} ₽/мес</p>
+                     <a href="#">Скачать подробную информацию</a>
+                  </div>
                </div>
             </div>
          </div>
       </div>
    </div>
-</div>
-<div class="modal fade performance" id="performance1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+{{/each}}
+<div class="modal fade performance" id="{{unite.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -41,122 +41,23 @@
 
          <div class="modal-wrapper">
             <div class="performance__text">
-               <h2>Роутер FR100-1</h2>
+               <h2>{{unite.name}}</h2>
                <h3>Характеристики:</h3>
                <ul>
-                  <li>Скорость до 100 Мбит/сек</li>
-                  <li>Диапазон частот 2,4 и 5 ГГц</li>
-                  <li>Подключение 3G/4G модема</li>
-                  <li>Автоматическое обновление ПО</li>
+                  {{#each unite.params}}
+                     <li>{{this}}</li>
+                  {{/each}}
                </ul>
             </div>
 
             <div class="performance__img">
-               <img src="img/pic/router_i@2x.png" alt="img"/>
+               <img src="img/pic/router_info.png" alt="img"/>
             </div>
 
             <div class="modal-order">
-               <a href="#" class="btn">Заказать</a>
+               <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
                <div class="modal-order__text">
-                  <p>88 ₽/мес</p>
-                  <a href="#">Скачать подробную информацию</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade performance" id="performance2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-
-         <div class="modal-wrapper">
-            <div class="performance__text">
-               <h2>Роутер FR1000-1</h2>
-               <h3>Характеристики:</h3>
-               <ul>
-                  <li>4 внешние антенны MU-MIMO</li>
-                  <li>Скорость до 1000 Мбит/с</li>
-                  <li>Диапазон частот 2,4 и 5 ГГц</li>
-                  <li>Подключение 3G/4G модема</li>
-                  <li>Автоматическое обновление ПО</li>
-               </ul>
-            </div>
-
-            <div class="performance__img">
-               <img src="img/pic/router2.png" alt="img"/>
-            </div>
-
-            <div class="modal-order">
-               <a href="#" class="btn">Заказать</a>
-               <div class="modal-order__text">
-                  <p>88 ₽/мес</p>
-                  <a href="#">Скачать подробную информацию</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade performance" id="performance3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-
-         <div class="modal-wrapper">
-            <div class="performance__text">
-               <h2>ТВ-приставка МегаФон ТВ</h2>
-               <h3>Характеристики:</h3>
-               <ul>
-                  <li>Подключается через Wi-Fi</li>
-                  <li>В комплекте Bluetooth-пульт</li>
-                  <li>Функция «Родительский контроль»</li>
-               </ul>
-            </div>
-
-            <div class="performance__img">
-               <img src="img/pic/mediaCenter.png" alt="img"/>
-            </div>
-
-            <div class="modal-order">
-               <a href="#" class="btn">Заказать</a>
-               <div class="modal-order__text">
-                  <p>88 ₽/мес</p>
-                  <a href="#">Скачать подробную информацию</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade performance" id="performanceUnite" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-
-         <div class="modal-wrapper">
-            <div class="performance__text">
-               <h2>ТВ-приставка МегаФон ТВ</h2>
-               <h3>Характеристики:</h3>
-               <ul>
-                  <li>Подключается через Wi-Fi</li>
-                  <li>В комплекте Bluetooth-пульт</li>
-                  <li>Функция «Родительский контроль»</li>
-               </ul>
-            </div>
-
-            <div class="performance__img">
-               <img src="img/pic/mediaCenter.png" alt="img"/>
-            </div>
-
-            <div class="modal-order">
-               <a href="#" class="btn">Заказать</a>
-               <div class="modal-order__text">
-                  <p>88 ₽/мес</p>
+                  <p>{{unite.price}} ₽/мес</p>
                   <a href="#">Скачать подробную информацию</a>
                </div>
             </div>
@@ -186,1047 +87,182 @@
                   <a href="#">Москва и область</a>
                   <a href="#">Санкт-Петербург и область</a>
                </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">А</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=75">
-                        Алтайский край</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=85">
-                        Амурская область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=11">Архангельская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=38">Астраханская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Б</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=24">Белгородская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=3">Брянская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">В</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=4">Владимирская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=39">Волгоградская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=12">Вологодская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=25">Воронежская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Е</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=86">Еврейская
-                        автономная область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">З</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=87">Забайкальский
-                        край</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">И</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=13">Ивановская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=88">Иркутская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">К</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=14">Калининградская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=5">Калужская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=89">Камчатский
-                        край</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=76">Кемеровская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=65">Кировская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=15">Костромская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=26">Краснодарский
-                        край</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=77">Красноярский
-                        край</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=66">Курганская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=6">Курская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Л</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=27">Липецкая
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">М</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=90">Магаданская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=2">Москва и
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=16">Мурманская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Н</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=7">Н.Новгород и
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=17">Новгородская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=78">Новосибирская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=83">Норильск и
-                        Таймырский МР</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">О</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=79">Омская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=40">Оренбургская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=8">Орловская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">П</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=41">Пензенская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=67">Пермский
-                        край</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=91">Приморский
-                        край</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=19">Псковская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Р</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=28">Республика
-                        Адыгея</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=80">Республика
-                        Алтай</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=42">Республика
-                        Башкортостан</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=92">Республика
-                        Бурятия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=29">Республика
-                        Дагестан</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=30">Республика
-                        Ингушетия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=31">Республика
-                        Кабардино-Балкария</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=43">Республика
-                        Калмыкия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=32">Республика
-                        Карачаево-Черкесия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=18">Республика
-                        Карелия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=68">Республика
-                        Коми</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=44">Республика Марий
-                        Эл</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=45">Республика
-                        Мордовия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=93">Республика Саха
-                        (Якутия)</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=33">Республика
-                        Северная Осетия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=46">Республика
-                        Татарстан</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=81">Республика
-                        Тыва</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=82">Республика
-                        Хакасия</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=34">Ростовская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=9">Рязанская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">С</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=47">Самарская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=20">Санкт-Петербург
-                        и область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=48">Саратовская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=94">Сахалинская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=69">Свердловская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=21">Смоленская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=35">Ставропольский
-                        край</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Т</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=36">Тамбовская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=22">Тверская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=84">Томская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=10">Тульская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=70">Тюменская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">У</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=71">Удмуртская
-                        Республика</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=49">Ульяновская
-                        область</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Х</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=95">Хабаровский
-                        край</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=72">Ханты-Мансийский
-                        АО</a></div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Ч</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=73">Челябинская
-                        область</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=37">Чеченская
-                        Республика</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=64">Чувашская
-                        Республика</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=96">Чукотский АО</a>
+               {{#each cities}}
+                  <div class="select-region__regions-group">
+                     <div class="select-region__region-title">{{alph}}</div>
+                     {{#each cities}}
+                        <div class="select-region__region">
+                           <a class="select-region__link" href="{{link}}">{{name}}</a>
+                        </div>
+                     {{/each}}
                   </div>
-               </div>
-               <div class="select-region__regions-group">
-                  <div class="select-region__region-title">Я</div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=74">Ямало-Ненецкий
-                        АО</a></div>
-                  <div class="select-region__region">
-                     <a class="select-region__link"
-                        href="//www.megafon.ru/regions.action?rid=23">Ярославская
-                        область</a></div>
-               </div>
+               {{/each}}
             </div>
          </div>
       </div>
    </div>
 </div>
 
-<!--тарифы-->
-<div class="modal fade tariff-modal tariff-two-web" id="tariffTwoWeb" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-         <h2>Объединяй! Два интернета</h2>
-         <div class="tariff-modal__info">
-            <div class="tariff-modal__info-wrapper">
-               <div class="tariff-modal__info-col tariff-modal__info-col_1">
-                  <div class="tariff-modal__info-title tariff-modal__title_web">
-                     <img src="img/svg/wi-fi.svg" alt="img">
-                     Интернет
+<!--Подробнее Тарифы-->
+{{#each tariffs}}
+   <div class="modal fade tariff-modal" id="{{id}}" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h2>Объединяй! {{name}}</h2>
+            <div class="tariff-modal__info">
+               <div class="tariff-modal__info-wrapper">
+                  <div class="tariff-modal__info-col tariff-modal__info-col_1">
+                     <div class="tariff-modal__info-title tariff-modal__title_web">
+                        <img src="img/svg/wi-fi.svg" alt="img">
+                        Интернет
+                     </div>
+
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">Скорость</div>
+                        <p>{{speed}} Мбит/с</p>
+                     </div>
+
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">Трафик</div>
+                        <p>Безлимитно</p>
+                     </div>
                   </div>
 
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Скорость</div>
-                     <p>50 Мбит/с</p>
+                  {{#if tv.length}}
+                     <div class="tariff-modal__info-col tariff-modal__info-col_2">
+                        <div class="tariff-modal__info-title tariff-modal__title_tv">
+                           <img src="img/svg/tv.svg" alt="img">
+                           ТВ
+                        </div>
+
+                        <div class="tariff-modal__info-param">
+                           <div class="tariff-modal__param-title">Трафик</div>
+                           <p>Безлимитно</p>
+                        </div>
+
+                        <div class="tariff-modal__info-param">
+                           <div class="tariff-modal__param-title">Мегафон ТВ</div>
+                           <p>{{totalChannel tv}} каналов</p>
+                           <div class="tariff-modal__param-packets">
+                              пакеты
+                              <a href="#">Максимальный</a>,
+                              <a href="#">Детский</a>,
+                              <a href="#">18+</a>
+                           </div>
+                        </div>
+                     </div>
+                  {{/if}}
+
+                  <div class="tariff-modal__info-col tariff-modal__info-col_3">
+                     <div class="tariff-modal__info-title tariff-modal__title_mobile">
+                        <img src="img/svg/mobile.svg" alt="img">
+                        Мобильная связь
+                     </div>
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">Мобильный интернет</div>
+                        <p>{{noLimit web}}</p>
+                     </div>
+
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
+                        <p>Безлимитно</p>
+                     </div>
+
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России</div>
+                        <p>{{min}} минут</p>
+                     </div>
+
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">МегаДиск</div>
+                        <p>1 ТБ</p>
+                     </div>
                   </div>
 
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
                </div>
             </div>
-
-            <div class="tariff-modal__info-col tariff-modal__info-col_3">
-               <div class="tariff-modal__info-title tariff-modal__title_mobile">
-                  <img src="img/svg/mobile.svg" alt="img">
-                  Мобильная связь
-               </div>
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Мобильный интернет</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России</div>
-                  <p>600 минут</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">МегаДиск</div>
-                  <p>1 ТБ</p>
-               </div>
-            </div>
-         </div>
-
-         <div class="tariff-modal__options">
-            <h3>Дополнительные опции:</h3>
-            <div class="tariff-modal__options-row options-row">
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffTwoWeb', 0)" type="checkbox">
-                        <span class="round"></span>
+            <div class="tariff-modal__options">
+               <h3>Дополнительные опции:</h3>
+               <div class="tariff-modal__options-row options-row">
+                  {{#if rentTvBox}}
+                     <div class="options-row__item item-option">
+                        <label>
+                           <div class="switch">
+                              <input onchange="totalPrice('#{{id}}', 0)" type="checkbox">
+                              <span class="round"></span>
+                           </div>
+                           <div class="item-option__text">
+                              <p>Аренда ТВ-приставки</p>
+                              <span class="item-option__num">{{rentTvBox}}</span><span> ₽ в месяц</span>
+                           </div>
+                        </label>
                      </div>
-                     <div class="item-option__text">
-                        <p>Аренда Wi-Fi роутера <br> (1 Гбит/с)</p>
-                        <span class="item-option__num">88</span><span> ₽ в месяц</span>
+                  {{/if}}
+                  {{#if rentRouter}}
+                     <div class="options-row__item item-option">
+                        <label>
+                           <div class="switch">
+                              <input onchange="totalPrice('#{{id}}', 1)" type="checkbox">
+                              <span class="round"></span>
+                           </div>
+                           <div class="item-option__text">
+                              <p>Аренда Wi-Fi роутера {{rentRouterSpeed}}</p>
+                              <span class="item-option__num">{{rentRouter}}</span><span> ₽ в месяц</span>
+                           </div>
+                        </label>
                      </div>
-                  </label>
-               </div>
-               <div class="options-row__item item-option">
-                  <div class="item-option__img">
-                     <img src="img/svg/bonus.svg" alt="img">
+                  {{/if}}
+                  <div class="options-row__item item-option">
+                     <div class="item-option__img">
+                        <img src="img/svg/bonus.svg" alt="img">
+                     </div>
+                     <p>Скидка 40% <br> на SIM-карты</p>
                   </div>
-                  <p>Скидка 40% <br> на SIM-карты</p>
-               </div>
-               <div class="options-row__item item-option">
-                  <div>
-                     <div class="download-pdf">
-                        <a href="#" class="download-pdf__icon">
-                           <img src="img/svg/download-pdf.svg" alt="img">
-                        </a>
-                        <div class="download-pdf__text">
-                           <a href="#">Скачать подробную информацию <br> о тарифе</a>
-                           <span>(PDF, 0.4 MB)</span>
+                  <div class="options-row__item item-option">
+                     <div>
+                        <div class="download-pdf">
+                           <a href="#" class="download-pdf__icon">
+                              <img src="img/svg/download-pdf.svg" alt="img">
+                           </a>
+                           <div class="download-pdf__text">
+                              <a href="#">Скачать подробную информацию <br> о тарифе</a>
+                              <span>(PDF, 0.4 MB)</span>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
 
-         <div class="tariff-modal__price price-tariff">
-            <div class="price-tariff__title">
-               <p>Стоимость тарифа:</p>
-               <span>с учетом выбранных опций</span>
-            </div>
-
-            <div class="price">
-               <div>
-                  <span class="old-price">700 ₽</span>
-                  <span class="new-price">350</span><span>₽</span>
-                  <span>в месяц</span>
+            <div class="tariff-modal__price price-tariff">
+               <div class="price-tariff__title">
+                  <p>Стоимость тарифа:</p>
+                  <span>с учетом выбранных опций</span>
                </div>
+
+               <div class="price">
+                  <div>
+                     {{#if oldPrice}}
+                        <span class="old-price">{{oldPrice}} ₽</span>
+                     {{/if}}
+                     <span class="new-price">{{price}}</span><span>₽</span>
+                     <span>в месяц</span>
+                     {{#if iconInfo }}
+                        <div class="price__icon price__icon_all"></div>
+                     {{/if}}
+                  </div>
+               </div>
+
+               <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
+
             </div>
-
-            <a href="#" class="btn">Заказать</a>
-
          </div>
       </div>
    </div>
-</div>
-<div class="modal fade tariff-modal" id="tariffconomic" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-         <h2>Объединяй! Эконом</h2>
-         <div class="tariff-modal__info">
-            <div class="tariff-modal__info-wrapper">
-               <div class="tariff-modal__info-col tariff-modal__info-col_1">
-                  <div class="tariff-modal__info-title tariff-modal__title_web">
-                     <img src="img/svg/wi-fi.svg" alt="img">
-                     Интернет
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Скорость</div>
-                     <p>50 Мбит/с</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-               </div>
-
-               <div class="tariff-modal__info-col tariff-modal__info-col_2">
-                  <div class="tariff-modal__info-title tariff-modal__title_tv">
-                     <img src="img/svg/tv.svg" alt="img">
-                     ТВ
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Мегафон ТВ</div>
-                     <p>50 каналов</p>
-                     <div class="tariff-modal__param-packets">
-                        пакеты
-                        <a href="#">Максимальный</a>,
-                        <a href="#">Детский</a>,
-                        <a href="#">18+</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="tariff-modal__info-col tariff-modal__info-col_3">
-               <div class="tariff-modal__info-title tariff-modal__title_mobile">
-                  <img src="img/svg/mobile.svg" alt="img">
-                  Мобильная связь
-               </div>
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Мобильный интернет</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России</div>
-                  <p>300 минут</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">МегаДиск</div>
-                  <p>1 ТБ</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__options">
-            <h3>Дополнительные опции:</h3>
-            <div class="tariff-modal__options-row options-row">
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffconomic', 0)" type="checkbox">
-                        <span class="round"></span>
-                     </div>
-                     <div class="item-option__text">
-                        <p>Аренда ТВ-приставки</p>
-                        <span class="item-option__num">99</span><span> ₽ в месяц</span>
-                     </div>
-                  </label>
-               </div>
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffconomic', 1)" type="checkbox">
-                        <span class="round"></span>
-                     </div>
-                     <div class="item-option__text">
-                        <p>Аренда Wi-Fi роутера (100 Мбит/с)</p>
-                        <span class="item-option__num">55</span><span> ₽ в месяц</span>
-                     </div>
-                  </label>
-               </div>
-               <div class="options-row__item item-option">
-                  <div class="item-option__img">
-                     <img src="img/svg/bonus.svg" alt="img">
-                  </div>
-                  <p>Скидка 40% <br> на SIM-карты</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__download download-pdf">
-            <a href="#" class="download-pdf__icon">
-               <img src="img/svg/download-pdf.svg" alt="img">
-            </a>
-            <div class="download-pdf__text">
-               <a href="#">Скачать подробную информацию <br> о тарифе</a>
-               <span>(PDF, 0.4 MB)</span>
-            </div>
-         </div>
-
-         <div class="tariff-modal__price price-tariff">
-            <div class="price-tariff__title">
-               <p>Стоимость тарифа:</p>
-               <span>с учетом выбранных опций</span>
-            </div>
-
-            <div class="price">
-               <div><span class="old-price">600 ₽</span>
-                  <span class="new-price">300</span><span>₽</span>
-                  <span>в месяц</span></div>
-            </div>
-
-            <a href="#" class="btn">Заказать</a>
-
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade tariff-modal" id="tariffHit" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-         <h2>Объединяй! Хит</h2>
-         <div class="tariff-modal__info">
-            <div class="tariff-modal__info-wrapper">
-               <div class="tariff-modal__info-col tariff-modal__info-col_1">
-                  <div class="tariff-modal__info-title tariff-modal__title_web">
-                     <img src="img/svg/wi-fi.svg" alt="img">
-                     Интернет
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Скорость</div>
-                     <p>100 Мбит/с</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-               </div>
-
-               <div class="tariff-modal__info-col tariff-modal__info-col_2">
-                  <div class="tariff-modal__info-title tariff-modal__title_tv">
-                     <img src="img/svg/tv.svg" alt="img">
-                     ТВ
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Мегафон ТВ</div>
-                     <p>160 каналов</p>
-                     <div class="tariff-modal__param-packets">
-                        пакеты
-                        <a href="#">Максимальный</a>,
-                        <a href="#">Детский</a>,
-                        <a href="#">18+</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="tariff-modal__info-col tariff-modal__info-col_3">
-               <div class="tariff-modal__info-title tariff-modal__title_mobile">
-                  <img src="img/svg/mobile.svg" alt="img">
-                  Мобильная связь
-               </div>
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Мобильный интернет</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России</div>
-                  <p>1200 минут</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">МегаДиск</div>
-                  <p>1 ТБ</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__options">
-            <h3>Дополнительные опции:</h3>
-            <div class="tariff-modal__options-row options-row">
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffHit', 0)" type="checkbox">
-                        <span class="round"></span>
-                     </div>
-                     <div class="item-option__text">
-                        <p>Аренда ТВ-приставки</p>
-                        <span class="item-option__num">0</span><span> ₽ в месяц</span>
-                     </div>
-                  </label>
-               </div>
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffHit', 1)" type="checkbox">
-                        <span class="round"></span>
-                     </div>
-                     <div class="item-option__text">
-                        <p>Аренда Wi-Fi роутера (1 Гбит/с)</p>
-                        <span class="item-option__num">88</span><span> ₽ в месяц</span>
-                     </div>
-                  </label>
-               </div>
-               <div class="options-row__item item-option">
-                  <div class="item-option__img">
-                     <img src="img/svg/bonus.svg" alt="img">
-                  </div>
-                  <p>Скидка 40% <br> на SIM-карты</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__download download-pdf">
-            <a href="#" class="download-pdf__icon">
-               <img src="img/svg/download-pdf.svg" alt="img">
-            </a>
-            <div class="download-pdf__text">
-               <a href="#">Скачать подробную информацию <br> о тарифе</a>
-               <span>(PDF, 0.4 MB)</span>
-            </div>
-         </div>
-         <div class="tariff-modal__price price-tariff">
-            <div class="price-tariff__title">
-               <p>Стоимость тарифа:</p>
-               <span>с учетом выбранных опций</span>
-            </div>
-
-            <div class="price">
-               <div><span class="old-price">800 ₽</span>
-                  <span class="new-price">400</span><span>₽</span>
-                  <span>в месяц</span></div>
-            </div>
-
-            <a href="#" class="btn">Заказать</a>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade tariff-modal" id="tariffForTheir" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-         <h2>Объединяй! Для своих</h2>
-         <div class="tariff-modal__info">
-            <div class="tariff-modal__info-wrapper">
-               <div class="tariff-modal__info-col tariff-modal__info-col_1">
-                  <div class="tariff-modal__info-title tariff-modal__title_web">
-                     <img src="img/svg/wi-fi.svg" alt="img">
-                     Интернет
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Скорость</div>
-                     <p>300 Мбит/с</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-               </div>
-
-               <div class="tariff-modal__info-col tariff-modal__info-col_2">
-                  <div class="tariff-modal__info-title tariff-modal__title_tv">
-                     <img src="img/svg/tv.svg" alt="img">
-                     ТВ
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Мегафон ТВ</div>
-                     <p>236 каналов</p>
-                     <div class="tariff-modal__param-packets">
-                        пакеты
-                        <a href="#">Максимальный</a>,
-                        <a href="#">Детский</a>,
-                        <a href="#">18+</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="tariff-modal__info-col tariff-modal__info-col_3">
-               <div class="tariff-modal__info-title tariff-modal__title_mobile">
-                  <img src="img/svg/mobile.svg" alt="img">
-                  Мобильная связь
-               </div>
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Мобильный интернет</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России</div>
-                  <p>2000 минут</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">МегаДиск</div>
-                  <p>1 ТБ</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__options">
-            <h3>Дополнительные опции:</h3>
-            <div class="tariff-modal__options-row options-row">
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffForTheir', 0)" type="checkbox">
-                        <span class="round"></span>
-                     </div>
-                     <div class="item-option__text">
-                        <p>Аренда ТВ-приставки</p>
-                        <span class="item-option__num">0</span><span> ₽ в месяц</span>
-                     </div>
-                  </label>
-               </div>
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffForTheir', 1)" type="checkbox">
-                        <span class="round"></span>
-                     </div>
-                     <div class="item-option__text">
-                        <p>Аренда Wi-Fi роутера (1 Гбит/с)</p>
-                        <span class="item-option__num">0</span><span> ₽ в месяц</span>
-                     </div>
-                  </label>
-               </div>
-               <div class="options-row__item item-option">
-                  <div class="item-option__img">
-                     <img src="img/svg/bonus.svg" alt="img">
-                  </div>
-                  <p>Скидка 40% <br> на SIM-карты</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__download download-pdf">
-            <a href="#" class="download-pdf__icon">
-               <img src="img/svg/download-pdf.svg" alt="img">
-            </a>
-            <div class="download-pdf__text">
-               <a href="#">Скачать подробную информацию <br> о тарифе</a>
-               <span>(PDF, 0.4 MB)</span>
-            </div>
-         </div>
-         <div class="tariff-modal__price price-tariff">
-            <div class="price-tariff__title">
-               <p>Стоимость тарифа:</p>
-               <span>с учетом выбранных опций</span>
-            </div>
-
-            <div class="price">
-               <div><span class="old-price">1500 ₽</span>
-                  <span class="new-price">750</span><span>₽</span>
-                  <span>в месяц</span></div>
-            </div>
-
-            <a href="#" class="btn">Заказать</a>
-
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade tariff-modal" id="tariffAround" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-         <h2>Объединяй! Везде</h2>
-         <div class="tariff-modal__info">
-            <div class="tariff-modal__info-wrapper">
-               <div class="tariff-modal__info-col tariff-modal__info-col_1">
-                  <div class="tariff-modal__info-title tariff-modal__title_web">
-                     <img src="img/svg/wi-fi.svg" alt="img">
-                     Интернет
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Скорость</div>
-                     <p>150 Мбит/с</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-               </div>
-
-               <div class="tariff-modal__info-col tariff-modal__info-col_2">
-                  <div class="tariff-modal__info-title tariff-modal__title_tv">
-                     <img src="img/svg/tv.svg" alt="img">
-                     ТВ
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Трафик</div>
-                     <p>Безлимитно</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Мегафон ТВ</div>
-                     <p>61 канал</p>
-                     <div class="tariff-modal__param-packets">
-                        пакеты
-                        <a href="#">Максимальный</a>,
-                        <a href="#">Детский</a>,
-                        <a href="#">18+</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="tariff-modal__info-col tariff-modal__info-col_3">
-               <div class="tariff-modal__info-title tariff-modal__title_mobile">
-                  <img src="img/svg/mobile.svg" alt="img">
-                  Мобильная связь
-               </div>
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Мобильный интернет</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
-                  <p>Безлимитно</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России</div>
-                  <p>1100 минут</p>
-               </div>
-
-               <div class="tariff-modal__info-param">
-                  <div class="tariff-modal__param-title">МегаДиск</div>
-                  <p>1 ТБ</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__options">
-            <h3>Дополнительные опции:</h3>
-            <div class="tariff-modal__options-row options-row">
-               <div class="options-row__item item-option">
-                  <label>
-                     <div class="switch">
-                        <input onchange="totalPrice('#tariffAround', 0)" checked type="checkbox">
-                        <span class="round"></span>
-                     </div>
-                     <div class="item-option__text">
-                        <p>Аренда 4G Wi-Fi роутера </p>
-                        <span class="item-option__num">100</span><span> ₽ в месяц</span>
-                     </div>
-                  </label>
-               </div>
-
-               <div class="options-row__item item-option">
-                  <div class="item-option__img">
-                     <img src="img/svg/bonus.svg" alt="img">
-                  </div>
-                  <p>Скидка 40% <br> на SIM-карты</p>
-               </div>
-            </div>
-         </div>
-         <div class="tariff-modal__download download-pdf">
-            <a href="#" class="download-pdf__icon">
-               <img src="img/svg/download-pdf.svg" alt="img">
-            </a>
-            <div class="download-pdf__text">
-               <a href="#">Скачать подробную информацию <br> о тарифе</a>
-               <span>(PDF, 0.4 MB)</span>
-            </div>
-         </div>
-         <div class="tariff-modal__price price-tariff">
-            <div class="price-tariff__title">
-               <p>Стоимость тарифа:</p>
-               <span>с учетом выбранных опций</span>
-            </div>
-
-            <div class="price">
-               <div>
-                  <!--                  <span class="old-price">1500 ₽</span>-->
-                  <span class="new-price">1700</span><span>₽</span>
-                  <span>в месяц</span></div>
-            </div>
-
-            <a href="#" class="btn">Заказать</a>
-
-         </div>
-      </div>
-   </div>
-</div>
+{{/each}}
 
 <!--Заказать-->
 <div class="modal fade tariff-modal order-modal" id="order" tabindex="-1" role="dialog"
