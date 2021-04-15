@@ -22,7 +22,7 @@ let path = {
    },
    watch: {
       // html: source_folder + '/**/*.html',
-      css: source_folder + '/scss/**/*.scss',
+      css: source_folder + '/**/**/*.scss',
       js: source_folder + '/js/**/*.js',
       img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
       data: source_folder + '/json/*.json',

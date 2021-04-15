@@ -22,7 +22,7 @@
 
    .unite {
       padding-bottom: 63px;
-      background: transparent linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0% 0% no-repeat padding-box;
+      background: transparent linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0 0 no-repeat padding-box;
    }
 
    &__links {
@@ -86,7 +86,21 @@
 
    }
 
-   .unite-row,
+   .unite-row {
+      align-items: flex-end;
+      justify-content: space-between;
+      display: flex;
+      margin-bottom: 40px;
+
+      > div {
+         width: 49%;
+
+         h2 {
+            padding-bottom: 24px;
+         }
+      }
+   }
+
    .unite-info-row {
       display: flex;
       margin-bottom: 40px;
@@ -109,7 +123,7 @@
       padding: 50px 0 0 0;
 
       h2 {
-         max-width: 600px;
+         max-width: 635px;
       }
 
       p {
@@ -263,7 +277,18 @@
       }
    }
 
+   &__img {
+      max-height: 608px;
+      margin-right: 54px;
+   }
+
    @media (min-width: 1024px) and (max-width: 1300px) {
+
+      &__img {
+         max-height: 580px;
+         margin-right: 0;
+         margin-bottom: 50px;
+      }
 
       &__links {
          padding-left: 63px;
@@ -324,7 +349,12 @@
    }
 
    @media (min-width: 768px) and (max-width: 1023px) {
-      //padding: 0;
+
+      &__img {
+         max-height: 472px;
+         margin: 46px auto 0;
+         transform: translateX(26px);
+      }
 
       .unite-address {
 
@@ -343,17 +373,31 @@
       .unite-row {
          flex-wrap: wrap;
 
+         h2 {
+            max-width: none;
+         }
+
          > div {
             width: 100%;
          }
       }
 
       &__to-plug {
-         padding: 50px 0;
+         padding: 50px 0 0;
       }
    }
 
    @media (max-width: 767px) {
+
+      .unite {
+         padding: 65px 0 72px;
+      }
+
+      &__img {
+         max-height: 367px;
+         margin: 46px auto 0;
+         transform: translateX(16px);
+      }
 
       .unite-address {
          &__input {
@@ -377,10 +421,11 @@
       }
 
       .unite__to-plug {
-         padding: 0 0 50px;
+         padding: 0;
 
          h2 {
             font-size: 28px;
+            line-height: 36px;
          }
 
          p {
