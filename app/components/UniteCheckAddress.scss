@@ -82,6 +82,11 @@
          padding-bottom: 40px;
          display: none;
          font-weight: 400;
+
+         .underline {
+            text-decoration: underline;
+            cursor: pointer;
+         }
       }
 
    }
