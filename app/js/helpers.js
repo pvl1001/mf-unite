@@ -30,6 +30,10 @@ module.exports = {
 
    iconInfo(i) {
       return i === 0;
+   },
+
+   markClass(text) {
+      return text === 'Популярное'
    }
 
 }

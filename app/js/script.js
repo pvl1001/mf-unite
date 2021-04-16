@@ -11,7 +11,7 @@
 
 
 // Скролл по якорю
-function toPlug(scrollTo) {
+const toPlug = scrollTo => {
    $( '.modal' ).modal( 'hide' )
    $( 'html,body' ).animate( {
       scrollTop:
@@ -36,7 +36,7 @@ $(document).on('show.bs.modal', '.modal', function (event) {
 });
 
 // popUp вперед
-function nextForm(open, close) {
+const nextForm = (open, close) => {
    event.preventDefault()
    $( close ).removeClass( 'd-flex' )
    $( open ).addClass( 'd-flex' )
@@ -44,7 +44,7 @@ function nextForm(open, close) {
 }
 
 // подтвердить заявку на подключение
-function onRequisition(open, close) {
+const onRequisition = (open, close) => {
    let date = document.querySelector( '.datepicker' ).value
    let time = document.querySelector( '.label-inner' ).innerHTML
    let text = document.getElementById( 'selectDate' )
@@ -56,13 +56,13 @@ function onRequisition(open, close) {
 }
 
 // popUp назад
-function backForm(close, open) {
+const backForm = (close, open) => {
    $( close ).removeClass( 'd-flex' )
    $( open ).addClass( 'd-flex' )
 }
 
 // popUp "Проверить возможность подключения"
-function validAddressPopUp(data, event) {
+const validAddressPopUp = (data, event) => {
    if (data.result === 1) { // адрес совпадает
       $( '.order-modal__input input[name=address]' )
          .addClass( 'valid' )
@@ -95,7 +95,7 @@ function validAddressPopUp(data, event) {
 }
 
 // Проверить возможность подключения
-function validAddress(data, event) {
+const validAddress = (data, event) => {
    let inputText = $( 'input' ).val()
    // console.log( data.result )
    if (data.result === 1) { // подключение возможно
@@ -114,7 +114,7 @@ function validAddress(data, event) {
 }
 
 // popUp расчет по радио-переключателю
-function totalPrice(id, index) {
+const totalPrice = (id, index) => {
    let newPrice = (`${id} .new-price`),
       newPriceNum = Number( $( newPrice ).text() ),
       optionPrice = $( `${id} .item-option__num` ),
@@ -141,7 +141,7 @@ $( 'input[name=address]' ).autocomplete( {
    serviceUrl: 'https://api.wifire.ru/api/address/check_address_dadata',
    type: 'POST',
 
-   onSelect: function (suggestion) {
+   onSelect(suggestion) {
       // console.log( suggestion )
 
       setTimeout( () => { // проверка адреса подключения
@@ -164,17 +164,8 @@ $( 'form[name=address]' ).submit( function (event) {
 } )
 
 // проверка адреса popUp/главная
-function checkAddress(data) {
+const checkAddress = data => {
    ($( '#order' ).hasClass( 'show' )) ?
       validAddressPopUp( data ) :
       validAddress( data )
 }
-
-
-
-
-
-
-
-
-

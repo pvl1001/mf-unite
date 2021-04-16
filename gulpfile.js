@@ -53,7 +53,8 @@ function hbs() {
       }
 
    return gulp.src('app/index.hbs')
-      .pipe(gulp_data(function () { // подключить json
+      // подключить json
+      .pipe(gulp_data(function () {
          const tariffs = require( './app/json/tariffs' )
          const performance = require( './app/json/performance' )
          const info = require( './app/json/info' )
