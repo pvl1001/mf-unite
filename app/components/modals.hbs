@@ -205,11 +205,11 @@
                      <div class="options-row__item item-option">
                         <label>
                            <div class="switch">
-                              <input onchange="totalPrice('#{{id}}', 1)" type="checkbox">
+                              <input {{checkedRoute name}} onchange="totalPrice('#{{id}}', 1)" type="checkbox">
                               <span class="round"></span>
                            </div>
                            <div class="item-option__text">
-                              <p>Аренда Wi-Fi роутера {{rentRouterSpeed}}</p>
+                              <p>{{rentRouterText}} {{rentRouterSpeed}}</p>
                               <span class="item-option__num">{{rentRouter}}</span><span> ₽ в месяц</span>
                            </div>
                         </label>

@@ -34,6 +34,10 @@ module.exports = {
 
    markClass(text) {
       return text === 'Популярное'
+   },
+
+   checkedRoute(tariff) {
+      return tariff === 'Везде' ? 'checked' : ''
    }
 
 }

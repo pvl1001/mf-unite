@@ -11,6 +11,7 @@
       "oldPrice": 700,
       "price": 350,
       "iconInfo": true,
+      "rentRouterText": "Аренда Wi-Fi роутера",
       "rentRouter": 88,
       "rentRouterSpeed": "(1 Гбит/c)",
       "rentTvBox": null
@@ -348,6 +349,7 @@
       "oldPrice": 600,
       "price": 300,
       "iconInfo": true,
+      "rentRouterText": "Аренда Wi-Fi роутера",
       "rentRouter": 55,
       "rentRouterSpeed": "(100 Мбит/с)",
       "rentTvBox": 99
@@ -1334,6 +1336,7 @@
       "oldPrice": 800,
       "price": 400,
       "iconInfo": true,
+      "rentRouterText": "Аренда Wi-Fi роутера",
       "rentRouter": 88,
       "rentRouterSpeed": "(1 Гбит/с)",
       "rentTvBox": "0"
@@ -2664,6 +2667,7 @@
       "oldPrice": 1500,
       "price": 750,
       "iconInfo": true,
+      "rentRouterText": "Аренда Wi-Fi роутера",
       "rentRouter": "0",
       "rentRouterSpeed": "(1 Гбит/с)",
       "rentTvBox": "0"
@@ -2679,6 +2683,7 @@
       "oldPrice": null,
       "price": 1600,
       "iconInfo": true,
+      "rentRouterText": "Аренда 4G Wi-Fi роутера",
       "rentRouter": 100,
       "rentRouterSpeed": null,
       "rentTvBox": null
