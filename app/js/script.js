@@ -9,7 +9,6 @@
 @@include( './plugins_config.js' )
 @@include( './service.js' )
 
-
 // Скролл по якорю
 const toPlug = scrollTo => {
    $( '.modal' ).modal( 'hide' )
@@ -103,6 +102,7 @@ const validAddress = (data, event) => {
    if (data.result === 1) validateMainAddress('show', 'hide', '.success-check b')
    if (data.result === 0) validateMainAddress('hide', 'show', '.unite-address__offer b')
    if (flagValid && event) hideResult()
+   if($('input').val() && !flagValid) $('input[name=address] + label').show()
 }
 
 const validateMainAddress = (success, offer, address) => {
@@ -168,7 +168,6 @@ $( 'input[name=address]' ).autocomplete( {
 
 // проверка адреса при клике 'проверить'
 $( 'form[name=address]' ).submit( function (event) {
-   if($('input').val() && !flagValid) $('input[name=address] + label').show()
    event.preventDefault();
    getAddress()
 } )
