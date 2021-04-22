@@ -5,13 +5,23 @@
       display: none;
       text-align: center;
       background-color: var(--mf-green);
-      padding: 32px 0 0;
+      padding: 0 0 40px;
       color: #fff;
 
       p {
          margin-top: 11px;
          font-weight: 400;
       }
+   }
+
+   .input-wrapp {
+      position: relative;
+   }
+
+   label.error {
+      top: 48px;
+      text-align: left;
+      color: #fff;
    }
 }
 
@@ -66,13 +76,24 @@
          justify-content: center;
          padding-bottom: 54px;
 
-         input {
-            width: 60%;
-            margin-right: 20px;
-            margin-left: 180px;
+         > div {
+            width: 100%;
+            max-width: 816px;
+            //margin-right: 20px;
+            //margin-left: 180px;
+            position: relative;
+
+            input {
+               width: 100%;
+            }
 
             &:focus {
                border: 1px solid #731982;
+            }
+
+            button {
+               margin-left: 20px;
+               position: absolute;
             }
          }
       }
@@ -309,6 +330,19 @@
          }
       }
 
+      .unite-address__input {
+
+         > div {
+            display: flex;
+            max-width: none;
+            margin: 0 0 28px;
+
+            button {
+               position: relative;
+            }
+         }
+      }
+
       .unite-row,
       .unite-info-row {
          flex-wrap: wrap;
@@ -367,9 +401,13 @@
             flex-wrap: wrap;
             justify-content: center;
 
-            input {
+            > div {
                width: 100%;
-               margin: 0 0 28px;
+
+               button {
+                  margin: 28px 0 0;
+                  position: relative;
+               }
             }
          }
 
@@ -405,14 +443,9 @@
       }
 
       .unite-address {
-         &__input {
-            flex-wrap: wrap;
-            justify-content: center;
-
-            input {
-               width: 100%;
-               margin: 0 0 28px;
-            }
+         &__input > div button {
+            margin: 50px 0 0;
+            position: relative;
          }
 
          b {

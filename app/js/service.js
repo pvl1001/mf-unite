@@ -4,8 +4,11 @@ function getAddress() {
       url: 'https://api.wifire.ru/api/address/check_dadata_address',
       method: 'POST',
       data: setAddress,
-      success: function (data) {
+      success(data) {
          checkAddress(data)
+      },
+      error(error) {
+         console.log('error address', error)
       }
    })
 }

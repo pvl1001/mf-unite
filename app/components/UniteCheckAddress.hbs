@@ -3,12 +3,20 @@
       <div class="unite-address">
          <p class="unite-address__title">Проверьте возможность подключения в вашем городе</p>
          <form name="address" class="unite-address__input">
-            <input onkeyup="validAddress('', event)" type="text" name="address" placeholder="Ваш адрес">
-            <button type="submit" class="btn btn-fiolet">Проверить</button>
+            <div>
+               <input onkeydown="validAddress('', event)" type="text" id="addressCheck" name="address"
+                      placeholder="Ваш адрес">
+               <label class="error" for="addressCheck">Выберите адрес дома из выпадающего списка!</label>
+               <button type="submit" class="btn btn-fiolet">Проверить</button>
+
+            </div>
+
          </form>
          <p class="unite-address__offer">
             К сожалению, мы пока не можем подключить ваш дом к домашнему интернету. <br>
-            Но по адресу <b>адрес</b> доступно <span onclick="toPlug('#unite')" class="underline">специальное предложение</span> на беспроводной интернет:
+            Но по адресу <b>адрес</b> доступно
+            <span onclick="toPlug('#unite')" class="underline">специальное предложение</span>
+            на беспроводной интернет:
          </p>
          <div class="success-check">
             <img src="img/svg/success.svg" alt="img">
@@ -108,3 +116,4 @@
       </div>
    </div>
 </section>
+<!--г Москва, ул Набережная, д 4-->

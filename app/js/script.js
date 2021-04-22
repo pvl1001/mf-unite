@@ -95,22 +95,32 @@ const validAddressPopUp = (data, event) => {
 }
 
 // Проверить возможность подключения
+let flagValid
 const validAddress = (data, event) => {
-   let inputText = $( 'input' ).val()
+   setAddress = {}
    // console.log( data.result )
-   if (data.result === 1) { // подключение возможно
-      $( '.unite-address__offer' ).hide()
-      $( '#unite' ).hide()
-      $( '.success-check' ).show();
-      $( '.success-check b' ).text( inputText );
-   } else if (data.result === 0) {
-      $( '.success-check' ).hide();
-      $( '.unite-address__offer' ).show()
-      $( '#unite' ).show()
-      $( '.unite-address__offer b' ).text( inputText )
-   } else if (event) {
-      $( '.success-check' ).hide();
-   }
+   if (data.result) $('input[name=address] + label').hide()
+   if (data.result === 1) validateMainAddress('show', 'hide', '.success-check b')
+   if (data.result === 0) validateMainAddress('hide', 'show', '.unite-address__offer b')
+   if (flagValid && event) hideResult()
+}
+
+const validateMainAddress = (success, offer, address) => {
+   let input = $( 'input' )
+   $('input[name=address] + label').hide()
+   $( '.unite-address__offer' )[offer]()
+   $( '#unite' )[offer]()
+   $( '.success-check' )[success]();
+   $( address ).text( input.val() );
+   flagValid = true
+}
+
+const hideResult = () => {
+   $( 'input' ).val('')
+   $( '.success-check' ).hide();
+   $( '.unite-address__offer' ).hide();
+   $( '#unite' ).hide()
+   flagValid = false
 }
 
 // popUp расчет по радио-переключателю
@@ -133,7 +143,6 @@ const totalPrice = (id, index) => {
 
 // autocomplete проверки адреса
 let setAddress = {}
-
 $( 'input[name=address]' ).autocomplete( {
    width: 'auto',
    minChars: 1,
@@ -143,10 +152,10 @@ $( 'input[name=address]' ).autocomplete( {
 
    onSelect(suggestion) {
       // console.log( suggestion )
-
-      setTimeout( () => { // проверка адреса подключения
+      setTimeout(()=> {
          $( '#orderForm' ).validate().element( '#addressOrder' )
-      }, 0 )
+      },0)
+      $('input[name=address] + label').hide()
 
       setAddress = {
          house_guid: suggestion.data.aoguid,
@@ -159,6 +168,7 @@ $( 'input[name=address]' ).autocomplete( {
 
 // проверка адреса при клике 'проверить'
 $( 'form[name=address]' ).submit( function (event) {
+   if($('input').val() && !flagValid) $('input[name=address] + label').show()
    event.preventDefault();
    getAddress()
 } )
