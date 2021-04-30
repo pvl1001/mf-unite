@@ -4,13 +4,19 @@
    .success-check {
       display: none;
       text-align: center;
-      background-color: var(--mf-green);
-      padding: 0 0 40px;
+      padding-bottom: 40px;
       color: #fff;
 
       p {
-         margin-top: 11px;
+         margin: 7px 0 11px;
+         padding: 0 20px;
          font-weight: 400;
+         line-height: 24px;
+      }
+
+      .btn {
+         display: block;
+         margin: 25px auto 0;
       }
    }
 
@@ -22,17 +28,17 @@
       top: 48px;
       text-align: left;
       color: #fff;
+      line-height: 24px;
    }
 }
 
 .unite {
    display: none;
-   background-color: var(--mf-green);
-   padding: 40px 0 0;
+   padding-top: 40px;
+   padding-bottom: 85px;
 
-   .unite {
-      padding-bottom: 63px;
-      background: transparent linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0 0 no-repeat padding-box;
+   &-wrapper {
+      background-color: #EDEDED;
    }
 
    &__links {
@@ -60,27 +66,29 @@
    }
 
    .unite-address {
-      text-align: center;
-      color: #fff;
-      font-size: 15px;
-      line-height: 24px;
+      background: linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0 0;
+      border-radius: 10px;
+      padding: 34px 49px 0;
+      overflow: hidden;
 
       &__title {
          display: block;
+         text-align: center;
+         color: #fff;
          font-size: 20px;
-         margin-bottom: 30px;
+         line-height: 28px;
+         margin-bottom: 34px;
+         font-weight: 700;
       }
 
       &__input {
          display: flex;
          justify-content: center;
-         padding-bottom: 54px;
+         padding-bottom: 42px;
 
          > div {
             width: 100%;
             max-width: 816px;
-            //margin-right: 20px;
-            //margin-left: 180px;
             position: relative;
 
             input {
@@ -91,25 +99,39 @@
                border: 1px solid #731982;
             }
 
-            button {
-               margin-left: 20px;
-               position: absolute;
-            }
+         }
+
+         button {
+            margin-left: 20px;
          }
       }
 
       &__offer {
-         margin-top: -14px;
+         font-size: 15px;
+         line-height: 24px;
          padding-bottom: 40px;
          display: none;
          font-weight: 400;
+         border-bottom: 1px solid rgba(255, 255, 255, .2);
+         text-align: center;
+         color: #fff;
 
          .underline {
             text-decoration: underline;
             cursor: pointer;
          }
+
+         p {
+            margin-bottom: 7px;
+         }
+
       }
 
+      .link {
+         color: #fff;
+         font-size: 12px;
+         text-decoration: underline;
+      }
    }
 
    .unite-row {
@@ -117,14 +139,6 @@
       justify-content: space-between;
       display: flex;
       margin-bottom: 40px;
-
-      > div {
-         width: 49%;
-
-         h2 {
-            padding-bottom: 24px;
-         }
-      }
    }
 
    .unite-info-row {
@@ -146,14 +160,18 @@
 
    &__to-plug {
       color: #fff;
-      padding: 50px 0 0 0;
+      padding: 50px 0 58px;
+      max-width: 701px;
+      margin: 0 auto;
 
       h2 {
-         max-width: 635px;
+         margin-bottom: 24px;
       }
 
       p {
-         margin-bottom: 39px;
+         max-width: 650px;
+         margin: 0 auto;
+         text-align: center;
          font-size: 15px;
          line-height: 24px;
       }
@@ -197,11 +215,23 @@
       }
    }
 
-   &__unite {
-      padding: 46px 50px 60px;
+   &__router {
+      display: none;
+      padding-bottom: 48px;
+
+      .unite-row {
+         align-items: center;
+      }
+   }
+
+   &__params {
+      width: 52%;
+      padding: 0 50px 43px;
       background-color: #fff;
       border-radius: 10px;
+      overflow: hidden;
       box-shadow: 0 1px 4px #0000004D;
+      color: #333;
 
       .unite-info {
 
@@ -303,18 +333,28 @@
       }
    }
 
+   &__params-title {
+      background-color: var(--mf-green);
+      color: #fff;
+      margin: 0 -50px 35px;
+      padding: 20px 50px 16px;
+      display: flex;
+      align-items: center;
+   }
+
    &__img {
-      max-height: 608px;
-      margin-right: 54px;
+      flex: 1 1 auto;
+      text-align: center;
+      margin: 0 -85px 0 0;
+      height: 525px;
+
+      img {
+         max-width: 100%;
+         max-height: 100%;
+      }
    }
 
    @media (min-width: 1024px) and (max-width: 1300px) {
-
-      &__img {
-         max-height: 580px;
-         margin-right: 0;
-         margin-bottom: 50px;
-      }
 
       &__links {
          padding-left: 63px;
@@ -330,17 +370,27 @@
          }
       }
 
-      .unite-address__input {
+      .unite-address {
+         padding: 34px 30px 0;
 
-         > div {
-            display: flex;
-            max-width: none;
-            margin: 0 0 28px;
+         &__title {
+            margin: 0 auto 30px;
+         }
+
+         &__input {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            > div {
+               width: 100%;
+               max-width: none;
+            }
 
             button {
-               position: relative;
+               margin: 32px 0 0;
             }
          }
+
       }
 
       .unite-row,
@@ -396,6 +446,12 @@
       }
 
       .unite-address {
+         padding: 34px 30px 0;
+
+         &__title {
+            max-width: 480px;
+            margin: 0 auto 30px;
+         }
 
          &__input {
             flex-wrap: wrap;
@@ -403,11 +459,12 @@
 
             > div {
                width: 100%;
+               max-width: none;
 
-               button {
-                  margin: 28px 0 0;
-                  position: relative;
-               }
+            }
+
+            button {
+               margin: 32px 0 0;
             }
          }
 
@@ -426,7 +483,10 @@
       }
 
       &__to-plug {
-         padding: 50px 0 0;
+
+         h2 {
+            text-align: center;
+         }
       }
    }
 
@@ -443,13 +503,26 @@
       }
 
       .unite-address {
-         &__input > div button {
-            margin: 50px 0 0;
-            position: relative;
+         padding: 34px 20px 0;
+
+         &__title {
+            max-width: 480px;
+            margin: 0 auto 30px;
          }
 
-         b {
-            display: block;
+         &__input {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            > div {
+               width: 100%;
+               max-width: none;
+
+            }
+
+            button {
+               margin: 32px 0 0;
+            }
          }
 
       }
@@ -459,9 +532,9 @@
       }
 
       .unite__to-plug {
-         padding: 0;
 
          h2 {
+            text-align: center;
             font-size: 28px;
             line-height: 36px;
          }
@@ -513,6 +586,7 @@
 
       .unite-order {
          flex-wrap: wrap;
+         justify-content: center;
 
          .btn {
             order: 1;
@@ -521,8 +595,16 @@
 
          .price {
             width: 100%;
-            justify-content: flex-start;
+            justify-content: center;
          }
+      }
+
+      &__params {
+         padding: 0 36px 43px;
+      }
+
+      &__router {
+         padding-bottom: 85px;
       }
    }
 }

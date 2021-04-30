@@ -1,44 +1,49 @@
-<section class="unite unite-check-address">
-   <div class="wrapper">
+<section class="unite-wrapper">
+   <div class="unite unite-check-address wrapper">
       <div class="unite-address">
-         <p class="unite-address__title">Проверьте возможность подключения в вашем городе</p>
-         <form name="address" class="unite-address__input">
-            <div>
-               <input onkeydown="validAddress('', event)" type="text" id="addressCheck" name="address"
-                      placeholder="Ваш адрес">
-               <label class="error" for="addressCheck">Выберите адрес дома из выпадающего списка!</label>
-               <button type="submit" class="btn btn-fiolet">Проверить</button>
+         <div id="addressCheckHead">
+            <p class="unite-address__title">Проверь возможность подключения домашнего интернета по твоему адресу</p>
+            <form name="address" class="unite-address__input">
+               <div>
+                  <input onkeydown="validAddress('', event)" type="text" id="addressCheck" name="address"
+                         placeholder="Ваш адрес">
+                  <label class="error" for="addressCheck">Выберите адрес дома из выпадающего списка!</label>
+               </div>
+               <button type="submit" class="btn">Проверить</button>
+            </form>
+         </div>
 
-            </div>
+         <div class="unite-address__offer">
+            <p>
+               К сожалению, мы пока не можем подключить ваш дом к домашнему интернету. <br>
+               Но по адресу <b>адрес</b> доступно
+               <span onclick="toPlug('#unite')" class="underline">специальное предложение</span>
+               на беспроводной интернет:
+            </p>
+            <span class="link" onclick="hideResult()">Изменить адрес</span>
+         </div>
 
-         </form>
-         <p class="unite-address__offer">
-            К сожалению, мы пока не можем подключить ваш дом к домашнему интернету. <br>
-            Но по адресу <b>адрес</b> доступно
-            <span onclick="toPlug('#unite')" class="underline">специальное предложение</span>
-            на беспроводной интернет:
-         </p>
          <div class="success-check">
             <img src="img/svg/success.svg" alt="img">
-            <p>Подключение по адресу <b>адрес</b> возможно!</p>
+            <p>Подключение по адресу <b>адрес</b> Возможно!</p>
+            <span class="link" onclick="hideResult()">Изменить адрес</span>
+            <button class="btn" data-toggle="modal" data-target="#order">Отправить заявку</button>
          </div>
-      </div>
-   </div>
-   <div class="unite" id="unite">
-      <div class="wrapper">
-         <div class="unite-row">
-            <div>
-               <div class="unite__to-plug">
-                  <h2>Мобильная связь, домашний интернет и ТВ на 4G+ скоростях со скидкой 40%</h2>
-                  <p>
-                     Пользуйтесь самым быстрым интернетом дома, даже когда недоступен проводной интернет. Берите роутер
-                     с собой и пользуйтесь Wi-Fi дома, на даче или у друзей.
-                  </p>
-               </div>
 
-               <div class="unite__unite">
+         <div class="unite__router" id="unite">
+            <div class="unite__to-plug">
+               <h2>Мобильная связь, домашний интернет и ТВ на 4G+ скоростях со скидкой 40% навсегда</h2>
+               <p>
+                  Пользуйтесь самым быстрым интернетом дома, даже когда недоступен проводной интернет. Берите роутер с
+                  собой и пользуйтесь Wi-Fi дома, на даче или у друзей.
+               </p>
+            </div>
 
-                  <h2>Объединяй! Везде</h2>
+            <div class="unite-row">
+               <div class="unite__params">
+                  <div class="unite__params-title">
+                     <h2>Объединяй! Везде</h2>
+                  </div>
                   <div class="unite-info-row">
                      <div class="unite-info">
                         <p class="unite-info__title">Беспроводной интернет и ТВ</p>
@@ -102,7 +107,7 @@
                   </div>
 
                   <div class="unite-order">
-                     <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
+                     <div data-toggle="modal" data-target="#order" class="btn">Отправить заявку</div>
                      <div class="price">
                         <span class="old-price">1600 ₽</span>
                         <span class="new-price">1060</span> <span>₽</span>
@@ -110,8 +115,10 @@
                      </div>
                   </div>
                </div>
+               <div class="unite__img">
+                  <img class="" src="img/pic/router_info_2x.png" alt="router">
+               </div>
             </div>
-            <img class="unite__img" src="img/pic/router_info_2x.png" alt="router">
          </div>
       </div>
    </div>
