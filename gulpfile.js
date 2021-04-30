@@ -17,10 +17,10 @@ let path = {
       fonts: source_folder + '/fonts/*',
    },
    watch: {
-      css: source_folder + '/**/**/*.scss',
+      css: source_folder + '/**/*.scss',
       js: source_folder + '/js/**/*.js',
       img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-      hbs: source_folder + '/**/*.hbs'
+      hbs: source_folder + '/**/**/*.hbs'
    },
    clean: './' + project_folder + '/'
 }
@@ -48,7 +48,7 @@ function hbs() {
       },
       options = {
          ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
-         batch: ['./app/components'],
+         batch: ['./app/components', './app/components/modals'],
          helpers: require('./app/js/helpers')
       }
 

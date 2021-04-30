@@ -1,0 +1,67 @@
+<!--Подробнее Модемы-->
+{{#each performance}}
+   <div class="modal fade performance" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+
+            <div class="modal-wrapper">
+               <div class="performance__text">
+                  <h2>{{name}}</h2>
+                  <h3>Характеристики:</h3>
+                  <ul>
+                     {{#each params}}
+                        <li>{{this}}</li>
+                     {{/each}}
+                  </ul>
+               </div>
+
+               <div class="performance__img">
+                  <img src="img/pic/{{img}}" alt="img"/>
+               </div>
+
+               <div class="modal-order">
+                  <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
+                  <div class="modal-order__text">
+                     <p>{{price}} ₽/мес</p>
+                     <a href="#">Скачать подробную информацию</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+{{/each}}
+<div class="modal fade performance" id="{{unite.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+
+         <div class="modal-wrapper">
+            <div class="performance__text">
+               <h2>{{unite.name}}</h2>
+               <h3>Характеристики:</h3>
+               <ul>
+                  {{#each unite.params}}
+                     <li>{{this}}</li>
+                  {{/each}}
+               </ul>
+            </div>
+
+            <div class="performance__img">
+               <img src="img/pic/router_info.png" alt="img"/>
+            </div>
+
+            <div class="modal-order">
+               <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
+               <div class="modal-order__text">
+                  <p>{{unite.price}} ₽/мес</p>
+                  <a href="#">Скачать подробную информацию</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
