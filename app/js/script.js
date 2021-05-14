@@ -107,19 +107,21 @@ const validAddress = (data, event) => {
 
 const validateMainAddress = (success, offer, address) => {
    let input = $( 'input' )
-   $('input[name=address] + label').hide()
+   $( 'input[name=address] + label' ).hide()
    $( '.unite-address__offer' )[offer]()
    $( '#unite' )[offer]()
    $( '.success-check' )[success]();
    $( address ).text( input.val() );
+   $( '#addressCheckHead' ).hide()
    flagValid = true
 }
 
 const hideResult = () => {
-   $( 'input' ).val('')
+   $( 'input' ).val( '' )
    $( '.success-check' ).hide();
    $( '.unite-address__offer' ).hide();
    $( '#unite' ).hide()
+   $( '#addressCheckHead' ).show()
    flagValid = false
 }
 
