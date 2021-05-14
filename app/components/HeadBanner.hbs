@@ -2,14 +2,15 @@
    <div class="wrapper">
       {{> Header}}
       <div class="section-row">
-         <div class="head-banner__col1">
-            <h1>Тарифы «Объединяй!» <br> со скидкой до 50%</h1>
+         <div class="head-banner__text">
+            <h1>Тарифы <wbr> «Объединяй!» <wbr> со скидкой до 50%</h1>
             <p>Домашний интернет, мобильная связь и ТВ вместе дешевле</p>
             <a onclick="toPlug('.tariffs')" class="btn btn-fiolet">Подключить</a>
          </div>
          <div class="head-banner__img-wrapp">
             <picture>
-               <img class="head-banner__img" src="img/pic/pic_o.png" alt="img"/>
+               <source srcset="img/pic/pic_o.png" media="(max-width: 920px)">
+               <img class="head-banner__img" src="img/pic/pic_o_l.png" alt="img"/>
             </picture>
          </div>
       </div>

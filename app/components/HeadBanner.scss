@@ -1,13 +1,14 @@
 .head-banner {
    background-color: var(--mf-green);
+   overflow: hidden;
 
-   .head-banner__img-wrapp {
+   &__img-wrapp {
       height: 100%;
-      max-width: 549px;
-      width: 100%;
+      margin-right: 4%;
       white-space: nowrap;
       font-size: 0;
       text-align: right;
+      position: relative;
 
       &:before {
          content: '';
@@ -17,7 +18,7 @@
       }
    }
 
-   .head-banner__img {
+   &__img {
       max-width: 100%;
       max-height: 100%;
       vertical-align: bottom;
@@ -27,18 +28,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 380px;
+      height: 379px;
    }
 
-   .head-banner__col1 {
+   &__text {
       color: #fff;
       margin-top: -13px;
       width: 45%;
+      min-width: 502px;
 
       h1 {
          margin-bottom: 15px;
+         white-space: nowrap;
 
-         @media (max-width: 1167px) {
+         @media (max-width: 1200px) {
             font-size: 44px;
             line-height: 48px;
          }
@@ -69,7 +72,7 @@
       padding: 0 33px;
    }
 
-   .head-banner__col2 {
+   &__col2 {
       height: 375px;
       margin-right: 50px;
 
@@ -78,32 +81,40 @@
       }
    }
 
-   @media (max-width: 1024px) {
-      .section-row {
-         margin-right: -30px;
-      }
-      .head-banner__col1 {
-         margin-top: -10px;
 
-         p {
-            margin-bottom: 30px;
-         }
+   @media (max-width: 1200px) {
+      &__img-wrapp {
+         margin-right: -22px;
+         max-width: 544px;
       }
+
+      &__text {
+         min-width: 421px;
+      }
+
+      p {
+         max-width: 343px;
+         margin-bottom: 30px;
+      }
+
    }
 
-   @media (max-width: 995px) {
+   @media (max-width: 920px) {
       .section-row {
          align-items: flex-start;
          height: auto;
          flex-wrap: wrap;
-         padding-top: 59px;
-         margin: 0 -30px;
+         padding-top: 56px;
+         margin: 0 auto;
+         max-width: 470px;
       }
-      .head-banner__col1 {
+
+      &__text {
          width: 100%;
          margin-top: 0;
          text-align: center;
-         padding: 0 30px 37px;
+         padding: 0 0 27px;
+         min-width: 0;
 
          p {
             max-width: none;
@@ -112,30 +123,52 @@
          }
       }
 
-      .head-banner__img-wrapp {
-         max-width: none;
+      &__img-wrapp {
+         margin-right: 0;
       }
 
-      .head-banner__img {
+      &__img {
          width: 100%;
          height: auto;
       }
+
+      &__sale {
+         font-size: 24px;
+         line-height: 29px;
+         padding: 2px 7px 2px 7px;
+         left: 17px;
+         top: 18px;
+
+         &:after {
+            top: 40px;
+            font-size: 19px;
+         }
+      }
    }
+
    @media (max-width: 500px) {
-      .head-banner__col1 {
-         padding: 30px;
+      &__text {
+         padding: 0 0 20px;
+
          h1 {
             font-size: 30px;
             line-height: 36px;
          }
+
          p {
             font-size: 15px;
-            max-width: 245px;
-            margin: 0 auto 30px;
+            padding: 0 20px;
          }
       }
+
       .section-row {
-         padding-top: 0;
+         padding-top: 33px;
+      }
+   }
+
+   @media (max-width: 320px) {
+      &__text h1 {
+         white-space: normal;
       }
    }
 }
