@@ -1,5 +1,5 @@
 let project_folder = 'dist'
-let source_folder = 'app'
+let source_folder = 'src'
 
 let fs = require('fs')
 
@@ -48,18 +48,18 @@ function hbs() {
       },
       options = {
          ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
-         batch: ['./app/components', './app/components/modals'],
-         helpers: require('./app/js/helpers')
+         batch: ['./src/components', './src/components/modals'],
+         helpers: require('./src/js/helpers')
       }
 
-   return gulp.src('app/index.hbs')
+   return gulp.src('src/index.hbs')
       // подключить json
       .pipe(gulp_data(function () {
-         const tariffs = require( './app/json/tariffs' )
-         const performance = require( './app/json/performance' )
-         const info = require( './app/json/info' )
-         const cities = require( './app/json/cities' )
-         const unite = require( './app/json/unite' )
+         const tariffs = require( './src/json/tariffs' )
+         const performance = require( './src/json/performance' )
+         const info = require( './src/json/info' )
+         const cities = require( './src/json/cities' )
+         const unite = require( './src/json/unite' )
 
          return {tariffs, performance, info, cities, unite}
       }))
