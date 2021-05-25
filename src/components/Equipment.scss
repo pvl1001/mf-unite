@@ -24,12 +24,19 @@
       background-color: var(--mf-green);
       color: #fff;
       display: flex !important;
-      justify-content: space-between;
       height: 100%;
 
+      &__wrapp {
+         display: flex;
+         height: fit-content;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+      }
+
       &__text {
-         width: 51%;
-         min-width: 545px;
+         width: 56%;
+         max-width: 650px;
          flex-shrink: 0;
          padding: 58px 0 58px 58px;
 
@@ -127,6 +134,18 @@
                   &.control {
                      background: #fff url('../img/svg/Block_24.svg') center / 17px no-repeat;
                   }
+
+                  &.phone {
+                     background: #fff url('../img/svg/phone_24.svg') center / 17px no-repeat;
+                  }
+
+                  &.safety {
+                     background: #fff url('../img/svg/safety_24.svg') center / 17px no-repeat;
+                  }
+
+                  &.message {
+                     background: #fff url('../img/svg/message.svg') center / 25px no-repeat;
+                  }
                }
 
                &_text {
@@ -169,14 +188,15 @@
 
       &__img {
          flex-grow: 1;
-         max-height: 322px;
-         margin-top: 87px;
-         margin-right: 30px;
+         max-height: 368px;
+         //margin-top: 87px;
+         //margin-right: 30px;
+         padding: 0 30px;
          text-align: center;
 
          img {
             display: inline-block;
-            max-height: 100%;
+            max-height: inherit;
             max-width: 100%;
          }
       }
@@ -194,7 +214,9 @@
       }
 
       .slide-equipment {
-         flex-wrap: wrap;
+         &__wrapp {
+            flex-wrap: wrap;
+         }
 
          &__text {
             width: 100%;
@@ -228,8 +250,8 @@
             width: 50%;
             flex-grow: 0;
             margin-left: auto;
-            margin-top: -180px;
-            padding: 0 0 59px;
+            margin-top: -207px;
+            padding: 0 30px 59px;
             text-align: right;
          }
       }
@@ -241,7 +263,10 @@
       }
 
       .slide-equipment {
-         flex-wrap: wrap;
+
+         &__wrapp {
+            flex-wrap: wrap;
+         }
 
          &__text {
             width: 100%;
@@ -276,8 +301,9 @@
          &__img {
             width: 100%;
             margin-top: 0;
-            padding: 0 53px 94px;
+            padding: 0 53px;
             margin-right: 0;
+            margin-bottom: 94px;
          }
       }
    }

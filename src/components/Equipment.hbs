@@ -3,34 +3,36 @@
       <div class="equipment__slider slider">
          {{#each performance}}
             <div class="equipment__slide slide-equipment">
-               <div class="slide-equipment__text">
-                  <h2>{{name}}</h2>
-                  <p>
-                     {{text}}
-                  </p>
-                  <div class="equipment-params">
+               <div class="slide-equipment__wrapp">
+                  <div class="slide-equipment__text">
+                     <h2>{{name}}</h2>
+                     <p>
+                        {{{text}}}
+                     </p>
+                     <div class="equipment-params">
 
-                     {{#each icons}}
-                        <div class="equipment-params__item">
-                           <div class="equipment-params__item_icon {{icon}}"></div>
-                           <div class="equipment-params__item_text">{{{text}}}</div>
-                        </div>
-                     {{/each}}
-                  </div>
-                  <div class="equipment-order">
-                     <a data-toggle="modal" data-target="#order" class="btn btn-fiolet">Заказать</a>
-                     <div class="equipment-order__text">
-                        <p>{{price}} ₽/мес</p>
-                        <a href="#">Скачать подробную информацию</a>
-                        <div data-toggle="modal"
-                             data-target="#{{id}}">
-                           Технические характеристики
+                        {{#each icons}}
+                           <div class="equipment-params__item">
+                              <div class="equipment-params__item_icon {{icon}}"></div>
+                              <div class="equipment-params__item_text">{{{text}}}</div>
+                           </div>
+                        {{/each}}
+                     </div>
+                     <div class="equipment-order">
+                        <a data-toggle="modal" data-target="#order" class="btn btn-fiolet">Заказать</a>
+                        <div class="equipment-order__text">
+                           <p>{{price}} ₽/мес</p>
+                           <a href="#">Скачать подробную информацию</a>
+                           <div data-toggle="modal"
+                                data-target="#{{id}}">
+                              Технические характеристики
+                           </div>
                         </div>
                      </div>
                   </div>
-               </div>
-               <div class="slide-equipment__img">
-                  <img src="img/pic/{{img}}" alt="img"/>
+                  <div class="slide-equipment__img">
+                     <img src="img/pic/{{img}}" alt="img"/>
+                  </div>
                </div>
             </div>
          {{/each}}

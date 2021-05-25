@@ -316,6 +316,7 @@ input[data-provide="datepicker"] {
 
    .slick-track, .slick-list {
       display: flex;
+      border-radius: 10px;
    }
 
    .slick-slide > div {
@@ -373,6 +374,12 @@ input[data-provide="datepicker"] {
             height: 12px;
             background-color: var(--mf-fiolet);
          }
+      }
+   }
+
+   @media (max-width: 1023px) {
+      .slick-track, .slick-list {
+         border-radius: 0;
       }
    }
 }
