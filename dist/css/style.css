@@ -8870,7 +8870,6 @@ form input.error + label {
 
 .head-banner__text h1 {
   margin-bottom: 15px;
-  white-space: nowrap;
 }
 
 .head-banner__text p {
@@ -15571,6 +15570,16 @@ form input.error + label {
 
   .head-banner .section-row {
     padding-top: 33px;
+  }
+}
+
+@media (max-width: 415px) {
+  .head-banner__text h1 nobr {
+    white-space: pre-wrap;
+  }
+
+  .head-banner__text h1 br {
+    display: none;
   }
 }
 

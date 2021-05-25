@@ -39,7 +39,6 @@
 
       h1 {
          margin-bottom: 15px;
-         white-space: nowrap;
 
          @media (max-width: 1200px) {
             font-size: 44px;
@@ -49,6 +48,15 @@
          @media (max-width: 995px) {
             font-size: 36px;
             line-height: 40px;
+         }
+
+         @media (max-width: 415px) {
+            nobr {
+               white-space: pre-wrap;
+            }
+            br {
+               display: none;
+            }
          }
       }
 
