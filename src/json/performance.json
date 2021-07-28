@@ -11,6 +11,7 @@
          "Подписка на видео МегаФон ТВ в подарок"
       ],
       "img": "pristavka.png",
+      "mobImg": "pristavka_mob.png",
       "price": 199,
       "icons": [
          {
@@ -29,7 +30,8 @@
             "icon": "chromecast",
             "text": "Google <br> Chromecast"
          }
-      ]
+      ],
+      "dataView": "androidtv"
    },
    {
       "id": "performance1",
@@ -68,7 +70,8 @@
             "icon": "control",
             "text": "Родительский <br> контроль"
          }
-      ]
+      ],
+      "dataView": "fr100"
    },
    {
       "id": "performance2",
@@ -108,7 +111,8 @@
             "icon": "antennas",
             "text": "4 внешние антенны <br> MU-MIMO"
          }
-      ]
+      ],
+      "dataView": "fr1000"
    },
    {
       "id": "performance3",
@@ -134,7 +138,8 @@
             "icon": "family",
             "text": "Функция <br> «Родительский контроль»"
          }
-      ]
+      ],
+      "dataView": "mftv"
    },
    {
       "id": "performance4",
@@ -165,6 +170,7 @@
             "icon": "message",
             "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
          }
-      ]
+      ],
+      "dataView": "almond"
    }
 ]

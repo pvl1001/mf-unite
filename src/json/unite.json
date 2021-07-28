@@ -9,5 +9,6 @@
       "Компактные размеры"
    ],
    "img": "router_info_2x.png",
-   "price": 100
+   "price": 100,
+   "priceSale": 960
 }

@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M1 18v3h3a3 3 0 00-3-3zm0-4v2a5 5 0 015 5h2a7 7 0 00-7-7zm0-4v2a9 9 0 019 9h2A11 11 0 001 10zm20-7H3a2.006 2.006 0 00-2 2v3h2V5h18v14h-7v2h7a2.006 2.006 0 002-2V5a2.006 2.006 0 00-2-2z" fill-rule="evenodd"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+<svg id="Page-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic_cast_black_24dp">
+    <g id="ic_remove_circle_white_24dp">
+      <path id="cast" d="M1,18v3H4a3,3,0,0,0-3-3Zm0-4v2a5,5,0,0,1,5,5H8a7,7,0,0,0-7-7Zm0-4v2a9,9,0,0,1,9,9h2A11,11,0,0,0,1,10ZM21,3H3A2.006,2.006,0,0,0,1,5V8H3V5H21V19H14v2h7a2.006,2.006,0,0,0,2-2V5a2.006,2.006,0,0,0-2-2Z" fill-rule="evenodd"/>
+      <rect id="bounds" width="24" height="24" fill="none"/>
+    </g>
+  </g>
+</svg>

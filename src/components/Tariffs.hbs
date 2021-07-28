@@ -3,32 +3,157 @@
       <!-- slider-->
       <div class="slider">
          {{#each  tariffs}}
+            {{#if (noAround name)}}
+               <div class="slider__item card">
+                  <div class="card__title">
+                     <p>Объединяй!</p>
+                     <p>{{name}}</p>
+                     <span data-view="tariff_card_{{dataView}}_start"
+                           onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')" data-view="first_banner">Подробнее</span>
+                  </div>
+                  <div class="card__info">
+                     <div class="card__info_block info-card">
+                        <p class="info-card__title">Домашний интернет {{#if tv}}и ТВ{{/if}}</p>
+                        <div class="info-card__desc">
+                           <div class="info-card__desc_icon wi-fi"></div>
+                           {{speed}} Мбит/с
+                        </div>
+                        {{#if tvLength}}
+                           <div class="info-card__desc desk-channels">
+                              <div class="info-card__desc_icon tv"></div>
+                              <a href="#collapseChannel{{@index}}"
+                                 data-toggle="collapse"
+                                 data-target=".multi-collapse">
+                                 {{tvLength}}
+                              </a>
+                           </div>
+                           <div data-toggle="collapse"
+                                class="collapse multi-collapse collapse-channel"
+                                id="collapseChannel{{@index}}">
+
+                              <ul class="collapse-channel__channels">
+                                 <li class="collapse-channel__channel-group">
+                                    {{#each ../tariffs.[3].tv}}
+                                       <a href="#collapseChannelGroup1{{@index}}"
+                                          data-toggle="collapse"
+                                          class="collapse-channel__group-toggle"
+                                          aria-controls="collapse_{{../id}}_{{@index}}"
+                                          data-target=".multi-collapse-gr{{@index}}"
+                                          aria-expanded="false"
+                                       >
+                                          <div class="collapse-channel__group-wrapper">
+                                             <span class="collapse-channel__group-name">{{group}}</span>
+                                             <span class="collapse-channel__group-count">
+                                                {{countChannel ../tv @index}}
+                                             </span>
+                                          </div>
+                                       </a>
+                                       <ul class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
+                                           id="collapse_{{../id}}_{{@index}}">
+                                          {{#each groupData}}
+                                             <li class="collapse-channel__group-channelName {{#if
+                                                (activeName name ../.. @../index)}}text-green{{/if}}">
+                                                {{name}}
+                                             </li>
+                                          {{/each}}
+                                       </ul>
+                                    {{/each}}
+                                 </li>
+                              </ul>
+
+                           </div>
+                        {{/if}}
+                     </div>
+
+                     <div class="card__info_block info-card">
+                        <p class="info-card__title">Мобильная связь</p>
+                        {{#if min}}
+                           <div class="info-card__desc desk-mobile">
+                              <div class="info-card__desc_icon mobile"></div>
+                              {{min}} минут
+                           </div>
+                        {{/if}}
+                        {{#if web}}
+                           <div class="info-card__desc">
+                              <div class="info-card__desc_icon web-4g"></div>
+                              {{web}}
+                           </div>
+                        {{/if}}
+                        {{#if sale}}
+                           <div class="info-card__desc">
+                              <div class="info-card__desc_icon bonus"></div>
+                              {{sale}}
+                           </div>
+                        {{/if}}
+                     </div>
+
+                     {{#if (isDefined rentDevice)}}
+                        <div class="card__info_block info-card">
+                           <p class="info-card__title">Оборудование</p>
+                              <div class="info-card__desc info-card__desc_equipment">
+                                 <div class="info-card__desc_icon router"></div>
+                                 Wi-Fi роутер
+                              </div>
+                              <div class="info-card__desc info-card__desc_equipment">
+                                 <div class="info-card__desc_icon tv-box"></div>
+                                 ТВ-приставка
+                              </div>
+                        </div>
+                     {{/if}}
+
+                  </div>
+                  <div class="card__price">
+                     <div class="price">
+                        {{#if oldPrice}}
+                           <span class="old-price">{{oldPrice}} ₽</span>
+                        {{/if}}
+                        <span class="new-price">{{price}}</span> <span>₽</span>
+                        <span>в месяц</span>
+                        {{#if iconInfo}}
+                           <div class="price__icon {{#if
+                              (iconInfo @index)}}price__icon_two-web{{else}}price__icon_all{{/if}}"></div>
+                        {{/if}}
+                     </div>
+                     <div class="card__price_btn">
+                        <div data-view="tariff_card_{{dataView}}_end"
+                             onclick="openOrder('send_', '{{dataView}}')"
+                             data-toggle="modal"
+                             data-target="#order"
+                             class="btn">Заказать
+                        </div>
+                     </div>
+                  </div>
+                  {{#if mark}}
+                     <div class="card__mark {{#if (markClass mark)}} mark-red {{else}} mark-blue{{/if}}">{{mark}}</div>
+                  {{/if}}
+               </div>
+            {{/if}}
+         {{/each}}
+         {{#with tariffs.[4]}}
             <div class="slider__item card">
                <div class="card__title">
                   <p>Объединяй!</p>
                   <p>{{name}}</p>
-                  <span data-target="#{{id}}" data-toggle="modal">Подробнее</span>
+                  <span data-view="tariff_card_{{dataView}}_start"
+                        onclick="moreTariff('#{{id}}', 4, 'details_{{dataView}}')">Подробнее</span>
                </div>
                <div class="card__info">
                   <div class="card__info_block info-card">
-                     <p class="info-card__title">Домашний интернет {{#if tv}}и ТВ{{/if}}</p>
+                     <p class="info-card__title">Домашний интернет {{#if tvLength}}и ТВ{{/if}}</p>
                      <div class="info-card__desc">
                         <div class="info-card__desc_icon wi-fi"></div>
                         {{speed}} Мбит/с
                      </div>
-                     {{#if tv.length}}
+                     {{#if tvLength}}
                         <div class="info-card__desc desk-channels">
                            <div class="info-card__desc_icon tv"></div>
                            <a href="#collapseChannel{{@index}}"
                               data-toggle="collapse"
-                              aria-controls="collapseChannel collapseChannel1 collapseChannel2"
                               data-target=".multi-collapse">
-                              {{totalChannel tv}} каналов
+                              {{tvLength}}
                            </a>
                         </div>
-                        <div href="#collapseChannel4"
-                             data-toggle="collapse"
-                             aria-controls="collapseChannel2"
+                        <div data-toggle="collapse"
                              class="collapse multi-collapse collapse-channel"
                              id="collapseChannel{{@index}}">
 
@@ -65,7 +190,6 @@
                         </div>
                      {{/if}}
                   </div>
-
                   <div class="card__info_block info-card">
                      <p class="info-card__title">Мобильная связь</p>
                      {{#if min}}
@@ -87,25 +211,6 @@
                         </div>
                      {{/if}}
                   </div>
-
-                  {{#if (isDefined rentRouter rentTvBox)}}
-                     <div class="card__info_block info-card">
-                        <p class="info-card__title">Оборудование</p>
-                        {{#if rentRouter}}
-                           <div class="info-card__desc info-card__desc_equipment">
-                              <div class="info-card__desc_icon router"></div>
-                              Wi-Fi роутер
-                           </div>
-                        {{/if}}
-                        {{#if rentTvBox}}
-                           <div class="info-card__desc info-card__desc_equipment">
-                              <div class="info-card__desc_icon tv-box"></div>
-                              ТВ-приставка
-                           </div>
-                        {{/if}}
-                     </div>
-                  {{/if}}
-
                </div>
                <div class="card__price">
                   <div class="price">
@@ -120,14 +225,16 @@
                      {{/if}}
                   </div>
                   <div class="card__price_btn">
-                     <div data-toggle="modal" data-target="#order" class="btn">Заказать</div>
+                     <div data-view="tariff_card_{{dataView}}_end"
+                          onclick="openOrder('send_', '{{dataView}}')"
+                          data-toggle="modal"
+                          data-target="#order"
+                          class="btn">Заказать
+                     </div>
                   </div>
                </div>
-               {{#if mark}}
-                  <div class="card__mark {{#if (markClass mark)}} mark-red {{else}} mark-blue{{/if}}">{{mark}}</div>
-               {{/if}}
             </div>
-         {{/each}}
+         {{/with}}
       </div>
    </div>
 </section>

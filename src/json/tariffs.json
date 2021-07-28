@@ -1,27 +1,35 @@
 [
    {
       "id": "TwoWeb",
+      "dataView": "dvainet",
       "name": "Два интернета",
       "mark": "Только нужное",
-      "speed": 50,
-      "min": 600,
+      "speed": 200,
+      "min": 900,
       "web": "Безлимитный интернет",
       "sale": "Скидка 40% на SIM-карты",
       "tv": null,
-      "oldPrice": 700,
-      "price": 350,
-      "iconInfo": true,
-      "rentRouterText": "Аренда Wi-Fi роутера",
-      "rentRouter": 88,
-      "rentRouterSpeed": "(1 Гбит/c)",
-      "rentTvBox": null
+      "oldPrice": null,
+      "price": 750,
+      "iconInfo": false,
+      "rentDevice": [
+         {
+            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
+            "price": 88
+         },
+         {
+            "text": "Аренда Android TV",
+            "price": 199
+         }
+      ]
    },
    {
       "id": "Economic",
+      "dataView": "econom",
       "name": "Эконом",
       "speed": 50,
-      "min": 300,
-      "web": "Безлимитный интернет",
+      "min": 700,
+      "web": "30 ГБ",
       "sale": "Скидка 40% на SIM-карты",
       "tv": [
          {
@@ -346,20 +354,32 @@
             ]
          }
       ],
-      "oldPrice": 600,
-      "price": 300,
-      "iconInfo": true,
-      "rentRouterText": "Аренда Wi-Fi роутера",
-      "rentRouter": 55,
-      "rentRouterSpeed": "(100 Мбит/с)",
-      "rentTvBox": 99
+      "tvLength": "61 канал",
+      "oldPrice": null,
+      "price": 650,
+      "iconInfo": false,
+      "rentDevice": [
+         {
+            "text": "Аренда ТВ-приставки",
+            "price": 88
+         },
+         {
+            "text": "Аренда Android TV",
+            "price": 199
+         },
+         {
+            "text": "Аренда Wi-Fi роутера <nobr>(100 Мбит/с)</nobr>",
+            "price": 55
+         }
+      ]
    },
    {
       "id": "Hit",
+      "dataView": "hit",
       "name": "Хит",
       "mark": "Популярное",
-      "speed": 100,
-      "min": 1200,
+      "speed": 300,
+      "min": 1300,
       "web": "Безлимитный интернет",
       "sale": "Скидка 40% на SIM-карты",
       "tv": [
@@ -1333,19 +1353,31 @@
             ]
          }
       ],
-      "oldPrice": 800,
-      "price": 400,
-      "iconInfo": true,
-      "rentRouterText": "Аренда Wi-Fi роутера",
-      "rentRouter": 88,
-      "rentRouterSpeed": "(1 Гбит/с)",
-      "rentTvBox": "0"
+      "tvLength": "188 каналов",
+      "oldPrice": null,
+      "price": 850,
+      "iconInfo": false,
+      "rentDevice": [
+         {
+            "text": "Аренда ТВ-приставки",
+            "price": 99
+         },
+         {
+            "text": "Аренда Android TV",
+            "price": 199
+         },
+         {
+            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
+            "price": 88
+         }
+      ]
    },
    {
       "id": "ForTheir",
+      "dataView": "their",
       "name": "Для своих",
-      "speed": 300,
-      "min": 3000,
+      "speed": 500,
+      "min": 2100,
       "web": "Безлимитный интернет",
       "sale": "Скидка 40% на SIM-карты",
       "tv": [
@@ -2664,28 +2696,369 @@
             ]
          }
       ],
-      "oldPrice": 1500,
-      "price": 750,
+      "tvLength": "250 каналов",
+      "oldPrice": 1300,
+      "price": 650,
       "iconInfo": true,
-      "rentRouterText": "Аренда Wi-Fi роутера",
-      "rentRouter": "0",
-      "rentRouterSpeed": "(1 Гбит/с)",
-      "rentTvBox": "0"
+      "rentDevice": [
+         {
+            "text": "Аренда ТВ-приставки",
+            "price": "0"
+         },
+         {
+            "text": "Аренда Android TV",
+            "price": 199
+         },
+         {
+            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
+            "price": "0"
+         }
+      ]
    },
    {
       "id": "Around",
+      "dataView": "vezde",
       "name": "Везде",
       "speed": 150,
-      "min": 1100,
+      "min": 2100,
       "web": "Безлимитный интернет",
-      "sale": "Скидка 40% на SIM-карты",
-      "tv": null,
+      "sale": null,
+      "tv": [
+         {
+            "group": "HD",
+            "groupData": [
+               {
+                  "id": 8,
+                  "name": "RT"
+               },
+               {
+                  "id": 9,
+                  "name": "RTД HD"
+               },
+               {
+                  "id": 12,
+                  "name": "SOCHI LIVE"
+               },
+               {
+                  "id": 18,
+                  "name": "Известия"
+               },
+               {
+                  "id": 20,
+                  "name": "Капитан Фантастика"
+               },
+               {
+                  "id": 37,
+                  "name": "Россия HD"
+               },
+               {
+                  "id": 48,
+                  "name": "Телеканал 360°"
+               }
+            ]
+         },
+         {
+            "group": "Для детей",
+            "groupData": [
+               {
+                  "id": 19,
+                  "name": "Канал Disney"
+               },
+               {
+                  "id": 20,
+                  "name": "Капитан Фантастика"
+               },
+               {
+                  "id": 21,
+                  "name": "Карусель"
+               },
+               {
+                  "id": 35,
+                  "name": "Радость моя"
+               },
+               {
+                  "id": 50,
+                  "name": "Уникум"
+               }
+            ]
+         },
+         {
+            "group": "Спорт",
+            "groupData": [
+               {
+                  "id": 23,
+                  "name": "Матч ТВ"
+               }
+            ]
+         },
+         {
+            "group": "Кино",
+            "groupData": [
+               {
+                  "id": 29,
+                  "name": "НТВ Сериал"
+               }
+            ]
+         },
+         {
+            "group": "Развлекательные",
+            "groupData": [
+               {
+                  "id": 16,
+                  "name": "Еда"
+               },
+               {
+                  "id": 30,
+                  "name": "Национальное телевидение Чувашии"
+               },
+               {
+                  "id": 33,
+                  "name": "Про Бизнес"
+               },
+               {
+                  "id": 40,
+                  "name": "Сарафан"
+               },
+               {
+                  "id": 43,
+                  "name": "Супер"
+               },
+               {
+                  "id": 51,
+                  "name": "Ю"
+               }
+            ]
+         },
+         {
+            "group": "Новости",
+            "groupData": [
+               {
+                  "id": 1,
+                  "name": "BBC World News"
+               },
+               {
+                  "id": 4,
+                  "name": "Deutsche Welle"
+               },
+               {
+                  "id": 5,
+                  "name": "France 24"
+               },
+               {
+                  "id": 8,
+                  "name": "RT"
+               },
+               {
+                  "id": 18,
+                  "name": "Известия"
+               },
+               {
+                  "id": 25,
+                  "name": "Мир 24"
+               },
+               {
+                  "id": 26,
+                  "name": "Москва24"
+               },
+               {
+                  "id": 30,
+                  "name": "Национальное телевидение Чувашии"
+               },
+               {
+                  "id": 34,
+                  "name": "РБК "
+               },
+               {
+                  "id": 37,
+                  "name": "Россия HD"
+               },
+               {
+                  "id": 45,
+                  "name": "ТНВ"
+               },
+               {
+                  "id": 48,
+                  "name": "Телеканал 360°"
+               },
+               {
+                  "id": 52,
+                  "name": "Югра"
+               }
+            ]
+         },
+         {
+            "group": "Музыкальные",
+            "groupData": [
+               {
+                  "id": 2,
+                  "name": "Bridge TV"
+               },
+               {
+                  "id": 3,
+                  "name": "Bridge TV Русский хит"
+               },
+               {
+                  "id": 6,
+                  "name": "Music Box Gold"
+               },
+               {
+                  "id": 7,
+                  "name": "Music Box Russia"
+               },
+               {
+                  "id": 10,
+                  "name": "RU.TV"
+               },
+               {
+                  "id": 15,
+                  "name": "Восток ТВ"
+               },
+               {
+                  "id": 27,
+                  "name": "Муз ТВ"
+               },
+               {
+                  "id": 47,
+                  "name": "ТНТ MUSIC"
+               }
+            ]
+         },
+         {
+            "group": "Познавательные",
+            "groupData": [
+               {
+                  "id": 9,
+                  "name": "RTД HD"
+               },
+               {
+                  "id": 11,
+                  "name": "Russian Travel Guide"
+               },
+               {
+                  "id": 12,
+                  "name": "SOCHI LIVE"
+               },
+               {
+                  "id": 22,
+                  "name": "Мама"
+               },
+               {
+                  "id": 30,
+                  "name": "Национальное телевидение Чувашии"
+               },
+               {
+                  "id": 42,
+                  "name": "Синергия ТВ"
+               },
+               {
+                  "id": 49,
+                  "name": "Телеканал Совета Федерации \"Вместе РФ\""
+               }
+            ]
+         },
+         {
+            "group": "Федеральные",
+            "groupData": [
+               {
+                  "id": 13,
+                  "name": "Архыз 24"
+               },
+               {
+                  "id": 14,
+                  "name": "Башкирское спутниковое телевидение"
+               },
+               {
+                  "id": 17,
+                  "name": "Звезда"
+               },
+               {
+                  "id": 21,
+                  "name": "Карусель"
+               },
+               {
+                  "id": 23,
+                  "name": "Матч ТВ"
+               },
+               {
+                  "id": 24,
+                  "name": "Мир"
+               },
+               {
+                  "id": 26,
+                  "name": "Москва24"
+               },
+               {
+                  "id": 27,
+                  "name": "Муз ТВ"
+               },
+               {
+                  "id": 28,
+                  "name": "НТВ"
+               },
+               {
+                  "id": 31,
+                  "name": "ОТР"
+               },
+               {
+                  "id": 32,
+                  "name": "ПЯТНИЦА"
+               },
+               {
+                  "id": 36,
+                  "name": "Россия - 24"
+               },
+               {
+                  "id": 37,
+                  "name": "Россия HD"
+               },
+               {
+                  "id": 38,
+                  "name": "Россия-К"
+               },
+               {
+                  "id": 39,
+                  "name": "СПАС"
+               },
+               {
+                  "id": 41,
+                  "name": "Своё ТВ"
+               },
+               {
+                  "id": 44,
+                  "name": "ТВ Центр"
+               },
+               {
+                  "id": 45,
+                  "name": "ТНВ"
+               },
+               {
+                  "id": 46,
+                  "name": "ТНТ"
+               },
+               {
+                  "id": 48,
+                  "name": "Телеканал 360°"
+               },
+               {
+                  "id": 52,
+                  "name": "Югра"
+               }
+            ]
+         }
+      ],
+      "tvLength": "61 канал",
       "oldPrice": null,
-      "price": 1600,
-      "iconInfo": true,
-      "rentRouterText": "Аренда 4G Wi-Fi роутера",
-      "rentRouter": 100,
-      "rentRouterSpeed": null,
-      "rentTvBox": null
+      "price": 1500,
+      "iconInfo": false,
+      "rentDevice": [
+         {
+            "text": "Аренда ТВ-приставки",
+            "price": 99
+         },
+         {
+            "text": "Аренда 4G Wi-Fi роутера",
+            "price": 100
+         }
+      ]
    }
 ]

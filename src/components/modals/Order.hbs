@@ -21,64 +21,7 @@
                </div>
             </div>
 
-            <div class="order-modal__input order-modal__input_address">
-               <div class="order-modal__input-title">Адрес подключения</div>
-               <input id="addressOrder" type="text" name="address" placeholder="Ваш адрес">
-            </div>
-
-            <div class="order-modal__select-date">
-               <span id="selectDate" onclick="nextForm('.order-opportunity', '.requisition')">Выберите дату и время подключения</span>
-            </div>
-
-            <button type="submit" class="btn">Отправить</button>
-         </form>
-      </div>
-
-      <div class="modal-content order-opportunity">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-         <button onclick="backForm('.order-opportunity', '.requisition')" class="back">Назад</button>
-
-         <h2>Проверьте возможность подключения</h2>
-         <form name="address">
-            <div class="order-modal__inputs">
-               <div class="order-modal__input">
-                  <input onkeyup="validAddressPopUp('',event)" type="text" name="address" placeholder="Ваш адрес">
-                  <label>Подключение по адресу возможно!</label>
-                  <label>К сожалению, Вы вне зоны покрытия</label>
-               </div>
-               <p class="order-opportunity__offer">
-                  По вашему адресу: <b>адрес</b> доступно подключение беспроводного интернета
-                  Объединяй! Везде
-               </p>
-            </div>
-            <button onclick="nextForm('.order-date' ,'.order-opportunity')" disabled id="btnFormNext" class="btn">
-               Проверить
-            </button>
-            <a href="#" id="btnFormCheck" class="btn">Подробнее</a>
-         </form>
-      </div>
-
-      <div class="modal-content order-date">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-         <button onclick="backForm('.order-date' ,'.order-opportunity')" class="back">Назад</button>
-
-         <h2>Заявка на подключение</h2>
-         <p>Выберите желаемую дату и время подключения:</p>
-         <form id="orderOpportunity">
-            <div class="order-modal__inputs">
-               <div class="order-modal__input">
-                  <input placeholder="Выберите дату" data-provide="datepicker" class="datepicker">
-                  <select id="mf-select">
-                     <option></option>
-                     <option>Утро (9:00-12:00)</option>
-                     <option>День (12:00-16:00)</option>
-                     <option>Вечер (16:00-20:00)</option>
-                     <option>Другое</option>
-                  </select>
-               </div>
-
-            </div>
-            <div onclick="onRequisition('.requisition', '.order-date')" class="btn">Подтвердить</div>
+            <button type="submit" class="btn" data-view="modal_order">Отправить</button>
          </form>
       </div>
 

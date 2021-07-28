@@ -1,7 +1,7 @@
 @import 'bootstrap';
 @import 'null';
 @import 'slick';
-@import 'datepicker';
+//@import 'datepicker';
 @import 'colors';
 @import 'template';
 @import 'tail-select';
@@ -13,10 +13,10 @@
 @import '../components/HeadBanner';
 @import '../components/Megadisk';
 @import '../components/MfTv';
-@import '../components/modals';
 @import '../components/Tariffs';
 @import '../components/UniteCheckAddress';
 @import '../components/modals/CitySelection';
 @import '../components/modals/ModalTariff';
 @import '../components/modals/Order';
 @import '../components/modals/Perfomance';
+@import '../components/TariffBanner';

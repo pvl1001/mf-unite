@@ -24,7 +24,7 @@ $.extend( $.fn, {
 		// If nothing is selected, return nothing; can't chain anyway
 		if ( !this.length ) {
 			if ( options && options.debug && window.console ) {
-				console.warn( "Nothing selected, can't validate, returning nothing." );
+				console.warn( "Nothing selected, can't validate_address, returning nothing." );
 			}
 			return;
 		}
@@ -43,7 +43,7 @@ $.extend( $.fn, {
 
 		if ( validator.settings.onsubmit ) {
 
-			this.on( "click.validate", ":submit", function( event ) {
+			this.on( "click.validate_address", ":submit", function( event ) {
 
 				// Track the used submit button to properly handle scripted
 				// submits later.
@@ -61,7 +61,7 @@ $.extend( $.fn, {
 			} );
 
 			// Validate the form on submit
-			this.on( "submit.validate", function( event ) {
+			this.on( "submit.validate_address", function( event ) {
 				if ( validator.settings.debug ) {
 
 					// Prevent form submit to be able to see console output
@@ -442,7 +442,7 @@ $.extend( $.validator, {
 			}
 
 			$( this.currentForm )
-				.on( "focusin.validate focusout.validate keyup.validate",
+				.on( "focusin.validate_address focusout.validate_address keyup.validate_address",
 					":text, [type='password'], [type='file'], select, textarea, [type='number'], [type='search'], " +
 					"[type='tel'], [type='url'], [type='email'], [type='datetime'], [type='date'], [type='month'], " +
 					"[type='week'], [type='time'], [type='datetime-local'], [type='range'], [type='color'], " +
@@ -450,10 +450,10 @@ $.extend( $.validator, {
 
 				// Support: Chrome, oldIE
 				// "select" is provided as event.target when clicking a option
-				.on( "click.validate", "select, option, [type='radio'], [type='checkbox']", delegate );
+				.on( "click.validate_address", "select, option, [type='radio'], [type='checkbox']", delegate );
 
 			if ( this.settings.invalidHandler ) {
-				$( this.currentForm ).on( "invalid-form.validate", this.settings.invalidHandler );
+				$( this.currentForm ).on( "invalid-form.validate_address", this.settings.invalidHandler );
 			}
 		},
 
@@ -491,7 +491,7 @@ $.extend( $.validator, {
 				this.prepareElement( checkElement );
 				this.currentElements = $( checkElement );
 
-				// If this element is grouped, then validate all group elements already
+				// If this element is grouped, then validate_address all group elements already
 				// containing a value
 				group = this.groups[ checkElement.name ];
 				if ( group ) {
@@ -1059,7 +1059,7 @@ $.extend( $.validator, {
 
 		validationTargetFor: function( element ) {
 
-			// If radio/checkbox, validate first element in group instead
+			// If radio/checkbox, validate_address first element in group instead
 			if ( this.checkable( element ) ) {
 				element = this.findByName( element.name );
 			}
@@ -1159,23 +1159,23 @@ $.extend( $.validator, {
 			this.resetForm();
 
 			$( this.currentForm )
-				.off( ".validate" )
+				.off( ".validate_address" )
 				.removeData( "validator" )
-				.find( ".validate-equalTo-blur" )
-					.off( ".validate-equalTo" )
-					.removeClass( "validate-equalTo-blur" )
-				.find( ".validate-lessThan-blur" )
-					.off( ".validate-lessThan" )
-					.removeClass( "validate-lessThan-blur" )
-				.find( ".validate-lessThanEqual-blur" )
-					.off( ".validate-lessThanEqual" )
-					.removeClass( "validate-lessThanEqual-blur" )
-				.find( ".validate-greaterThanEqual-blur" )
-					.off( ".validate-greaterThanEqual" )
-					.removeClass( "validate-greaterThanEqual-blur" )
-				.find( ".validate-greaterThan-blur" )
-					.off( ".validate-greaterThan" )
-					.removeClass( "validate-greaterThan-blur" );
+				.find( ".validate_address-equalTo-blur" )
+					.off( ".validate_address-equalTo" )
+					.removeClass( "validate_address-equalTo-blur" )
+				.find( ".validate_address-lessThan-blur" )
+					.off( ".validate_address-lessThan" )
+					.removeClass( "validate_address-lessThan-blur" )
+				.find( ".validate_address-lessThanEqual-blur" )
+					.off( ".validate_address-lessThanEqual" )
+					.removeClass( "validate_address-lessThanEqual-blur" )
+				.find( ".validate_address-greaterThanEqual-blur" )
+					.off( ".validate_address-greaterThanEqual" )
+					.removeClass( "validate_address-greaterThanEqual-blur" )
+				.find( ".validate_address-greaterThan-blur" )
+					.off( ".validate_address-greaterThan" )
+					.removeClass( "validate_address-greaterThan-blur" );
 		}
 
 	},
@@ -1230,7 +1230,7 @@ $.extend( $.validator, {
 			rules[ method ] = value;
 		} else if ( type === method && type !== "range" ) {
 
-			// Exception: the jquery validate 'range' method
+			// Exception: the jquery validate_address 'range' method
 			// does not test for the html5 'range' type
 			rules[ method ] = true;
 		}
@@ -1546,8 +1546,8 @@ $.extend( $.validator, {
 
 			// Bind to the blur event of the target in order to revalidate whenever the target field is updated
 			var target = $( param );
-			if ( this.settings.onfocusout && target.not( ".validate-equalTo-blur" ).length ) {
-				target.addClass( "validate-equalTo-blur" ).on( "blur.validate-equalTo", function() {
+			if ( this.settings.onfocusout && target.not( ".validate_address-equalTo-blur" ).length ) {
+				target.addClass( "validate_address-equalTo-blur" ).on( "blur.validate_address-equalTo", function() {
 					$( element ).valid();
 				} );
 			}

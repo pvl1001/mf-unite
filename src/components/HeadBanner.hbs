@@ -3,14 +3,26 @@
       {{> Header}}
       <div class="section-row">
          <div class="head-banner__text">
-            <h1><nobr>Тарифы «Объединяй!»</nobr>
-               <br> со скидкой до 50%</h1>
-            <p>Домашний интернет, мобильная связь и ТВ вместе дешевле</p>
-            <a onclick="toPlug('.tariffs')" class="btn btn-fiolet">Подключить</a>
+            <h1>
+               <nobr>Домашний интернет,</nobr>
+               <nobr>связь и ТВ</nobr>
+            </h1>
+            <p>В тарифах «Объединяй!»</p>
+            <div class="head-banner__btns">
+               <div onclick="connect()"
+                    class="btn btn-fiolet"
+                    data-view="first_banner"
+                    data-target="#order"
+                    data-toggle="modal"
+               >Подключить
+               </div>
+               <span data-target="#ForTheir" onclick="analytics('connect_details_their')" data-toggle="modal"
+                     class="head-banner__about">Подробнее</span>
+            </div>
          </div>
          <div class="head-banner__img-wrapp">
             <picture>
-               <source srcset="img/pic/pic_o.png" media="(max-width: 920px)">
+               <source srcset="img/pic/pic_o.png" media="(max-width: 767px)">
                <img class="head-banner__img" src="img/pic/pic_o_l.png" alt="img"/>
             </picture>
          </div>

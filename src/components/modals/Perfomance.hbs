@@ -17,12 +17,20 @@
                   </ul>
                </div>
 
-               <div class="performance__img">
-                  <img src="img/pic/{{img}}" alt="img"/>
-               </div>
+               <picture class="performance__img">
+                  {{#if mobImg}}
+                     <source srcset="img/pic/{{mobImg}}" media="(max-width: 767px)">
+                  {{/if}}
+                  <img src="img/pic/{{img}}" alt="{{img}}">
+               </picture>
 
                <div class="modal-order">
-                  <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
+                  <div class="btn"
+                       data-toggle="modal"
+                       data-target="#order"
+                       onclick="openOrder('send_', '{{dataView}}')"
+                  >Заказать
+                  </div>
                   <div class="modal-order__text">
                      <p>{{price}} ₽/мес</p>
                      <a href="#">Скачать подробную информацию</a>
@@ -55,7 +63,12 @@
             </div>
 
             <div class="modal-order">
-               <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
+               <div class="btn"
+                    data-toggle="modal"
+                    data-target="#order"
+                    onclick="openOrder('send_', 'vezde_ntv')"
+               >Заказать
+               </div>
                <div class="modal-order__text">
                   <p>{{unite.price}} ₽/мес</p>
                   <a href="#">Скачать подробную информацию</a>

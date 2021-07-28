@@ -5,7 +5,6 @@
    }
 
    .modal-content {
-      min-height: 410px;
 
       h2 {
          margin-bottom: 15px;
@@ -231,6 +230,13 @@
          padding: 60px 275px !important;
       }
 
+      .modal-dialog {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         max-width: none;
+      }
+
       &__input {
          width: 50%;
 
@@ -253,11 +259,22 @@
          }
       }
 
+      .order-thx {
+         width: 100%;
+      }
+
    }
 
    @media (min-width: 768px) and (max-width: 1023px) {
       .modal-content {
          padding: 60px 122px !important;
+      }
+
+      .modal-dialog {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         max-width: none;
       }
 
       &__input {
@@ -289,9 +306,18 @@
             }
          }
       }
+
+      .order-thx {
+         width: 100%;
+      }
    }
 
    @media (max-width: 767px) {
+
+      .modal-content {
+         padding: 95px 30px 80px;
+      }
+
       &__inputs {
          flex-wrap: wrap;
       }
@@ -333,6 +359,11 @@
                margin: 0 0 20px;
             }
          }
+      }
+
+      .order-thx {
+         width: 100%;
+         height: 100vh;
       }
    }
 }

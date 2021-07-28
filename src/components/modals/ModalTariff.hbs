@@ -9,48 +9,47 @@
             <h2>Объединяй! {{name}}</h2>
             <div class="tariff-modal__info">
                <div class="tariff-modal__info-wrapper">
-                  <div class="tariff-modal__info-col tariff-modal__info-col_1">
-                     <div class="tariff-modal__info-title tariff-modal__title_web">
-                        <img src="img/svg/wi-fi.svg" alt="img">
-                        Интернет
-                     </div>
+                  <div class="tariff-modal__info-col-wrapp">
+                     <div class="tariff-modal__info-col tariff-modal__info-col_1">
+                        <div class="tariff-modal__info-title tariff-modal__title_web">
+                           <img src="img/svg/wi-fi.svg" alt="img">
+                           Интернет
+                        </div>
 
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Скорость</div>
-                        <p>{{speed}} Мбит/с</p>
-                     </div>
-
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Трафик</div>
-                        <p>Безлимитно</p>
-                     </div>
-                  </div>
-
-                  {{#if tv.length}}
-                     <div class="tariff-modal__info-col tariff-modal__info-col_2">
-                        <div class="tariff-modal__info-title tariff-modal__title_tv">
-                           <img src="img/svg/tv.svg" alt="img">
-                           ТВ
+                        <div class="tariff-modal__info-param">
+                           <div class="tariff-modal__param-title">Скорость</div>
+                           <p>{{speed}} Мбит/с</p>
+                        </div>
+                        <div class="tariff-modal__info-param">
+                           <div class="tariff-modal__param-title">
+                              Максимальная скорость интернет-соединения, предусмотренная тарифом.
+                           </div>
                         </div>
 
                         <div class="tariff-modal__info-param">
                            <div class="tariff-modal__param-title">Трафик</div>
-                           <p>Безлимитно</p>
-                        </div>
-
-                        <div class="tariff-modal__info-param">
-                           <div class="tariff-modal__param-title">Мегафон ТВ</div>
-                           <p>{{totalChannel tv}} каналов</p>
-                           <div class="tariff-modal__param-packets">
-                              пакеты
-                              <a href="#">Максимальный</a>,
-                              <a href="#">Детский</a>,
-                              <a href="#">18+</a>
-                           </div>
+                           <p>{{noLimit web}}</p>
                         </div>
                      </div>
-                  {{/if}}
 
+                     {{#if tvLength}}
+                        <div class="tariff-modal__info-col tariff-modal__info-col_2">
+                           <div class="tariff-modal__info-title tariff-modal__title_tv">
+                              <img src="img/svg/tv.svg" alt="img">
+                              ТВ
+                           </div>
+                           <div class="tariff-modal__info-param">
+                              <div class="tariff-modal__param-title">Трафик</div>
+                              <p>Безлимитно</p>
+                           </div>
+                           <div class="tariff-modal__info-param">
+                              <div class="tariff-modal__param-title">Мегафон ТВ</div>
+                              <p>{{tvLength}}</p>
+                           </div>
+                        </div>
+                     {{/if}}
+
+                  </div>
                   <div class="tariff-modal__info-col tariff-modal__info-col_3">
                      <div class="tariff-modal__info-title tariff-modal__title_mobile">
                         <img src="img/svg/mobile.svg" alt="img">
@@ -67,7 +66,8 @@
                      </div>
 
                      <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России</div>
+                        <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России
+                        </div>
                         <p>{{min}} минут</p>
                      </div>
 
@@ -81,57 +81,48 @@
             </div>
             <div class="tariff-modal__options">
                <h3>Дополнительные опции:</h3>
-               <div class="tariff-modal__options-row options-row">
-                  {{#if rentTvBox}}
+               <div class="tariff-modal__options-wrapp">
+                  <div class="tariff-modal__options-row options-row">
+                     {{#each rentDevice}}
+                        <div class="options-row__item item-option">
+                           <label>
+                              <div class="switch">
+                                 <input {{checkedPrice price text}}
+                                    onchange="calcRadio.sum('#{{../id}}', {{@../index}})" type="checkbox">
+                                 <span class="round"></span>
+                              </div>
+                              <div class="item-option__text">
+                                 <p>{{{text}}}</p>
+                                 <span class="item-option__num">{{price}}</span><span> ₽ в месяц</span>
+                              </div>
+                           </label>
+                        </div>
+                     {{/each}}
+                     {{#if sale}}
+                        <div class="options-row__item item-option">
+                           <div class="item-option__img">
+                              <img src="img/svg/bonus.svg" alt="img">
+                           </div>
+                           <p>Скидка 40% на SIM-карты</p>
+                        </div>
+                     {{/if}}
                      <div class="options-row__item item-option">
-                        <label>
-                           <div class="switch">
-                              <input onchange="totalPrice('#{{id}}', 0)" type="checkbox">
-                              <span class="round"></span>
-                           </div>
-                           <div class="item-option__text">
-                              <p>Аренда ТВ-приставки</p>
-                              <span class="item-option__num">{{rentTvBox}}</span><span> ₽ в месяц</span>
-                           </div>
-                        </label>
-                     </div>
-                  {{/if}}
-                  {{#if rentRouter}}
-                     <div class="options-row__item item-option">
-                        <label>
-                           <div class="switch">
-                              <input {{checkedRoute name}} onchange="totalPrice('#{{id}}', 1)" type="checkbox">
-                              <span class="round"></span>
-                           </div>
-                           <div class="item-option__text">
-                              <p>{{rentRouterText}} {{rentRouterSpeed}}</p>
-                              <span class="item-option__num">{{rentRouter}}</span><span> ₽ в месяц</span>
-                           </div>
-                        </label>
-                     </div>
-                  {{/if}}
-                  <div class="options-row__item item-option">
-                     <div class="item-option__img">
-                        <img src="img/svg/bonus.svg" alt="img">
-                     </div>
-                     <p>Скидка 40% <br> на SIM-карты</p>
-                  </div>
-                  <div class="options-row__item item-option">
-                     <div>
-                        <div class="download-pdf">
-                           <a href="#" class="download-pdf__icon">
-                              <img src="img/svg/download-pdf.svg" alt="img">
-                           </a>
-                           <div class="download-pdf__text">
-                              <a href="#">Скачать подробную информацию <br> о тарифе</a>
-                              <span>(PDF, 0.4 MB)</span>
+                        <div>
+                           <div class="download-pdf">
+                              <a href="#" class="download-pdf__icon">
+                                 <img src="img/svg/download-pdf.svg" alt="img">
+                              </a>
+                              <div class="download-pdf__text">
+                                 <a href="#">Скачать подробную информацию <br> о тарифе</a>
+                                 <span>(PDF, 0.4 MB)</span>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
+                  {{> TariffBanner}}
                </div>
             </div>
-
             <div class="tariff-modal__price price-tariff">
                <div class="price-tariff__title">
                   <p>Стоимость тарифа:</p>
@@ -151,10 +142,16 @@
                   </div>
                </div>
 
-               <a href="#" class="btn" data-toggle="modal" data-target="#order">Заказать</a>
-
+               <div
+                  class="btn"
+                  data-toggle="modal"
+                  data-target="#order"
+                  data-view="modal_{{dataView}}"
+                  onclick="openOrder('send_', '{{dataView}}')">Заказать
+               </div>
             </div>
          </div>
       </div>
    </div>
 {{/each}}
+

@@ -14,6 +14,10 @@
          display: flex;
       }
 
+      .slick-track > div:last-child .card__almond {
+         display: none;
+      }
+
       .slick-slide > div {
          height: 100%;
          padding: 10px;
@@ -63,11 +67,49 @@
          &__info {
             flex-grow: 1;
             padding-top: 28px;
-            margin-bottom: 25px;
+            margin-bottom: 50px;
 
             &_block {
                margin-bottom: 26px;
+
+               &:last-child {
+                  margin-bottom: 0;
+               }
             }
+         }
+
+         &__almond {
+            background-color: var(--mf-fiolet);
+            border-radius: 10px;
+            padding: 13px 17px 16px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 16px;
+            display: flex;
+            margin: 0 0 50px;
+
+            &-img {
+               width: 50px;
+               flex-shrink: 0;
+               margin: 3px 18px 0 0;
+
+               img {
+                  max-width: 100%;
+                  max-height: inherit;
+               }
+            }
+
+            &-text {
+               p {
+                  margin-bottom: 7px;
+               }
+
+               span {
+                  cursor: pointer;
+                  text-decoration: underline;
+               }
+            }
+
          }
 
          .info-card {
@@ -268,7 +310,7 @@
       }
    }
 
-   @media (max-width: 1023px) {
+   @media (max-width: 1279px) {
       .slider .slick-list {
          overflow: visible;
       }
