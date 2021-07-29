@@ -1,7 +1,7 @@
 import prop from "./prop";
 
 window.hideResult = () => {
-   $( '#CHKADR input' ).val( '' )
+   $( prop.input ).val( '' )
    $( '.success-check' ).hide();
    $( '.unite-address__offer' ).hide();
    $( '#unite' ).hide()

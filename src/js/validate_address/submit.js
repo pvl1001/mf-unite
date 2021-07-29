@@ -1,7 +1,8 @@
-import {getAddress} from "./getAddress";
+import {getResultAddress} from "./getResultAddress";
+import {validAddress} from "./validAddress";
 
 $( 'form[name=address]' ).submit( function (event) {
    event.preventDefault();
-   getAddress()
-   analytics('address')
+   getResultAddress().then( data => validAddress( data ) )
+   analytics( 'address' )
 } )

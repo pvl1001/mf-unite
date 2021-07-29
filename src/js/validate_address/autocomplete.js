@@ -1,4 +1,5 @@
 import prop from "./prop";
+import {showHideLabel} from "./showHideLabel";
 
 $( 'input[name=address]' ).autocomplete( {
    width: 'auto',
@@ -8,9 +9,8 @@ $( 'input[name=address]' ).autocomplete( {
    type: 'POST',
 
    onSelect(suggestion) {
-      // console.log( suggestion )
       $( '#orderForm' ).validate()
-      $( 'input[name=address] + label' ).hide() // скрыть подсказку
+      showHideLabel( 'hide' )
 
       prop.setAddress = {
          house_guid: suggestion.data.aoguid,

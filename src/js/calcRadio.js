@@ -9,21 +9,6 @@ window.calcRadio = {
    switchBanner: '',
    priceSwitch: [],
    sumPrice: [],
-   plus(id, index) {
-      if (this.cnt < 10) {
-         this.cnt++
-         counter.val( this.cnt )
-         this.switchBanner.prop('checked', true)
-         this.sum(id, index)
-      }
-   },
-   minus(id, index) {
-      if (this.cnt > 1) {
-         this.cnt--
-         counter.val( this.cnt )
-         this.sum(id, index)
-      }
-   },
    sum(id, index) {
       this.switch = $( id + ' .item-option .switch input' ) // все switch
       this.totalPrice = $( id + ' .new-price' ) // общая цена

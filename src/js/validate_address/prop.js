@@ -1,4 +1,5 @@
 export default {
    flagValid: null,
-   setAddress: {}
+   setAddress: {},
+   input: document.querySelector( '#CHKADR input' )
 }
