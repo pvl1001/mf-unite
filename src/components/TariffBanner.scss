@@ -13,7 +13,7 @@
    justify-content: space-between;
 
    &__text {
-      width: 39%;
+      width: 40%;
 
       p {
          font-size: 18px;
@@ -57,11 +57,10 @@
          }
       }
    }
-   @media (max-width: 840px) {
+   @media (max-width: 880px) {
       display: block;
       padding: 23px 20px 30px;
       width: 100%;
-      max-width: 372px;
       min-width: 0;
 
       &__text {

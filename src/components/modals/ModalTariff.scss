@@ -28,33 +28,34 @@
 
    &__info {
       display: flex;
+      padding-right: 81px;
       margin-bottom: 18px;
-   }
 
-   &__info-wrapper {
-      display: flex;
-      flex-grow: 1;
-      margin-right: 81px;
+      &_tv {
+         padding-right: 22px;
+      }
    }
 
    &__info-col {
-      &_1 {
+      &_web {
          margin-right: 98px;
+         flex-grow: 1;
       }
 
-      &_2 {
+      &_tv {
          max-width: 150px;
          margin-right: 85px;
          white-space: nowrap;
       }
 
-      &_3 {
+      &_mob {
          max-width: 350px;
       }
    }
 
    &__info-col-wrapp {
       display: flex;
+      flex-grow: 1;
    }
 
    &__info-title {
@@ -71,6 +72,7 @@
 
    &__param-title {
       color: #33333380;
+      margin-bottom: 2px;
    }
 
    &__info-param {
@@ -145,6 +147,10 @@
       margin-bottom: 40px;
    }
 
+   &__options-banner {
+      margin-top: -8px;
+   }
+
    .price-tariff {
       display: flex;
 
@@ -174,6 +180,16 @@
       }
    }
 
+   @media (max-width: 1200px) {
+      .modal-content {
+         padding: 81px 112px 73px;
+      }
+
+      &__options .options-row__item {
+         margin-right: 48px;
+      }
+   }
+
    @media (max-width: 1023px) {
       .modal-content {
          padding: 80px 30px;
@@ -181,18 +197,21 @@
 
       &__info-col {
 
-         &_1 {
-            margin-bottom: 40px;
+         &_web {
+            margin-bottom: 32px;
             margin-right: 50px;
             width: 220px;
          }
       }
 
       &__info-col-wrapp {
+         flex-grow: 0;
          display: block;
+         width: 39%;
       }
 
       &__info {
+         padding-right: 0;
          margin-bottom: 75px;
       }
    }
@@ -204,15 +223,11 @@
 
       &__info {
          flex-wrap: wrap;
+         margin-bottom: 45px;
 
-         &-col_3 {
+         &-col_mob {
             width: 100%;
          }
-      }
-
-      &__info-wrapper {
-         display: block;
-         margin-right: 0;
       }
 
       &__options-wrapp {
@@ -222,14 +237,14 @@
       &__info-col {
          margin-right: 0;
 
-         &_1, &_2 {
+         &_web, &_tv {
             width: auto;
             margin-bottom: 40px;
          }
       }
 
-      &__info {
-         margin-bottom: 45px;
+      &__info-col-wrapp {
+         width: 100%;
       }
 
       .options-row {

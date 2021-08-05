@@ -7,78 +7,77 @@
          <div class="modal-content">
             <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
             <h2>Объединяй! {{name}}</h2>
-            <div class="tariff-modal__info">
-               <div class="tariff-modal__info-wrapper">
-                  <div class="tariff-modal__info-col-wrapp">
-                     <div class="tariff-modal__info-col tariff-modal__info-col_1">
-                        <div class="tariff-modal__info-title tariff-modal__title_web">
-                           <img src="img/svg/wi-fi.svg" alt="img">
-                           Интернет
-                        </div>
 
-                        <div class="tariff-modal__info-param">
-                           <div class="tariff-modal__param-title">Скорость</div>
-                           <p>{{speed}} Мбит/с</p>
-                        </div>
-                        <div class="tariff-modal__info-param">
-                           <div class="tariff-modal__param-title">
-                              Максимальная скорость интернет-соединения, предусмотренная тарифом.
-                           </div>
-                        </div>
-
-                        <div class="tariff-modal__info-param">
-                           <div class="tariff-modal__param-title">Трафик</div>
-                           <p>{{noLimit web}}</p>
-                        </div>
+            <div class="tariff-modal__info {{#if tvLength}}tariff-modal__info_tv{{/if}}">
+               <div class="tariff-modal__info-col-wrapp">
+                  <div class="tariff-modal__info-col tariff-modal__info-col_web">
+                     <div class="tariff-modal__info-title tariff-modal__title_web">
+                        <img src="img/svg/wi-fi.svg" alt="img">
+                        Интернет
                      </div>
 
-                     {{#if tvLength}}
-                        <div class="tariff-modal__info-col tariff-modal__info-col_2">
-                           <div class="tariff-modal__info-title tariff-modal__title_tv">
-                              <img src="img/svg/tv.svg" alt="img">
-                              ТВ
-                           </div>
-                           <div class="tariff-modal__info-param">
-                              <div class="tariff-modal__param-title">Трафик</div>
-                              <p>Безлимитно</p>
-                           </div>
-                           <div class="tariff-modal__info-param">
-                              <div class="tariff-modal__param-title">Мегафон ТВ</div>
-                              <p>{{tvLength}}</p>
-                           </div>
-                        </div>
-                     {{/if}}
-
-                  </div>
-                  <div class="tariff-modal__info-col tariff-modal__info-col_3">
-                     <div class="tariff-modal__info-title tariff-modal__title_mobile">
-                        <img src="img/svg/mobile.svg" alt="img">
-                        Мобильная связь
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">Скорость</div>
+                        <p>{{speed}} Мбит/с</p>
                      </div>
                      <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Мобильный интернет</div>
+                        <div class="tariff-modal__param-title">
+                           Максимальная скорость интернет-соединения, предусмотренная тарифом.
+                        </div>
+                     </div>
+
+                     <div class="tariff-modal__info-param">
+                        <div class="tariff-modal__param-title">Трафик</div>
                         <p>{{noLimit web}}</p>
                      </div>
-
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
-                        <p>Безлимитно</p>
-                     </div>
-
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России
-                        </div>
-                        <p>{{min}} минут</p>
-                     </div>
-
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">МегаДиск</div>
-                        <p>1 ТБ</p>
-                     </div>
                   </div>
 
+                  {{#if tvLength}}
+                     <div class="tariff-modal__info-col tariff-modal__info-col_tv">
+                        <div class="tariff-modal__info-title tariff-modal__title_tv">
+                           <img src="img/svg/tv.svg" alt="img">
+                           ТВ
+                        </div>
+                        <div class="tariff-modal__info-param">
+                           <div class="tariff-modal__param-title">Трафик</div>
+                           <p>Безлимитно</p>
+                        </div>
+                        <div class="tariff-modal__info-param">
+                           <div class="tariff-modal__param-title">Мегафон ТВ</div>
+                           <p>{{tvLength}}</p>
+                        </div>
+                     </div>
+                  {{/if}}
+
+               </div>
+               <div class="tariff-modal__info-col tariff-modal__info-col_mob">
+                  <div class="tariff-modal__info-title tariff-modal__title_mobile">
+                     <img src="img/svg/mobile.svg" alt="img">
+                     Мобильная связь
+                  </div>
+                  <div class="tariff-modal__info-param">
+                     <div class="tariff-modal__param-title">Мобильный интернет</div>
+                     <p>{{noLimit web}}</p>
+                  </div>
+
+                  <div class="tariff-modal__info-param">
+                     <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
+                     <p>Безлимитно</p>
+                  </div>
+
+                  <div class="tariff-modal__info-param">
+                     <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России
+                     </div>
+                     <p>{{min}} минут</p>
+                  </div>
+
+                  <div class="tariff-modal__info-param">
+                     <div class="tariff-modal__param-title">МегаДиск</div>
+                     <p>1 ТБ</p>
+                  </div>
                </div>
             </div>
+
             <div class="tariff-modal__options">
                <h3>Дополнительные опции:</h3>
                <div class="tariff-modal__options-wrapp">
