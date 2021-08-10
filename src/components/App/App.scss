@@ -15,8 +15,6 @@
       max-width: 455px;
 
       &__title {
-         font-size: 32px;
-         line-height: 40px;
          margin-bottom: 9px;
       }
 
@@ -77,11 +75,6 @@
       .text-app {
          max-width: 377px;
 
-         &__title {
-            font-size: 26px;
-            line-height: 38px;
-         }
-
          &__text {
             font-size: 18px;
             line-height: 24px;
@@ -92,12 +85,6 @@
    @media (max-width: 1023px) {
       &__container {
          padding: 32px;
-      }
-
-      .text-app {
-         &__title {
-            line-height: 32px;
-         }
       }
 
       &__img {
@@ -124,10 +111,6 @@
             justify-content: center;
          }
 
-         &__title {
-            font-size: 22px;
-            line-height: 28px;
-         }
       }
 
       &__img {

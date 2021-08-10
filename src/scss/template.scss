@@ -217,9 +217,19 @@ button.back {
 }
 
 h1 {
-   font-size: 52px;
-   line-height: 56px;
-   font-weight: 700;
+   font-size: 32px;
+   line-height: 40px;
+   font-weight: 600;
+
+   @media (max-width: 1023px) {
+      font-size: 26px;
+      line-height: 32px;
+   }
+
+   @media (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+   }
 }
 
 h2 {
@@ -422,40 +432,40 @@ input[data-provide="datepicker"] {
 
    > span {
       font-size: 12px;
-      line-height: 22px;
+      line-height: 14px;
+      vertical-align: text-bottom;
    }
 
    .old-price {
-      font-size: 18px;
-      line-height: 24px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 500;
+      color: #7F7F7F;
       position: relative;
+      margin-right: 2px;
 
       &:before {
          content: '';
          position: absolute;
          left: 0;
-         top: 50%;
+         top: 49%;
          height: 2px;
          width: 100%;
          background-color: #ff0000;
       }
    }
 
-   .new-price {
-      font-size: 32px;
-      line-height: 32px;
-      color: var(--mf-green);
-      font-weight: 700;
-      margin: 0 5px;
+   .new-price,
+   .new-price + span {
+      font-size: 20px;
+      line-height: 18px;
+      font-weight: 500;
    }
 
-   .new-price + span {
-      font-size: 32px;
-      line-height: 32px;
-      color: var(--mf-green);
-      font-weight: 700;
-      margin-right: 5px;
+   .new-price {
+
+      + span {
+
+      }
    }
 }
 
@@ -471,25 +481,28 @@ input[data-provide="datepicker"] {
    }
 
    .slick-arrow {
+      $arrow_position: -50px;
+
       font-size: 0;
       width: 40px;
       height: 40px;
       border-radius: 50%;
       background: #731982 url('../img/svg/arrow_slider.svg') center / 10px no-repeat;
       position: absolute;
-      top: 42%;
+      top: calc(50% - 36px);
+      z-index: 1;
 
       &:not(.slick-disabled):hover {
          background-color: #B808D4;
       }
 
       &.slick-prev {
-         left: -50px;
+         left: $arrow_position;
          transform: rotate(180deg);
       }
 
       &.slick-next {
-         right: -50px;
+         right: $arrow_position;
       }
 
       &.slick-disabled {
@@ -501,7 +514,7 @@ input[data-provide="datepicker"] {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 14px;
+      margin-top: 20px;
 
       li {
          font-size: 0;
@@ -524,9 +537,35 @@ input[data-provide="datepicker"] {
       }
    }
 
+   @media (max-width: 1530px) {
+      .slick-arrow {
+         $arrow_position: -42px;
+
+         &.slick-prev {
+            left: $arrow_position;
+         }
+
+         &.slick-next {
+            right: $arrow_position;
+         }
+      }
+   }
+
    @media (max-width: 1023px) {
       .slick-track, .slick-list {
          border-radius: 0;
+      }
+
+      .slick-arrow {
+         $arrow_position: -34px;
+
+         &.slick-prev {
+            left: $arrow_position;
+         }
+
+         &.slick-next {
+            right: $arrow_position;
+         }
       }
    }
 }
@@ -535,6 +574,14 @@ input[data-provide="datepicker"] {
    max-width: 1500px;
    padding: 0 30px;
    margin: 0 auto;
+
+   @media (max-width: 1279px) {
+      padding: 0 64px;
+   }
+
+   @media (max-width: 1023px) {
+      padding: 0 48px;
+   }
 
    @media (max-width: 767px) {
       padding: 0 16px;
@@ -704,5 +751,27 @@ form {
       span {
          color: #333333 !important;
       }
+   }
+}
+
+.icon-infinity {
+   display: inline-block;
+   width: 33px;
+   height: 15px;
+   background: url('../img/svg/Infinity_24.svg') center/cover no-repeat;
+   transform: translateY(-1px)
+}
+
+.mark {
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+   line-height: 1;
+   border-radius: 2px;
+   padding: 5px 9px;
+   color: #fff;
+
+   span {
+      margin-bottom: -1px;
    }
 }

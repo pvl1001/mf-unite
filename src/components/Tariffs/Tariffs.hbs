@@ -1,40 +1,64 @@
 <section class="tariffs">
    <div class="wrapper">
-      <h1>Тарифы «Объединяй!»</h1>
+      <h1 class="tariffs__title">Тарифы «Объединяй!»</h1>
       <!-- slider-->
       <div class="slider">
          {{#each  tariffs}}
-            {{#if (noAround name)}}
-               <div class="slider__item card">
-                  <div class="card__title">
-                     <p>Объединяй!</p>
-                     <p>{{name}}</p>
-                     <span data-view="tariff_card_{{dataView}}_start"
-                           onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">Подробнее</span>
-                  </div>
-                  <div class="card__info">
-                     <div class="card__info_block info-card">
-                        <p class="info-card__title">Домашний интернет {{#if tv}}и ТВ{{/if}}</p>
-                        <div class="info-card__desc">
-                           <div class="info-card__desc_icon wi-fi"></div>
-                           {{speed}} Мбит/с
-                        </div>
-                        {{#if tvLength}}
-                           <div class="info-card__desc desk-channels">
-                              <div class="info-card__desc_icon tv"></div>
-                              <a href="#collapseChannel{{@index}}"
-                                 data-toggle="collapse"
-                                 data-target=".multi-collapse">
-                                 {{tvLength}}
-                              </a>
+            <div class="card slider__card slider__card_{{id}}">
+               <div class="card__title card-wrapper">
+                  <h2 onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">{{name}}</h2>
+                  {{#if mark}}
+                     <div class="card__title-mark mark" style="background-color: {{markClass mark}}">
+                        <span>{{mark}}</span>
+                     </div>
+                  {{/if}}
+               </div>
+
+               <div class="card__info card-wrapper">
+                  <div class="card__block-progress block-progress">
+
+                     {{#each infoProgress}}
+                        <div class="block-progress__progress-bar info-progress-bar">
+                           <div class="info-progress-bar__text card__info-title">
+                              <p class="info-progress-bar__text-name">{{title}}</p>
+                              <p class="info-progress-bar__text-value">{{{value}}}</p>
                            </div>
+
+                           <div class="info-progress-bar__line">
+                              <div class="info-progress-bar__line_active"
+                                   style="width: {{progressBar title value}}"></div>
+                           </div>
+                        </div>
+                     {{/each}}
+
+                     {{#if tvLength}}
+                        <div class="block-progress__progress-bar info-progress-bar">
+                           <div class="info-progress-bar__text card__info-title">
+                              <p>ТВ</p>
+                              <div>
+                                 <div class="block-progress__desc desk-channels">
+                                    <div class="block-progress__desc_icon tv"></div>
+                                    <a href="#collapseChannel{{@index}}"
+                                       data-toggle="collapse"
+                                       data-target=".multi-collapse">
+                                       {{tvLength}}
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="info-progress-bar__line">
+                              <div class="info-progress-bar__line_active"
+                                   style="width: {{progressBar 'ТВ' tvLength}}"></div>
+                           </div>
+
                            <div data-toggle="collapse"
                                 class="collapse multi-collapse collapse-channel"
                                 id="collapseChannel{{@index}}">
 
                               <ul class="collapse-channel__channels">
                                  <li class="collapse-channel__channel-group">
-                                    {{#each ../tariffs.[3].tv}}
+                                    {{#each ../tariffs.[5].tv}}
                                        <a href="#collapseChannelGroup1{{@index}}"
                                           data-toggle="collapse"
                                           class="collapse-channel__group-toggle"
@@ -49,8 +73,9 @@
                                              </span>
                                           </div>
                                        </a>
-                                       <ul class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
-                                           id="collapse_{{../id}}_{{@index}}">
+                                       <ul
+                                          class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
+                                          id="collapse_{{../id}}_{{@index}}">
                                           {{#each groupData}}
                                              <li class="collapse-channel__group-channelName {{#if
                                                 (activeName name ../.. @../index)}}text-green{{/if}}">
@@ -61,181 +86,55 @@
                                     {{/each}}
                                  </li>
                               </ul>
-
                            </div>
-                        {{/if}}
-                     </div>
-
-                     <div class="card__info_block info-card">
-                        <p class="info-card__title">Мобильная связь</p>
-                        {{#if min}}
-                           <div class="info-card__desc desk-mobile">
-                              <div class="info-card__desc_icon mobile"></div>
-                              {{min}} минут
-                           </div>
-                        {{/if}}
-                        {{#if web}}
-                           <div class="info-card__desc">
-                              <div class="info-card__desc_icon web-4g"></div>
-                              {{web}}
-                           </div>
-                        {{/if}}
-                        {{#if sale}}
-                           <div class="info-card__desc">
-                              <div class="info-card__desc_icon bonus"></div>
-                              {{sale}}
-                           </div>
-                        {{/if}}
-                     </div>
-
-                     {{#if (isDefined rentDevice)}}
-                        <div class="card__info_block info-card">
-                           <p class="info-card__title">Оборудование</p>
-                              <div class="info-card__desc info-card__desc_equipment">
-                                 <div class="info-card__desc_icon router"></div>
-                                 Wi-Fi роутер
-                              </div>
-                              <div class="info-card__desc info-card__desc_equipment">
-                                 <div class="info-card__desc_icon tv-box"></div>
-                                 ТВ-приставка
-                              </div>
                         </div>
                      {{/if}}
+                  </div>
 
-                  </div>
-                  <div class="card__price">
-                     <div class="price">
-                        {{#if oldPrice}}
-                           <span class="old-price">{{oldPrice}} ₽</span>
-                        {{/if}}
-                        <span class="new-price">{{price}}</span> <span>₽</span>
-                        <span>в месяц</span>
-                        {{#if iconInfo}}
-                           <div class="price__icon {{#if
-                              (iconInfo @index)}}price__icon_two-web{{else}}price__icon_all{{/if}}"></div>
-                        {{/if}}
-                     </div>
-                     <div class="card__price_btn">
-                        <div data-view="tariff_card_{{dataView}}_end"
-                             onclick="openOrder('send_', '{{dataView}}')"
-                             data-toggle="modal"
-                             data-target="#order"
-                             class="btn">Заказать
+                  {{#if tvIcons}}
+                     <div class="card__block-tv block-tv">
+
+                        <h3 class="block-tv__title card__info-title">
+                           МегаФон ТВ навсегда:
+                        </h3>
+
+                        <div class="block-tv__icons tv-icons">
+                           {{#each tvIcons}}
+                              <div class="tv-icons__icon tv-icons__icon_{{this}}"></div>
+                           {{/each}}
+
                         </div>
+
                      </div>
-                  </div>
-                  {{#if mark}}
-                     <div class="card__mark {{#if (markClass mark)}} mark-red {{else}} mark-blue{{/if}}">{{mark}}</div>
                   {{/if}}
                </div>
-            {{/if}}
-         {{/each}}
-         {{#with tariffs.[4]}}
-            <div class="slider__item card">
-               <div class="card__title">
-                  <p>Объединяй!</p>
-                  <p>{{name}}</p>
-                  <span data-view="tariff_card_{{dataView}}_start"
-                        onclick="moreTariff('#{{id}}', 4, 'details_{{dataView}}')">Подробнее</span>
-               </div>
-               <div class="card__info">
-                  <div class="card__info_block info-card">
-                     <p class="info-card__title">Домашний интернет {{#if tvLength}}и ТВ{{/if}}</p>
-                     <div class="info-card__desc">
-                        <div class="info-card__desc_icon wi-fi"></div>
-                        {{speed}} Мбит/с
-                     </div>
-                     {{#if tvLength}}
-                        <div class="info-card__desc desk-channels">
-                           <div class="info-card__desc_icon tv"></div>
-                           <a href="#collapseChannel{{@index}}"
-                              data-toggle="collapse"
-                              data-target=".multi-collapse">
-                              {{tvLength}}
-                           </a>
-                        </div>
-                        <div data-toggle="collapse"
-                             class="collapse multi-collapse collapse-channel"
-                             id="collapseChannel{{@index}}">
 
-                           <ul class="collapse-channel__channels">
-                              <li class="collapse-channel__channel-group">
-                                 {{#each ../tariffs.[3].tv}}
-                                    <a href="#collapseChannelGroup1{{@index}}"
-                                       data-toggle="collapse"
-                                       class="collapse-channel__group-toggle"
-                                       aria-controls="collapse_{{../id}}_{{@index}}"
-                                       data-target=".multi-collapse-gr{{@index}}"
-                                       aria-expanded="false"
-                                    >
-                                       <div class="collapse-channel__group-wrapper">
-                                          <span class="collapse-channel__group-name">{{group}}</span>
-                                          <span class="collapse-channel__group-count">
-                                             {{countChannel ../tv @index}}
-                                          </span>
-                                       </div>
-                                    </a>
-                                    <ul class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
-                                        id="collapse_{{../id}}_{{@index}}">
-                                       {{#each groupData}}
-                                          <li class="collapse-channel__group-channelName {{#if
-                                             (activeName name ../.. @../index)}}text-green{{/if}}">
-                                             {{name}}
-                                          </li>
-                                       {{/each}}
-                                    </ul>
-                                 {{/each}}
-                              </li>
-                           </ul>
-
-                        </div>
-                     {{/if}}
-                  </div>
-                  <div class="card__info_block info-card">
-                     <p class="info-card__title">Мобильная связь</p>
-                     {{#if min}}
-                        <div class="info-card__desc desk-mobile">
-                           <div class="info-card__desc_icon mobile"></div>
-                           {{min}} минут
-                        </div>
-                     {{/if}}
-                     {{#if web}}
-                        <div class="info-card__desc">
-                           <div class="info-card__desc_icon web-4g"></div>
-                           {{web}}
-                        </div>
-                     {{/if}}
-                     {{#if sale}}
-                        <div class="info-card__desc">
-                           <div class="info-card__desc_icon bonus"></div>
-                           {{sale}}
-                        </div>
-                     {{/if}}
-                  </div>
-               </div>
-               <div class="card__price">
+               <div class="card__price card-wrapper">
                   <div class="price">
                      {{#if oldPrice}}
                         <span class="old-price">{{oldPrice}} ₽</span>
                      {{/if}}
-                     <span class="new-price">{{price}}</span> <span>₽</span>
+                     <span class="new-price">{{price}}</span> <span class="always">₽</span>
                      <span>в месяц</span>
                      {{#if iconInfo}}
-                        <div class="price__icon {{#if
-                           (iconInfo @index)}}price__icon_two-web{{else}}price__icon_all{{/if}}"></div>
+                        <div class="price__icon {{#if (iconInfo @index)}}price__icon_all{{/if}}"></div>
                      {{/if}}
                   </div>
                   <div class="card__price_btn">
-                     <div data-view="tariff_card_{{dataView}}_end"
-                          onclick="openOrder('send_', '{{dataView}}')"
-                          data-toggle="modal"
-                          data-target="#order"
-                          class="btn">Заказать
-                     </div>
+                     <button data-view="tariff_card_{{dataView}}_end"
+                             onclick="openOrder('send_', '{{dataView}}')"
+                             data-toggle="modal"
+                             data-target="#order"
+                             class="btn"
+                     >Подключить
+                     </button>
+                  </div>
+                  <div class="link" data-view="tariff_card_{{dataView}}_start"
+                       onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">Подробнее
                   </div>
                </div>
             </div>
-         {{/with}}
+         {{/each}}
       </div>
    </div>
 </section>

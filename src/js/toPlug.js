@@ -7,7 +7,7 @@ window.toPlug = (scrollTo, px = 0, ms = 500) => {
       duration: ms
    } )
       .promise().done( () => {
-      if (scrollTo === '.about-tariffs') {
+      if (scrollTo === '.fiq') {
          $( '#collapse00' ).collapse( 'show' )
       }
    } )
