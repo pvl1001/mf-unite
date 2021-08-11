@@ -1,14 +1,30 @@
 <header class="header">
    <div class="wrapper">
-      <div class="header__logo">
-         <a href="/"></a>
-      </div>
-      <div class="header__phone">
-         <a href="tel:88005500001">8 800 55-00-001</a>
-      </div>
-      <div class="header__city" data-toggle="modal"
-           data-target="#citySelection" onclick="analytics('regions')">
-         <span>Москва и область</span>
+      <div class="section-row">
+         <div class="header__text">
+            <h1>
+               <nobr>Домашний интернет,</nobr>
+               <nobr>связь и ТВ</nobr>
+            </h1>
+            <p>В тарифах «Объединяй!»</p>
+            <div class="header__btns">
+               <div onclick="connect()"
+                    class="btn btn-fiolet"
+                    data-view="first_banner"
+                    data-target="#order"
+                    data-toggle="modal"
+               >Подключить
+               </div>
+               <span data-target="#ForTheir" onclick="analytics('connect_details_their')" data-toggle="modal"
+                     class="header__about">Подробнее</span>
+            </div>
+         </div>
+         <div class="header__img-wrapp">
+            <picture>
+               <source srcset="img/pic/pic_o.png" media="(max-width: 767px)">
+               <img class="header__img" src="img/pic/pic_o_l.png" alt="img"/>
+            </picture>
+         </div>
       </div>
    </div>
 </header>

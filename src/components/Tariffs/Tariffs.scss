@@ -1,11 +1,17 @@
 .tariffs {
    background-color: #EDEDED;
-   padding: 36px 0 38px;
+   padding: 72px 0 38px;
    overflow: hidden;
 
    .wrapper {
       max-width: 1540px;
       padding: 0 80px;
+   }
+
+   h1 {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 37px;
    }
 
    .slider {
