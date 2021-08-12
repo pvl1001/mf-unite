@@ -5,14 +5,19 @@
 @import 'colors';
 @import 'template';
 @import 'tail-select';
+
+// components
 @import '../components/AboutTariffs/AboutTariffs';
 @import '../components/Footer/Footer';
 @import '../components/Nav/Nav';
 @import '../components/Header/Header';
 @import '../components/Tariffs/Tariffs';
 @import '../components/UniteCheckAddress/UniteCheckAddress';
+@import '../components/TariffBanner/TariffBanner';
+@import '../components/WhatElse/WhatElse';
+
+// components/modals
 @import '../components/modals/CitySelection/CitySelection';
 @import '../components/modals/ModalTariff/ModalTariff';
 @import '../components/modals/Order/Order';
 @import '../components/modals/Perfomance/Perfomance';
-@import '../components/TariffBanner/TariffBanner';
