@@ -55,16 +55,30 @@ $( function () {
    } );
 
    // слайдер
-   $( '.equipment__slider' ).slick( {
+   $( '.equipments .slider' ).slick( {
       infinite: false,
-      slidesToShow: 1,
+      slidesToShow: 4,
       slidesToScroll: 1,
       dots: true,
       responsive: [
          {
+            breakpoint: 1296,
+            settings: {
+               slidesToShow: 3,
+            }
+         }, {
             breakpoint: 1024,
             settings: {
-               arrows: false
+               slidesToShow: 2,
+               arrows: false,
+               variableWidth: true
+            }
+         }, {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 1,
+               arrows: false,
+               variableWidth: true
             }
          }
       ]
