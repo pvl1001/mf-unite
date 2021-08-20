@@ -3,19 +3,6 @@
    padding: 64px 0 38px;
    overflow: hidden;
 
-   .wrapper {
-      max-width: 1600px;
-      padding: 0 64px;
-
-      @media (max-width: 1023px) {
-         padding: 0 48px;
-      }
-
-      @media (max-width: 767px) {
-         padding: 0 16px;
-      }
-   }
-
    &__title {
       margin-bottom: 37px;
    }

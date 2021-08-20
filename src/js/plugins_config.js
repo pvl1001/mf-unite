@@ -24,7 +24,7 @@ $( function () {
       dots: true,
       responsive: [
          {
-            breakpoint: 1296,
+            breakpoint: 1280,
             settings: {
                slidesToShow: 3,
             }
@@ -62,7 +62,7 @@ $( function () {
       dots: true,
       responsive: [
          {
-            breakpoint: 1296,
+            breakpoint: 1280,
             settings: {
                slidesToShow: 3,
             }
