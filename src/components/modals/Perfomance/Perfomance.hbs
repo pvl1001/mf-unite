@@ -1,20 +1,40 @@
 <!--Подробнее Модемы-->
-{{#each performance}}
+{{#each equipments}}
    <div class="modal fade performance" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
          <div class="modal-content">
             <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
 
-            <div class="modal-wrapper">
+            <h1 class="performance__title">{{#if @first}}Приставка {{name}}{{else}}{{name}}{{/if}}</h1>
+
+            {{#if @first}}
+               <div class="performance__sale performance-sale">
+                  <div class="performance-sale__mark mark">Акция</div>
+                  <p class="performance-sale__text">Возьми в аренду Android TV и получи год сериалов в подарок</p>
+               </div>
+            {{/if}}
+
+            <div class="performance__container">
                <div class="performance__text">
-                  <h2>{{name}}</h2>
-                  <h3>Характеристики:</h3>
+                  <h3>Характеристики {{paramsName name}}:</h3>
+
                   <ul>
                      {{#each params}}
-                        <li>{{this}}</li>
+                        <li>
+                           <img src="img/svg/{{icon}}" alt="{{icon}}">
+                           <p>{{{text}}}</p>
+                        </li>
                      {{/each}}
                   </ul>
+
+                  <div class="performance__download-info download-info">
+                     <img src="img/svg/download-pdf.svg" class="download-info__icon" alt="Скачать">
+                     <div>
+                        <a href="#" class="download-info__link">Скачать подробную информацию</a>
+                        <p class="download-info__size">(PDF, 0.4 MB)</p>
+                     </div>
+                  </div>
                </div>
 
                <picture class="performance__img">
@@ -23,19 +43,19 @@
                   {{/if}}
                   <img src="img/pic/{{img}}" alt="{{img}}">
                </picture>
+            </div>
 
-               <div class="modal-order">
-                  <div class="btn"
+            <div class="modal-order">
+               <div class="modal-order__text">
+                  <p>{{price}} ₽ в месяц</p>
+               </div>
+               <button class="btn"
+                       type="button"
                        data-toggle="modal"
                        data-target="#order"
                        onclick="openOrder('send_', '{{dataView}}')"
-                  >Заказать
-                  </div>
-                  <div class="modal-order__text">
-                     <p>{{price}} ₽/мес</p>
-                     <a href="#">Скачать подробную информацию</a>
-                  </div>
-               </div>
+               >Заказать
+               </button>
             </div>
          </div>
       </div>

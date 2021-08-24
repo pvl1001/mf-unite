@@ -5,32 +5,25 @@
       "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
       "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
       "params": [
-         "Dualband Wi-Fi 2,4+5 ГГц",
-         "Android TV (Google Play, YouTube, Google Chromecast, Google Ассистент)",
-         "Версия Android 9 или выше",
-         "Поддержка 4K UHD видео",
-         "Подписка на видео МегаФон ТВ в подарок"
+         {
+            "icon": "fiolet_googleplay.svg",
+            "text": "1000+ приложений в Google Play"
+         },
+         {
+            "icon": "fiolet_4k.svg",
+            "text": "Поддержка 4K UHD и HDR"
+         },
+         {
+            "icon": "fiolet_voice-message.svg",
+            "text": "Голосовое управление"
+         },
+         {
+            "icon": "fiolet_video.svg",
+            "text": "Google Chromecast"
+         }
       ],
       "img": "pristavka.png",
       "price": 199,
-      "icons": [
-         {
-            "icon": "google-play",
-            "text": "Google Play <br> 1000+ приложений"
-         },
-         {
-            "icon": "mic",
-            "text": "Голосовое <br> управление"
-         },
-         {
-            "icon": "crystal",
-            "text": "Поддержка <br> 4K UHD и HDR"
-         },
-         {
-            "icon": "chromecast",
-            "text": "Google <br> Chromecast"
-         }
-      ],
       "dataView": "androidtv"
    },
    {
@@ -39,39 +32,33 @@
       "mark": "РАССРОЧКА",
       "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
       "params": [
-         "Скорость до 100 Мбит/сек",
-         "Диапазон частот 2,4 и 5 ГГц",
-         "Подключение 3G/4G модема",
-         "Автоматическое обновление ПО"
+         {
+            "icon": "fiolet_speed.svg",
+            "text": "Скорость до 100 Мбит/с"
+         },
+         {
+            "icon": "fiolet_hertz.svg",
+            "text": "Диапазон частот 2,4 и 5 ГГц"
+         },
+         {
+            "icon": "fiolet_mobile-internet.svg",
+            "text": "Возможность подключения 4G"
+         },
+         {
+            "icon": "fiolet_zone.svg",
+            "text": "Зона покрытия до 70 м<sup>2</sup>"
+         },
+         {
+            "icon": "fiolet_settings.svg",
+            "text": "Лёгкость настройки"
+         },
+         {
+            "icon": "fiolet_block.svg",
+            "text": "Родительский контроль"
+         }
       ],
       "img": "fr100.png",
       "price": 55,
-      "icons": [
-         {
-            "icon": "speed",
-            "text": "Скорость <br> до 100 Мбит/с"
-         },
-         {
-            "icon": "hertz",
-            "text": "Диапазон частот <br> 2,4 и 5 Ггц"
-         },
-         {
-            "icon": "mobile-internet",
-            "text": "Возможность <br> подключения 4G"
-         },
-         {
-            "icon": "zone",
-            "text": "Зона покрытия <br> до 70 м<sup>2</sup>"
-         },
-         {
-            "icon": "settings",
-            "text": "Легкость <br> настройки"
-         },
-         {
-            "icon": "control",
-            "text": "Родительский <br> контроль"
-         }
-      ],
       "dataView": "fr100"
    },
    {
@@ -80,40 +67,33 @@
       "mark": "РАССРОЧКА",
       "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
       "params": [
-         "4 внешние антенны MU-MIMO",
-         "Скорость до 1000 Мбит/с",
-         "Диапазон частот 2,4 и 5 ГГц",
-         "Подключение 3G/4G модема",
-         "Автоматическое обновление ПО"
+         {
+            "icon": "fiolet_speed.svg",
+            "text": "Скорость до 1 Гбит/с"
+         },
+         {
+            "icon": "fiolet_hertz.svg",
+            "text": "Диапазон частот 2,4 и 5 ГГц"
+         },
+         {
+            "icon": "fiolet_mobile-internet.svg",
+            "text": "Возможность подключения 4G"
+         },
+         {
+            "icon": "fiolet_zone.svg",
+            "text": "Зона покрытия более 70 м2"
+         },
+         {
+            "icon": "fiolet_router.svg",
+            "text": "4 внешние антенны MU‑MIMO"
+         },
+         {
+            "icon": "fiolet_block.svg",
+            "text": "Родительский контроль"
+         }
       ],
       "img": "fr1000.png",
       "price": 88,
-      "icons": [
-         {
-            "icon": "speed",
-            "text": "Скорость <br> До 1 Гбит/с"
-         },
-         {
-            "icon": "hertz",
-            "text": "Диапазон частот <br> 2,4 и 5 Ггц"
-         },
-         {
-            "icon": "mobile-internet",
-            "text": "Возможность <br> подключения 4G"
-         },
-         {
-            "icon": "zone",
-            "text": "Зона покрытия <br> более 70 м<sup>2</sup>"
-         },
-         {
-            "icon": "control",
-            "text": "Родительский <br> контроль"
-         },
-         {
-            "icon": "antennas",
-            "text": "4 внешние антенны <br> MU-MIMO"
-         }
-      ],
       "dataView": "fr1000"
    },
    {
@@ -122,26 +102,25 @@
       "mark": "РАССРОЧКА",
       "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
       "params": [
-         "Подключается через Wi-Fi",
-         "В комплекте Bluetooth-пульт",
-         "Функция «Родительский контроль»"
+         {
+            "icon": "fiolet_umnyj-dom.svg",
+            "text": "Работает везде, где есть интернет"
+         },
+         {
+            "icon": "fiolet_4k.svg",
+            "text": "Поддерживает видео UHD и HD"
+         },
+         {
+            "icon": "fiolet_wi-fi.svg",
+            "text": "Подключается через Wi‑Fi"
+         },
+         {
+            "icon": "fiolet_pult.svg",
+            "text": "Управляется Bluetooth‑пультом"
+         }
       ],
       "img": "tv_new.png",
       "price": 99,
-      "icons": [
-         {
-            "icon": "pult",
-            "text": "В комплекте <br> Bluetooth-пульт"
-         },
-         {
-            "icon": "wi-fi",
-            "text": "Подключается <br> через Wi-Fi"
-         },
-         {
-            "icon": "family",
-            "text": "Функция <br> «Родительский контроль»"
-         }
-      ],
       "dataView": "mftv"
    },
    {
@@ -174,6 +153,86 @@
             "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
          }
       ],
-      "dataView": "almond"
+      "dataView": "almond",
+      "routers": [
+         {
+            "id": "almond-0",
+            "name": "Роутер Almond 3",
+            "img": "Almond-3_about.png",
+            "params": [
+               {
+                  "icon": "speed-2_w.svg",
+                  "text": "Скорость <br> до 300 Мбит/с"
+               },
+               {
+                  "icon": "zone-24_w.svg",
+                  "text": "Зона покрытия <br> до 120 м2"
+               },
+               {
+                  "icon": "hertz_24_w.svg",
+                  "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+               }
+            ],
+            "price": 399
+         },
+         {
+            "id": "almond-1",
+            "name": "Роутер Almond 3S",
+            "img": "Almond-3S_about.png",
+            "params": [
+               {
+                  "icon": "speed-2_w.svg",
+                  "text": "Скорость <br> до 300 Мбит/с"
+               },
+               {
+                  "icon": "Whats-left_24.svg",
+                  "text": "Встроенный <br> аккумулятор"
+               },
+               {
+                  "icon": "zone-24_w.svg",
+                  "text": "Зона покрытия <br> до 120 м2"
+               },
+               {
+                  "icon": "Sim-card_24.svg",
+                  "text": "LTE <br> резервирование"
+               },
+               {
+                  "icon": "hertz_24_w.svg",
+                  "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+               }
+            ],
+            "price": 499
+         }
+      ],
+      "sensors": [
+         {
+            "id":"sensor-0",
+            "name": "Wi-Fi камера",
+            "img": "Wi-Fi-kamera_about.png",
+            "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
+            "price": 250
+         },
+         {
+            "id": "sensor-1",
+            "name": "Датчик движения",
+            "img": "Datchik-dvizheniya_about.png",
+            "desc": "Будьте в курсе любых передвижений в доме",
+            "price": 150
+         },
+         {
+            "id": "sensor-2",
+            "name": "Датчик открытия и закрытия",
+            "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+            "desc": "Будьте в курсе всех незваных гостей",
+            "price": 150
+         },
+         {
+            "id": "sensor-3",
+            "name": "Датчик протечки воды",
+            "img": "Datchik-protechki-vody_about.png",
+            "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
+            "price": 150
+         }
+      ]
    }
 ]

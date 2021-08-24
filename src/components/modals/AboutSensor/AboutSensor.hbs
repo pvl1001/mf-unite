@@ -1,0 +1,57 @@
+{{#with equipments.[4]}}
+   {{#each sensors}}
+      <div class="modal fade aboutSensor" id="about_sensor-{{@../index}}{{@index}}" tabindex="-1">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+
+               <div class="aboutSensor__wrapp">
+                  <div class="aboutSensor__img">
+                     <img src="img/pic/{{img}}" alt="{{img}}">
+                  </div>
+                  <div class="aboutSensor__text">
+                     <h2 class="aboutSensor__title">{{name}}</h2>
+
+                     <p class="aboutSensor__desc">{{desc}}</p>
+
+                     <div class="aboutSensor__switch item-option">
+                        <label>
+                           <div class="switch">
+                              <input onchange="switchInputAlmond('sensor-', '{{@index}}')"
+                                     type="checkbox">
+                              <span class="round"></span>
+                           </div>
+                           <div class="item-option__text">
+                              <p>Аренда {{deviceName name}}</p>
+                              <span class="item-option__num">{{price}}</span><span> ₽ в месяц</span>
+                           </div>
+                        </label>
+
+                        <div class="aboutSensor__counter counter">
+                           <div onclick="calculate(event, 'sensor-', '{{@index}}', '-')"
+                                class="counter__minus">-
+                           </div>
+                           <input id="counterID-sensor-{{@index}}" type="text" readonly value="1">
+                           <div onclick="calculate(event, 'sensor-', '{{@index}}', '+')"
+                                class="counter__plus">+
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <div class="download-pdf">
+                        <a href="#" class="download-pdf__icon">
+                           <img src="img/svg/download-pdf.svg" alt="img">
+                        </a>
+                        <div class="download-pdf__text">
+                           <a href="#">Скачать подробную информацию</a><br> <span>(PDF, 0.4 MB)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   {{/each}}
+{{/with}}

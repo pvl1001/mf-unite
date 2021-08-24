@@ -8,7 +8,7 @@
 
                {{#if mark}}
                   <div class="equipments-card__mark mark"
-                       {{#if @first}}style="background-color: #EB5A40"{{/if}}>
+                       {{#if @first}}style="background-color: var(--mf-orange)"{{/if}}>
                      <span>{{mark}}</span>
                   </div>
                {{/if}}
@@ -46,9 +46,16 @@
                      >Заказать
                      </button>
                   </div>
-                  <div class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
-                     Подробнее
-                  </div>
+
+                  {{#if @last}}
+                     <div class="link"  data-toggle="modal" data-target="#modalAlmond">
+                        Подробнее
+                     </div>
+                  {{else}}
+                     <div class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
+                        Подробнее
+                     </div>
+                  {{/if}}
                </div>
             </div>
          {{/each}}

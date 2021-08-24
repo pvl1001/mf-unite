@@ -3,152 +3,46 @@
    <div class="modal fade tariff-modal" id="{{id}}" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true">
+      <div class="tariff-modal__btn">
+         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+
       <div class="modal-dialog modal-dialog-centered" role="document">
+
+
          <div class="modal-content">
-            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-            <h2>Объединяй! {{name}}</h2>
 
-            <div class="tariff-modal__info {{#if tvLength}}tariff-modal__info_tv{{/if}}">
-               <div class="tariff-modal__info-col-wrapp">
-                  <div class="tariff-modal__info-col tariff-modal__info-col_web">
-                     <div class="tariff-modal__info-title tariff-modal__title_web">
-                        <img src="img/svg/wi-fi.svg" alt="img">
-                        Интернет
-                     </div>
+            <h1 class="tariff-modal__title wrapp">Объединяй! {{name}}</h1>
 
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Скорость</div>
-                        <p>{{speed}} Мбит/с</p>
-                     </div>
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">
-                           Максимальная скорость интернет-соединения, предусмотренная тарифом.
+            <ul class="tariff-modal__container">
+
+               {{#each infoModal}}
+                  <li class="tariff-modal__item item-modal wrapp">
+                     <div class="item-modal__title">
+                        <div class="item-modal__title-icon">
+                           <img src="img/svg/mobile.svg" alt="">
                         </div>
+                        <h2>{{title}}</h2>
                      </div>
 
-                     <div class="tariff-modal__info-param">
-                        <div class="tariff-modal__param-title">Трафик</div>
-                        <p>{{noLimit web}}</p>
-                     </div>
-                  </div>
-
-                  {{#if tvLength}}
-                     <div class="tariff-modal__info-col tariff-modal__info-col_tv">
-                        <div class="tariff-modal__info-title tariff-modal__title_tv">
-                           <img src="img/svg/tv.svg" alt="img">
-                           ТВ
-                        </div>
-                        <div class="tariff-modal__info-param">
-                           <div class="tariff-modal__param-title">Трафик</div>
-                           <p>Безлимитно</p>
-                        </div>
-                        <div class="tariff-modal__info-param">
-                           <div class="tariff-modal__param-title">Мегафон ТВ</div>
-                           <p>{{tvLength}}</p>
-                        </div>
-                     </div>
-                  {{/if}}
-
-               </div>
-               <div class="tariff-modal__info-col tariff-modal__info-col_mob">
-                  <div class="tariff-modal__info-title tariff-modal__title_mobile">
-                     <img src="img/svg/mobile.svg" alt="img">
-                     Мобильная связь
-                  </div>
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Мобильный интернет</div>
-                     <p>{{noLimit web}}</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Звонки на номера МегаФона России</div>
-                     <p>Безлимитно</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">Звонки на мобильные номера других операторов России
-                     </div>
-                     <p>{{min}} минут</p>
-                  </div>
-
-                  <div class="tariff-modal__info-param">
-                     <div class="tariff-modal__param-title">МегаДиск</div>
-                     <p>1 ТБ</p>
-                  </div>
-               </div>
-            </div>
-
-            <div class="tariff-modal__options">
-               <h3>Дополнительные опции:</h3>
-               <div class="tariff-modal__options-wrapp">
-                  <div class="tariff-modal__options-row options-row">
-                     {{#each rentDevice}}
-                        <div class="options-row__item item-option">
-                           <label>
-                              <div class="switch">
-                                 <input {{checkedPrice price text}}
-                                    onchange="calcRadio.sum('#{{../id}}', {{@../index}})" type="checkbox">
-                                 <span class="round"></span>
+                     <ul class="item-modal__options">
+                        {{#each options}}
+                           <li class="item-modal__option option-item">
+                              <div class="option-item__text">
+                                 <p class="option-item__text-name">{{name}}</p>
+                                 {{#if description}}
+                                    <p class="option-item__text-desc">{{description}}</p>
+                                 {{/if}}
                               </div>
-                              <div class="item-option__text">
-                                 <p>{{{text}}}</p>
-                                 <span class="item-option__num">{{price}}</span><span> ₽ в месяц</span>
-                              </div>
-                           </label>
-                        </div>
-                     {{/each}}
-                     {{#if sale}}
-                        <div class="options-row__item item-option">
-                           <div class="item-option__img">
-                              <img src="img/svg/bonus.svg" alt="img">
-                           </div>
-                           <p>Скидка 40% на SIM-карты</p>
-                        </div>
-                     {{/if}}
-                     <div class="options-row__item item-option">
-                        <div>
-                           <div class="download-pdf">
-                              <a href="#" class="download-pdf__icon">
-                                 <img src="img/svg/download-pdf.svg" alt="img">
-                              </a>
-                              <div class="download-pdf__text">
-                                 <a href="#">Скачать подробную информацию <br> о тарифе</a>
-                                 <span>(PDF, 0.4 MB)</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  {{> TariffBanner}}
-               </div>
-            </div>
-            <div class="tariff-modal__price price-tariff">
-               <div class="price-tariff__title">
-                  <p>Стоимость тарифа:</p>
-                  <span>с учетом выбранных опций</span>
-               </div>
+                              <p class="option-item__value">{{value}}</p>
+                           </li>
+                        {{/each}}
+                     </ul>
+                  </li>
+               {{/each}}
 
-               <div class="price">
-                  <div>
-                     {{#if oldPrice}}
-                        <span class="old-price">{{oldPrice}} ₽</span>
-                     {{/if}}
-                     <span class="new-price">{{price}}</span><span>₽</span>
-                     <span>в месяц</span>
-                     {{#if iconInfo }}
-                        <div class="price__icon price__icon_all"></div>
-                     {{/if}}
-                  </div>
-               </div>
+            </ul>
 
-               <div
-                  class="btn"
-                  data-toggle="modal"
-                  data-target="#order"
-                  data-view="modal_{{dataView}}"
-                  onclick="openOrder('send_', '{{dataView}}')">Заказать
-               </div>
-            </div>
          </div>
       </div>
    </div>
