@@ -24,6 +24,7 @@ import './js/moreTariff' // Кнопка "подробнее" о тарифе
 import './js/openOrder' // кнопка "Заказать"
 import './js/nextForm' // popUp вперед
 import './js/validate_address' // "проверить возможность подключения"
+import './js/switchDopOptionCard' //
 
 // build all img
 function requireAll(r) { r.keys().forEach(r); }

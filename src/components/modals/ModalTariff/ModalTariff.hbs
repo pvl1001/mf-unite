@@ -1,49 +1,186 @@
 <!--Подробнее Тарифы-->
 {{#each tariffs}}
-   <div class="modal fade tariff-modal" id="{{id}}" tabindex="-1" role="dialog"
+   <div class="modal fade tariff-modal tariff-modal_{{id}}" id="{{id}}" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-      <div class="tariff-modal__btn">
+
+      <div class="tariff-modal__btn-close modal-dialog">
          <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
 
       <div class="modal-dialog modal-dialog-centered" role="document">
 
-
          <div class="modal-content">
 
             <h1 class="tariff-modal__title wrapp">Объединяй! {{name}}</h1>
 
-            <ul class="tariff-modal__container">
+            <div class="tariff-modal__container">
 
-               {{#each infoModal}}
-                  <li class="tariff-modal__item item-modal wrapp">
-                     <div class="item-modal__title">
-                        <div class="item-modal__title-icon">
-                           <img src="img/svg/mobile.svg" alt="">
+               <ul class="tariff-modal__items">
+                  {{#each infoModal}}
+                     <li class="tariff-modal__item item-modal wrapp">
+                        <div class="item-modal__title">
+                           <div class="item-modal__title-icon">
+                              <img src="img/svg/{{icon}}" alt="{{icon}}">
+                           </div>
+                           <h2>{{title}}</h2>
                         </div>
-                        <h2>{{title}}</h2>
-                     </div>
 
-                     <ul class="item-modal__options">
-                        {{#each options}}
-                           <li class="item-modal__option option-item">
-                              <div class="option-item__text">
-                                 <p class="option-item__text-name">{{name}}</p>
-                                 {{#if description}}
-                                    <p class="option-item__text-desc">{{description}}</p>
-                                 {{/if}}
+                        <ul class="item-modal__options">
+                           {{#each options}}
+                              <li class="item-modal__option option-item">
+                                 <div class="option-item__text">
+                                    <p class="option-item__text-name">{{name}}</p>
+                                    {{#if description}}
+                                       <p class="option-item__text-desc">{{description}}</p>
+                                    {{/if}}
+                                 </div>
+                                 <p class="option-item__value">{{value}}</p>
+                              </li>
+                           {{/each}}
+                        </ul>
+                     </li>
+                  {{/each}}
+               </ul>
+
+               <div class="tariff-modal__dop-options wrapp">
+                  <h2 class="tariff-modal__dop-options-title">Дополнительные опции:</h2>
+
+                  <ul class="tariff-modal__dop-options-cards">
+
+                     {{#each equipments}}
+                        <li
+                           class="tariff-modal__dop-options-card dop-options-card dop-options-card__option_{{../id}}-{{dataView}}">
+                           <div class="dop-options-card__img">
+                              <img src="img/pic/{{img}}" alt="{{img}}">
+                           </div>
+
+                           <div class="dop-options-card__option
+                              {{#unless plan}} dop-options-card__option_rent{{/unless}}">
+                              <h3>{{name}}
+                                 <nobr>{{speed}}</nobr>
+                              </h3>
+
+                              {{#if plan}}
+                                 <p>Рассрочка</p>
+                              {{else}}
+                                 <p>Аренда</p>
+                              {{/if}}
+
+                              {{#if plan}}
+                                 <div class="dop-options-card__option-radio">
+
+                                    <label class="dop-options-card__radio-btn">
+                                       <input name="radio-{{../id}}-{{@index}}" id="radio36-id-{{../id}}-{{@index}}"
+                                              type="radio" value="{{plan.[36]}}" checked disabled>
+                                       <label for="radio36-id-{{../id}}-{{@index}}"></label>
+                                       <span>36 мес</span>
+                                    </label>
+
+                                    <label class="dop-options-card__radio-btn">
+                                       <input name="radio-{{../id}}-{{@index}}" id="radio24-id-{{../id}}-{{@index}}"
+                                              type="radio" value="{{plan.[24]}}" disabled>
+                                       <label for="radio24-id-{{../id}}-{{@index}}"></label>
+                                       <span>24 мес</span>
+                                    </label>
+                                 </div>
+                              {{/if}}
+                           </div>
+
+                           <div class="dop-options-card__price">
+                              <div class="price">
+                                    <span class="price__current">
+                                       {{#if plan}}
+                                          {{plan.[36]}}
+                                       {{else}}
+                                          {{price}}
+                                       {{/if}}
+                                    </span> <span> ₽</span>
+                                 <span class="price__month"> в месяц</span>
                               </div>
-                              <p class="option-item__value">{{value}}</p>
-                           </li>
-                        {{/each}}
-                     </ul>
-                  </li>
-               {{/each}}
 
-            </ul>
+                              <label class="switch">
+                                 <input type="checkbox"
+                                        onchange="switchDopOptionCard( {{@index}}, '{{../id}}-{{dataView}}' )">
+                                 <span class="round"></span>
+                              </label>
+                           </div>
+
+                        </li>
+                     {{/each}}
+
+                     <li class="tariff-modal__dop-options-card dop-options-card">
+                        <div class="dop-options-card__sim">
+                           <p>SIM-карта с тарифом
+                              <span data-toggle="modal" data-target="#tariff-all"> «Без переплат. Всё»</span>
+                              Скидка 40% на абонентскую плату
+                           </p>
+                           <div class="tariff-modal__counter counter">
+                              <div onclick="calculate(event, 'almond-', '{{@index}}', '-')"
+                                   class="counter__minus">&minus;
+                              </div>
+                              <input type="text" id="counterID-dop-options-card-{{../id}}" readonly value="1">
+                              <div onclick="calculate(event, 'almond-', '{{@index}}', '+')"
+                                   class="counter__plus">+
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="dop-options-card__price">
+                           <label>
+                              <div class="price">
+                                 <span class="price__old">650 ₽</span>
+                                 <span class="price__current">
+                                    {{#if plan}}
+                                       {{plan.[36]}}
+                                    {{else}}
+                                       {{price}}
+                                    {{/if}}
+                                 </span> <span> ₽</span>
+                                 <span class="price__month"> в месяц</span>
+                              </div>
+
+                              <div class="switch">
+                                 <input type="checkbox"
+                                        onchange="switchDopOptionCard( {{@index}}, '{{../id}}-{{dataView}}' )">
+                                 <span class="round"></span>
+                              </div>
+                           </label>
+                        </div>
+
+                     </li>
+
+                  </ul>
+
+                  <div class="tariff-modal__download-pdf download-pdf">
+                     <a href="#" class="download-pdf__icon">
+                        <img src="img/svg/download-pdf.svg" alt="img">
+                     </a>
+                     <div class="download-pdf__text">
+                        <a href="#">Скачать подробную информацию о тарифе</a>
+                        <span>(PDF, 0.4 MB)</span>
+                     </div>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="tariff-modal__footer wrapp">
+               <div class="tariff-modal__price price">
+                  {{#if oldPrice}}
+                     <span class="price__old">{{oldPrice}} ₽</span>
+                  {{/if}}
+                  <span class="price__current">{{price}}</span>
+                  <span class="price__month"> ₽ в месяц</span>
+               </div>
+
+               <button type="button" class="tariff-modal__price-btn btn">Заказать</button>
+               <p class="tariff-modal__price-desc">с учетом выбранных опций</p>
+            </div>
 
          </div>
+
       </div>
    </div>
 {{/each}}

@@ -20,8 +20,8 @@ a:visited,
 }
 
 a.btn,
-div.btn,
-button.btn {
+.btn,
+.btn {
    height: 48px;
    border-radius: 24px;
    padding: 0 50px;
@@ -262,6 +262,61 @@ input {
    border: 1px solid #DDDDDD;
 }
 
+input[type="radio"] {
+   display: none;
+
+   + label {
+      position: relative;
+
+      &:before {
+         content: '';
+         display: inline-block;
+         height: 20px;
+         width: 20px;
+         border-radius: 50%;
+         border: 2px solid #D8D8D8;
+         margin-right: 8px;
+      }
+
+      + span {
+         margin-bottom: -2px;
+         font-weight: 400;
+      }
+   }
+
+
+
+   &:checked + label {
+      &:before {
+         background-color: var(--mf-green);
+         border: 0;
+      }
+
+      &:after {
+         content: '';
+         display: inline-block;
+         position: absolute;
+         height: 8px;
+         width: 8px;
+         border-radius: 50%;
+         background-color: #fff;
+         left: calc((20px - 8px) / 2)
+      }
+   }
+
+   &:checked:disabled + label {
+      &:before {
+         background-color: #D8D8D8;
+         border: 0;
+      }
+   }
+
+   &:disabled + label {
+      cursor: default;
+   }
+
+}
+
 input[data-provide="datepicker"] {
    background: url('../img/svg/Calendar_16.svg') calc(100% - 21px) 50% / 14px no-repeat;
    border-radius: 0;
@@ -392,19 +447,19 @@ input[data-provide="datepicker"] {
       bottom: 0;
       background-color: #fff;
       transition: .3s;
-      border: 1px solid #DDDDDD;
+      border: 1px solid #33333327;
    }
 
    span:before {
       content: '';
       position: absolute;
-      height: 20px;
-      width: 20px;
+      height: 18px;
+      width: 18px;
       left: -1px;
-      bottom: -1px;
+      top: calc(50% - 9px);
       background-color: #fff;
       transition: .3s;
-      border: 1px solid #DDDDDD;
+      border: 1px solid #33333327;
    }
 
    input:checked + span {
@@ -416,7 +471,7 @@ input[data-provide="datepicker"] {
    }
 
    input:checked + span:before {
-      transform: translateX(20px);
+      left: calc(100% - 18px + 1px);
    }
 
    /* Rounded sliders */
@@ -430,15 +485,11 @@ input[data-provide="datepicker"] {
 }
 
 .price {
-   display: flex;
-   align-items: flex-end;
-   justify-content: center;
    white-space: nowrap;
 
    > span {
       font-size: 12px;
       line-height: 14px;
-      vertical-align: text-bottom;
    }
 
    .old-price {
@@ -701,8 +752,8 @@ form {
       line-height: 30px;
       text-align: center;
       cursor: pointer;
-      font-weight: 400;
-      font-size: 15px;
+      font-size: 20px;
+      font-weight: 500;
       user-select: none;
 
       &:hover {
@@ -752,6 +803,7 @@ form {
 
       span {
          color: #333333 !important;
+         white-space: nowrap;
       }
    }
 }

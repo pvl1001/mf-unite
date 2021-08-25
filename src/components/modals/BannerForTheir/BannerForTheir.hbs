@@ -1,0 +1,32 @@
+<div class="tariff-modal__options-banner banner-for-their">
+   {{#with noOverpayments}}
+      <div class="banner-for-their__text">
+         <p class="banner-for-their__text-text">Подключи своим близким тариф
+            <span onclick="nextForm('.modal-for-their__screen-2', '.modal-for-their__screen-1')">
+               {{title}}</span> с бессрочной скидкой 40% на абонентскую плату.
+         </p>
+
+         <label class="banner-for-their__switch">
+            <div class="switch">
+               <input onchange="calcRadio.sum('#{{../id}}', 3)" type="checkbox">
+               <span class="round"></span>
+            </div>
+            <div class="switch-text">
+               <p>SIM-карта для друга</p>
+               <span class="banner-for-their__old-price">{{oldPrice}}</span><span
+               class="item-option__num">{{price}}</span> <span>₽ в месяц</span>
+            </div>
+         </label>
+
+         <div class="banner-for-their__counter counter" id="counterBanner">
+            <div onclick="calcRadio.minus('#{{../id}}', 3)" class="counter__minus">-</div>
+            <input type="text" readonly value="1">
+            <div onclick="calcRadio.plus('#{{../id}}', 3)" class="counter__plus">+</div>
+         </div>
+
+      </div>
+      <div class="banner-for-their__img">
+         <img src="img/pic/pic_podrobnee.png" alt="pic_podrobnee.png"/>
+      </div>
+   {{/with}}
+</div>

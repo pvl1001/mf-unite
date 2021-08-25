@@ -20,4 +20,4 @@ $('.modal').on('hidden.bs.modal', function () {
 })
 
 // открыть modal
-// $('#equipment-1').modal('show')
+// $('#for-their').modal('show')

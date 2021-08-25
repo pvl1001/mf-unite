@@ -1363,6 +1363,7 @@
       "infoModal": [
          {
             "title": "Мобильная связь",
+            "icon": "mob_bold.svg",
             "options": [
                {
                   "name": "Мобильный интернет",
@@ -1393,6 +1394,7 @@
          },
          {
             "title": "Интернет",
+            "icon": "wi-fi_bold.svg",
             "options": [
                {
                   "name": "Скорость",
@@ -1408,6 +1410,7 @@
          },
          {
             "title": "ТВ",
+            "icon": "TV_bold.svg",
             "options": [
                {
                   "name": "Мегафон ТВ",
@@ -1421,6 +1424,257 @@
                }
             ]
          }
+      ],
+      "equipments": [
+         {
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": {
+               "24": 299,
+               "36": 199
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR1000-1",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м2"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv",
+            "plan": {
+               "24": 239,
+               "36": 159
+            }
+         },
+         {
+            "name": "Умный дом с роутером Almond",
+            "text": "Wi-Fi роутер Almond с системой охраны дома.",
+            "params": [
+               "Настройте за несколько секунд",
+               "Управляйте Wi-Fi через приложение",
+               "Объедините устройства в умный дом",
+               "Получайте сигналы, если в дом кто-то проникнет"
+            ],
+            "img": "almond.png",
+            "price": 399,
+            "icons": [
+               {
+                  "icon": "settings",
+                  "text": "Настройте за несколько секунд"
+               },
+               {
+                  "icon": "phone",
+                  "text": "Управляйте Wi-Fi через приложение"
+               },
+               {
+                  "icon": "safety",
+                  "text": "Объедините устройства в умный дом"
+               },
+               {
+                  "icon": "message",
+                  "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
+               }
+            ],
+            "dataView": "almond",
+            "routers": [
+               {
+                  "id": "almond-0",
+                  "name": "Роутер Almond 3",
+                  "img": "Almond-3_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 399
+               },
+               {
+                  "id": "almond-1",
+                  "name": "Роутер Almond 3S",
+                  "img": "Almond-3S_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "Whats-left_24.svg",
+                        "text": "Встроенный <br> аккумулятор"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "Sim-card_24.svg",
+                        "text": "LTE <br> резервирование"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 499
+               }
+            ],
+            "sensors": [
+               {
+                  "id": "sensor-0",
+                  "name": "Wi-Fi камера",
+                  "img": "Wi-Fi-kamera_about.png",
+                  "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
+                  "price": 250
+               },
+               {
+                  "id": "sensor-1",
+                  "name": "Датчик движения",
+                  "img": "Datchik-dvizheniya_about.png",
+                  "desc": "Будьте в курсе любых передвижений в доме",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-2",
+                  "name": "Датчик открытия и закрытия",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "desc": "Будьте в курсе всех незваных гостей",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-3",
+                  "name": "Датчик протечки воды",
+                  "img": "Datchik-protechki-vody_about.png",
+                  "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
+                  "price": 150
+               }
+            ]
+         }
       ]
    },
    {
@@ -1429,7 +1683,7 @@
       "name": "Два интернета",
       "mark": "Только нужное",
       "speed": 200,
-      "min": 900,
+      "min": 1200,
       "web": "Безлимитный интернет",
       "sale": "Скидка 40% на SIM-карты",
       "infoProgress": [
@@ -1448,16 +1702,312 @@
       ],
       "tv": null,
       "oldPrice": null,
-      "price": 750,
+      "price": 700,
       "iconInfo": false,
       "rentDevice": [
          {
             "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
-            "price": 88
+            "price": 99
          },
          {
             "text": "Аренда Android TV",
             "price": 199
+         }
+      ],
+      "infoModal": [
+         {
+            "title": "Мобильная связь",
+            "icon": "mob_bold.svg",
+            "options": [
+               {
+                  "name": "Мобильный интернет",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Мессенджеры и звонки на номера МегаФона доступны при любом балансе",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на номера МегаФона России",
+                  "description": "Не расходуют пакет минут",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на мобильные номера других операторов России",
+                  "description": "",
+                  "value": "1200 минут"
+               },
+               {
+                  "name": "МегаДиск",
+                  "description": "Облачное хранилище для ваших фотографий и файлов",
+                  "value": "1 ТБ"
+               }
+            ]
+         },
+         {
+            "title": "Интернет",
+            "icon": "wi-fi_bold.svg",
+            "options": [
+               {
+                  "name": "Скорость",
+                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
+                  "value": "200 Мбит/с"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         }
+      ],
+      "equipments": [
+         {
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": {
+               "24": 299,
+               "36": 199
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR1000-1",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м2"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv"
+         },
+         {
+            "name": "Умный дом с роутером Almond",
+            "text": "Wi-Fi роутер Almond с системой охраны дома.",
+            "params": [
+               "Настройте за несколько секунд",
+               "Управляйте Wi-Fi через приложение",
+               "Объедините устройства в умный дом",
+               "Получайте сигналы, если в дом кто-то проникнет"
+            ],
+            "img": "almond.png",
+            "price": 399,
+            "icons": [
+               {
+                  "icon": "settings",
+                  "text": "Настройте за несколько секунд"
+               },
+               {
+                  "icon": "phone",
+                  "text": "Управляйте Wi-Fi через приложение"
+               },
+               {
+                  "icon": "safety",
+                  "text": "Объедините устройства в умный дом"
+               },
+               {
+                  "icon": "message",
+                  "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
+               }
+            ],
+            "dataView": "almond",
+            "routers": [
+               {
+                  "id": "almond-0",
+                  "name": "Роутер Almond 3",
+                  "img": "Almond-3_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 399
+               },
+               {
+                  "id": "almond-1",
+                  "name": "Роутер Almond 3S",
+                  "img": "Almond-3S_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "Whats-left_24.svg",
+                        "text": "Встроенный <br> аккумулятор"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "Sim-card_24.svg",
+                        "text": "LTE <br> резервирование"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 499
+               }
+            ],
+            "sensors": [
+               {
+                  "id": "sensor-0",
+                  "name": "Wi-Fi камера",
+                  "img": "Wi-Fi-kamera_about.png",
+                  "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
+                  "price": 250
+               },
+               {
+                  "id": "sensor-1",
+                  "name": "Датчик движения",
+                  "img": "Datchik-dvizheniya_about.png",
+                  "desc": "Будьте в курсе любых передвижений в доме",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-2",
+                  "name": "Датчик открытия и закрытия",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "desc": "Будьте в курсе всех незваных гостей",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-3",
+                  "name": "Датчик протечки воды",
+                  "img": "Datchik-protechki-vody_about.png",
+                  "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
+                  "price": 150
+               }
+            ]
          }
       ]
    },
@@ -1467,7 +2017,7 @@
       "name": "Хит",
       "mark": "Популярное",
       "speed": 300,
-      "min": 1300,
+      "min": 1500,
       "web": "Безлимитный интернет",
       "sale": "Скидка 40% на SIM-карты",
       "infoProgress": [
@@ -2462,7 +3012,7 @@
       "rentDevice": [
          {
             "text": "Аренда ТВ-приставки",
-            "price": 99
+            "price": 159
          },
          {
             "text": "Аренда Android TV",
@@ -2470,7 +3020,323 @@
          },
          {
             "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
-            "price": 88
+            "price": 99
+         }
+      ],
+      "infoModal": [
+         {
+            "title": "Мобильная связь",
+            "icon": "mob_bold.svg",
+            "options": [
+               {
+                  "name": "Мобильный интернет",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Мессенджеры и звонки на номера МегаФона доступны при любом балансе",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на номера МегаФона России",
+                  "description": "Не расходуют пакет минут",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на мобильные номера других операторов России",
+                  "description": "",
+                  "value": "1500 минут"
+               },
+               {
+                  "name": "МегаДиск",
+                  "description": "Облачное хранилище для ваших фотографий и файлов",
+                  "value": "1 ТБ"
+               }
+            ]
+         },
+         {
+            "title": "Интернет",
+            "icon": "wi-fi_bold.svg",
+            "options": [
+               {
+                  "name": "Скорость",
+                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
+                  "value": "300 Мбит/с"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         },
+         {
+            "title": "ТВ",
+            "icon": "TV_bold.svg",
+            "options": [
+               {
+                  "name": "Мегафон ТВ",
+                  "description": "",
+                  "value": "188 каналов"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         }
+      ],
+      "equipments": [
+         {
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": {
+               "24": 299,
+               "36": 199
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR1000-1",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м2"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv",
+            "plan": {
+               "24": 239,
+               "36": 159
+            }
+         },
+         {
+            "name": "Умный дом с роутером Almond",
+            "text": "Wi-Fi роутер Almond с системой охраны дома.",
+            "params": [
+               "Настройте за несколько секунд",
+               "Управляйте Wi-Fi через приложение",
+               "Объедините устройства в умный дом",
+               "Получайте сигналы, если в дом кто-то проникнет"
+            ],
+            "img": "almond.png",
+            "price": 399,
+            "icons": [
+               {
+                  "icon": "settings",
+                  "text": "Настройте за несколько секунд"
+               },
+               {
+                  "icon": "phone",
+                  "text": "Управляйте Wi-Fi через приложение"
+               },
+               {
+                  "icon": "safety",
+                  "text": "Объедините устройства в умный дом"
+               },
+               {
+                  "icon": "message",
+                  "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
+               }
+            ],
+            "dataView": "almond",
+            "routers": [
+               {
+                  "id": "almond-0",
+                  "name": "Роутер Almond 3",
+                  "img": "Almond-3_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 399
+               },
+               {
+                  "id": "almond-1",
+                  "name": "Роутер Almond 3S",
+                  "img": "Almond-3S_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "Whats-left_24.svg",
+                        "text": "Встроенный <br> аккумулятор"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "Sim-card_24.svg",
+                        "text": "LTE <br> резервирование"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 499
+               }
+            ],
+            "sensors": [
+               {
+                  "id": "sensor-0",
+                  "name": "Wi-Fi камера",
+                  "img": "Wi-Fi-kamera_about.png",
+                  "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
+                  "price": 250
+               },
+               {
+                  "id": "sensor-1",
+                  "name": "Датчик движения",
+                  "img": "Datchik-dvizheniya_about.png",
+                  "desc": "Будьте в курсе любых передвижений в доме",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-2",
+                  "name": "Датчик открытия и закрытия",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "desc": "Будьте в курсе всех незваных гостей",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-3",
+                  "name": "Датчик протечки воды",
+                  "img": "Datchik-protechki-vody_about.png",
+                  "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
+                  "price": 150
+               }
+            ]
          }
       ]
    },
@@ -2479,7 +3345,7 @@
       "dataView": "films",
       "name": "Кино и сериалы",
       "speed": 300,
-      "min": 1300,
+      "min": 1500,
       "web": "Безлимитный интернет",
       "sale": "Скидка 40% на SIM-карты",
       "infoProgress": [
@@ -2508,7 +3374,7 @@
       "rentDevice": [
          {
             "text": "Аренда ТВ-приставки",
-            "price": 99
+            "price": 159
          },
          {
             "text": "Аренда Android TV",
@@ -2516,367 +3382,307 @@
          },
          {
             "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
-            "price": 88
-         }
-      ]
-   },
-   {
-      "id": "around",
-      "dataView": "vezde",
-      "name": "Везде",
-      "speed": 150,
-      "min": 2100,
-      "web": "Безлимитный интернет",
-      "sale": null,
-      "infoProgress": [
-         {
-            "title": "Мобильный интернет",
-            "value": "<span class='icon-infinity'></span> ГБ"
-         },
-         {
-            "title": "Звонки",
-            "value": "2100 минут"
-         },
-         {
-            "title": "Домашний интернет",
-            "value": "150 Мбит/с"
-         }
-      ],
-      "tv": [
-         {
-            "group": "HD",
-            "groupData": [
-               {
-                  "id": 8,
-                  "name": "RT"
-               },
-               {
-                  "id": 9,
-                  "name": "RTД HD"
-               },
-               {
-                  "id": 12,
-                  "name": "SOCHI LIVE"
-               },
-               {
-                  "id": 18,
-                  "name": "Известия"
-               },
-               {
-                  "id": 20,
-                  "name": "Капитан Фантастика"
-               },
-               {
-                  "id": 37,
-                  "name": "Россия HD"
-               },
-               {
-                  "id": 48,
-                  "name": "Телеканал 360°"
-               }
-            ]
-         },
-         {
-            "group": "Для детей",
-            "groupData": [
-               {
-                  "id": 19,
-                  "name": "Канал Disney"
-               },
-               {
-                  "id": 20,
-                  "name": "Капитан Фантастика"
-               },
-               {
-                  "id": 21,
-                  "name": "Карусель"
-               },
-               {
-                  "id": 35,
-                  "name": "Радость моя"
-               },
-               {
-                  "id": 50,
-                  "name": "Уникум"
-               }
-            ]
-         },
-         {
-            "group": "Спорт",
-            "groupData": [
-               {
-                  "id": 23,
-                  "name": "Матч ТВ"
-               }
-            ]
-         },
-         {
-            "group": "Кино",
-            "groupData": [
-               {
-                  "id": 29,
-                  "name": "НТВ Сериал"
-               }
-            ]
-         },
-         {
-            "group": "Развлекательные",
-            "groupData": [
-               {
-                  "id": 16,
-                  "name": "Еда"
-               },
-               {
-                  "id": 30,
-                  "name": "Национальное телевидение Чувашии"
-               },
-               {
-                  "id": 33,
-                  "name": "Про Бизнес"
-               },
-               {
-                  "id": 40,
-                  "name": "Сарафан"
-               },
-               {
-                  "id": 43,
-                  "name": "Супер"
-               },
-               {
-                  "id": 51,
-                  "name": "Ю"
-               }
-            ]
-         },
-         {
-            "group": "Новости",
-            "groupData": [
-               {
-                  "id": 1,
-                  "name": "BBC World News"
-               },
-               {
-                  "id": 4,
-                  "name": "Deutsche Welle"
-               },
-               {
-                  "id": 5,
-                  "name": "France 24"
-               },
-               {
-                  "id": 8,
-                  "name": "RT"
-               },
-               {
-                  "id": 18,
-                  "name": "Известия"
-               },
-               {
-                  "id": 25,
-                  "name": "Мир 24"
-               },
-               {
-                  "id": 26,
-                  "name": "Москва24"
-               },
-               {
-                  "id": 30,
-                  "name": "Национальное телевидение Чувашии"
-               },
-               {
-                  "id": 34,
-                  "name": "РБК "
-               },
-               {
-                  "id": 37,
-                  "name": "Россия HD"
-               },
-               {
-                  "id": 45,
-                  "name": "ТНВ"
-               },
-               {
-                  "id": 48,
-                  "name": "Телеканал 360°"
-               },
-               {
-                  "id": 52,
-                  "name": "Югра"
-               }
-            ]
-         },
-         {
-            "group": "Музыкальные",
-            "groupData": [
-               {
-                  "id": 2,
-                  "name": "Bridge TV"
-               },
-               {
-                  "id": 3,
-                  "name": "Bridge TV Русский хит"
-               },
-               {
-                  "id": 6,
-                  "name": "Music Box Gold"
-               },
-               {
-                  "id": 7,
-                  "name": "Music Box Russia"
-               },
-               {
-                  "id": 10,
-                  "name": "RU.TV"
-               },
-               {
-                  "id": 15,
-                  "name": "Восток ТВ"
-               },
-               {
-                  "id": 27,
-                  "name": "Муз ТВ"
-               },
-               {
-                  "id": 47,
-                  "name": "ТНТ MUSIC"
-               }
-            ]
-         },
-         {
-            "group": "Познавательные",
-            "groupData": [
-               {
-                  "id": 9,
-                  "name": "RTД HD"
-               },
-               {
-                  "id": 11,
-                  "name": "Russian Travel Guide"
-               },
-               {
-                  "id": 12,
-                  "name": "SOCHI LIVE"
-               },
-               {
-                  "id": 22,
-                  "name": "Мама"
-               },
-               {
-                  "id": 30,
-                  "name": "Национальное телевидение Чувашии"
-               },
-               {
-                  "id": 42,
-                  "name": "Синергия ТВ"
-               },
-               {
-                  "id": 49,
-                  "name": "Телеканал Совета Федерации \"Вместе РФ\""
-               }
-            ]
-         },
-         {
-            "group": "Федеральные",
-            "groupData": [
-               {
-                  "id": 13,
-                  "name": "Архыз 24"
-               },
-               {
-                  "id": 14,
-                  "name": "Башкирское спутниковое телевидение"
-               },
-               {
-                  "id": 17,
-                  "name": "Звезда"
-               },
-               {
-                  "id": 21,
-                  "name": "Карусель"
-               },
-               {
-                  "id": 23,
-                  "name": "Матч ТВ"
-               },
-               {
-                  "id": 24,
-                  "name": "Мир"
-               },
-               {
-                  "id": 26,
-                  "name": "Москва24"
-               },
-               {
-                  "id": 27,
-                  "name": "Муз ТВ"
-               },
-               {
-                  "id": 28,
-                  "name": "НТВ"
-               },
-               {
-                  "id": 31,
-                  "name": "ОТР"
-               },
-               {
-                  "id": 32,
-                  "name": "ПЯТНИЦА"
-               },
-               {
-                  "id": 36,
-                  "name": "Россия - 24"
-               },
-               {
-                  "id": 37,
-                  "name": "Россия HD"
-               },
-               {
-                  "id": 38,
-                  "name": "Россия-К"
-               },
-               {
-                  "id": 39,
-                  "name": "СПАС"
-               },
-               {
-                  "id": 41,
-                  "name": "Своё ТВ"
-               },
-               {
-                  "id": 44,
-                  "name": "ТВ Центр"
-               },
-               {
-                  "id": 45,
-                  "name": "ТНВ"
-               },
-               {
-                  "id": 46,
-                  "name": "ТНТ"
-               },
-               {
-                  "id": 48,
-                  "name": "Телеканал 360°"
-               },
-               {
-                  "id": 52,
-                  "name": "Югра"
-               }
-            ]
-         }
-      ],
-      "tvLength": "61 канал",
-      "oldPrice": null,
-      "price": 1500,
-      "iconInfo": false,
-      "rentDevice": [
-         {
-            "text": "Аренда ТВ-приставки",
             "price": 99
+         }
+      ],
+      "infoModal": [
+         {
+            "title": "Мобильная связь",
+            "icon": "mob_bold.svg",
+            "options": [
+               {
+                  "name": "Мобильный интернет",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Мессенджеры и звонки на номера МегаФона доступны при любом балансе",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на номера МегаФона России",
+                  "description": "Не расходуют пакет минут",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на мобильные номера других операторов России",
+                  "description": "",
+                  "value": "1500 минут"
+               },
+               {
+                  "name": "МегаДиск",
+                  "description": "Облачное хранилище для ваших фотографий и файлов",
+                  "value": "1 ТБ"
+               }
+            ]
          },
          {
-            "text": "Аренда 4G Wi-Fi роутера",
-            "price": 100
+            "title": "Интернет",
+            "icon": "wi-fi_bold.svg",
+            "options": [
+               {
+                  "name": "Скорость",
+                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
+                  "value": "300 Мбит/с"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         }
+      ],
+      "equipments": [
+         {
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": {
+               "24": 299,
+               "36": 199
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR1000-1",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м2"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv",
+            "plan": {
+               "24": 239,
+               "36": 159
+            }
+         },
+         {
+            "name": "Умный дом с роутером Almond",
+            "text": "Wi-Fi роутер Almond с системой охраны дома.",
+            "params": [
+               "Настройте за несколько секунд",
+               "Управляйте Wi-Fi через приложение",
+               "Объедините устройства в умный дом",
+               "Получайте сигналы, если в дом кто-то проникнет"
+            ],
+            "img": "almond.png",
+            "price": 399,
+            "icons": [
+               {
+                  "icon": "settings",
+                  "text": "Настройте за несколько секунд"
+               },
+               {
+                  "icon": "phone",
+                  "text": "Управляйте Wi-Fi через приложение"
+               },
+               {
+                  "icon": "safety",
+                  "text": "Объедините устройства в умный дом"
+               },
+               {
+                  "icon": "message",
+                  "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
+               }
+            ],
+            "dataView": "almond",
+            "routers": [
+               {
+                  "id": "almond-0",
+                  "name": "Роутер Almond 3",
+                  "img": "Almond-3_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 399
+               },
+               {
+                  "id": "almond-1",
+                  "name": "Роутер Almond 3S",
+                  "img": "Almond-3S_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "Whats-left_24.svg",
+                        "text": "Встроенный <br> аккумулятор"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "Sim-card_24.svg",
+                        "text": "LTE <br> резервирование"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 499
+               }
+            ],
+            "sensors": [
+               {
+                  "id": "sensor-0",
+                  "name": "Wi-Fi камера",
+                  "img": "Wi-Fi-kamera_about.png",
+                  "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
+                  "price": 250
+               },
+               {
+                  "id": "sensor-1",
+                  "name": "Датчик движения",
+                  "img": "Datchik-dvizheniya_about.png",
+                  "desc": "Будьте в курсе любых передвижений в доме",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-2",
+                  "name": "Датчик открытия и закрытия",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "desc": "Будьте в курсе всех незваных гостей",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-3",
+                  "name": "Датчик протечки воды",
+                  "img": "Datchik-protechki-vody_about.png",
+                  "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
+                  "price": 150
+               }
+            ]
          }
       ]
    },
@@ -2884,9 +3690,9 @@
       "id": "premium",
       "dataView": "Premium",
       "name": "Премиум",
-      "speed": 50,
-      "min": 700,
-      "web": "30 ГБ",
+      "speed": 500,
+      "min": 3000,
+      "web": "Безлимитный интернет",
       "sale": "Скидка 40% на SIM-карты",
       "infoProgress": [
          {
@@ -4226,12 +5032,12 @@
       ],
       "tvLength": "250 каналов",
       "oldPrice": null,
-      "price": 650,
+      "price": 1900,
       "iconInfo": false,
       "rentDevice": [
          {
             "text": "Аренда ТВ-приставки",
-            "price": 88
+            "price": 159
          },
          {
             "text": "Аренда Android TV",
@@ -4241,13 +5047,329 @@
             "text": "Аренда Wi-Fi роутера <nobr>(100 Мбит/с)</nobr>",
             "price": 55
          }
+      ],
+      "infoModal": [
+         {
+            "title": "Мобильная связь",
+            "icon": "mob_bold.svg",
+            "options": [
+               {
+                  "name": "Мобильный интернет",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Мессенджеры и звонки на номера МегаФона доступны при любом балансе",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на номера МегаФона России",
+                  "description": "Не расходуют пакет минут",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на мобильные номера других операторов России",
+                  "description": "",
+                  "value": "3000 минут"
+               },
+               {
+                  "name": "МегаДиск",
+                  "description": "Облачное хранилище для ваших фотографий и файлов",
+                  "value": "1 ТБ"
+               }
+            ]
+         },
+         {
+            "title": "Интернет",
+            "icon": "wi-fi_bold.svg",
+            "options": [
+               {
+                  "name": "Скорость",
+                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
+                  "value": "500 Мбит/с"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         },
+         {
+            "title": "ТВ",
+            "icon": "TV_bold.svg",
+            "options": [
+               {
+                  "name": "Мегафон ТВ",
+                  "description": "",
+                  "value": "250 каналов"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         }
+      ],
+      "equipments": [
+         {
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": {
+               "24": 299,
+               "36": 199
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR1000-1",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м2"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv",
+            "plan": {
+               "24": 239,
+               "36": 159
+            }
+         },
+         {
+            "name": "Умный дом с роутером Almond",
+            "text": "Wi-Fi роутер Almond с системой охраны дома.",
+            "params": [
+               "Настройте за несколько секунд",
+               "Управляйте Wi-Fi через приложение",
+               "Объедините устройства в умный дом",
+               "Получайте сигналы, если в дом кто-то проникнет"
+            ],
+            "img": "almond.png",
+            "price": 399,
+            "icons": [
+               {
+                  "icon": "settings",
+                  "text": "Настройте за несколько секунд"
+               },
+               {
+                  "icon": "phone",
+                  "text": "Управляйте Wi-Fi через приложение"
+               },
+               {
+                  "icon": "safety",
+                  "text": "Объедините устройства в умный дом"
+               },
+               {
+                  "icon": "message",
+                  "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
+               }
+            ],
+            "dataView": "almond",
+            "routers": [
+               {
+                  "id": "almond-0",
+                  "name": "Роутер Almond 3",
+                  "img": "Almond-3_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 399
+               },
+               {
+                  "id": "almond-1",
+                  "name": "Роутер Almond 3S",
+                  "img": "Almond-3S_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "Whats-left_24.svg",
+                        "text": "Встроенный <br> аккумулятор"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "Sim-card_24.svg",
+                        "text": "LTE <br> резервирование"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 499
+               }
+            ],
+            "sensors": [
+               {
+                  "id": "sensor-0",
+                  "name": "Wi-Fi камера",
+                  "img": "Wi-Fi-kamera_about.png",
+                  "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
+                  "price": 250
+               },
+               {
+                  "id": "sensor-1",
+                  "name": "Датчик движения",
+                  "img": "Datchik-dvizheniya_about.png",
+                  "desc": "Будьте в курсе любых передвижений в доме",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-2",
+                  "name": "Датчик открытия и закрытия",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "desc": "Будьте в курсе всех незваных гостей",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-3",
+                  "name": "Датчик протечки воды",
+                  "img": "Datchik-protechki-vody_about.png",
+                  "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
+                  "price": 150
+               }
+            ]
+         }
       ]
    },
    {
       "id": "economic",
       "dataView": "econom",
       "name": "Эконом",
-      "speed": 50,
+      "speed": 100,
       "min": 700,
       "web": "30 ГБ",
       "sale": "Скидка 40% на SIM-карты",
@@ -4595,7 +5717,7 @@
       "rentDevice": [
          {
             "text": "Аренда ТВ-приставки",
-            "price": 88
+            "price": 159
          },
          {
             "text": "Аренда Android TV",
@@ -4603,7 +5725,323 @@
          },
          {
             "text": "Аренда Wi-Fi роутера <nobr>(100 Мбит/с)</nobr>",
-            "price": 55
+            "price": 99
+         }
+      ],
+      "infoModal": [
+         {
+            "title": "Мобильная связь",
+            "icon": "mob_bold.svg",
+            "options": [
+               {
+                  "name": "Мобильный интернет",
+                  "description": "",
+                  "value": "30 ГБ"
+               },
+               {
+                  "name": "Мессенджеры и звонки на номера МегаФона доступны при любом балансе",
+                  "description": "",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на номера МегаФона России",
+                  "description": "Не расходуют пакет минут",
+                  "value": "Безлимитно"
+               },
+               {
+                  "name": "Звонки на мобильные номера других операторов России",
+                  "description": "",
+                  "value": "700 минут"
+               },
+               {
+                  "name": "МегаДиск",
+                  "description": "Облачное хранилище для ваших фотографий и файлов",
+                  "value": "1 ТБ"
+               }
+            ]
+         },
+         {
+            "title": "Интернет",
+            "icon": "wi-fi_bold.svg",
+            "options": [
+               {
+                  "name": "Скорость",
+                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
+                  "value": "100 Мбит/с"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "30 ГБ"
+               }
+            ]
+         },
+         {
+            "title": "ТВ",
+            "icon": "TV_bold.svg",
+            "options": [
+               {
+                  "name": "Мегафон ТВ",
+                  "description": "",
+                  "value": "61 канал"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         }
+      ],
+      "equipments": [
+         {
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": {
+               "24": 299,
+               "36": 199
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "name": "Wi-Fi роутер FR1000-1",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м2"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv",
+            "plan": {
+               "24": 239,
+               "36": 159
+            }
+         },
+         {
+            "name": "Умный дом с роутером Almond",
+            "text": "Wi-Fi роутер Almond с системой охраны дома.",
+            "params": [
+               "Настройте за несколько секунд",
+               "Управляйте Wi-Fi через приложение",
+               "Объедините устройства в умный дом",
+               "Получайте сигналы, если в дом кто-то проникнет"
+            ],
+            "img": "almond.png",
+            "price": 399,
+            "icons": [
+               {
+                  "icon": "settings",
+                  "text": "Настройте за несколько секунд"
+               },
+               {
+                  "icon": "phone",
+                  "text": "Управляйте Wi-Fi через приложение"
+               },
+               {
+                  "icon": "safety",
+                  "text": "Объедините устройства в умный дом"
+               },
+               {
+                  "icon": "message",
+                  "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
+               }
+            ],
+            "dataView": "almond",
+            "routers": [
+               {
+                  "id": "almond-0",
+                  "name": "Роутер Almond 3",
+                  "img": "Almond-3_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 399
+               },
+               {
+                  "id": "almond-1",
+                  "name": "Роутер Almond 3S",
+                  "img": "Almond-3S_about.png",
+                  "params": [
+                     {
+                        "icon": "speed-2_w.svg",
+                        "text": "Скорость <br> до 300 Мбит/с"
+                     },
+                     {
+                        "icon": "Whats-left_24.svg",
+                        "text": "Встроенный <br> аккумулятор"
+                     },
+                     {
+                        "icon": "zone-24_w.svg",
+                        "text": "Зона покрытия <br> до 120 м2"
+                     },
+                     {
+                        "icon": "Sim-card_24.svg",
+                        "text": "LTE <br> резервирование"
+                     },
+                     {
+                        "icon": "hertz_24_w.svg",
+                        "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
+                     }
+                  ],
+                  "price": 499
+               }
+            ],
+            "sensors": [
+               {
+                  "id": "sensor-0",
+                  "name": "Wi-Fi камера",
+                  "img": "Wi-Fi-kamera_about.png",
+                  "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
+                  "price": 250
+               },
+               {
+                  "id": "sensor-1",
+                  "name": "Датчик движения",
+                  "img": "Datchik-dvizheniya_about.png",
+                  "desc": "Будьте в курсе любых передвижений в доме",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-2",
+                  "name": "Датчик открытия и закрытия",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "desc": "Будьте в курсе всех незваных гостей",
+                  "price": 150
+               },
+               {
+                  "id": "sensor-3",
+                  "name": "Датчик протечки воды",
+                  "img": "Datchik-protechki-vody_about.png",
+                  "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
+                  "price": 150
+               }
+            ]
          }
       ]
    }
