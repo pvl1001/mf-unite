@@ -1,11 +1,11 @@
 export default function (text) {
    switch (text) {
       case 'Только нужное':
-         return 'var(--mf-blue)'
+         return 'blue'
       case 'Популярное':
-         return 'var(--mf-fiolet)'
+         return 'fiolet'
       case 'Акция':
-         return 'var(--mf-orange)'
+         return 'orange'
    }
 
 }

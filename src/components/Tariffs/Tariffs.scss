@@ -287,6 +287,16 @@
          justify-content: space-between;
       }
 
+      &__text-name {
+         br {
+            display: none;
+
+            @media (max-width: 1350px) {
+               display: block;
+            }
+         }
+      }
+
       &__text-value {
          display: flex;
          align-items: flex-end;

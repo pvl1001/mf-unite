@@ -6,6 +6,7 @@
       display: flex;
       align-items: center;
       width: 100%;
+      padding: 0 40px;
    }
 
    &__logo a {
@@ -52,6 +53,20 @@
       }
    }
 
+
+   @media (max-width: 1614px) {
+      &__logo a {
+         width: 136px;
+      }
+   }
+
+   @media (max-width: 1279px) {
+      .wrapper {
+         padding-left: 32px;
+         padding-right: 24px;
+      }
+   }
+
    @media (max-width: 1024px) {
 
       &__phone {
@@ -76,6 +91,18 @@
                display: none;
             }
          }
+      }
+   }
+
+   @media (max-width: 1023px) {
+      .wrapper {
+         padding: 0 24px;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .wrapper {
+         padding: 0 16px;
       }
    }
 }

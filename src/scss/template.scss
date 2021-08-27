@@ -285,7 +285,6 @@ input[type="radio"] {
    }
 
 
-
    &:checked + label {
       &:before {
          background-color: var(--mf-green);
@@ -595,7 +594,7 @@ input[data-provide="datepicker"] {
 
    @media (max-width: 1530px) {
       .slick-arrow {
-         $arrow_position: -42px;
+         $arrow_position: -45px;
 
          &.slick-prev {
             left: $arrow_position;
@@ -627,9 +626,10 @@ input[data-provide="datepicker"] {
 }
 
 .wrapper {
-   max-width: 1500px;
-   padding: 0 64px;
+   max-width: 1440px;
+   padding: 0 80px;
    margin: 0 auto;
+   box-sizing: content-box;
 
    @media (max-width: 1023px) {
       padding: 0 48px;
@@ -828,4 +828,22 @@ form {
    span {
       margin-bottom: -1px;
    }
+
+   &_blue {
+      background-color: var(--mf-blue);
+
+      @media (max-width: 1350px) {
+         display: none;
+      }
+   }
+
+   &_fiolet {
+      background-color: var(--mf-fiolet);
+   }
+
+   &_orange {
+      background-color: var(--mf-orange);
+   }
+
+
 }

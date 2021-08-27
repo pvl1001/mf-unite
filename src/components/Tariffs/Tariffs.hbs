@@ -8,7 +8,7 @@
                <div class="card__title card-wrapper">
                   <h2 onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">{{name}}</h2>
                   {{#if mark}}
-                     <div class="card__title-mark mark" style="background-color: {{markClass mark}}">
+                     <div class="card__title-mark mark mark_{{markClass mark}}">
                         <span>{{mark}}</span>
                      </div>
                   {{/if}}
@@ -20,7 +20,7 @@
                      {{#each infoProgress}}
                         <div class="block-progress__progress-bar info-progress-bar">
                            <div class="info-progress-bar__text card__info-title">
-                              <p class="info-progress-bar__text-name">{{title}}</p>
+                              <p class="info-progress-bar__text-name">{{{title}}}</p>
                               <p class="info-progress-bar__text-value">{{{value}}}</p>
                            </div>
 
