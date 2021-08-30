@@ -354,6 +354,8 @@
    }
 
    @media (max-width: 1023px) {
+      padding: 78px 0 34px;
+
       &__title {
          margin-bottom: 40px;
       }
@@ -366,6 +368,7 @@
    }
 
    @media (max-width: 767px) {
+      padding: 56px 0 34px;
       &__title {
          margin-bottom: 25px;
       }

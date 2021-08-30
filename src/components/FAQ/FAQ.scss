@@ -90,7 +90,13 @@
       }
    }
 
+   @media (max-width: 1023px) {
+      padding: 75px 0 86px;
+   }
+
    @media (max-width: 767px) {
+      padding: 66px 0 81px;
+
       &__title {
          margin-bottom: 33px;
       }
