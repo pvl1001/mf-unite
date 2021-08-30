@@ -66,7 +66,7 @@
    .unite-address {
       background: linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0 0;
       border-radius: 10px;
-      padding: 34px 49px 0;
+      padding: 32px 49px 0;
       overflow: hidden;
 
       &__title {
@@ -75,22 +75,28 @@
          color: #fff;
          font-size: 20px;
          line-height: 28px;
-         margin-bottom: 34px;
-         font-weight: 700;
+         margin-bottom: 32px;
+         font-weight: 600;
+
+         @media (max-width: 1279px) {
+            font-size: 18px;
+            line-height: 24px;
+         }
       }
 
       &__input {
          display: flex;
          justify-content: center;
-         padding-bottom: 42px;
+         padding-bottom: 44px;
 
          > div {
             width: 100%;
-            max-width: 816px;
+            max-width: 830px;
             position: relative;
 
             input {
                width: 100%;
+               border: 1px solid #731982;
             }
 
             &:focus {
@@ -99,8 +105,10 @@
 
          }
 
-         button {
+         .btn {
             margin-left: 20px;
+            padding: 0 44px;
+            font-weight: 500;
          }
       }
 
@@ -352,7 +360,8 @@
       }
    }
 
-   @media (min-width: 1024px) and (max-width: 1300px) {
+
+   @media (max-width: 1279px) {
 
       &__links {
          padding-left: 63px;
@@ -369,23 +378,27 @@
       }
 
       .unite-address {
-         padding: 34px 30px 0;
+         padding: 33px 33px 0;
 
          &__title {
-            margin: 0 auto 30px;
+            margin: 0 auto 19px;
+            font-size: 18px;
+            line-height: 24px;
          }
 
          &__input {
             flex-wrap: wrap;
             justify-content: center;
+            padding-bottom: 32px;
 
             > div {
                width: 100%;
                max-width: none;
             }
 
-            button {
-               margin: 32px 0 0;
+            .btn {
+               margin-left: 0;
+               margin-top: 32px;
             }
          }
 
@@ -435,7 +448,7 @@
       }
    }
 
-   @media (min-width: 768px) and (max-width: 1023px) {
+   @media (max-width: 1023px) {
 
       &__img {
          max-height: 472px;
@@ -444,13 +457,6 @@
       }
 
       .unite-address {
-         padding: 34px 30px 0;
-
-         &__title {
-            max-width: 480px;
-            margin: 0 auto 30px;
-         }
-
          &__input {
             flex-wrap: wrap;
             justify-content: center;
@@ -465,7 +471,6 @@
                margin: 32px 0 0;
             }
          }
-
       }
 
       .unite-row {
@@ -501,28 +506,7 @@
       }
 
       .unite-address {
-         padding: 34px 20px 0;
-
-         &__title {
-            max-width: 480px;
-            margin: 0 auto 30px;
-         }
-
-         &__input {
-            flex-wrap: wrap;
-            justify-content: center;
-
-            > div {
-               width: 100%;
-               max-width: none;
-
-            }
-
-            button {
-               margin: 32px 0 0;
-            }
-         }
-
+         padding: 34px 16px 0;
       }
 
       &__unite {
@@ -547,12 +531,7 @@
       }
 
       .unite-row {
-         flex-wrap: wrap;
          margin-bottom: 0;
-
-         > div {
-            width: 100%;
-         }
       }
 
       .unite-row,
