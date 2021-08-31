@@ -2,7 +2,7 @@
    padding: 70px 0 86px;
 
    &__title {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
    }
 
    .accordion {
@@ -11,24 +11,32 @@
       > div {
          width: 50%;
          margin-right: 20px;
+         border-top: 1px solid #DDDDDD;
+
+         &:last-child {
+            margin-right: 0;
+         }
       }
 
       &__item {
          font-size: 15px;
-         line-height: 20px;
+         line-height: 24px;
          font-weight: 500;
          border-bottom: 1px solid #DDDDDD;
       }
 
       &__header {
-         padding: 26px 72px 26px 24px;
+         padding: 0 72px 0 24px;
          cursor: pointer;
          position: relative;
+         height: 72px;
+         display: flex;
+         align-items: center;
 
          &:after {
             content: '';
             position: absolute;
-            right: 20px;
+            right: 29px;
             top: 0;
             width: 13px;
             height: 100%;
@@ -60,8 +68,8 @@
       }
    }
 
-   @media (max-width: 1024px) {
-      padding: 80px 0;
+   @media (max-width: 1279px) {
+      padding: 70px 0 85px;
 
       .accordion {
          flex-wrap: wrap;
@@ -69,7 +77,32 @@
          > div {
             width: 100%;
             margin-right: 0;
+
+            &:last-child {
+               border-top: 0;
+            }
          }
+
+         &__header {
+            height: auto;
+            padding: 24px 72px 24px 24px;
+         }
+      }
+   }
+
+   @media (max-width: 1023px) {
+      padding: 75px 0 86px;
+   }
+
+   @media (max-width: 767px) {
+      padding: 66px 0 81px;
+
+      &__title {
+         margin-bottom: 33px;
+      }
+
+      .accordion__header {
+         padding: 24px 72px 24px 16px;
       }
    }
 

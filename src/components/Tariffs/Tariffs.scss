@@ -1,10 +1,10 @@
 .tariffs {
    background-color: #EDEDED;
-   padding: 72px 0 32px;
+   padding: 72px 0 34px;
    overflow: hidden;
 
    &__title {
-      margin-bottom: 29px;
+      margin-bottom: 37px;
    }
 
    .slider {
@@ -118,7 +118,12 @@
             margin-bottom: -1px;
 
             &:hover {
-               text-decoration: 1px underline;
+               text-decoration: underline;
+               text-decoration-thickness: 1px;
+            }
+
+            @media (max-width: 1279px) {
+               font-size: 18px;
             }
          }
 
@@ -128,8 +133,8 @@
          display: flex;
          flex-direction: column;
          flex-grow: 1;
-         padding: 38px 0;
-         margin-bottom: 20px;
+         padding: 38px 0 40px;
+         margin-bottom: 23px;
          position: relative;
 
          &:after {
@@ -184,13 +189,9 @@
          }
       }
 
-      &__block-tv {
-
-      }
-
       .block-tv {
          &__title {
-            margin-bottom: 12px;
+            margin-bottom: 11px;
          }
       }
 
@@ -249,7 +250,7 @@
       .price {
          display: block;
          height: 20px;
-         margin-bottom: 10px;
+         margin-bottom: 9px;
 
          &__icon {
             flex: 0 0 20px;
@@ -291,7 +292,7 @@
          br {
             display: none;
 
-            @media (max-width: 1350px) {
+            @media (min-width: 1280px) and (max-width: 1350px) {
                display: block;
             }
          }
@@ -323,18 +324,16 @@
    }
 
 
-   @media (max-width: 1530px) {
+   @media (max-width: 1920px) {
       .card {
+         padding-bottom: 18px;
+
          &__title {
             height: 61px;
-
-            h2 {
-               font-size: 18px;
-            }
          }
 
          &__info {
-            padding: 30px 0;
+            padding: 30px 0 32px;
             margin-bottom: 23px;
          }
 
@@ -343,7 +342,7 @@
          }
 
          &__price_btn .btn {
-            padding: 0 40px;
+            padding: 0 38px;
          }
       }
 
@@ -355,6 +354,8 @@
    }
 
    @media (max-width: 1023px) {
+      padding: 78px 0 34px;
+
       &__title {
          margin-bottom: 40px;
       }
@@ -367,6 +368,8 @@
    }
 
    @media (max-width: 767px) {
+      padding: 56px 0 34px;
+
       &__title {
          margin-bottom: 25px;
       }
