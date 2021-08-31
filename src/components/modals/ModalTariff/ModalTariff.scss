@@ -31,6 +31,7 @@
       padding: 0;
       border-radius: 10px;
       overflow: hidden;
+      background-color: transparent;
 
       // firefox
       scrollbar-width: 0; /* толщина */
@@ -167,6 +168,7 @@
          font-size: 0;
          white-space: nowrap;
          margin-right: 30px;
+         position: relative;
 
          &:before {
             content: '';
@@ -194,10 +196,16 @@
          }
 
          h3 {
+            display: inline-block;
             color: var(--mf-blue);
             font-size: 15px;
             line-height: 20px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+
+            &:hover {
+               text-decoration: underline;
+            }
          }
 
          &_rent {
@@ -215,6 +223,8 @@
 
       &__option-radio {
          display: flex;
+         flex-wrap: wrap;
+         margin-bottom: -16px;
 
          label {
             display: flex;
@@ -224,6 +234,10 @@
             &:first-child {
                margin-right: 18px;
             }
+         }
+
+         > * {
+            margin-bottom: 16px;
          }
       }
 
@@ -266,7 +280,7 @@
          &__current + span {
             font-size: 20px;
             font-weight: 500;
-            margin-right: 5px;
+            margin-right: 0;
          }
 
          &__month {
@@ -277,7 +291,7 @@
       }
 
       .switch {
-         margin-left: 20px;
+         margin-left: 14px;
          margin-right: 0;
          height: 28px;
          width: 48px;
@@ -298,12 +312,17 @@
          margin-right: 20px;
 
          p {
-            margin-bottom: 13px;
+            margin-bottom: 14px;
+            margin-top: -2px;
          }
 
          span {
             color: var(--mf-blue);
             cursor: pointer;
+
+            &:hover {
+               text-decoration: underline;
+            }
          }
 
          @media (max-width: 800px) {
@@ -315,6 +334,14 @@
 
       &__counter {
 
+      }
+
+      &__mark {
+         position: absolute;
+         left: 0;
+         top: -1px;
+         background-color: var(--mf-orange);
+         padding: 4px 8px;
       }
    }
 
@@ -329,6 +356,7 @@
    &__footer {
       padding-top: 37px;
       padding-bottom: 30px;
+      background-color: #fff;
    }
 
    &__price {
@@ -402,6 +430,7 @@
 
    &__btn-close {
       position: sticky;
+      position: -webkit-sticky;
       z-index: 100;
       top: 0;
       overflow: initial !important;
@@ -433,8 +462,7 @@
 
    @media (max-width: 767px) {
       .modal-dialog {
-         margin-left: 0;
-         margin-right: 0;
+         margin: 54px 0;
       }
 
       .wrapp {
@@ -455,7 +483,7 @@
          }
 
          &__option {
-            margin-right: 0;
+            padding-right: 0;
             width: calc(100% - 84px - 20px);
          }
 

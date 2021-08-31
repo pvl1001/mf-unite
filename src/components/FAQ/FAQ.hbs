@@ -20,8 +20,18 @@
                         </div>
                      </div>
                   </div>
-               {{/each}}
 
+                  {{#h-if @../last '&&' @last}}
+                     <div class="accordion__item">
+                        <a href="https://help.home.megafon.ru/" style="color:#333;">
+                           <div class="accordion__header collapsed">
+                              Помощь и обслуживание клиентов
+                           </div>
+                        </a>
+                     </div>
+                  {{/h-if}}
+
+               {{/each}}
             </div>
          {{/each}}
       </div>

@@ -7,7 +7,7 @@ export default function (title, value) {
       return widthProgressBar( value, 30 )
    }
 
-   if (title === 'Домашний интернет') {
+   if (title === 'Домашний&nbsp;<br>интернет') {
       return widthProgressBar( value, 5 )
    }
 
