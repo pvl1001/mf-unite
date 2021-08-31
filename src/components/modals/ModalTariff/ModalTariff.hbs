@@ -64,11 +64,12 @@
                               {{#unless plan}} dop-options-card__option_rent{{/unless}}">
                               <div>
 
-                                 <h3 {{#unless @last}}
-                                 onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')"
-                                 {{else}}
-                                 data-toggle="modal" data-target="#modalAlmond"
-                                 {{/unless}}
+                                 <h3
+                                    {{#unless @last}}
+                                     onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                                    {{else}}
+                                     data-toggle="modal" data-target="#modalAlmond"
+                                    {{/unless}}
                                  >{{name}}
                                     <nobr>{{speed}}</nobr>
                                  </h3>
@@ -143,20 +144,20 @@
                         </div>
 
                         <div class="dop-options-card__price">
-<!--                           <label>-->
-                              <div class="price">
-                                 <span class="price__old">600 ₽</span>
-                                 <span class="price__current">
+                           <!--                           <label>-->
+                           <div class="price">
+                              <span class="price__old">600 ₽</span>
+                              <span class="price__current">
                                     360
                                  </span> <span> ₽</span>
-                                 <span class="price__month"> в месяц</span>
-                              </div>
+                              <span class="price__month"> в месяц</span>
+                           </div>
 
-                              <label class="switch">
-                                 <input type="checkbox"
-                                        onchange="switchDopOptionCard( {{@index}}, '{{../id}}-{{dataView}}' )">
-                                 <span class="round"></span>
-                              </label>
+                           <label class="switch">
+                              <input type="checkbox"
+                                     onchange="switchDopOptionCard( {{@index}}, '{{../id}}-{{dataView}}' )">
+                              <span class="round"></span>
+                           </label>
                            </label>
                         </div>
 

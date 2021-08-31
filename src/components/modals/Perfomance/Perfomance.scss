@@ -1,5 +1,12 @@
 .performance {
 
+   &.hide-price {
+      .modal-order {
+         visibility: hidden;
+         margin-top: -102px;
+      }
+   }
+
    .modal-dialog {
       padding: 0 48px;
       max-width: 916px;
