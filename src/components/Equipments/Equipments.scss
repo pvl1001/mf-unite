@@ -29,7 +29,6 @@
       }
 
       .slick-dots {
-         margin-top: 22px;
 
          li.slick-active {
             width: 8px;
@@ -170,8 +169,6 @@
    }
 
    @media (max-width: 1023px) {
-      padding: 77px 0 59px;
-
       &__title {
          font-size: 26px;
          line-height: 32px;

@@ -47,17 +47,10 @@
    }
 
    &__link {
-      position: relative;
 
-      a:hover {
-         color: var(--mf-blue)
-      }
-
-      svg {
-         position: absolute;
-         right: -8px;
-         top: -1px;
+      svg{
          width: 5px;
+         vertical-align: sub;
       }
    }
 }

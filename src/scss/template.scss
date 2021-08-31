@@ -15,7 +15,6 @@ a:visited,
    cursor: pointer;
 
    &:hover {
-      color: var(--mf-blue);
       text-decoration: underline;
    }
 }
@@ -225,11 +224,6 @@ h1 {
    line-height: 40px;
    font-weight: 600;
 
-   @media (max-width: 1279px) {
-      font-size: 28px;
-      line-height: 36px;
-   }
-
    @media (max-width: 1023px) {
       font-size: 26px;
       line-height: 32px;
@@ -266,8 +260,6 @@ input {
    height: 48px;
    padding: 0 24px;
    border: 1px solid #DDDDDD;
-   border-radius: 0;
-   -webkit-appearance: none;
 }
 
 input[type="radio"] {
@@ -289,9 +281,9 @@ input[type="radio"] {
       + span {
          margin-bottom: -2px;
          font-weight: 400;
-         white-space: nowrap;
       }
    }
+
 
    &:checked + label {
       &:before {
@@ -467,7 +459,6 @@ input[data-provide="datepicker"] {
       background-color: #fff;
       transition: .3s;
       border: 1px solid #33333327;
-      box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .05), 0 3px 3px 0 rgba(0, 0, 0, .05);
    }
 
    input:checked + span {
@@ -505,6 +496,7 @@ input[data-provide="datepicker"] {
       font-weight: 500;
       color: #7F7F7F;
       position: relative;
+      margin-right: 2px;
 
       &:before {
          content: '';
@@ -544,7 +536,7 @@ input[data-provide="datepicker"] {
    }
 
    .slick-arrow {
-      $arrow_position: -46px;
+      $arrow_position: -50px;
 
       font-size: 0;
       width: 40px;
@@ -577,7 +569,7 @@ input[data-provide="datepicker"] {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 17px;
+      margin-top: 20px;
 
       li {
          font-size: 0;
@@ -614,27 +606,13 @@ input[data-provide="datepicker"] {
       }
    }
 
-   @media (max-width: 1279px) {
-      .slick-arrow {
-         $arrow_position: -42px;
-
-         &.slick-prev {
-            left: $arrow_position;
-         }
-
-         &.slick-next {
-            right: $arrow_position;
-         }
-      }
-   }
-
    @media (max-width: 1023px) {
       .slick-track, .slick-list {
          border-radius: 0;
       }
 
       .slick-arrow {
-         $arrow_position: -36px;
+         $arrow_position: -34px;
 
          &.slick-prev {
             left: $arrow_position;
@@ -652,10 +630,6 @@ input[data-provide="datepicker"] {
    padding: 0 80px;
    margin: 0 auto;
    box-sizing: content-box;
-
-   @media (max-width: 1279px) {
-      padding: 0 64px;
-   }
 
    @media (max-width: 1023px) {
       padding: 0 48px;
@@ -710,12 +684,6 @@ form {
       + label {
          display: block;
          color: #F62434;
-      }
-   }
-
-   @media (max-width: 337px) {
-      label.error {
-         position: static;
       }
    }
 }
@@ -803,15 +771,13 @@ form {
 
    input {
       height: 100%;
-      width: 62px;
+      width: 60px;
       border: 1px solid #d9d9d9;
       line-height: 30px;
       margin: 0 -1px;
       font-weight: 500;
       padding: 0;
       text-align: center;
-      border-radius: 0;
-      box-shadow: none;
    }
 }
 
@@ -866,7 +832,7 @@ form {
    &_blue {
       background-color: var(--mf-blue);
 
-      @media (max-width: 1379px) {
+      @media (max-width: 1350px) {
          display: none;
       }
    }

@@ -31,10 +31,21 @@ $( function () {
          }, {
             breakpoint: 1024,
             settings: {
+               slidesToShow: 3,
+            }
+         }, {
+            breakpoint: 960,
+            settings: {
                slidesToShow: 2,
             }
          }, {
             breakpoint: 768,
+            settings: {
+               slidesToShow: 2,
+               arrows: false,
+            }
+         }, {
+            breakpoint: 640,
             settings: {
                slidesToShow: 1,
                arrows: false,

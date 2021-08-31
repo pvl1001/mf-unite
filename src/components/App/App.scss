@@ -73,7 +73,7 @@
       }
 
       .text-app {
-         max-width: 385px;
+         max-width: 377px;
 
          &__text {
             font-size: 18px;
@@ -107,18 +107,8 @@
             max-width: none;
          }
 
-         &__desc {
-            font-size: 12px;
-            line-height: 16px;
-         }
-
          &__icons {
             justify-content: center;
-
-            a {
-               width: 116px;
-               height: 34px;
-            }
          }
 
       }
