@@ -546,6 +546,17 @@ input[data-provide="datepicker"] {
 
 .slider {
 
+   .card {
+      .price-card__btn {
+         height: 32px;
+         width: 220px;
+         line-height: 1;
+         font-weight: 500;
+         justify-content: center;
+         margin-bottom: 19px;
+      }
+   }
+
    .slick-track, .slick-list {
       display: flex;
       border-radius: 10px;
@@ -609,6 +620,13 @@ input[data-provide="datepicker"] {
             height: 12px;
             background-color: var(--mf-fiolet);
          }
+      }
+   }
+
+
+   @media (max-width: 1920px) {
+      .card .price-card__btn {
+         width: 168px;
       }
    }
 

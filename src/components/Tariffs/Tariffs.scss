@@ -224,19 +224,6 @@
          }
       }
 
-      &__price_btn {
-         display: flex;
-         justify-content: center;
-         margin-bottom: 19px;
-
-         .btn {
-            height: 32px;
-            line-height: 1;
-            padding: 0 65px;
-            font-weight: 500;
-         }
-      }
-
       &__price {
          display: flex;
          flex-direction: column;
@@ -334,10 +321,6 @@
          &__block-progress {
             margin-bottom: 30px;
          }
-
-         &__price_btn .btn {
-            padding: 0 38px;
-         }
       }
 
       .card-wrapper {
@@ -352,12 +335,6 @@
 
       &__title {
          margin-bottom: 40px;
-      }
-
-      .card {
-         &__price_btn .btn {
-            padding: 0 55px;
-         }
       }
    }
 
@@ -377,19 +354,10 @@
             margin-left: -24px;
          }
 
-
          .slick-slide > div {
             padding: 8px;
          }
-
       }
-
-      .card {
-         &__price_btn .btn {
-            padding: 0 40px;
-         }
-      }
-
    }
 }
 

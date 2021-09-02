@@ -109,19 +109,6 @@
 
       .price-card {
          padding: 23px 16px 21px;
-
-         &__btn {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 19px;
-
-            .btn {
-               height: 32px;
-               line-height: 1;
-               padding: 0 76px;
-               font-weight: 500;
-            }
-         }
       }
 
       &__price {
@@ -159,12 +146,6 @@
       .equipments-card {
          .info-card {
             padding: 31px 16px 10px;
-         }
-
-         .price-card {
-            &__btn .btn {
-               padding: 0 50px;
-            }
          }
       }
    }
