@@ -3708,7 +3708,7 @@
    },
    {
       "id": "premium",
-      "dataView": "Premium",
+      "dataView": "premium",
       "name": "Премиум",
       "speed": 500,
       "min": 3000,

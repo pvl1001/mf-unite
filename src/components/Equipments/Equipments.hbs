@@ -48,7 +48,11 @@
                   </div>
 
                   {{#if @last}}
-                     <div class="link"  data-toggle="modal" data-target="#modalAlmond">
+                     <div class="link"
+                          data-toggle="modal"
+                          data-target="#modalAlmond"
+                          onclick="analytics('details_{{dataView}}')"
+                     >
                         Подробнее
                      </div>
                   {{else}}
