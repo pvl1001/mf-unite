@@ -67,7 +67,7 @@
                                     {{#unless @last}}
                                     onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
                                     {{else}}
-                                    data-toggle="modal" data-target="#modalAlmond"
+                                    data-toggle="modal" data-target="#modalAlmond" onclick="analytics('details_{{dataView}}')"
                                     {{/unless}}
                                  >{{{name}}}
                                     <nobr>{{speed}}</nobr>
