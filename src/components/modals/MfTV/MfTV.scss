@@ -1,0 +1,49 @@
+.mftv {
+   &_premium {
+      .tariff-modal__title {
+         background-color: #444189;
+      }
+   }
+
+   .item-modal {
+      padding: 52px 78px 44px;
+
+      &__logo {
+         margin-bottom: 35px;
+
+         &_start {
+            width: 65px;
+         }
+
+         &_amediateka {
+            width: 203px;
+         }
+
+         &_more {
+            width: 134px;
+         }
+
+         &_mf-tv {
+            width: 201px;
+         }
+      }
+
+      &__desc {
+         line-height: 24px;
+         font-weight: 400;
+      }
+   }
+
+   @media (max-width: 1023px) {
+      .item-modal {
+         padding: 52px 48px 44px;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .item-modal {
+         padding: 52px 16px 44px;
+      }
+   }
+
+}

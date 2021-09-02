@@ -93,4 +93,4 @@ $( '.modal' ).on( 'shown.bs.modal', function (e) {
 })
 
 // открыть modal
-// $( '#for-their' ).modal( 'show' )
+// $( '#mftv-for-their' ).modal( 'show' )

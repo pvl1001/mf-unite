@@ -91,7 +91,7 @@
                      {{/if}}
                   </div>
 
-                  {{#if tvIcons}}
+                  {{#if mftv}}
                      <div class="card__block-tv block-tv">
 
                         <h3 class="block-tv__title card__info-title">
@@ -99,8 +99,10 @@
                         </h3>
 
                         <div class="block-tv__icons tv-icons">
-                           {{#each tvIcons}}
-                              <div class="tv-icons__icon tv-icons__icon_{{this}}"></div>
+                           {{#each mftv}}
+                              <div data-toggle="modal"
+                                   data-target="#mftv-{{../id}}"
+                                   class="tv-icons__icon tv-icons__icon_{{icon}}"></div>
                            {{/each}}
 
                         </div>

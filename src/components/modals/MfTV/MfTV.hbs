@@ -1,0 +1,43 @@
+{{#each tariffs}}
+   <div class="modal tariff-modal mftv mftv_{{id}}" id="mftv-{{id}}" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+
+      <div class="tariff-modal__btn-close modal-dialog">
+         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-dialog modal-dialog-centered" role="document">
+
+         <div class="modal-content">
+
+            <div class="tariff-modal__title wrapp">
+               <h1>МегаФон ТВ</h1>
+            </div>
+
+
+            <div class="tariff-modal__container">
+
+               <div class="tariff-modal__container">
+
+                  <ul class="tariff-modal__items">
+                     {{#each mftv}}
+                        <li class="tariff-modal__item item-modal wrapp">
+
+                           <img src="img/svg/mftv_{{icon}}.svg"
+                                class="item-modal__logo item-modal__logo_{{icon}}">
+
+                           <p class="item-modal__desc">{{desc}}</p>
+
+                        </li>
+                     {{/each}}
+                  </ul>
+
+
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+{{/each}}
