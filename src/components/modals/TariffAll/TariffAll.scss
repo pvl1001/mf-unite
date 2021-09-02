@@ -31,14 +31,4 @@
       }
    }
 
-   .modal-close {
-      position: absolute;
-      right: 23px;
-   }
-
-   @media (max-width: 1023px) {
-      .modal-close {
-         right: 16px;
-      }
-   }
 }

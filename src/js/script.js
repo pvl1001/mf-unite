@@ -81,5 +81,16 @@ $( '.modal' ).on( 'hidden.bs.modal', function () {
    }
 } )
 
+
+$( '.modal' ).on( 'shown.bs.modal', function (e) {
+   const modal = e.currentTarget
+   const btnClose = modal.querySelector('.tariff-modal__btn-close')
+   const modalContent = modal.querySelector('.modal-content')
+
+   if(btnClose) {
+      btnClose.style.top = modalContent.getBoundingClientRect().top + 'px', 0
+   }
+})
+
 // открыть modal
 // $( '#for-their' ).modal( 'show' )
