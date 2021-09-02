@@ -530,6 +530,18 @@ input[data-provide="datepicker"] {
 
       }
    }
+
+   &__icon {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: url('../img/svg/info.svg') center / contain no-repeat;
+      align-self: center;
+      margin-left: 5px;
+      cursor: pointer;
+      font-weight: 400;
+   }
 }
 
 .slider {
@@ -758,18 +770,6 @@ form {
    @media (max-width: 1150px) {
       white-space: normal;
    }
-}
-
-.price__icon {
-   flex: 0 0 20px;
-   width: 20px;
-   height: 20px;
-   display: inline-block;
-   background: url('../img/svg/info.svg') center / 16px no-repeat;
-   align-self: center;
-   margin-left: 5px;
-   cursor: pointer;
-   font-weight: 400;
 }
 
 .counter {

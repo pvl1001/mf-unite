@@ -98,7 +98,7 @@ $( function () {
    // const placeAlmond = () => window.innerWidth >= 830 ? 'left' : 'top'
 
    tippy( '.price__icon_all', {
-      content: '<span class="link" onclick="toPlug(`.fiq`)">Скидка</span> на абонентскую плату действует 3 месяца после подключения',
+      content: '<span class="link" onclick="toPlug(`.faq`)">Скидка</span> на абонентскую плату действует 3 месяца после подключения',
       interactive: true,
       placement: placement(),
       maxWidth: maxWidth(),

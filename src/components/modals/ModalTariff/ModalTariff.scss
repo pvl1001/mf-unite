@@ -2,6 +2,8 @@
    font-size: 15px;
    line-height: 20px;
    font-weight: 500;
+
+   $br: 10px;
    
    &_premium {
       .tariff-modal__title {
@@ -24,13 +26,12 @@
    .modal-dialog {
       max-width: calc(820px + 48px * 2);
       padding: 0 48px;
-      overflow-y: auto;
+      overflow: visible;
    }
 
    .modal-content {
       padding: 0;
-      border-radius: 10px;
-      overflow: hidden;
+      overflow: visible;
       background-color: transparent;
 
       // firefox
@@ -55,6 +56,7 @@
       display: flex;
       align-items: center;
       font-weight: 700;
+      border-radius: $br $br 0 0;
    }
 
    &__container {
@@ -357,6 +359,8 @@
       padding-top: 37px;
       padding-bottom: 30px;
       background-color: #fff;
+      border-radius: 0 0 $br $br;
+
    }
 
    &__price {
@@ -370,7 +374,7 @@
    .price {
 
       > * {
-         margin-right: 6px;
+         margin-right: 4px;
       }
 
       &__old {
@@ -396,7 +400,18 @@
          font-weight: 600;
       }
 
+      &__icon {
+         width: 24px;
+         height: 24px;
+         transform: translateY(-2px);
+         margin-left: 8px;
+      }
+
       @media (max-width: 1023px) {
+         > * {
+            margin-right: 2px;
+         }
+
          &__old {
             font-size: 18px;
             line-height: 24px;
@@ -405,6 +420,13 @@
          &__current,
          &__month {
             font-size: 26px;
+         }
+
+         &__icon {
+            width: 16px;
+            height: 16px;
+            transform: translateY(-1px);
+            margin-left: 6px;
          }
       }
 
@@ -456,6 +478,10 @@
       .modal-close {
          top: 27px;
          right: 65px;
+      }
+
+      &__price {
+         margin-bottom: 12px;
       }
 
    }

@@ -182,6 +182,9 @@
                   {{/if}}
                   <span class="price__current">{{price}}</span>
                   <span class="price__month"> ₽ в месяц</span>
+                  {{#if iconInfo}}
+                     <div class="price__icon price__icon_all" aria-expanded="false"></div>
+                  {{/if}}
                </div>
 
                <button type="button" class="tariff-modal__price-btn btn">Заказать</button>

@@ -253,13 +253,7 @@
          margin-bottom: 9px;
 
          &__icon {
-            flex: 0 0 20px;
             height: 20px;
-            display: inline-block;
-            background: url('../img/svg/info.svg') center / 16px no-repeat;
-            align-self: center;
-            margin-left: 5px;
-            cursor: pointer;
             vertical-align: middle;
             transform: translateY(-6px);
          }

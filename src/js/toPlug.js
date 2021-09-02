@@ -7,7 +7,7 @@ window.toPlug = (scrollTo, px = 0, ms = 500) => {
       duration: ms
    } )
       .promise().done( () => {
-      if (scrollTo === '.fiq') {
+      if (scrollTo === '.faq') {
          $( '#collapse00' ).collapse( 'show' )
       }
    } )
