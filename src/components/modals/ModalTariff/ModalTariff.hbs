@@ -51,7 +51,7 @@
                   <ul class="tariff-modal__dop-options-cards">
 
                      {{#each equipments}}
-                        <li
+                        <li id="card-{{../id}}-{{id}}"
                            class="tariff-modal__dop-options-card dop-options-card dop-options-card__option_{{../id}}-{{dataView}}">
                            <div class="dop-options-card__img">
                               {{#h-if name '===' 'Android TV'}}
@@ -66,9 +66,9 @@
 
                                  <h3
                                     {{#unless @last}}
-                                     onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                                    onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
                                     {{else}}
-                                     data-toggle="modal" data-target="#modalAlmond"
+                                    data-toggle="modal" data-target="#modalAlmond"
                                     {{/unless}}
                                  >{{name}}
                                     <nobr>{{speed}}</nobr>
@@ -105,7 +105,6 @@
                            <div class="dop-options-card__price">
                               <div class="price">
                                     <span class="price__current">
-
                                        {{#if @last}}от {{/if}}
                                        {{#if plan}}
                                           {{plan.[36]}}
@@ -117,8 +116,7 @@
                               </div>
 
                               <label class="switch">
-                                 <input type="checkbox"
-                                        onchange="switchDopOptionCard( {{@index}}, '{{../id}}-{{dataView}}' )">
+                                 <input type="checkbox">
                                  <span class="round"></span>
                               </label>
                            </div>
@@ -136,7 +134,7 @@
                               <div onclick="calculate(event, 'almond-', '{{@index}}', '-')"
                                    class="counter__minus">&minus;
                               </div>
-                              <input type="text" id="counterID-dop-options-card-{{../id}}" readonly value="1">
+                              <input type="text" id="counterID-dop-options-card-{{id}}" readonly value="1">
                               <div onclick="calculate(event, 'almond-', '{{@index}}', '+')"
                                    class="counter__plus">+
                               </div>
@@ -144,7 +142,6 @@
                         </div>
 
                         <div class="dop-options-card__price">
-                           <!--                           <label>-->
                            <div class="price">
                               <span class="price__old">600 ₽</span>
                               <span class="price__current">
@@ -155,9 +152,8 @@
 
                            <label class="switch">
                               <input type="checkbox"
-                                     onchange="switchDopOptionCard( {{@index}}, '{{../id}}-{{dataView}}' )">
+                                     >
                               <span class="round"></span>
-                           </label>
                            </label>
                         </div>
 
