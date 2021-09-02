@@ -4,7 +4,7 @@
 
    &__text {
       color: #fff;
-      max-width: 600px;
+      width: 45%;
 
       h1 {
          font-size: 52px;
@@ -19,7 +19,7 @@
             line-height: 48px;
          }
 
-         @media (max-width: 995px) {
+         @media (max-width: 935px) {
             font-size: 36px;
             line-height: 40px;
          }
@@ -42,25 +42,20 @@
    }
 
    &__img-wrapp {
-      flex-grow: 1;
-      align-self: flex-end;
+      width: 60%;
+      height: 100%;
+      align-self: center;
       white-space: nowrap;
       font-size: 0;
-      text-align: center;
       position: relative;
-
-      &:before {
-         content: '';
-         display: inline-block;
-         height: 100%;
-         vertical-align: bottom;
-      }
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
    }
 
    &__img {
-      max-width: 475px;
-      max-height: 100%;
-      vertical-align: bottom;
+      width: 100%;
+      max-width: 775px;
    }
 
    .section-row {
@@ -72,9 +67,7 @@
    }
 
    .btn {
-      padding: 0 55px;
-      font-weight: 500;
-      line-height: 1;
+      padding: 0 33px;
    }
 
    &__col2 {
@@ -100,6 +93,14 @@
       cursor: pointer;
    }
 
+   @media (max-width: 1920px) {
+      &__text {
+
+         p {
+            margin-bottom: 30px;
+         }
+      }
+   }
 
    @media (max-width: 1024px) {
 
@@ -107,22 +108,17 @@
          margin-right: -30px;
       }
 
-      &__img-wrapp img {
-         max-width: 439px;
-      }
-
       &__text {
          margin-right: 0;
-      }
 
-      p {
-         max-width: 343px;
-         margin-bottom: 30px;
+         p {
+            max-width: 343px;
+         }
       }
 
    }
 
-   @media (max-width: 920px) {
+   @media (max-width: 935px) {
       .section-row {
          align-items: flex-start;
          justify-content: center;
@@ -130,6 +126,7 @@
          flex-wrap: wrap;
          padding-top: 56px;
          margin-right: 0;
+         overflow: visible;
       }
 
       &__text {
@@ -138,6 +135,7 @@
          text-align: center;
          min-width: 0;
          margin-bottom: 31px;
+         z-index: 1;
 
          h1 {
             display: block;
@@ -151,13 +149,16 @@
       }
 
       &__img-wrapp {
-         max-width: 377px;
-         margin: 0 auto;
-         padding-left: 20px;
+         width: auto;
+         height: auto;
+         z-index: 0;
+         margin-top: -163px;
       }
 
       &__img {
-         width: 100%;
+         max-width: none;
+         width: auto;
+         height: 436px;
       }
 
       &__sale {
@@ -178,8 +179,9 @@
       }
    }
 
-   @media (max-width: 500px) {
+   @media (max-width: 602px) {
       &__text {
+         padding: 0 16px;
 
          h1 {
             font-size: 30px;
@@ -194,10 +196,17 @@
 
       .section-row {
          padding-top: 33px;
+         margin: 0 -16px;
       }
 
       &__img-wrapp {
-         max-width: 308px;
+         width: 100%;
+         margin-top: 0;
+      }
+
+      &__img {
+         width: 100%;
+         height: auto;
       }
    }
 

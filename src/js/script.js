@@ -82,4 +82,4 @@ $( '.modal' ).on( 'hidden.bs.modal', function () {
 } )
 
 // открыть modal
-$( '#for-their' ).modal( 'show' )
+// $( '#for-their' ).modal( 'show' )
