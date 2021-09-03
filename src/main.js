@@ -26,6 +26,7 @@ import './js/nextForm' // popUp вперед
 import './js/validate_address' // "проверить возможность подключения"
 import './js/switchDopOptionCard' //
 import './js/equipments' // открытие модального окна с оборудованием (скрыть кнопку заказать)
+import './js/calculateEquip' // расчеты карточек доп. опций
 
 // build all img
 function requireAll(r) { r.keys().forEach(r); }
