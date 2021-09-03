@@ -54,62 +54,63 @@
                   <ul class="tariff-modal__dop-options-cards">
 
                      {{#each equipments}}
-                        <li id="card-{{../id}}-{{id}}"
-                            class="tariff-modal__dop-options-card
+                        {{#unless @last}}
+                           <li id="card-{{../id}}-{{id}}"
+                               class="tariff-modal__dop-options-card
                             dop-options-card
                             dop-options-card__option_{{../id}}-{{dataView}}
-                               {{#if plan}} dop-options-card__option_plan{{/if}}">
-                           <div class="dop-options-card__img">
-                              {{#h-if name '===' 'Android TV'}}
-                                 <div class="dop-options-card__mark mark">Акция</div>
-                              {{/h-if}}
-                              <img src="img/pic/{{img}}" alt="{{img}}">
-                           </div>
-
-                           <div class="dop-options-card__option">
-                              <div>
-
-                                 <h3
-                                    {{#unless @last}}
-                                    onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
-                                    {{else}}
-                                    data-toggle="modal" data-target="#modalAlmond"
-                                    onclick="analytics('details_{{dataView}}')"
-                                    {{/unless}}
-                                 >{{{name}}}
-                                    <nobr>{{speed}}</nobr>
-                                 </h3>
-
+                                  {{#if plan}} dop-options-card__option_plan{{/if}}">
+                              <div class="dop-options-card__img">
+                                 {{#h-if name '===' 'Android TV'}}
+                                    <div class="dop-options-card__mark mark">Акция</div>
+                                 {{/h-if}}
+                                 <img src="img/pic/{{img}}" alt="{{img}}">
                               </div>
 
-                              {{#if plan}}
-                                 <p>Рассрочка</p>
-                              {{else}}
-                                 <p>Аренда</p>
-                              {{/if}}
+                              <div class="dop-options-card__option">
+                                 <div>
 
-                              {{#if plan}}
-                                 <div class="dop-options-card__option-radio">
+                                    <h3
+                                       {{#unless @last}}
+                                       onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                                       {{else}}
+                                       data-toggle="modal" data-target="#modalAlmond"
+                                       onclick="analytics('details_{{dataView}}')"
+                                       {{/unless}}
+                                    >{{{name}}}
+                                       <nobr>{{speed}}</nobr>
+                                    </h3>
 
-                                    <label class="dop-options-card__radio-btn">
-                                       <input name="radio-{{../id}}-{{@index}}" id="radio36-id-{{../id}}-{{@index}}"
-                                              type="radio" value="{{plan.[36]}}" checked disabled>
-                                       <label for="radio36-id-{{../id}}-{{@index}}"></label>
-                                       <span>36 мес</span>
-                                    </label>
-
-                                    <label class="dop-options-card__radio-btn">
-                                       <input name="radio-{{../id}}-{{@index}}" id="radio24-id-{{../id}}-{{@index}}"
-                                              type="radio" value="{{plan.[24]}}" disabled>
-                                       <label for="radio24-id-{{../id}}-{{@index}}"></label>
-                                       <span>24 мес</span>
-                                    </label>
                                  </div>
-                              {{/if}}
-                           </div>
 
-                           <div class="dop-options-card__price">
-                              <div class="price">
+                                 {{#if plan}}
+                                    <p>Рассрочка</p>
+                                 {{else}}
+                                    <p>Аренда</p>
+                                 {{/if}}
+
+                                 {{#if plan}}
+                                    <div class="dop-options-card__option-radio">
+
+                                       <label class="dop-options-card__radio-btn">
+                                          <input name="radio-{{../id}}-{{@index}}" id="radio36-id-{{../id}}-{{@index}}"
+                                                 type="radio" value="{{plan.[36]}}" checked disabled>
+                                          <label for="radio36-id-{{../id}}-{{@index}}"></label>
+                                          <span>36 мес</span>
+                                       </label>
+
+                                       <label class="dop-options-card__radio-btn">
+                                          <input name="radio-{{../id}}-{{@index}}" id="radio24-id-{{../id}}-{{@index}}"
+                                                 type="radio" value="{{plan.[24]}}" disabled>
+                                          <label for="radio24-id-{{../id}}-{{@index}}"></label>
+                                          <span>24 мес</span>
+                                       </label>
+                                    </div>
+                                 {{/if}}
+                              </div>
+
+                              <div class="dop-options-card__price">
+                                 <div class="price">
                                     <span class="price__current">
                                        {{#if @last}}от {{/if}}
                                        {{#if plan}}
@@ -118,52 +119,51 @@
                                           {{price}}
                                        {{/if}}
                                     </span> <span> ₽</span>
-                                 <span class="price__month"> в месяц</span>
+                                    <span class="price__month"> в месяц</span>
+                                 </div>
+
+                                 <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="round"></span>
+                                 </label>
                               </div>
 
-                              <label class="switch">
-                                 <input type="checkbox">
-                                 <span class="round"></span>
-                              </label>
-                           </div>
+                           </li>
+                        {{else}}
+                           <li id="card-{{../id}}-{{id}}" class="tariff-modal__dop-options-card dop-options-card">
+                              <div class="dop-options-card__sim">
+                                 <p>SIM-карта с тарифом
+                                    <span data-toggle="modal" data-target="#tariff-all"> «Без переплат. Всё»</span>
+                                    Скидка 40% на абонентскую плату
+                                 </p>
+                                 <div class="tariff-modal__counter counter">
+                                    <div onclick="calculate(event, 'almond-', '{{@index}}', '-')"
+                                         class="counter__minus">&minus;
+                                    </div>
+                                    <input type="text" id="counterID-dop-options-card-{{id}}" readonly value="1">
+                                    <div onclick="calculate(event, 'almond-', '{{@index}}', '+')"
+                                         class="counter__plus">+
+                                    </div>
+                                 </div>
+                              </div>
 
-                        </li>
+                              <div class="dop-options-card__price">
+                                 <div class="price">
+                                    <span class="price__old">{{oldPrice}} ₽</span>
+                                    <span class="price__current">{{price}}</span> <span> ₽</span>
+                                    <span class="price__month"> в месяц</span>
+                                 </div>
+
+                                 <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="round"></span>
+                                 </label>
+                              </div>
+
+                           </li>
+                        {{/unless}}
                      {{/each}}
 
-                     <li class="tariff-modal__dop-options-card dop-options-card">
-                        <div class="dop-options-card__sim">
-                           <p>SIM-карта с тарифом
-                              <span data-toggle="modal" data-target="#tariff-all"> «Без переплат. Всё»</span>
-                              Скидка 40% на абонентскую плату
-                           </p>
-                           <div class="tariff-modal__counter counter">
-                              <div onclick="calculate(event, 'almond-', '{{@index}}', '-')"
-                                   class="counter__minus">&minus;
-                              </div>
-                              <input type="text" id="counterID-dop-options-card-{{id}}" readonly value="1">
-                              <div onclick="calculate(event, 'almond-', '{{@index}}', '+')"
-                                   class="counter__plus">+
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="dop-options-card__price">
-                           <div class="price">
-                              <span class="price__old">600 ₽</span>
-                              <span class="price__current">
-                                    360
-                                 </span> <span> ₽</span>
-                              <span class="price__month"> в месяц</span>
-                           </div>
-
-                           <label class="switch">
-                              <input type="checkbox"
-                              >
-                              <span class="round"></span>
-                           </label>
-                        </div>
-
-                     </li>
 
                   </ul>
 

@@ -1340,6 +1340,11 @@
                   "price": 150
                }
             ]
+         },
+         {
+            "id": "equipment-sim",
+            "oldPrice": 600,
+            "price": 360
          }
       ]
    },
@@ -1679,6 +1684,11 @@
                   "price": 150
                }
             ]
+         },
+         {
+            "id": "equipment-sim",
+            "oldPrice": 600,
+            "price": 360
          }
       ]
    },
@@ -3013,6 +3023,11 @@
                   "price": 150
                }
             ]
+         },
+         {
+            "id": "equipment-sim",
+            "oldPrice": 600,
+            "price": 360
          }
       ]
    },
@@ -3370,6 +3385,11 @@
                   "price": 150
                }
             ]
+         },
+         {
+            "id": "equipment-sim",
+            "oldPrice": 600,
+            "price": 360
          }
       ]
    },
@@ -5066,6 +5086,11 @@
                   "price": 150
                }
             ]
+         },
+         {
+            "id": "equipment-sim",
+            "oldPrice": 600,
+            "price": 360
          }
       ]
    },
@@ -5751,6 +5776,11 @@
                   "price": 150
                }
             ]
+         },
+         {
+            "id": "equipment-sim",
+            "oldPrice": 600,
+            "price": 360
          }
       ]
    },
@@ -6428,6 +6458,11 @@
                   "price": 150
                }
             ]
+         },
+         {
+            "id": "equipment-sim",
+            "oldPrice": 600,
+            "price": 360
          }
       ]
    }

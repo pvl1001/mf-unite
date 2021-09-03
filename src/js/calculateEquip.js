@@ -1,29 +1,30 @@
 import tariffs from '../json/tariffs.json'
 
 class CardRent {
-   constructor(card, switchCard, price, totalPriceTempl, totalPrice, index) {
+   constructor(card, switchCard, price, totalPriceTempl, totalPrice, index, tariff) {
       this.card = card
       this.switchCard = switchCard
       this.price = price
       this.totalPriceTempl = totalPriceTempl
       this.totalPrice = totalPrice
       this.index = index
+      this.tariff = tariff
    }
 
-   filterPrice(price) {
-      const arrPrice = price.textContent.split( ' ' )
-      return arrPrice[arrPrice.length -2]
+   get sumArr() {
+      return +this.sumTotalPrice[this.tariff].reduce( (a, b) => +a + +b )
+   }
+
+   addInArrPrice() {
+      this.switchCard.checked
+         ? this.sumTotalPrice[this.tariff][this.index] = parseInt(this.price.textContent)
+         : this.sumTotalPrice[this.tariff][this.index] = 0
    }
 
    sumTotalPrice() {
-      // debugger
-      this.sumTotalPrice.arrPrice = this.sumTotalPrice.arrPrice || []
-      this.switchCard.checked
-         ? this.sumTotalPrice.arrPrice[this.index] = this.filterPrice(this.price)
-         : this.sumTotalPrice.arrPrice[this.index] = 0
-      const sumArrPrice = this.sumTotalPrice.arrPrice.reduce( (a, b) => +a + +b )
-      console.log( this.sumTotalPrice.arrPrice, sumArrPrice)
-      return this.totalPriceTempl.textContent = this.totalPrice + +sumArrPrice
+      this.sumTotalPrice[this.tariff] = this.sumTotalPrice[this.tariff] || []
+      this.addInArrPrice()
+      return this.totalPriceTempl.textContent = this.totalPrice + this.sumArr
    }
 
    eventSwitch() {
@@ -32,8 +33,8 @@ class CardRent {
 }
 
 class CardPlan extends CardRent {
-   constructor(card, switchCard, price, inputs, totalPriceTempl, totalPrice, index) {
-      super( card, switchCard, price, totalPriceTempl, totalPrice, index)
+   constructor(card, switchCard, price, inputs, totalPriceTempl, totalPrice, index, tariff) {
+      super( card, switchCard, price, totalPriceTempl, totalPrice, index, tariff)
       this.inputs = inputs
    }
 
@@ -69,6 +70,7 @@ window.onload = () => {
 
       tariff.equipments.forEach( (equipment, i) => {
          const card = modal.querySelector( '#card-' + tariff.id + '-' + equipment.id )
+         let testArr = []
          if (equipment.plan) {
             new CardPlan(
                card,
@@ -77,7 +79,8 @@ window.onload = () => {
                card.querySelectorAll( 'input[type="radio"]' ),
                totalPriceTempl,
                tariff.price,
-               i
+               i,
+               tariff.id
             ).eventSwitch()
          } else {
             new CardRent(
@@ -86,7 +89,8 @@ window.onload = () => {
                card.querySelector( '.price__current' ),
                totalPriceTempl,
                tariff.price,
-               i
+               i,
+               tariff.id
             ).eventSwitch()
          }
       } )
