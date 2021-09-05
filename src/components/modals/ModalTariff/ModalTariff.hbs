@@ -56,9 +56,7 @@
                      {{#each equipments}}
                         {{#unless @last}}
                            <li id="card-{{../id}}-{{id}}"
-                               class="tariff-modal__dop-options-card
-                            dop-options-card
-                            dop-options-card__option_{{../id}}-{{dataView}}
+                               class="tariff-modal__dop-options-card dop-options-card dop-options-card__option_{{../id}}-{{dataView}}
                                   {{#if plan}} dop-options-card__option_plan{{/if}}">
                               <div class="dop-options-card__img">
                                  {{#h-if name '===' 'Android TV'}}
@@ -71,12 +69,12 @@
                                  <div>
 
                                     <h3
-                                       {{#unless @last}}
+                                       {{#h-if id '!==' 'equipment-5'}}
                                        onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
                                        {{else}}
                                        data-toggle="modal" data-target="#modalAlmond"
                                        onclick="analytics('details_{{dataView}}')"
-                                       {{/unless}}
+                                       {{/h-if}}
                                     >{{{name}}}
                                        <nobr>{{speed}}</nobr>
                                     </h3>
@@ -112,7 +110,7 @@
                               <div class="dop-options-card__price">
                                  <div class="price">
                                     <span class="price__current">
-                                       {{#if @last}}от {{/if}}
+                                       {{#h-if id '===' 'equipment-5'}}от {{/h-if}}
                                        {{#if plan}}
                                           {{plan.[36]}}
                                        {{else}}
