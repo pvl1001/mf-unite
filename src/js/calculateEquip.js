@@ -18,9 +18,13 @@ class CardRent {
       return +this.sumTotalPrice[this.tariff].reduce( (a, b) => +a + +b )
    }
 
+   filterNum(num) {
+      return parseInt(num.match(/\d+/) )
+   }
+
    addInArrPrice() {
       this.switchCard.checked
-         ? this.sumTotalPrice[this.tariff][this.index] = parseInt( this.price.textContent )
+         ? this.sumTotalPrice[this.tariff][this.index] = this.filterNum(this.price.textContent )
          : this.sumTotalPrice[this.tariff][this.index] = 0
    }
 
@@ -40,7 +44,7 @@ class CardPlan extends CardRent {
       super( tariff, equipment, index )
 
       this.inputs = this.card.querySelectorAll( 'input[type="radio"]' )
-      this.eventChangePrice =  this.changePrice.bind( this )
+      this.eventChangePrice = this.changePrice.bind( this )
       this.eventInputDisabled = this.inputDisabled.bind( this )
    }
 
@@ -91,16 +95,16 @@ class CardSim extends CardRent {
 
    cntMinus() {
       let cnt = this.counter.querySelector( 'input' )
-      if(cnt.value > 1) --cnt.value
-      this.sumPriceCard(cnt.value)
-      if(this.switchCard.checked) this.sumTotalPrice()
+      if (cnt.value > 1) --cnt.value
+      this.sumPriceCard( cnt.value )
+      if (this.switchCard.checked) this.sumTotalPrice()
    }
 
    cntPlus() {
       let cnt = this.counter.querySelector( 'input' )
-      if(cnt.value < 10) ++cnt.value
-      this.sumPriceCard(cnt.value)
-      if(this.switchCard.checked) this.sumTotalPrice()
+      if (cnt.value < 10) ++cnt.value
+      this.sumPriceCard( cnt.value )
+      if (this.switchCard.checked) this.sumTotalPrice()
 
    }
 
@@ -122,7 +126,7 @@ window.onload = () => {
          if (equipment.plan) {
             new CardPlan( tariff, equipment, i ).eventSwitch()
          } else if (equipment.id === 'equipment-sim') {
-            const cardSim = new CardSim(tariff, equipment, i )
+            const cardSim = new CardSim( tariff, equipment, i )
             cardSim.eventSwitch()
             cardSim.isCounter()
          } else {
