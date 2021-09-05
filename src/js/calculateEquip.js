@@ -1,15 +1,18 @@
 import tariffs from '../json/tariffs.json'
 
 class CardRent {
-   constructor(card, switchCard, price, totalPriceTempl, totalPrice, index, tariff) {
-      this.card = card
-      this.switchCard = switchCard
-      this.price = price
-      this.totalPriceTempl = totalPriceTempl
-      this.totalPrice = totalPrice
+   constructor(tariff, equipment, index) {
+      this.modal = document.getElementById( tariff.id )
+      this.card = this.modal.querySelector( '#card-' + tariff.id + '-' + equipment.id )
+      this.switchCard = this.card.querySelector( '.switch input' )
+      this.price = this.card.querySelector( '.price__current' )
+      this.totalPriceTempl = this.modal.querySelector( '.tariff-modal__price .price__current' )
+      this.totalPrice = tariff.price
       this.index = index
-      this.tariff = tariff
+      this.tariff = tariff.id
+      this.eventSumTotalPrice = this.sumTotalPrice.bind( this )
    }
+
 
    get sumArr() {
       return +this.sumTotalPrice[this.tariff].reduce( (a, b) => +a + +b )
@@ -17,7 +20,7 @@ class CardRent {
 
    addInArrPrice() {
       this.switchCard.checked
-         ? this.sumTotalPrice[this.tariff][this.index] = parseInt(this.price.textContent)
+         ? this.sumTotalPrice[this.tariff][this.index] = parseInt( this.price.textContent )
          : this.sumTotalPrice[this.tariff][this.index] = 0
    }
 
@@ -28,20 +31,24 @@ class CardRent {
    }
 
    eventSwitch() {
-      $( this.switchCard ).on( 'change', this.sumTotalPrice.bind( this ) )
+      this.switchCard.addEventListener( 'change', this.eventSumTotalPrice )
    }
 }
 
 class CardPlan extends CardRent {
-   constructor(card, switchCard, price, inputs, totalPriceTempl, totalPrice, index, tariff) {
-      super( card, switchCard, price, totalPriceTempl, totalPrice, index, tariff)
-      this.inputs = inputs
+   constructor(tariff, equipment, index) {
+      super( tariff, equipment, index )
+
+      this.inputs = this.card.querySelectorAll( 'input[type="radio"]' )
+      this.eventChangePrice =  this.changePrice.bind( this )
+      this.eventInputDisabled = this.inputDisabled.bind( this )
    }
 
 
    changePrice() {
       const radioChecked = Array.from( this.inputs ).find( input => input.checked )
       this.price.textContent = radioChecked.value + ' '
+      this.sumTotalPrice()
    }
 
    inputDisabled() {
@@ -53,11 +60,56 @@ class CardPlan extends CardRent {
    }
 
    eventSwitch() {
-      $( this.switchCard ).on( 'change', this.inputDisabled.bind( this ) )
+      this.switchCard.addEventListener( 'change', this.eventInputDisabled )
    }
 
    eventRadio(input) {
-      $( input ).on( 'change', this.changePrice.bind( this ) )
+      input.addEventListener( 'change', this.eventChangePrice )
+   }
+
+}
+
+class CardSim extends CardRent {
+   constructor(tariff, equipment, i) {
+      super( tariff, equipment, i );
+
+      this.counter = this.card.querySelector( '.counter' )
+      this.minus = this.counter.querySelector( '.counter__minus' )
+      this.plus = this.counter.querySelector( '.counter__plus' )
+      this.cardPrice = this.price.textContent
+      this.eventCntMinus = this.cntMinus.bind( this )
+      this.eventCntPlus = this.cntPlus.bind( this )
+      this.eventIsCounter = this.isCounter.bind( this )
+   }
+
+
+   isCounter() {
+      this.minus.addEventListener( 'click', this.eventCntMinus )
+      this.plus.addEventListener( 'click', this.eventCntPlus )
+      this.sumTotalPrice()
+   }
+
+   cntMinus() {
+      let cnt = this.counter.querySelector( 'input' )
+      if(cnt.value > 1) --cnt.value
+      this.sumPriceCard(cnt.value)
+      if(this.switchCard.checked) this.sumTotalPrice()
+   }
+
+   cntPlus() {
+      let cnt = this.counter.querySelector( 'input' )
+      if(cnt.value < 10) ++cnt.value
+      this.sumPriceCard(cnt.value)
+      if(this.switchCard.checked) this.sumTotalPrice()
+
+   }
+
+   sumPriceCard(cnt) {
+      this.price.textContent = this.cardPrice * cnt
+   }
+
+   eventSwitch() {
+      this.switchCard.addEventListener( 'change', this.eventIsCounter )
    }
 
 }
@@ -65,33 +117,16 @@ class CardPlan extends CardRent {
 
 window.onload = () => {
    tariffs.forEach( tariff => {
-      const modal = document.getElementById( tariff.id )
-      const totalPriceTempl = modal.querySelector( '.tariff-modal__price .price__current' )
 
       tariff.equipments.forEach( (equipment, i) => {
-         const card = modal.querySelector( '#card-' + tariff.id + '-' + equipment.id )
-         let testArr = []
          if (equipment.plan) {
-            new CardPlan(
-               card,
-               card.querySelector( '.switch input' ),
-               card.querySelector( '.price__current' ),
-               card.querySelectorAll( 'input[type="radio"]' ),
-               totalPriceTempl,
-               tariff.price,
-               i,
-               tariff.id
-            ).eventSwitch()
+            new CardPlan( tariff, equipment, i ).eventSwitch()
+         } else if (equipment.id === 'equipment-sim') {
+            const cardSim = new CardSim(tariff, equipment, i )
+            cardSim.eventSwitch()
+            cardSim.isCounter()
          } else {
-            new CardRent(
-               card,
-               card.querySelector( '.switch input' ),
-               card.querySelector( '.price__current' ),
-               totalPriceTempl,
-               tariff.price,
-               i,
-               tariff.id
-            ).eventSwitch()
+            new CardRent( tariff, equipment, i ).eventSwitch()
          }
       } )
 
