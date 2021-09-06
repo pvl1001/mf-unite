@@ -10,6 +10,7 @@ class CardRent {
       this.totalPrice = tariff.price
       this.index = index
       this.tariff = tariff.id
+      this.description = this.modal.querySelector( '.tariff-modal__price-desc' )
       this.eventSumTotalPrice = this.sumTotalPrice.bind( this )
    }
 
@@ -19,18 +20,25 @@ class CardRent {
    }
 
    filterNum(num) {
-      return parseInt(num.match(/\d+/) )
+      return parseInt( num.match( /\d+/ ) )
    }
 
    addInArrPrice() {
       this.switchCard.checked
-         ? this.sumTotalPrice[this.tariff][this.index] = this.filterNum(this.price.textContent )
+         ? this.sumTotalPrice[this.tariff][this.index] = this.filterNum( this.price.textContent )
          : this.sumTotalPrice[this.tariff][this.index] = 0
+   }
+
+   isDescription() {
+      this.sumArr
+         ? this.description.style.visibility = 'visible'
+         : this.description.style.visibility = 'hidden'
    }
 
    sumTotalPrice() {
       this.sumTotalPrice[this.tariff] = this.sumTotalPrice[this.tariff] || []
       this.addInArrPrice()
+      this.isDescription()
       return this.totalPriceTempl.textContent = this.totalPrice + this.sumArr
    }
 
