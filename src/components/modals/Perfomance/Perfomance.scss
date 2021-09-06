@@ -46,7 +46,7 @@
    }
 
    &__text {
-      width: 50%;
+      width: 40%;
 
       h3 {
          line-height: 24px;
@@ -79,11 +79,12 @@
    }
 
    &__img {
-      width: 44%;
+      width: 268px;
+      text-align: center;
 
       img {
          max-width: 100%;
-         max-height: inherit;
+         max-height: 242px;
       }
    }
 

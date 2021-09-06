@@ -61,40 +61,55 @@
       </div>
    </div>
 {{/each}}
-<div class="modal performance" id="{{unite.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+{{#with unite}}
+   <div class="modal performance" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
 
-         <div class="modal-wrapper">
-            <div class="performance__text">
-               <h2>{{unite.name}}</h2>
-               <h3>Характеристики:</h3>
-               <ul>
-                  {{#each unite.params}}
-                     <li>{{this}}</li>
-                  {{/each}}
-               </ul>
-            </div>
+            <h1 class="performance__title">{{name}}</h1>
 
-            <div class="performance__img">
-               <img src="img/pic/router_info.png" alt="img"/>
+            <div class="performance__container">
+               <div class="performance__text">
+                  <h3>Характеристики роутера:</h3>
+
+                  <ul>
+                     {{#each icons}}
+                        <li>
+                           <img src="img/svg/{{icon}}" alt="{{icon}}">
+                           <p>{{{text}}}</p>
+                        </li>
+                     {{/each}}
+                  </ul>
+
+                  <div class="performance__download-info download-info">
+                     <img src="img/svg/download-pdf.svg" class="download-info__icon" alt="Скачать">
+                     <div>
+                        <a href="#" class="download-info__link">Скачать подробную информацию</a>
+                        <p class="download-info__size">(PDF, 0.4 MB)</p>
+                     </div>
+                  </div>
+               </div>
+
+               <picture class="performance__img">
+                  <img src="img/pic/{{img}}" alt="{{img}}">
+               </picture>
             </div>
 
             <div class="modal-order">
-               <div class="btn"
-                    data-toggle="modal"
-                    data-target="#order"
-                    onclick="openOrder('send_', 'vezde_ntv')"
-               >Заказать
-               </div>
                <div class="modal-order__text">
-                  <p>{{unite.price}} ₽/мес</p>
-                  <a href="#">Скачать подробную информацию</a>
+                  <p>{{price}} ₽ в месяц</p>
                </div>
+               <button class="btn"
+                       type="button"
+                       data-toggle="modal"
+                       data-target="#order"
+                       onclick="openOrder('send_', '{{dataView}}')"
+               >Заказать
+               </button>
             </div>
          </div>
       </div>
    </div>
-</div>
+{{/with}}

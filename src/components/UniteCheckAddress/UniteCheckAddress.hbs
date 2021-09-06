@@ -3,7 +3,9 @@
       <div class="unite-address">
          <div id="addressCheckHead">
             <p class="unite-address__title">
-               Проверь возможность <nobr>подключения по твоему</nobr> адресу
+               Проверь возможность
+               <nobr>подключения по твоему</nobr>
+               адресу
             </p>
             <form id="CHKADR" name="address" class="unite-address__input">
                <div>
@@ -32,7 +34,8 @@
                     data-toggle="modal"
                     data-target="#order"
                     onclick="openOrder('send_', 'address_success')"
-            >Отправить заявку</button>
+            >Отправить заявку
+            </button>
          </div>
 
          <div class="unite__router" id="unite">
@@ -45,82 +48,88 @@
             </div>
 
             <div class="unite-row">
-               <div class="unite__params">
-                  <div class="unite__params-title">
-                     <h2>Объединяй! Везде</h2>
-                  </div>
-                  <div class="unite-info-row">
-                     <div class="unite-info">
-                        <p class="unite-info__title">Беспроводной интернет и ТВ</p>
-                        <div class="unite-info__desc">
-                           <div class="unite-info__desc_icon">
-                              <img src="./img/svg/wi-fi.svg" alt="img">
-                           </div>
-                           150 Мбит/с
-                        </div>
-                        <div class="unite-info__desc desk-channels">
-                           <div class="unite-info__desc_icon">
-                              <img src="./img/svg/tv.svg" alt="img">
-                           </div>
-                           <a href="#">61 канал</a>
-                        </div>
-                     </div>
-                     <div class="unite-info">
-                        <p class="unite-info__title">Мобильная связь</p>
-                        <div class="unite-info__desc desk-mobile">
-                           <div class="unite-info__desc_icon">
-                              <img src="./img/svg/mobile.svg" alt="img">
-                           </div>
-                           <div>
-                              <p>1100 минут</p>
-                              <p>Безлимит на МегаФон России</p>
-                           </div>
-                        </div>
-                        <div class="unite-info__desc">
-                           <div class="unite-info__desc_icon">
-                              <img src="./img/svg/4g.svg" alt="img">
-                           </div>
-                           Безлимитный интернет
-                        </div>
-                     </div>
-                  </div>
 
-                  <div class="unite-checkbox">
-                     <div class="unite-checkbox__hire item-option">
-                        <label>
-                           <div class="switch">
-                              <input checked onchange="calcRadio.sum('#unite', 0)" type="checkbox">
-                              <span class="round"></span>
+               {{#each tariffs}}
+                  {{#h-if id '===' 'around'}}
+                     <div class="unite__params">
+                        <div class="unite__params-title">
+                           <h2>Объединяй! {{name}}</h2>
+                        </div>
+                        <div class="unite-info-row">
+                           <div class="unite-info">
+                              <p class="unite-info__title">Беспроводной интернет и ТВ</p>
+                              <div class="unite-info__desc">
+                                 <div class="unite-info__desc_icon">
+                                    <img src="./img/svg/wi-fi.svg" alt="wi-fi">
+                                 </div>
+                                 {{speed}} Мбит/с
+                              </div>
+                              <div class="unite-info__desc desk-channels">
+                                 <div class="unite-info__desc_icon">
+                                    <img src="./img/svg/tv.svg" alt="tv">
+                                 </div>
+                                 <a href="#">{{tvLength}}</a>
+                              </div>
                            </div>
-                           <div class="switch-text">
-                              <p>Аренда 4G Wi-Fi роутера</p>
-                              <span class="item-option__num">{{unite.price}}</span> <span>₽ в месяц</span>
+                           <div class="unite-info">
+                              <p class="unite-info__title">Мобильная связь</p>
+                              <div class="unite-info__desc desk-mobile">
+                                 <div class="unite-info__desc_icon">
+                                    <img src="./img/svg/mobile.svg" alt="mobile">
+                                 </div>
+                                 <div>
+                                    <p>{{min}} минут</p>
+                                    <p>Безлимит на МегаФон России</p>
+                                 </div>
+                              </div>
+                              <div class="unite-info__desc">
+                                 <div class="unite-info__desc_icon">
+                                    <img src="./img/svg/4g.svg" alt="4g">
+                                 </div>
+                                 Безлимитный интернет
+                              </div>
                            </div>
-                        </label>
-                     </div>
-                  </div>
+                        </div>
 
-                  <div class="unite__links">
-                     <a href="#">Скачать подробную информацию</a>
-                     <span data-target="#performanceUnite"
-                           data-toggle="modal"
-                           onclick="analytics('details_vezde_ntv')"
-                     >Технические характеристики</span>
-                  </div>
+                        <div class="unite-checkbox">
+                           <div class="unite-checkbox__hire item-option">
+                              <label>
+                                 <div class="switch">
+                                    <input checked onchange="calcRadio.sum('#unite', 0)" type="checkbox">
+                                    <span class="round"></span>
+                                 </div>
+                                 <div class="switch-text">
+                                    <p>Аренда 4G Wi-Fi роутера</p>
+                                    <span class="item-option__num">{{../unite.price}}</span> <span>₽ в месяц</span>
+                                 </div>
+                              </label>
+                           </div>
+                        </div>
 
-                  <div class="unite-order">
-                     <div data-toggle="modal" data-target="#order" class="btn" data-view="block_vezde_ntv"
-                     onclick="openOrder('send_', 'vezde_ntv')">Отправить заявку</div>
-                     <div class="price">
-                        <span class="old-price">1600 ₽</span>
-                        <span class="new-price">{{unite.priceSale}}</span> <span>₽</span>
-                        <span>в месяц</span>
+                        <div class="unite__links">
+                           <a href="#">Скачать подробную информацию</a>
+                           <span data-target="#{{../unite.id}}"
+                                 data-toggle="modal"
+                                 onclick="analytics('details_vezde_ntv')"
+                           >Технические характеристики</span>
+                        </div>
+
+                        <div class="unite-order">
+                           <div data-toggle="modal" data-target="#order" class="btn" data-view="block_vezde_ntv"
+                                onclick="openOrder('send_', 'vezde_ntv')">Отправить заявку
+                           </div>
+                           <div class="price">
+                              <span class="old-price">1600 ₽</span>
+                              <span class="new-price">{{../unite.priceSale}}</span> <span>₽</span>
+                              <span>в месяц</span>
+                           </div>
+                        </div>
                      </div>
-                  </div>
-               </div>
-               <div class="unite__img">
-                  <img class="" src="img/pic/router_info_2x.png" alt="router">
-               </div>
+                     <div class="unite__img">
+                        <img class="" src="img/pic/router_info_2x.png" alt="router">
+                     </div>
+                  {{/h-if}}
+               {{/each}}
             </div>
          </div>
       </div>

@@ -1,14 +1,29 @@
 {
-   "id": "performanceUnite",
+   "id": "eq-unite",
    "name": "4G Wi-Fi роутер",
-   "params": [
-      "Скорость до 150 Мбит/с",
-      "Wi-Fi 2,4 и 5 ГГц",
-      "Уверенный сигнал и большая зона покрытия",
-      "Простое подключение до 50 пользователей",
-      "Компактные размеры"
-   ],
-   "img": "router_info_2x.png",
+   "img": "router_info.png",
    "price": 100,
-   "priceSale": 960
+   "priceSale": 960,
+   "icons": [
+      {
+         "icon": "fiolet_speed.svg",
+         "text": "Скорость до 150 Мбит/с"
+      },
+      {
+         "icon": "fiolet_hertz.svg",
+         "text": "Wi-Fi 2,4 и 5 ГГц"
+      },
+      {
+         "icon": "fiolet_zone.svg",
+         "text": "Уверенный сигнал и большая зона покрытия"
+      },
+      {
+         "icon": "fiolet_settings.svg",
+         "text": "Простое подключение до 50 пользователей"
+      },
+      {
+         "icon": "fiolet_razmer.svg",
+         "text": "Компактные размеры"
+      }
+   ]
 }
