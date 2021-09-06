@@ -104,8 +104,8 @@ class CardSim extends CardRent {
       let cnt = this.counter.querySelector( 'input' )
       if (cnt.value < 10) ++cnt.value
       this.sumPriceCard( cnt.value )
-      if (this.switchCard.checked) this.sumTotalPrice()
-
+      this.switchCard.checked = true
+      this.sumTotalPrice()
    }
 
    sumPriceCard(cnt) {
