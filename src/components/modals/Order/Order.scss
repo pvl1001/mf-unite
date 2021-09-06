@@ -5,6 +5,7 @@
    }
 
    .modal-content {
+      padding: 81px 125px 73px;
 
       h2 {
          margin-bottom: 15px;
@@ -225,9 +226,11 @@
       }
    }
 
-   @media (min-width: 1024px) and (max-width: 1100px) {
+   @media (max-width: 1279px) {
       .modal-content {
-         padding: 60px 275px !important;
+         padding: 60px 275px;
+         height: 100vh;
+         justify-content: center;
       }
 
       .modal-dialog {
@@ -265,9 +268,9 @@
 
    }
 
-   @media (min-width: 768px) and (max-width: 1023px) {
+   @media (max-width: 1023px) {
       .modal-content {
-         padding: 60px 122px !important;
+         padding: 60px 122px;
       }
 
       .modal-dialog {
