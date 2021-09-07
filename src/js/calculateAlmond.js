@@ -1,6 +1,11 @@
 $( '.modalAlmond' ).on( 'shown.bs.modal', function (e) {
-   window.almond = new Almond( e.currentTarget.id )
-   almond.addEvents()
+   if(e.currentTarget.id === 'modalAlmond') {
+      window.almond = new EqiupmentsAlmond( e.currentTarget.id )
+      almond.addEvents()
+   } else {
+      window.almond = new Almond( e.currentTarget.id )
+      almond.addEvents()
+   }
 } )
 $( '.modalAlmond' ).on( 'hidden.bs.modal', function (e) {
    almond.removeEvents()
@@ -28,21 +33,31 @@ class Almond {
       this.cards.forEach( (card, index) => {
          card.addEventListener( 'click', this.card )
       } )
-      this.btn.addEventListener('click', this.clickBtn)
+      this.btn.addEventListener( 'click', this.clickBtn )
    }
 
    removeEvents() {
       this.cards.forEach( (card, index) => {
          card.removeEventListener( 'click', this.card )
       } )
-      this.btn.removeEventListener('click', this.clickBtn)
+      this.btn.removeEventListener( 'click', this.clickBtn )
    }
 
+   get parentModal() {
+      const arr = this.id.split( '-' )
+      arr.splice( 0, 1 )
+      return arr.join( '-' )
+   }
 
-   clickBtn() {
-      console.log(almond.id)
-      $('#' + almond.id).modal('hide')
-      openOrder('send_', 'almond')
+   sumCardAlmond() {
+      this.onSwitchAlmond()
+      const priceCardAlmond = document.querySelector( '#card-' + this.parentModal + '-eq-almond .price__current' )
+      priceCardAlmond.textContent = this.totalPrice.textContent + ' '
+      $( '.tariff-modal.show' )[0][almond.parentModal][0].sumTotalPrice()
+   }
+
+   onSwitchAlmond() {
+      document.querySelector( '#card-' + this.parentModal +'-eq-almond .switch input' ).checked = true
    }
 
    card() {
@@ -55,8 +70,8 @@ class Almond {
       this.sumPrices[this.id][almond.card.index] = sumCard
       this.totalPrice.textContent = this.sumPrices[this.id].reduce( (a, b) => a + b )
       this.showTotalPrice( +this.totalPrice.textContent )
-      this.disabledBtn( +this.totalPrice.textContent )
-      this.activeCard( sumCard )
+      this.isDisabledBtn( +this.totalPrice.textContent )
+      this.isActiveCard( sumCard )
    }
 
    showTotalPrice(totalPrice) {
@@ -65,13 +80,13 @@ class Almond {
          : this.totalPriceTempl.style.display = 'none'
    }
 
-   disabledBtn(totalPrice) {
+   isDisabledBtn(totalPrice) {
       totalPrice
          ? this.btn.disabled = false
          : this.btn.disabled = true
    }
 
-   activeCard(sumCard) {
+   isActiveCard(sumCard) {
       let cnt = aboutAlmond.counter.querySelector( 'input' )
       let cntCard = almond.card.template.querySelector( '.card-price__cnt span' )
 
@@ -82,8 +97,13 @@ class Almond {
       return almond.card.template.classList.remove( 'active' )
    }
 
-}
+   clickBtn() {
+      $( '#' + almond.id ).modal( 'hide' )
+      almond.sumCardAlmond()
+      openOrder( 'send_', 'almond' )
+   }
 
+}
 
 class AboutAlmond extends Almond {
    constructor(id) {
@@ -136,4 +156,17 @@ class AboutAlmond extends Almond {
       almond.sumPrices( this.price.textContent * cnt )
    }
 
+}
+
+class EqiupmentsAlmond extends Almond {
+   constructor(id) {
+      super(id)
+   }
+
+   clickBtn() {
+      $( '#order' ).modal( 'show' )
+      openOrder( 'send_', 'almond' )
+   }
+
+   isDisabledBtn(totalPrice) {}
 }

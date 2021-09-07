@@ -200,6 +200,14 @@
       margin: 0 auto;
    }
 
+   .price {
+      .new-price,
+      .new-price + span {
+         font-size: 32px;
+         font-weight: 600;
+      }
+   }
+
    &__price-router-title {
       font-size: 15px;
       line-height: 20px;

@@ -1,5 +1,30 @@
 import tariffs from '../json/tariffs.json'
 
+$( '.tariff-modal' ).on( 'shown.bs.modal', function (e) {
+   const tariff = tariffs.find( tariff => tariff.id === e.currentTarget.id )
+   this[tariff.id] = []
+   tariff.equipments.forEach( (equipment, i) => {
+      if (equipment.plan) {
+         window.cardPlan = new CardPlan( tariff, equipment, i )
+         this[tariff.id].push( cardPlan )
+         cardPlan.addEvents()
+      } else if (equipment.id === 'equipment-sim') {
+         window.cardSim = new CardSim( tariff, equipment, i )
+         this[tariff.id].push( cardSim )
+         cardSim.addEvents()
+         cardSim.isCounter()
+      } else {
+         window.cardRent = new CardRent( tariff, equipment, i )
+         this[tariff.id].push( cardRent )
+         cardRent.addEvents()
+      }
+   } )
+
+} )
+$( '.tariff-modal' ).on( 'hidden.bs.modal', function (e) {
+   this[e.currentTarget.id].forEach( el => el.removeEvents() )
+} )
+
 class CardRent {
    constructor(tariff, equipment, index) {
       this.modal = document.getElementById( tariff.id )
@@ -15,35 +40,28 @@ class CardRent {
    }
 
 
-   get sumArr() {
-      return +this.sumTotalPrice[this.tariff].reduce( (a, b) => +a + +b )
+   addEvents() {
+      this.switchCard.addEventListener( 'change', this.eventSumTotalPrice )
    }
 
-   filterNum(num) {
-      return parseInt( num.match( /\d+/ ) )
+   removeEvents() {
+      this.switchCard.removeEventListener( 'change', this.eventSumTotalPrice )
    }
 
-   addInArrPrice() {
-      this.switchCard.checked
-         ? this.sumTotalPrice[this.tariff][this.index] = this.filterNum( this.price.textContent )
-         : this.sumTotalPrice[this.tariff][this.index] = 0
-   }
-
-   isDescription() {
-      this.sumArr
+   isDescription(cardsSwitchOn) {
+      cardsSwitchOn.length
          ? this.description.style.visibility = 'visible'
          : this.description.style.visibility = 'hidden'
    }
 
    sumTotalPrice() {
-      this.sumTotalPrice[this.tariff] = this.sumTotalPrice[this.tariff] || []
-      this.addInArrPrice()
-      this.isDescription()
-      return this.totalPriceTempl.textContent = this.totalPrice + this.sumArr
-   }
-
-   eventSwitch() {
-      this.switchCard.addEventListener( 'change', this.eventSumTotalPrice )
+      const parentModal = document.getElementById( this.tariff )
+      const cards = parentModal.querySelectorAll( '.dop-options-card' )
+      const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector('.switch input').checked )
+      this.totalPriceTempl.textContent = cardsSwitchOn
+         .map(card => parseInt( card.querySelector('.price__current').textContent.match( /\d+/ ) ) )
+         .reduce((a, b) => a + b, this.totalPrice)
+      this.isDescription(cardsSwitchOn)
    }
 }
 
@@ -57,6 +75,18 @@ class CardPlan extends CardRent {
    }
 
 
+   addEvents() {
+      this.switchCard.addEventListener( 'change', this.eventInputDisabled )
+   }
+
+   removeEvents() {
+      this.switchCard.removeEventListener( 'change', this.eventInputDisabled )
+   }
+
+   eventRadio(input) {
+      input.addEventListener( 'change', this.eventChangePrice )
+   }
+
    changePrice() {
       const radioChecked = Array.from( this.inputs ).find( input => input.checked )
       this.price.textContent = radioChecked.value + ' '
@@ -67,16 +97,10 @@ class CardPlan extends CardRent {
       this.inputs.forEach( input => {
          input.disabled = !input.disabled
          this.eventRadio( input )
+         if (input.disabled) input.removeEventListener( 'change', this.eventChangePrice )
       } )
       this.sumTotalPrice()
-   }
 
-   eventSwitch() {
-      this.switchCard.addEventListener( 'change', this.eventInputDisabled )
-   }
-
-   eventRadio(input) {
-      input.addEventListener( 'change', this.eventChangePrice )
    }
 
 }
@@ -94,6 +118,14 @@ class CardSim extends CardRent {
       this.eventIsCounter = this.isCounter.bind( this )
    }
 
+
+   addEvents() {
+      this.switchCard.addEventListener( 'change', this.eventIsCounter )
+   }
+
+   removeEvents() {
+      this.switchCard.removeEventListener( 'change', this.eventIsCounter )
+   }
 
    isCounter() {
       this.minus.addEventListener( 'click', this.eventCntMinus )
@@ -120,27 +152,4 @@ class CardSim extends CardRent {
       this.price.textContent = this.cardPrice * cnt
    }
 
-   eventSwitch() {
-      this.switchCard.addEventListener( 'change', this.eventIsCounter )
-   }
-
-}
-
-
-window.onload = () => {
-   tariffs.forEach( tariff => {
-
-      tariff.equipments.forEach( (equipment, i) => {
-         if (equipment.plan) {
-            new CardPlan( tariff, equipment, i ).eventSwitch()
-         } else if (equipment.id === 'equipment-sim') {
-            const cardSim = new CardSim( tariff, equipment, i )
-            cardSim.eventSwitch()
-            cardSim.isCounter()
-         } else {
-            new CardRent( tariff, equipment, i ).eventSwitch()
-         }
-      } )
-
-   } )
 }

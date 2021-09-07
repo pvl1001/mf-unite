@@ -16,7 +16,7 @@ import './js/plugins_config' // настройки плагинов
 import './js/script' // прочее
 import './js/order' // валидация заявки на подключение
 import './js/calcRadio' // расчеты по переключателям
-import './js/calculate' // расчеты Almond
+import './js/calculateAlmond' // расчеты Almond
 import './js/analytics' // аналитика
 import './js/toPlug' // Скролл по якорю
 import './js/connect' // кнопка headBanner "Подключить"
