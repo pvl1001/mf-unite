@@ -72,7 +72,7 @@
                                        {{#h-if id '!==' 'eq-almond'}}
                                        onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
                                        {{else}}
-                                       data-toggle="modal" data-target="#modalAlmond"
+                                       data-toggle="modal" data-target="#modalAlmond-{{../id}}"
                                        onclick="analytics('details_{{dataView}}')"
                                        {{/h-if}}
                                     >{{{name}}}

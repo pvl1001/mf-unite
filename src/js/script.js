@@ -34,4 +34,4 @@ $( '.modal' ).on( 'shown.bs.modal', function (e) {
 } )
 
 // открыть modal
-// $( '#premium' ).modal( 'show' )
+// $( '#modalAlmond-two-web' ).modal( 'show' )
