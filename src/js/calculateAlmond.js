@@ -1,5 +1,5 @@
 $( '.modalAlmond' ).on( 'shown.bs.modal', function (e) {
-   if(e.currentTarget.id === 'modalAlmond') {
+   if (e.currentTarget.id === 'modalAlmond') {
       window.almond = new EqiupmentsAlmond( e.currentTarget.id )
       almond.addEvents()
    } else {
@@ -9,6 +9,7 @@ $( '.modalAlmond' ).on( 'shown.bs.modal', function (e) {
 } )
 $( '.modalAlmond' ).on( 'hidden.bs.modal', function (e) {
    almond.removeEvents()
+   if (almond.totalPrice.textContent === '0' && almond.id !== 'modalAlmond') almond.sumCardAlmondNull()
 } )
 $( '.modalAboutAlmond' ).on( 'shown.bs.modal', function (e) {
    window.aboutAlmond = new AboutAlmond( e.currentTarget.id )
@@ -27,6 +28,8 @@ class Almond {
       this.totalPrice = this.modal.querySelector( '.price .new-price' )
       this.cards = this.modal.querySelectorAll( '.card-price' )
       this.btn = this.modal.querySelector( '.modalAlmond__price-btn' )
+      this.priceCardAlmond = document.querySelector( '#card-' + this.parentModal + '-eq-almond .price__current' )
+      this.switchAlmond = document.querySelector( '#card-' + this.parentModal + '-eq-almond .switch input' )
    }
 
    addEvents() {
@@ -50,14 +53,16 @@ class Almond {
    }
 
    sumCardAlmond() {
-      this.onSwitchAlmond()
-      const priceCardAlmond = document.querySelector( '#card-' + this.parentModal + '-eq-almond .price__current' )
-      priceCardAlmond.textContent = this.totalPrice.textContent + ' '
+      this.switchAlmond.checked = true
+      this.priceCardAlmond.textContent = this.totalPrice.textContent + ' '
       $( '.tariff-modal.show' )[0][almond.parentModal][0].sumTotalPrice()
    }
 
-   onSwitchAlmond() {
-      document.querySelector( '#card-' + this.parentModal +'-eq-almond .switch input' ).checked = true
+   sumCardAlmondNull() {
+      const firstCardPrice = this.cards[0].querySelector( '.card-price__text-price p' ).textContent
+      this.priceCardAlmond.textContent = parseInt( firstCardPrice.match( /\d+/ ) ) + ' '
+      this.switchAlmond.checked = false
+      cardAlmond.sumTotalPrice()
    }
 
    card() {
@@ -160,7 +165,7 @@ class AboutAlmond extends Almond {
 
 class EqiupmentsAlmond extends Almond {
    constructor(id) {
-      super(id)
+      super( id )
    }
 
    clickBtn() {
@@ -168,5 +173,6 @@ class EqiupmentsAlmond extends Almond {
       openOrder( 'send_', 'almond' )
    }
 
-   isDisabledBtn(totalPrice) {}
+   isDisabledBtn(totalPrice) {
+   }
 }

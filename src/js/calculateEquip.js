@@ -13,6 +13,10 @@ $( '.tariff-modal' ).on( 'shown.bs.modal', function (e) {
          this[tariff.id].push( cardSim )
          cardSim.addEvents()
          cardSim.isCounter()
+      } else if (equipment.id === 'eq-almond') {
+         window.cardAlmond = new CardRent( tariff, equipment, i )
+         this[tariff.id].push( cardAlmond )
+         cardAlmond.addEvents()
       } else {
          window.cardRent = new CardRent( tariff, equipment, i )
          this[tariff.id].push( cardRent )
@@ -58,11 +62,11 @@ class CardRent {
    sumTotalPrice() {
       const parentModal = document.getElementById( this.tariff )
       const cards = parentModal.querySelectorAll( '.dop-options-card' )
-      const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector('.switch input').checked )
+      const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector( '.switch input' ).checked )
       this.totalPriceTempl.textContent = cardsSwitchOn
-         .map(card => parseInt( card.querySelector('.price__current').textContent.match( /\d+/ ) ) )
-         .reduce((a, b) => a + b, this.totalPrice)
-      this.isDescription(cardsSwitchOn)
+         .map( card => parseInt( card.querySelector( '.price__current' ).textContent.match( /\d+/ ) ) )
+         .reduce( (a, b) => a + b, this.totalPrice )
+      this.isDescription( cardsSwitchOn )
    }
 }
 
