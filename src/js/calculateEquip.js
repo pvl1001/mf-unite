@@ -12,7 +12,6 @@ $( '.tariff-modal' ).on( 'shown.bs.modal', function (e) {
          window.cardSim = new CardSim( tariff, equipment, i )
          this[tariff.id].push( cardSim )
          cardSim.addEvents()
-         cardSim.isCounter()
       } else if (equipment.id === 'eq-almond') {
          window.cardAlmond = new CardRent( tariff, equipment, i )
          this[tariff.id].push( cardAlmond )
@@ -126,10 +125,13 @@ class CardSim extends CardRent {
 
    addEvents() {
       this.switchCard.addEventListener( 'change', this.eventIsCounter )
+      this.isCounter()
    }
 
    removeEvents() {
       this.switchCard.removeEventListener( 'change', this.eventIsCounter )
+      this.minus.removeEventListener( 'click', this.eventCntMinus )
+      this.plus.removeEventListener( 'click', this.eventCntPlus )
    }
 
    isCounter() {
