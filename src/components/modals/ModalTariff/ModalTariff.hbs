@@ -54,7 +54,7 @@
                   <ul class="tariff-modal__dop-options-cards">
 
                      {{#each equipments}}
-                        {{#unless @last}}
+                        {{#h-if id '!==' 'equipment-sim'}}
                            <li id="card-{{../id}}-{{id}}"
                                class="tariff-modal__dop-options-card dop-options-card dop-options-card__option_{{../id}}-{{dataView}}
                                   {{#if plan}} dop-options-card__option_plan{{/if}}">
@@ -121,7 +121,7 @@
                                  </div>
 
                                  <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
                                     <span class="round"></span>
                                  </label>
                               </div>
@@ -155,7 +155,7 @@
                               </div>
 
                            </li>
-                        {{/unless}}
+                        {{/h-if}}
                      {{/each}}
 
 

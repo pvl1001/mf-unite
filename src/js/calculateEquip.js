@@ -42,6 +42,7 @@ class CardRent {
 
    addEvents() {
       this.switchCard.addEventListener( 'change', this.eventSumTotalPrice )
+      this.sumTotalPrice()
    }
 
    removeEvents() {
@@ -55,6 +56,7 @@ class CardRent {
    }
 
    sumTotalPrice() {
+      debugger
       const parentModal = document.getElementById( this.tariff )
       const cards = parentModal.querySelectorAll( '.dop-options-card' )
       const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector('.switch input').checked )
