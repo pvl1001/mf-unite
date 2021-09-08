@@ -1113,10 +1113,7 @@
             "img": "pristavka.png",
             "price": 199,
             "dataView": "androidtv",
-            "plan": {
-               "24": 299,
-               "36": 199
-            }
+            "plan": null
          },
          {
             "id": "eq-FR100-1",
@@ -1153,10 +1150,7 @@
             "img": "fr100.png",
             "price": 55,
             "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
+            "plan": null
          },
          {
             "id": "eq-FR1000-1",
@@ -1193,10 +1187,7 @@
             "img": "fr1000.png",
             "price": 88,
             "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
+            "plan": null
          },
          {
             "id": "eq-MFTV",
@@ -1224,10 +1215,7 @@
             "img": "tv_new.png",
             "price": 99,
             "dataView": "mftv",
-            "plan": {
-               "24": 239,
-               "36": 159
-            }
+            "plan": null
          },
          {
             "id": "eq-almond",
@@ -1461,10 +1449,7 @@
             "img": "pristavka.png",
             "price": 199,
             "dataView": "androidtv",
-            "plan": {
-               "24": 299,
-               "36": 199
-            }
+            "plan": null
          },
          {
             "id": "eq-FR100-1",
@@ -1501,10 +1486,7 @@
             "img": "fr100.png",
             "price": 55,
             "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
+            "plan": null
          },
          {
             "id": "eq-FR1000-1",
@@ -1541,10 +1523,7 @@
             "img": "fr1000.png",
             "price": 88,
             "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
+            "plan": null
          },
          {
             "id": "eq-MFTV",
@@ -2796,10 +2775,7 @@
             "img": "pristavka.png",
             "price": 199,
             "dataView": "androidtv",
-            "plan": {
-               "24": 299,
-               "36": 199
-            }
+            "plan": null
          },
          {
             "id": "eq-FR100-1",
@@ -2836,10 +2812,7 @@
             "img": "fr100.png",
             "price": 55,
             "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
+            "plan": null
          },
          {
             "id": "eq-FR1000-1",
@@ -2876,10 +2849,7 @@
             "img": "fr1000.png",
             "price": 88,
             "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
+            "plan": null
          },
          {
             "id": "eq-MFTV",
@@ -2907,10 +2877,7 @@
             "img": "tv_new.png",
             "price": 99,
             "dataView": "mftv",
-            "plan": {
-               "24": 239,
-               "36": 159
-            }
+            "plan": null
          },
          {
             "id": "eq-almond",
@@ -3158,10 +3125,7 @@
             "img": "pristavka.png",
             "price": 199,
             "dataView": "androidtv",
-            "plan": {
-               "24": 299,
-               "36": 199
-            }
+            "plan": null
          },
          {
             "id": "eq-FR100-1",
@@ -3198,10 +3162,7 @@
             "img": "fr100.png",
             "price": 55,
             "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
+            "plan": null
          },
          {
             "id": "eq-FR1000-1",
@@ -3238,10 +3199,7 @@
             "img": "fr1000.png",
             "price": 88,
             "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
+            "plan": null
          },
          {
             "id": "eq-MFTV",
@@ -3269,10 +3227,7 @@
             "img": "tv_new.png",
             "price": 99,
             "dataView": "mftv",
-            "plan": {
-               "24": 239,
-               "36": 159
-            }
+            "plan": null
          },
          {
             "id": "eq-almond",
@@ -4859,10 +4814,7 @@
             "img": "pristavka.png",
             "price": 199,
             "dataView": "androidtv",
-            "plan": {
-               "24": 299,
-               "36": 199
-            }
+            "plan": null
          },
          {
             "id": "eq-FR100-1",
@@ -4899,10 +4851,7 @@
             "img": "fr100.png",
             "price": 55,
             "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
+            "plan": null
          },
          {
             "id": "eq-FR1000-1",
@@ -4939,10 +4888,7 @@
             "img": "fr1000.png",
             "price": 88,
             "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
+            "plan": null
          },
          {
             "id": "eq-MFTV",
@@ -4970,10 +4916,7 @@
             "img": "tv_new.png",
             "price": 99,
             "dataView": "mftv",
-            "plan": {
-               "24": 239,
-               "36": 159
-            }
+            "plan": null
          },
          {
             "id": "eq-almond",
@@ -5549,10 +5492,7 @@
             "img": "pristavka.png",
             "price": 199,
             "dataView": "androidtv",
-            "plan": {
-               "24": 299,
-               "36": 199
-            }
+            "plan": null
          },
          {
             "id": "eq-FR100-1",
@@ -5589,10 +5529,7 @@
             "img": "fr100.png",
             "price": 55,
             "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
+            "plan": null
          },
          {
             "id": "eq-FR1000-1",
@@ -5629,10 +5566,7 @@
             "img": "fr1000.png",
             "price": 88,
             "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
+            "plan": null
          },
          {
             "id": "eq-MFTV",
@@ -5660,10 +5594,7 @@
             "img": "tv_new.png",
             "price": 99,
             "dataView": "mftv",
-            "plan": {
-               "24": 239,
-               "36": 159
-            }
+            "plan": null
          },
          {
             "id": "eq-almond",
@@ -6205,6 +6136,34 @@
          }
       ],
       "equipments": [
+         {
+            "id": "eq-android-tv",
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": null
+         },
          {
             "id": "eq-unite",
             "name": "4G Wi-Fi роутер",
