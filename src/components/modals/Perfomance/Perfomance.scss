@@ -209,12 +209,14 @@
       }
    }
 
-   @media (max-width: 677px) {
+   @media (max-width: 767px) {
       .modal-dialog {
+         margin: 54px 0;
          padding: 0;
-         margin: 0;
       }
+   }
 
+   @media (max-width: 677px) {
       .modal-content {
          padding: 47px 16px 54px;
       }
