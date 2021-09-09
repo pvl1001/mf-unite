@@ -13,6 +13,7 @@
 
    &__banners {
       width: 66%;
+      max-width: 647px;
       overflow-y: auto;
       padding-right: 20px;
 
@@ -308,7 +309,7 @@
    }
 
 
-   @media (max-width: 1200px) {
+   @media (max-width: 1279px) {
       background-color: #fff;
 
       .modal-dialog {

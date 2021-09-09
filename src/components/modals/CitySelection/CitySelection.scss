@@ -5,7 +5,6 @@
 
    .modal-content {
       padding: 60px 115px 60px 138px;
-      border-radius: 0;
       font-size: 15px;
       line-height: 20px;
       font-weight: 500;
@@ -96,9 +95,29 @@
       }
    }
 
+   @media (max-width: 1279px) {
+      background-color: #fff;
+
+      .modal-dialog {
+         height: 100%;
+         margin: 0;
+         max-width: none;
+         width: 100%;
+      }
+
+      .modal-content {
+         font-size: 15px;
+         font-weight: 500;
+         height: 100vh;
+         line-height: 20px;
+         padding: 60px 115px 60px 138px;
+         width: 100%;
+      }
+   }
+
    @media (max-width: 1024px) {
       .modal-content {
-         padding: 60px 30px !important;
+         padding: 60px 30px;
       }
    }
 
@@ -111,10 +130,6 @@
       .select-region {
          padding: 30px 0 0;
          column-count: 1;
-      }
-
-      .city-selection-wrapper {
-         padding-right: 0;
       }
 
       .header-city__auto span {

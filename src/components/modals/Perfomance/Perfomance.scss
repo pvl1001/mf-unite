@@ -12,11 +12,6 @@
       max-width: 916px;
    }
 
-   .modal-content {
-      border-radius: 10px;
-      overflow: hidden;
-   }
-
    &__title {
       margin-bottom: 45px;
       padding-right: 47px;
@@ -219,10 +214,6 @@
    @media (max-width: 677px) {
       .modal-content {
          padding: 47px 16px 54px;
-      }
-
-      &__title {
-         //margin-bottom: 20px;
       }
 
       &__sale {
