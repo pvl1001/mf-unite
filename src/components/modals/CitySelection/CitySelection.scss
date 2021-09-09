@@ -9,7 +9,7 @@
       line-height: 20px;
       font-weight: 500;
       width: 100%;
-      height: 820px;
+      max-height: 85vh;
    }
 
    .header-city {
@@ -109,6 +109,7 @@
          font-size: 15px;
          font-weight: 500;
          height: 100vh;
+         max-height: none;
          line-height: 20px;
          padding: 60px 115px 60px 138px;
          width: 100%;
