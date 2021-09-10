@@ -117,6 +117,7 @@ class CardSim extends CardRent {
    constructor(tariff, equipment, i) {
       super( tariff, equipment, i );
 
+      this.equipment = equipment
       this.counter = this.card.querySelector( '.counter' )
       this.minus = this.counter.querySelector( '.counter__minus' )
       this.plus = this.counter.querySelector( '.counter__plus' )
@@ -167,7 +168,7 @@ class CardSim extends CardRent {
    }
 
    sumPriceCard(cnt) {
-      this.price.textContent = this.cardPrice * cnt
+      this.price.textContent = this.equipment.oldPrice * 0.6 * cnt
    }
 
 }
