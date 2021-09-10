@@ -52,6 +52,10 @@ class CardRent {
       this.switchCard.removeEventListener( 'change', this.eventSumTotalPrice )
    }
 
+   filterNum(val) {
+      return parseInt( val.match( /\d+/ ) )
+   }
+
    isDescription(cardsSwitchOn) {
       cardsSwitchOn.length
          ? this.description.style.visibility = 'visible'
@@ -63,7 +67,7 @@ class CardRent {
       const cards = parentModal.querySelectorAll( '.dop-options-card' )
       const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector( '.switch input' ).checked )
       this.totalPriceTempl.textContent = cardsSwitchOn
-         .map( card => parseInt( card.querySelector( '.price__current' ).textContent.match( /\d+/ ) ) )
+         .map( card => this.filterNum(card.querySelector( '.price__current' ).textContent) )
          .reduce( (a, b) => a + b, this.totalPrice )
       this.isDescription( cardsSwitchOn )
    }
@@ -144,6 +148,7 @@ class CardSim extends CardRent {
       let cnt = this.counter.querySelector( 'input' )
       if (cnt.value > 1) --cnt.value
       this.sumPriceCard( cnt.value )
+      this.sumSale()
       if (this.switchCard.checked) this.sumTotalPrice()
    }
 
@@ -152,7 +157,13 @@ class CardSim extends CardRent {
       if (cnt.value < 10) ++cnt.value
       this.sumPriceCard( cnt.value )
       this.switchCard.checked = true
+      this.sumSale()
       this.sumTotalPrice()
+   }
+
+   sumSale() {
+      const sale = this.card.querySelector('.price__old')
+      if(sale) sale.textContent = this.filterNum(this.price.textContent) / 0.6 + ' ₽'
    }
 
    sumPriceCard(cnt) {
