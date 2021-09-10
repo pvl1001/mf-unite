@@ -92,6 +92,11 @@
    }
 
    @media (max-width: 767px) {
+      .modal-dialog {
+         margin: 54px 0;
+         padding: 0;
+         align-items: flex-start;
+      }
 
       .modal-content {
          padding: 88px 0;
