@@ -82,7 +82,7 @@
          },
          {
             "icon": "fiolet_zone.svg",
-            "text": "Зона покрытия более 70 м2"
+            "text": "Зона покрытия более 70 м<sup>2</sup>"
          },
          {
             "icon": "fiolet_router.svg",
@@ -167,7 +167,7 @@
                },
                {
                   "icon": "zone-24_w.svg",
-                  "text": "Зона покрытия <br> до 120 м2"
+                  "text": "Зона покрытия <br> до 120 м<sup>2</sup>"
                },
                {
                   "icon": "hertz_24_w.svg",
@@ -191,7 +191,7 @@
                },
                {
                   "icon": "zone-24_w.svg",
-                  "text": "Зона покрытия <br> до 120 м2"
+                  "text": "Зона покрытия <br> до 120 м<sup>2</sup>"
                },
                {
                   "icon": "Sim-card_24.svg",
