@@ -1,32 +1,32 @@
 import tariffs from '../json/tariffs.json'
 
-$( '.tariff-modal' ).on( 'shown.bs.modal', function (e) {
-   const tariff = tariffs.find( tariff => tariff.id === e.currentTarget.id )
-   this[tariff.id] = []
-   tariff.equipments.forEach( (equipment, i) => {
-      if (equipment.plan) {
-         window.cardPlan = new CardPlan( tariff, equipment, i )
-         this[tariff.id].push( cardPlan )
-         cardPlan.addEvents()
-      } else if (equipment.id === 'equipment-sim') {
-         window.cardSim = new CardSim( tariff, equipment, i )
-         this[tariff.id].push( cardSim )
-         cardSim.addEvents()
-      } else if (equipment.id === 'eq-almond') {
-         window.cardAlmond = new CardRent( tariff, equipment, i )
-         this[tariff.id].push( cardAlmond )
-         cardAlmond.addEvents()
-      } else {
-         window.cardRent = new CardRent( tariff, equipment, i )
-         this[tariff.id].push( cardRent )
-         cardRent.addEvents()
-      }
+$( '.about-tariff-modal' )
+   .on( 'shown.bs.modal', function (e) {
+      const tariff = tariffs.find( tariff => tariff.id === e.currentTarget.id )
+      this[tariff.id] = []
+      tariff.equipments.forEach( (equipment, i) => {
+         if (equipment.plan) {
+            window.cardPlan = new CardPlan( tariff, equipment, i )
+            this[tariff.id].push( cardPlan )
+            cardPlan.addEvents()
+         } else if (equipment.id === 'equipment-sim') {
+            window.cardSim = new CardSim( tariff, equipment, i )
+            this[tariff.id].push( cardSim )
+            cardSim.addEvents()
+         } else if (equipment.id === 'eq-almond') {
+            window.cardAlmond = new CardRent( tariff, equipment, i )
+            this[tariff.id].push( cardAlmond )
+            cardAlmond.addEvents()
+         } else {
+            window.cardRent = new CardRent( tariff, equipment, i )
+            this[tariff.id].push( cardRent )
+            cardRent.addEvents()
+         }
+      } )
    } )
-
-} )
-$( '.tariff-modal' ).on( 'hidden.bs.modal', function (e) {
-   this[e.currentTarget.id].forEach( el => el.removeEvents() )
-} )
+   .on( 'hidden.bs.modal', function (e) {
+      this[e.currentTarget.id].forEach( el => el.removeEvents() )
+   } )
 
 class CardRent {
    constructor(tariff, equipment, index) {
@@ -67,7 +67,7 @@ class CardRent {
       const cards = parentModal.querySelectorAll( '.dop-options-card' )
       const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector( '.switch input' ).checked )
       this.totalPriceTempl.textContent = cardsSwitchOn
-         .map( card => this.filterNum(card.querySelector( '.price__current' ).textContent) )
+         .map( card => this.filterNum( card.querySelector( '.price__current' ).textContent ) )
          .reduce( (a, b) => a + b, this.totalPrice )
       this.isDescription( cardsSwitchOn )
    }
@@ -163,8 +163,8 @@ class CardSim extends CardRent {
    }
 
    sumSale() {
-      const sale = this.card.querySelector('.price__old')
-      if(sale) sale.textContent = this.filterNum(this.price.textContent) / 0.6 + ' ₽'
+      const sale = this.card.querySelector( '.price__old' )
+      if (sale) sale.textContent = this.filterNum( this.price.textContent ) / 0.6 + ' ₽'
    }
 
    sumPriceCard(cnt) {
