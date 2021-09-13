@@ -1452,6 +1452,46 @@
             "plan": null
          },
          {
+            "id": "eq-FR100-1",
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
             "id": "eq-FR1000-2",
             "name": "Wi-Fi роутер FR1000-2",
             "speed": "(1 Гбит/с)",
@@ -2717,6 +2757,46 @@
             "plan": null
          },
          {
+            "id": "eq-FR100-1",
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
             "id": "eq-FR1000-2",
             "name": "Wi-Fi роутер FR1000-2",
             "speed": "(1 Гбит/с)",
@@ -3034,6 +3114,46 @@
             "price": 199,
             "dataView": "androidtv",
             "plan": null
+         },
+         {
+            "id": "eq-FR100-1",
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
          },
          {
             "id": "eq-FR1000-2",
