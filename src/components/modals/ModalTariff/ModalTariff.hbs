@@ -120,7 +120,9 @@
                                  </div>
 
                                  <label class="switch">
-                                    <input type="checkbox" {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
+                                    <input type="checkbox"
+                                           {{#h-if price '===' '0'}}checked{{/h-if}}
+                                           {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
                                     <span class="round"></span>
                                  </label>
                               </div>
