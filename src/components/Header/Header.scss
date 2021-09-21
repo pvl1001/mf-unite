@@ -67,7 +67,7 @@
    }
 
    .btn {
-      padding: 0 33px;
+      width: 200px;
    }
 
    &__col2 {
@@ -210,7 +210,11 @@
       }
    }
 
-   @media (max-width: 320px) {
+   @media (max-width: 350px) {
+      .btn {
+         width: 155px;
+      }
+
       &__text h1 {
          white-space: normal;
       }
