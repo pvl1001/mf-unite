@@ -1,11 +1,14 @@
 class Range {
-   constructor($range) {
-      this.$range = $range
-      this.$labels = this.$range.querySelectorAll( '.range-slider__label' )
-      this.$input = this.$range.querySelector( 'input[type="range"]' )
+   constructor(rangeProps) {
+      this.$labels = rangeProps.$labels
+      this.$input = rangeProps.$input
+      this.$descMount = rangeProps.$descMount
+      this.$descPercent = rangeProps.$descPercent
+      this.$progress = rangeProps.$progress
+      this.$price = rangeProps.$price
       this.eventRange = () => {
-         this.isActiveRangeProgress(  )
-         this.isActiveRangeLabel(  )
+         this.isActiveRangeProgress()
+         this.isActiveRangeLabel()
          this.isChangeDesc()
          this.setSalePrice()
       }
@@ -14,29 +17,25 @@ class Range {
    isChangeDesc() {
       const $currentMount = this.$labels[0].children[this.$input.value].firstElementChild
       const $currentPercent = this.$labels[1].children[this.$input.value]
-      const $descMount = this.$range.querySelector( '.tariff-range__desc-mounts' )
-      const $descPercent = this.$range.querySelector( '.tariff-range__desc-percent' )
-      $descMount.textContent = $currentMount.textContent
-      $descPercent.textContent = $currentPercent.textContent
+      this.$descMount.textContent = $currentMount.textContent
+      this.$descPercent.textContent = $currentPercent.textContent
    }
 
    isActiveRangeProgress() {
-      const $progress = this.$range.querySelector( '.mf-range__progress-active' )
       const percent = this.$input.value / this.$input.max * 100
-      $progress.style.width = percent + '%'
+      this.$progress.style.width = percent + '%'
    }
 
    isActiveRangeLabel() {
       this.$labels.forEach( $label => {
-         Array.from($label.children).forEach( li => li.classList.remove( 'range-slider__label-active' ) )
+         Array.from( $label.children ).forEach( li => li.classList.remove( 'range-slider__label-active' ) )
          $label.children[this.$input.value].classList.add( 'range-slider__label-active' )
       } )
    }
 
    setSalePrice() {
-      const $price = this.$range.querySelector('.tariff-range__price span')
-      const $percent = this.$range.querySelector('.tariff-range__desc-percent')
-      $price.textContent = Math.ceil(550 - 550 * (parseInt( $percent.textContent.match( /\d+/ ) ) / 100))
+      const price = 550
+      this.$price.textContent = Math.ceil( price - price * (parseInt( this.$descPercent.textContent.match( /\d+/ ) ) / 100) )
    }
 
    addEvent() {
@@ -48,4 +47,15 @@ class Range {
 }
 
 
-window.onload = () => new Range( document.getElementById( 'range' ) ).addEvent()
+window.onload = () => {
+   const $range = document.getElementById( 'range' )
+   const $labels = $range.querySelectorAll( '.range-slider__label' )
+   const $input = $range.querySelector( 'input[type="range"]' )
+   const $descMount = $range.querySelector( '.tariff-range__desc-mounts' )
+   const $descPercent = $range.querySelector( '.tariff-range__desc-percent' )
+   const $progress = $range.querySelector( '.mf-range__progress-active' )
+   const $price = $range.querySelector( '.tariff-range__price span' )
+
+   const rangeProps = {$labels, $input, $descMount, $descPercent, $progress, $price}
+   new Range( rangeProps ).addEvent()
+}
