@@ -1,14 +1,13 @@
 <section class="equipments">
    <div class="wrapper">
-      <h1 class="equipments__title">Доступное оборудование</h1>
+      <h1 class="equipments__title">Оборудование</h1>
 
       <div class="equipments__slider slider">
          {{#each  equipments}}
             <div class="slider__card equipments-card card">
 
                {{#if mark}}
-                  <div class="equipments-card__mark mark"
-                       {{#if @first}}style="background-color: var(--mf-orange)"{{/if}}>
+                  <div class="equipments-card__mark mark">
                      <span>{{mark}}</span>
                   </div>
                {{/if}}
@@ -45,19 +44,10 @@
                   >Заказать
                   </button>
 
-                  {{#if @last}}
-                     <div class="link"
-                          data-toggle="modal"
-                          data-target="#modalAlmond"
+                  <div class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
+                     Подробнее
+                  </div>
 
-                     >
-                        Подробнее
-                     </div>
-                  {{else}}
-                     <div class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
-                        Подробнее
-                     </div>
-                  {{/if}}
                </div>
             </div>
          {{/each}}

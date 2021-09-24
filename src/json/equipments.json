@@ -2,7 +2,7 @@
    {
       "id": "eq-android-tv",
       "name": "Android TV",
-      "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+      "mark": "Аренда",
       "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
       "params": [
          {
@@ -123,117 +123,5 @@
       "img": "tv_new.png",
       "price": 99,
       "dataView": "mftv"
-   },
-   {
-      "id": "eq-almond",
-      "name": "Умный дом",
-      "text": "Wi-Fi роутер Almond с системой охраны дома.",
-      "params": [
-         "Настройте за несколько секунд",
-         "Управляйте Wi-Fi через приложение",
-         "Объедините устройства в умный дом",
-         "Получайте сигналы, если в дом кто-то проникнет"
-      ],
-      "img": "almond.png",
-      "price": 399,
-      "icons": [
-         {
-            "icon": "settings",
-            "text": "Настройте за несколько секунд"
-         },
-         {
-            "icon": "phone",
-            "text": "Управляйте Wi-Fi через приложение"
-         },
-         {
-            "icon": "safety",
-            "text": "Объедините устройства в умный дом"
-         },
-         {
-            "icon": "message",
-            "text": "Получайте сигналы,<br> если в дом кто-то проникнет"
-         }
-      ],
-      "dataView": "almond",
-      "routers": [
-         {
-            "id": "almond-0",
-            "name": "Роутер Almond 3",
-            "img": "Almond-3_about.png",
-            "params": [
-               {
-                  "icon": "speed-2_w.svg",
-                  "text": "Скорость <br> до 300 Мбит/с"
-               },
-               {
-                  "icon": "zone-24_w.svg",
-                  "text": "Зона покрытия <br> до 120 м<sup>2</sup>"
-               },
-               {
-                  "icon": "hertz_24_w.svg",
-                  "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
-               }
-            ],
-            "price": 399
-         },
-         {
-            "id": "almond-1",
-            "name": "Роутер Almond 3S",
-            "img": "Almond-3S_about.png",
-            "params": [
-               {
-                  "icon": "speed-2_w.svg",
-                  "text": "Скорость <br> до 300 Мбит/с"
-               },
-               {
-                  "icon": "Whats-left_24.svg",
-                  "text": "Встроенный <br> аккумулятор"
-               },
-               {
-                  "icon": "zone-24_w.svg",
-                  "text": "Зона покрытия <br> до 120 м<sup>2</sup>"
-               },
-               {
-                  "icon": "Sim-card_24.svg",
-                  "text": "LTE <br> резервирование"
-               },
-               {
-                  "icon": "hertz_24_w.svg",
-                  "text": "Диапазоны частот <br> 2,4 и 5 Ггц"
-               }
-            ],
-            "price": 499
-         }
-      ],
-      "sensors": [
-         {
-            "id":"sensor-0",
-            "name": "Wi-Fi камера",
-            "img": "Wi-Fi-kamera_about.png",
-            "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
-            "price": 250
-         },
-         {
-            "id": "sensor-1",
-            "name": "Датчик движения",
-            "img": "Datchik-dvizheniya_about.png",
-            "desc": "Будьте в курсе любых передвижений в доме",
-            "price": 150
-         },
-         {
-            "id": "sensor-2",
-            "name": "Датчик открытия и закрытия",
-            "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
-            "desc": "Будьте в курсе всех незваных гостей",
-            "price": 150
-         },
-         {
-            "id": "sensor-3",
-            "name": "Датчик протечки воды",
-            "img": "Datchik-protechki-vody_about.png",
-            "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
-            "price": 150
-         }
-      ]
    }
 ]
