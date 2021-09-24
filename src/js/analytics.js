@@ -11,19 +11,19 @@ document.addEventListener( "DOMContentLoaded", function () {
                eventFired.push( lazyBlock )
                if (widthW > 1024) {
                   gtag( 'event', 'desktop', {
-                     'event_category': 'EventFMC_ViewBlock',
+                     'event_category': 'EventHomeMF_ViewBlock',
                      'event_label': lazyBlock,
                      'non_interaction': true
                   } )
                } else if (widthW > 700) {
                   gtag( 'event', 'tablet', {
-                     'event_category': 'EventFMC_ViewBlock',
+                     'event_category': 'EventHomeMF_ViewBlock',
                      'event_label': lazyBlock,
                      'non_interaction': true
                   } )
                } else {
                   gtag( 'event', 'mobile', {
-                     'event_category': 'EventFMC_ViewBlock',
+                     'event_category': 'EventHomeMF_ViewBlock',
                      'event_label': lazyBlock,
                      'non_interaction': true
                   } )
@@ -39,5 +39,5 @@ document.addEventListener( "DOMContentLoaded", function () {
 } )
 
 window.analytics = eventLabel => {
-   gtag('event', 'click', {'event_category': 'EventFMC','event_label': 'click_button_' + eventLabel })
+   gtag('event', 'click', {'event_category': 'EventHomeMF','event_label': 'click_button_' + eventLabel })
 }
