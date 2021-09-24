@@ -4,7 +4,7 @@
 
    &__text {
       color: #fff;
-      width: 45%;
+      width: 55%;
 
       h1 {
          font-size: 52px;
@@ -25,10 +25,9 @@
          }
 
          @media (max-width: 415px) {
-            nobr {
-               white-space: pre-wrap;
-            }
-
+            //nobr {
+            //   white-space: pre-wrap;
+            //}
          }
       }
 
@@ -84,15 +83,6 @@
       align-items: center;
    }
 
-   &__about {
-      font-size: 15px;
-      line-height: 24px;
-      color: #fff;
-      margin-left: 35px;
-      text-decoration: underline;
-      cursor: pointer;
-   }
-
    @media (max-width: 1920px) {
       &__text {
 
@@ -130,6 +120,7 @@
       }
 
       &__text {
+         height: 515px;
          width: 100%;
          margin-top: 0;
          text-align: center;
@@ -181,6 +172,7 @@
 
    @media (max-width: 602px) {
       &__text {
+         height: 465px;
          padding: 0 16px;
 
          h1 {
