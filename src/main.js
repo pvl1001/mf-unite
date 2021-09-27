@@ -16,17 +16,14 @@ import './js/plugins_config' // настройки плагинов
 import './js/script' // прочее
 import './js/order' // валидация заявки на подключение
 import './js/calcRadio' // расчеты по переключателям
-// import './js/calculateAlmond' // расчеты Almond
 import './js/analytics' // аналитика
-// import './js/toPlug' // Скролл по якорю
 import './js/connect' // кнопка headBanner "Подключить"
 import './js/moreTariff' // Кнопка "подробнее" о тарифе
 import './js/openOrder' // кнопка "Заказать"
 import './js/nextForm' // popUp вперед
 import './js/validate_address' // "проверить возможность подключения"
-// import './js/equipments' // открытие модального окна с оборудованием (скрыть кнопку заказать)
-// import './js/calculateEquip' // расчеты карточек доп. опций
 import './js/range' // ползунок тарифа
+import './js/calculateModalEquip' //
 
 // build all img
 function requireAll(r) { r.keys().forEach(r); }

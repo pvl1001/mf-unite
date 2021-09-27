@@ -901,5 +901,32 @@ form {
       background-color: var(--mf-orange);
    }
 
+}
+
+.option-radio {
+   display: flex;
+   flex-wrap: wrap;
+
+   &__title {
+      margin-bottom: 15px;
+   }
+
+   label {
+      display: flex;
+      align-items: center;
+      line-height: 20px;
+
+      &:first-child {
+         margin-right: 18px;
+      }
+   }
+
+   > * {
+      margin-bottom: 16px;
+   }
+
+   &__radio-btn:not(:last-child) {
+      margin-right: 20px;
+   }
 
 }

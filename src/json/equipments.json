@@ -59,7 +59,11 @@
       ],
       "img": "fr100.png",
       "price": 55,
-      "dataView": "fr100"
+      "dataView": "fr100",
+      "plan": {
+         "24": 149,
+         "36": 99
+      }
    },
    {
       "id": "eq-FR1000-2",
@@ -95,7 +99,11 @@
       ],
       "img": "fr1000-2.png",
       "price": 88,
-      "dataView": "fr1000-2"
+      "dataView": "fr1000-2",
+      "plan": {
+         "24": 199,
+         "36": 129
+      }
    },
    {
       "id": "eq-MFTV",
@@ -122,6 +130,10 @@
       ],
       "img": "tv_new.png",
       "price": 99,
-      "dataView": "mftv"
+      "dataView": "mftv",
+      "plan": {
+         "24": 239,
+         "36": 159
+      }
    }
 ]

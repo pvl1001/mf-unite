@@ -28,7 +28,11 @@
                      {{/if}}
 
                      <span class="new-price">
-                        {{#h-if @first '||' @last}}{{else}}от {{/h-if}}{{price}}
+                        {{#if plan}}
+                           от {{plan.[36]}}
+                        {{else}}
+                           {{price}}
+                        {{/if}}
                      </span> <span class="always">₽</span>
 
                      <span>в месяц</span>

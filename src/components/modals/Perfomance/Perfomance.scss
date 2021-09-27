@@ -84,6 +84,15 @@
       }
    }
 
+   &__radio {
+      margin-top: -9px;
+      margin-bottom: 15px;
+   }
+
+   &__radio-title {
+      margin-bottom: 7px;
+   }
+
    .download-info {
       display: flex;
       align-items: flex-start;
@@ -252,6 +261,15 @@
       &__img {
          min-width: 0;
          margin: 0 auto;
+      }
+
+      &__radio {
+         margin-top: -2px;
+         margin-bottom: 15px;
+      }
+
+      &__radio-title {
+         margin-bottom: 4px;
       }
 
       .modal-close {

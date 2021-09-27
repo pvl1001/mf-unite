@@ -38,9 +38,37 @@
                </picture>
             </div>
 
+            {{#h-if mark '===' 'РАССРОЧКА'}}
+               <div class="performance__radio">
+                  <p class="performance__radio-title">
+                     Рассрочка
+                  </p>
+                  <div class="option-radio">
+
+                     <label class="option-radio__radio-btn">
+                        <input name="radio-{{../id}}-{{@index}}" id="radio36-id-{{../id}}-{{@index}}"
+                               type="radio" value="{{plan.[36]}}" checked>
+                        <label for="radio36-id-{{../id}}-{{@index}}"></label>
+                        <span>36 мес</span>
+                     </label>
+
+                     <label class="option-radio__radio-btn">
+                        <input name="radio-{{../id}}-{{@index}}" id="radio24-id-{{../id}}-{{@index}}"
+                               type="radio" value="{{plan.[24]}}">
+                        <label for="radio24-id-{{../id}}-{{@index}}"></label>
+                        <span>24 мес</span>
+                     </label>
+                  </div>
+               </div>
+            {{/h-if}}
+
             <div class="modal-order">
                <div class="modal-order__text">
-                  <p>{{price}} ₽ в месяц</p>
+                  {{#if plan}}
+                     <p><span>{{plan.[36]}}</span> ₽ в месяц</p>
+                  {{else}}
+                     <p>{{price}} ₽ в месяц</p>
+                  {{/if}}
                </div>
                <button class="btn"
                        type="button"
@@ -92,7 +120,7 @@
 
             <div class="modal-order">
                <div class="modal-order__text">
-                  <p>{{price}} ₽ в месяц</p>
+                  <p><span>{{price}}</span> ₽ в месяц</p>
                </div>
                <button class="btn"
                        type="button"
