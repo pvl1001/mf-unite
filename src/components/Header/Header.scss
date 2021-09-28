@@ -5,6 +5,7 @@
    &__text {
       color: #fff;
       width: 55%;
+      white-space: nowrap;
 
       h1 {
          font-size: 52px;
@@ -41,20 +42,20 @@
    }
 
    &__img-wrapp {
-      width: 60%;
+      width: 55%;
       height: 100%;
       align-self: center;
       white-space: nowrap;
       font-size: 0;
       position: relative;
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      align-items: flex-end;
+      justify-content: center;
    }
 
    &__img {
       width: 100%;
-      max-width: 775px;
+      max-width: 430px;
    }
 
    .section-row {
@@ -67,15 +68,6 @@
 
    .btn {
       width: 200px;
-   }
-
-   &__col2 {
-      height: 375px;
-      margin-right: 50px;
-
-      img {
-         height: 100%;
-      }
    }
 
    &__btns {
@@ -92,7 +84,7 @@
       }
    }
 
-   @media (max-width: 1024px) {
+   @media (max-width: 1279px) {
 
       .section-row {
          margin-right: -30px;
@@ -106,9 +98,14 @@
          }
       }
 
+      &__img {
+         max-width: 412px;
+         margin-right: 21px;
+      }
+
    }
 
-   @media (max-width: 935px) {
+   @media (max-width: 1023px) {
       .section-row {
          align-items: flex-start;
          justify-content: center;
@@ -120,13 +117,13 @@
       }
 
       &__text {
-         height: 515px;
          width: 100%;
          margin-top: 0;
          text-align: center;
          min-width: 0;
          margin-bottom: 31px;
          z-index: 1;
+         white-space: normal;
 
          h1 {
             display: block;
@@ -139,17 +136,9 @@
          }
       }
 
-      &__img-wrapp {
-         width: auto;
-         height: auto;
-         z-index: 0;
-         margin-top: -163px;
-      }
-
       &__img {
-         max-width: none;
-         width: auto;
-         height: 436px;
+         max-width: 321px;
+         margin-right: -77px;
       }
 
       &__sale {
@@ -170,10 +159,10 @@
       }
    }
 
-   @media (max-width: 602px) {
+   @media (max-width: 767px) {
       &__text {
-         height: 465px;
          padding: 0 16px;
+         margin-bottom: 21px;
 
          h1 {
             font-size: 30px;
@@ -191,14 +180,9 @@
          margin: 0 -16px;
       }
 
-      &__img-wrapp {
-         width: 100%;
-         margin-top: 0;
-      }
-
       &__img {
-         width: 100%;
-         height: auto;
+         max-width: 213px;
+         margin-right: 0;
       }
    }
 
