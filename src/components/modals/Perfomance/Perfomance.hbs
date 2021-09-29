@@ -67,14 +67,14 @@
                   {{#if plan}}
                      <p><span>{{plan.[36]}}</span> ₽ в месяц</p>
                   {{else}}
-                     <p>{{price}} ₽ в месяц</p>
+                     <p><span>{{price}}</span> ₽ в месяц</p>
                   {{/if}}
                </div>
                <button class="btn"
                        type="button"
                        data-toggle="modal"
                        data-target="#order"
-                       onclick="openOrder('send_', '{{dataView}}')"
+                       onclick="openOrder('send_', '{{dataView}}', '#{{id}} .modal-order__text span', '{{name}}')"
                >Заказать
                </button>
             </div>
@@ -126,7 +126,7 @@
                        type="button"
                        data-toggle="modal"
                        data-target="#order"
-                       onclick="openOrder('send_', '{{dataView}}')"
+                       onclick="openOrder('send_', '{{dataView}}', '#{{id}} .modal-order__text span', '{{name}}')"
                >Заказать
                </button>
             </div>

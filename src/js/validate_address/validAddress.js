@@ -3,6 +3,7 @@ import {showResultMainCheck} from "./showResultMainCheck";
 import {showHideLabel} from "./showHideLabel";
 
 export const validAddress = (data) => {
+   prop.dataAddress = prop.setAddress
    prop.setAddress = {}
 
    if (data.result === 1) {

@@ -4,7 +4,7 @@
 
       <div class="equipments__slider slider">
          {{#each  equipments}}
-            <div class="slider__card equipments-card card">
+            <div class="slider__card equipments-card card card_{{id}}">
 
                {{#if mark}}
                   <div class="equipments-card__mark mark">
@@ -33,7 +33,7 @@
                         {{else}}
                            {{price}}
                         {{/if}}
-                     </span> <span class="always">₽</span>
+                     </span><span class="always">₽</span>
 
                      <span>в месяц</span>
                      {{#if iconInfo}}
@@ -41,7 +41,7 @@
                      {{/if}}
                   </div>
                   <button data-view="tariff_card_{{dataView}}_end"
-                          onclick="openOrder('send_', '{{dataView}}')"
+                          onclick="openOrder('send_', '{{dataView}}', '.card_{{id}} .new-price', '{{name}}')"
                           data-toggle="modal"
                           data-target="#order"
                           class="price-card__btn btn"
