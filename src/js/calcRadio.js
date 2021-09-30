@@ -1,5 +1,5 @@
-import tariffs from '../json/tariffs.json'
 import unite from '../json/unite.json'
+
 const counter = $( '#counterBanner input' )
 
 window.calcRadio = {
@@ -13,8 +13,8 @@ window.calcRadio = {
       this.switch = $( id + ' .item-option .switch input' ) // все switch
       this.totalPrice = $( id + ' .new-price' ) // общая цена
       this.priceSwitch = $( id + ' .item-option__num' ) // switch цена
-      this.switchBanner = $('.banner-for-their .switch input')
-      this.priceBanner = $('.banner-for-their .item-option__num')
+      this.switchBanner = $( '.banner-for-their .switch input' )
+      this.priceBanner = $( '.banner-for-their .item-option__num' )
       let sumBanner = +counter.val() * +this.priceBanner.text()
       const arrSwitchVal = []
 
@@ -24,12 +24,9 @@ window.calcRadio = {
          }
       } )
 
-      if(id === '#unite')  {
-         this.sumPrice = arrSwitchVal.reduce( (a, b) => a + b,  unite.priceSale )
-      } else
-         this.sumPrice = arrSwitchVal.reduce( (a, b) => a + b,  tariffs[index].price )
+      this.sumPrice = arrSwitchVal.reduce( (a, b) => a + b, unite.priceSale )
 
-      if(this.switchBanner.prop('checked') && id === '#ForTheir') {
+      if (this.switchBanner.prop( 'checked' ) && id === '#ForTheir') {
          this.sumPrice = this.sumPrice + sumBanner
          return $( this.totalPrice ).text( this.sumPrice )
       }

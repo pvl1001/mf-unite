@@ -3,8 +3,8 @@ import './plugins/slick'
 import './plugins/jquery.mask'
 import './plugins/jquery.validate'
 import 'bootstrap'
-import 'popper.js'
 import 'select2'
+// import 'popper.js'
 // import './plugins/datepicker'
 
 $( function () {
@@ -93,33 +93,21 @@ $( function () {
    // } )
 
    // popper tippy
-   const maxWidth = () => window.innerWidth >= 830 ? 'none' : 275
-   const placement = () => window.innerWidth >= 830 ? 'right' : 'top'
+   // const maxWidth = () => window.innerWidth >= 830 ? 'none' : 275
+   // const placement = () => window.innerWidth >= 830 ? 'right' : 'top'
    // const placeAlmond = () => window.innerWidth >= 830 ? 'left' : 'top'
 
-   tippy( '.price__icon_all', {
-      content: '<span class="link" onclick="toPlug(`.faq`)">Скидка</span> на абонентскую плату действует 3 месяца после подключения',
-      interactive: true,
-      placement: placement(),
-      maxWidth: maxWidth(),
-      allowHTML: true,
-      theme: 'light',
-      hideOnClick: false,
-      // trigger: 'click',
-   } )
+   // tippy( '.price__icon_all', {
+   //    content: '<span class="link" onclick="toPlug(`.faq`)">Скидка</span> на абонентскую плату действует 3 месяца после подключения',
+   //    interactive: true,
+   //    placement: placement(),
+   //    maxWidth: maxWidth(),
+   //    allowHTML: true,
+   //    theme: 'light',
+   //    hideOnClick: false,
+   //    // trigger: 'click',
+   // } )
 
-   // const tariffs = require('../json/tariffs.json')
-   // tariffs.forEach((el, index) => {
-   //    tippy( '#modalAlmond-' + index + ' .price__icon', {
-   //       content: `С учетом выбранных опций и тарифа «Объединяй! ${el.name}»`,
-   //       interactive: true,
-   //       placement: placeAlmond(),
-   //       maxWidth: 'none',
-   //       allowHTML: true,
-   //       theme: 'light',
-   //       hideOnClick: false,
-   //    } )
-   // })
 
 } )
 
