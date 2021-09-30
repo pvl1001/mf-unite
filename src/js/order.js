@@ -50,25 +50,21 @@ async function getResponseOrder(data) {
 
 // сформировать объект заявки для отправки
 function getDataOrder() {
-   const city = document.querySelector( '.nav__city span' ).textContent
    const getClientAddress = () => prop.dataAddress.address !== undefined ? `По адресу ${prop.dataAddress.address} ` : ''
-   const equipText = () => prop.nameEquip && prop.priceEquip ? ` ${prop.nameEquip} ${prop.priceEquip.textContent}₽ в месяц` : ''
-   const comment = `${getClientAddress()}ДляДома Всё с прогрессивной скидкой${equipText()}`
+   const getEquipText = () => prop.nameEquip && prop.priceEquip ? ` ${prop.nameEquip} ${prop.priceEquip.textContent}₽ в месяц` : ''
 
    return {
       form_name: 'express_form_ccmp_short',
-      city,
+      city: document.querySelector( '.nav__city span' ).textContent,
       clientName: this.currentElements[1].value,
       clientPhone: this.currentElements[0].value,
       clientAddress: prop.dataAddress.address || '',
       house_guid: prop.dataAddress.house_guid || '',
       tariffId: 4261,
-      tariffName: '#ДляДома Интернет',
+      tariffName: 'ДляДома Всё',
       clientSite: window.location.host + window.location.pathname,
-      comment,
-      calltracking_params: (() => ct( 'calltracking_params', 'g96m2c8n' )
-         ? ct( 'calltracking_params', 'g96m2c8n' ).sessionId
-         : '')()
+      comment: `${getClientAddress()}ДляДома Всё с прогрессивной скидкой${getEquipText()}`,
+      calltracking_params: ct( 'calltracking_params', 'g96m2c8n' ) || ''
    }
 
 }
@@ -76,11 +72,11 @@ function getDataOrder() {
 // обработка полученного кода
 function resultOrderText(data, dataOrder) {
    if (data.code === '200') {
-      gtag( 'event', 'click', {'event_category': 'EventHomeMF', 'event_label': 'click_button_send_vse'} )
+      gtag( 'event', 'click', {'event_category': 'EventHomeMF', 'event_label': prop.event_label} )
       gtag( 'event', 'requestLandingSend', {'event_category': 'order'} )
       if (typeof ym !== 'undefined') {
          ym( 66149989, 'reachGoal', 'zayavka_megafon' )
-         ym( 66149989, 'reachGoal', 'click_button_send_vse' )
+         ym( 66149989, 'reachGoal', prop.event_label )
       }
 
       if (typeof dataOrder.calltracking_params !== 'undefined') {

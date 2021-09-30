@@ -14,7 +14,7 @@
 
       <div class="for-home__tariff-for-home tariff-for-home">
 
-         <h2 class="tariff-for-home__title">
+         <h2 class="tariff-for-home__title" data-view="tariff_card_vse_start">
             #ДляДома Всё
          </h2>
 
@@ -111,7 +111,12 @@
                <p class="tariff-range__price">
                   <span>275</span> ₽ в месяц
                </p>
-               <button type="button" data-target="#order" data-toggle="modal" class="tariff-range__btn btn btn-fiolet">Подключить</button>
+               <button onclick="connect('')"
+                       data-view="tariff_card_vse_end"
+                       type="button"
+                       data-target="#order"
+                       data-toggle="modal"
+                       class="tariff-range__btn btn btn-fiolet">Подключить</button>
                <div class="tariff-range__desc">
                   С учетом скидки <span class="tariff-range__desc-percent">50%</span>
                   с <span class="tariff-range__desc-mounts">61</span> месяца

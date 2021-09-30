@@ -1,15 +1,15 @@
 import prop from "./validate_address/prop";
 
 // при клике "отправить" создать переменные
-window.sendOrder = (act, eventLabel, priceEquipSelector, name) => {
-   analytics(act + eventLabel)
+window.sendOrder = (eventLabel, priceEquipSelector, name) => {
+   prop.event_label = 'click_button_' + eventLabel
    prop.nameEquip = name
    prop.priceEquip = document.querySelector(priceEquipSelector)
 }
 
 // при открытии окна присвоить атрибут кнопке "отправить"
-window.openOrder = (act, eventLabel, priceEquipSelector, name) => {
-   $('#order .btn').attr('onclick', `sendOrder('${act}', '${eventLabel}', '${priceEquipSelector}', '${name}')`)
+window.openOrder = (eventLabel, priceEquipSelector, name) => {
+   $('#order .btn').attr('onclick', `sendOrder('send_${eventLabel}', '${priceEquipSelector}', '${name}')`)
    analytics('order_' + eventLabel)
 }
 
