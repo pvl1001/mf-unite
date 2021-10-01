@@ -126,7 +126,13 @@
                        type="button"
                        data-toggle="modal"
                        data-target="#order"
-                       onclick="openOrder('{{dataView}}', '#{{id}} .modal-order__text span', '{{name}}')"
+                       onclick="openOrder(
+                          '{{dataView}}',
+                          '#{{id}} .modal-order__text span',
+                          '{{name}}',
+                          {{tariffId}},
+                          '{{tariffName}}'
+                          )"
                >Заказать
                </button>
             </div>

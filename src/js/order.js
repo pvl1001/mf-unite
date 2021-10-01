@@ -60,11 +60,11 @@ function getDataOrder() {
       clientPhone: this.currentElements[0].value,
       clientAddress: prop.dataAddress.address || '',
       house_guid: prop.dataAddress.house_guid || '',
-      tariffId: 4261,
-      tariffName: 'ДляДома Всё',
+      tariffId: prop.tariffId,
+      tariffName: prop.tariffName,
       clientSite: window.location.host + window.location.pathname,
-      comment: `${getClientAddress()}ДляДома Всё с прогрессивной скидкой${getEquipText()}`,
-      calltracking_params: ct( 'calltracking_params', 'g96m2c8n' ) || ''
+      comment: `${getClientAddress()}${prop.tariffName}${getEquipText()}`,
+      calltracking_params: ct( 'calltracking_params', 'g96m2c8n' ) || '',
    }
 
 }

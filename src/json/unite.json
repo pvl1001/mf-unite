@@ -1,6 +1,7 @@
 {
    "id": "eq-unite",
    "name": "4G Wi-Fi роутер",
+   "dataView": "vezde_ntv",
    "img": "router_info.png",
    "price": 200,
    "priceSale": 960,
@@ -25,5 +26,7 @@
          "icon": "fiolet_razmer.svg",
          "text": "Компактные размеры"
       }
-   ]
+   ],
+   "tariffId": 3981,
+   "tariffName": "Объединяй! Везде со скидкой 40%"
 }

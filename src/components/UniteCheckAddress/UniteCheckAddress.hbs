@@ -109,13 +109,19 @@
                         <a href="#">Скачать подробную информацию</a>
                         <span data-target="#{{../unite.id}}"
                               data-toggle="modal"
-                              onclick="analytics('details_vezde_ntv')"
+                              onclick="analytics('details_{{../unite.dataView}}')"
                         >Технические характеристики</span>
                      </div>
 
                      <div class="unite-order">
-                        <div data-toggle="modal" data-target="#order" class="btn" data-view="block_vezde_ntv"
-                             onclick="openOrder('vezde_ntv', '#unite .item-option__num', '4G Wi-Fi роутер')">Отправить
+                        <div data-toggle="modal" data-target="#order" class="btn" data-view="block_{{../unite.dataView}}"
+                             onclick="openOrder(
+                                '{{../unite.dataView}}',
+                                '#unite .item-option__num',
+                                '{{../unite.name}}',
+                                {{../unite.tariffId}},
+                                '{{../unite.tariffName}}'
+                                )">Отправить
                            заявку
                         </div>
                         <div class="price">
