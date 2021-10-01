@@ -1,4 +1,4 @@
-import prop from "./prop";
+import prop from "../prop";
 import {showHideLabel} from "./showHideLabel";
 
 const checkNoFullAddress = () => {

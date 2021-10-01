@@ -1,4 +1,4 @@
-import prop from "./prop";
+import prop from "../prop";
 import {showHideLabel} from "./showHideLabel";
 
 export const showResultMainCheck = (success, offer, address) => {

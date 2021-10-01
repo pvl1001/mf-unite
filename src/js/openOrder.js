@@ -1,4 +1,4 @@
-import prop from "./validate_address/prop";
+import prop from "./prop";
 
 // при клике "отправить" создать переменные
 window.sendOrder = (eventLabel, priceEquipSelector, name) => {

@@ -1,4 +1,4 @@
-import prop from "./prop";
+import prop from "../prop";
 
 const clearValue = (event) => {
    if (prop.flagValid && event) hideResult()

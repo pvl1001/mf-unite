@@ -1,4 +1,4 @@
-import prop from "./prop";
+import prop from "../prop";
 
 window.hideResult = () => {
    $( prop.input ).val( '' )

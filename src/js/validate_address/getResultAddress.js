@@ -1,4 +1,4 @@
-import prop from "./prop";
+import prop from "../prop";
 
 export async function getResultAddress() {
    return await $.ajax( {
