@@ -190,7 +190,7 @@
       ]
    },
    {
-      "id": "plusTV",
+      "id": "plustv",
       "tariffId":  4272,
       "dataView": "plusTV",
       "name": "ПлюсТВ",
@@ -2539,9 +2539,9 @@
       ]
    },
    {
-      "id": "highSpeed",
+      "id": "speed",
       "tariffId":  4274,
-      "dataView": "highSpeed",
+      "dataView": "speed",
       "name": "Скоростной",
       "mark": "Самый быстрый",
       "sale": "Скидка 40% на SIM-карты",

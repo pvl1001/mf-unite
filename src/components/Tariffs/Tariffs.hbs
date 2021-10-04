@@ -6,7 +6,7 @@
          {{#each  tariffs}}
             <div class="card slider__card slider__card_{{id}}">
                <div class="card__title card-wrapper">
-                  <h2 onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">{{name}}</h2>
+                  <h2 onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')" data-view="tariff_card_{{dataView}}_start">{{name}}</h2>
                   {{#if mark}}
                      <div class="card__title-mark mark mark_{{markClass mark}}">
                         <span>{{mark}}</span>
@@ -124,7 +124,7 @@
                   </div>
                   <button data-view="tariff_card_{{dataView}}_end"
                           onclick="openOrder(
-                             'send_{{dataView}}',
+                             '{{dataView}}',
                              '.slider__card_{{id}} .new-price',
                              '',
                              '{{tariffId}}',

@@ -27,7 +27,6 @@ $( '#orderForm' ).validate( {
    },
    submitHandler: function () {
       const dataOrder = getDataOrder.call( this )
-      console.log(dataOrder)
       getResponseOrder( dataOrder )
          .then( (data) => resultOrderText( data, dataOrder ) )
          .then( () => nextForm( '.order-thx', '.requisition' ) )
