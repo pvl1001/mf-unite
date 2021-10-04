@@ -4,7 +4,7 @@ import './plugins/jquery.mask'
 import './plugins/jquery.validate'
 import 'bootstrap'
 import 'select2'
-// import 'popper.js'
+import 'popper.js'
 // import './plugins/datepicker'
 
 $( function () {
@@ -81,33 +81,17 @@ $( function () {
          return setAddress.address === value
    } )
 
-   // календарь
-   // $( '#orderOpportunity .datepicker' ).datepicker( { // календарь заявки
-   //    format: 'dd MM yyyy',
-   //    language: 'ru',
-   //    orientation: 'bottom',
-   //    maxViewMode: 'days',
-   //    autoclose: true,
-   //    startDate: '0',
-   //    endDate: '+14d'
-   // } )
-
    // popper tippy
-   // const maxWidth = () => window.innerWidth >= 830 ? 'none' : 275
-   // const placement = () => window.innerWidth >= 830 ? 'right' : 'top'
-   // const placeAlmond = () => window.innerWidth >= 830 ? 'left' : 'top'
-
-   // tippy( '.price__icon_all', {
-   //    content: '<span class="link" onclick="toPlug(`.faq`)">Скидка</span> на абонентскую плату действует 3 месяца после подключения',
-   //    interactive: true,
-   //    placement: placement(),
-   //    maxWidth: maxWidth(),
-   //    allowHTML: true,
-   //    theme: 'light',
-   //    hideOnClick: false,
-   //    // trigger: 'click',
-   // } )
-
+   tippy( '.price__icon_all', {
+      content: 'Для участия в <span class="link" onclick="toPlug(`.faq`)">Акции</span> необходимо быть абонентом МегаФон и подключить услугу ДляДома',
+      interactive: true,
+      placement: 'auto',
+      maxWidth: '80vw',
+      allowHTML: true,
+      theme: 'light',
+      hideOnClick: false,
+      // trigger: 'click'
+   } )
 
 } )
 

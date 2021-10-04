@@ -1,6 +1,6 @@
 export default function (text) {
    switch (text) {
-      case 'Только нужное':
+      case 'Самый быстрый':
          return 'blue'
       case 'Популярное':
          return 'fiolet'
