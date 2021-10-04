@@ -1,6 +1,7 @@
 [
    {
       "id": "internet",
+      "tariffId": 4271,
       "dataView": "internet",
       "name": "Интернет",
       "mark": "Акция",
@@ -30,7 +31,7 @@
       ],
       "infoModal": [
          {
-            "title": "Интернет",
+            "title": "Домашний интернет",
             "icon": "wi-fi_bold.svg",
             "options": [
                {
@@ -190,6 +191,7 @@
    },
    {
       "id": "plusTV",
+      "tariffId":  4272,
       "dataView": "plusTV",
       "name": "ПлюсТВ",
       "mark": "",
@@ -1186,7 +1188,7 @@
       ],
       "infoModal": [
          {
-            "title": "Интернет",
+            "title": "Домашний интернет",
             "icon": "wi-fi_bold.svg",
             "options": [
                {
@@ -1362,6 +1364,7 @@
    },
    {
       "id": "vse",
+      "tariffId":  4273,
       "dataView": "vse",
       "name": "Всё",
       "mark": "Популярное",
@@ -2361,7 +2364,7 @@
       ],
       "infoModal": [
          {
-            "title": "Интернет",
+            "title": "Домашний интернет",
             "icon": "wi-fi_bold.svg",
             "options": [
                {
@@ -2537,6 +2540,7 @@
    },
    {
       "id": "highSpeed",
+      "tariffId":  4274,
       "dataView": "highSpeed",
       "name": "Скоростной",
       "mark": "Самый быстрый",
@@ -2564,7 +2568,7 @@
       ],
       "infoModal": [
          {
-            "title": "Интернет",
+            "title": "Домашний интернет",
             "icon": "wi-fi_bold.svg",
             "options": [
                {
@@ -2724,6 +2728,7 @@
    },
    {
       "id": "maximum",
+      "tariffId":  4275,
       "dataView": "maximum",
       "name": "Максимум",
       "sale": "Скидка 40% на SIM-карты",
@@ -4067,7 +4072,7 @@
       ],
       "infoModal": [
          {
-            "title": "Интернет",
+            "title": "Домашний интернет",
             "icon": "wi-fi_bold.svg",
             "options": [
                {

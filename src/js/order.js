@@ -27,6 +27,7 @@ $( '#orderForm' ).validate( {
    },
    submitHandler: function () {
       const dataOrder = getDataOrder.call( this )
+      console.log(dataOrder)
       getResponseOrder( dataOrder )
          .then( (data) => resultOrderText( data, dataOrder ) )
          .then( () => nextForm( '.order-thx', '.requisition' ) )
@@ -51,7 +52,9 @@ async function getResponseOrder(data) {
 // сформировать объект заявки для отправки
 function getDataOrder() {
    const getClientAddress = () => prop.dataAddress.address !== undefined ? `По адресу ${prop.dataAddress.address} ` : ''
-   const getEquipText = () => prop.nameEquip && prop.priceEquip ? ` ${prop.nameEquip} ${prop.priceEquip.textContent}₽ в месяц` : ''
+   const getEquipText = () => prop.sendOrder.nameEquip || prop.sendOrder.priceEquip ? ` ${prop.sendOrder.nameEquip} ${prop.sendOrder.priceEquip.textContent}₽ в месяц` : ''
+   const tariffName = prop.sendOrder.tariffName || '#ДляДома Интернет'
+   const tariffId =  +prop.sendOrder.tariffId || 4271
 
    return {
       form_name: 'express_form_ccmp_short',
@@ -60,10 +63,10 @@ function getDataOrder() {
       clientPhone: this.currentElements[0].value,
       clientAddress: prop.dataAddress.address || '',
       house_guid: prop.dataAddress.house_guid || '',
-      tariffId: prop.tariffId,
-      tariffName: prop.tariffName,
+      tariffId,
+      tariffName,
       clientSite: window.location.host + window.location.pathname,
-      comment: `${getClientAddress()}${prop.tariffName}${getEquipText()}`,
+      comment: `${getClientAddress()}${tariffName}${getEquipText()}`,
       calltracking_params: ct( 'calltracking_params', 'g96m2c8n' ) || '',
    }
 
@@ -72,11 +75,11 @@ function getDataOrder() {
 // обработка полученного кода
 function resultOrderText(data, dataOrder) {
    if (data.code === '200') {
-      gtag( 'event', 'click', {'event_category': 'EventHomeMF', 'event_label': prop.event_label} )
+      gtag( 'event', 'click', {'event_category': 'EventHomeMF', 'event_label': prop.sendOrder.eventLabel} )
       gtag( 'event', 'requestLandingSend', {'event_category': 'order'} )
       if (typeof ym !== 'undefined') {
          ym( 66149989, 'reachGoal', 'zayavka_megafon' )
-         ym( 66149989, 'reachGoal', prop.event_label )
+         ym( 66149989, 'reachGoal', prop.sendOrder.eventLabel )
       }
 
       if (typeof dataOrder.calltracking_params !== 'undefined') {

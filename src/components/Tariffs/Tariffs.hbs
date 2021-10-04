@@ -122,13 +122,18 @@
                         <div class="price__icon {{#if (iconInfo @index)}}price__icon_all{{/if}}"></div>
                      {{/if}}
                   </div>
-                     <button data-view="tariff_card_{{dataView}}_end"
-                             onclick="openOrder('send_', '{{dataView}}')"
-                             data-toggle="modal"
-                             data-target="#order"
-                             class="price-card__btn btn"
-                     >Подключить
-                     </button>
+                  <button data-view="tariff_card_{{dataView}}_end"
+                          onclick="openOrder(
+                             'send_{{dataView}}',
+                             '.slider__card_{{id}} .new-price',
+                             '',
+                             '{{tariffId}}',
+                             '#ДляДома {{name}}')"
+                          data-toggle="modal"
+                          data-target="#order"
+                          class="price-card__btn btn"
+                  >Подключить
+                  </button>
                   <div class="link" data-view="tariff_card_{{dataView}}_start"
                        onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">Подробнее
                   </div>

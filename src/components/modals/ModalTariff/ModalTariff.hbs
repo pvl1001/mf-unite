@@ -190,7 +190,12 @@
                        data-toggle="modal"
                        data-target="#order"
                        data-view="modal_{{dataView}}"
-                       onclick="openOrder('send_', '{{dataView}}')">Заказать
+                       onclick="openOrder(
+                          'send_{{dataView}}',
+                          '.tariff-modal_{{id}} .tariff-modal__footer .price__current',
+                          '',
+                          '{{tariffId}}',
+                          '#ДляДома {{name}}')">Заказать
                </button>
                <p class="tariff-modal__price-desc">с учетом выбранных опций</p>
             </div>

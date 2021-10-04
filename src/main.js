@@ -18,7 +18,6 @@ import './js/toPlug' // плавный скролл
 import './js/order' // валидация заявки на подключение
 import './js/calcRadio' // расчеты по переключателям
 import './js/analytics' // аналитика
-import './js/connect' // кнопка headBanner "Подключить"
 import './js/moreTariff' // Кнопка "подробнее" о тарифе
 import './js/openOrder' // кнопка "Заказать"
 import './js/nextForm' // popUp вперед
