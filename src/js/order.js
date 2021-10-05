@@ -50,10 +50,11 @@ async function getResponseOrder(data) {
 
 // сформировать объект заявки для отправки
 function getDataOrder() {
-   const getClientAddress = () => prop.dataAddress.address !== undefined ? `По адресу ${prop.dataAddress.address} ` : ''
-   const getEquipText = () => prop.sendOrder.nameEquip || prop.sendOrder.priceEquip ? ` ${prop.sendOrder.nameEquip} ${prop.sendOrder.priceEquip.textContent}₽ в месяц` : ''
-   const tariffName = prop.sendOrder.tariffName || '#ДляДома Интернет'
-   const tariffId =  +prop.sendOrder.tariffId || 4271
+   const price = prop.sendOrder.priceEquip ? prop.sendOrder.priceEquip.textContent.trim() + '₽' : ''
+   const nameEquip = prop.sendOrder.nameEquip || ''
+   const address = prop.dataAddress.address ? `По адресу ${prop.dataAddress.address}` : ''
+   const tariffName = prop.sendOrder.tariffName || 'Объединяй! Для своих'
+   const tariffId =  +prop.sendOrder.tariffId || 5330
 
    return {
       form_name: 'express_form_ccmp_short',
@@ -65,8 +66,8 @@ function getDataOrder() {
       tariffId,
       tariffName,
       clientSite: window.location.host + window.location.pathname,
-      comment: `${getClientAddress()}${tariffName}${getEquipText()}`,
-      calltracking_params: ct( 'calltracking_params', 'g96m2c8n' ) || '',
+      comment: `${address} ${tariffName} ${nameEquip} ${price}`,
+      calltracking_params: ct( 'calltracking_params', 'g96m2c8n' ) ? ct( 'calltracking_params', 'g96m2c8n' ).sessionId : ''
    }
 
 }
@@ -81,7 +82,7 @@ function resultOrderText(data, dataOrder) {
          ym( 66149989, 'reachGoal', prop.sendOrder.eventLabel )
       }
 
-      if (typeof dataOrder.calltracking_params !== 'undefined') {
+      if (dataOrder.calltracking_params) {
          const ct_site_id = '37410'
          const ct_data = {
             fio: dataOrder.clientName,
@@ -92,6 +93,7 @@ function resultOrderText(data, dataOrder) {
             comment: dataOrder.comment,
             sessionId: dataOrder.calltracking_params
          }
+
          $.ajax( {
                url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/' + ct_site_id + '/register/',
                dataType: 'json',
