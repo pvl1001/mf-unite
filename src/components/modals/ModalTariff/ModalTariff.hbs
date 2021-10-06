@@ -118,8 +118,8 @@
 
                                  <label class="switch">
                                     <input type="checkbox"
-                                           {{#h-if price '===' '0'}}checked{{/h-if}}
-                                           {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
+                                       {{#h-if price '===' '0'}}checked{{/h-if}}
+                                       {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
                                     <span class="round"></span>
                                  </label>
                               </div>
@@ -181,7 +181,10 @@
                   <span class="price__current">{{price}}</span>
                   <span class="price__month"> ₽ в месяц</span>
                   {{#if iconInfo}}
-                     <div class="price__icon price__icon_all" aria-expanded="false"></div>
+                     <div class="price__icon
+                        {{#h-if @index '==' 0}} price__icon_all{{/h-if}}
+                        {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"
+                     ></div>
                   {{/if}}
                </div>
 

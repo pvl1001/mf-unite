@@ -93,5 +93,15 @@ $( function () {
       // trigger: 'click'
    } )
 
+   tippy( '.price__icon_vse', {
+      content: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
+      interactive: true,
+      placement: window.innerWidth > 767 ? 'right' : 'auto',
+      maxWidth: '80vw',
+      allowHTML: true,
+      theme: 'light',
+      hideOnClick: false
+   } )
+
 } )
 

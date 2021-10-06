@@ -2347,7 +2347,9 @@
          }
       ],
       "tvLength": "188 каналов",
-      "price": 550,
+      "oldPrice": 550,
+      "price": 275,
+      "iconInfo": true,
       "rentDevice": [
          {
             "text": "Аренда ТВ-приставки",
