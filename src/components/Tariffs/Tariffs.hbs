@@ -6,8 +6,13 @@
          {{#each  tariffs}}
             <div class="card slider__card slider__card_{{id}}">
                <div class="card__title card-wrapper">
-                  <h2 onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')"
-                      data-view="tariff_card_{{dataView}}_start">{{name}}</h2>
+                  {{#h-if id '===' 'vse'}}
+                     <h2 class="card__title_vse" data-view="tariff_card_{{dataView}}_start">{{name}}</h2>
+                  {{else}}
+                     <h2 onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                         data-view="tariff_card_{{dataView}}_start">{{name}}</h2>
+                  {{/h-if}}
+
                   {{#if mark}}
                      <div class="card__title-mark mark mark_{{markClass mark}}">
                         <span>{{mark}}</span>
@@ -121,8 +126,8 @@
                      <span>в месяц</span>
                      {{#if iconInfo}}
                         <div class="price__icon
-                              {{#h-if @index '==' 0}} price__icon_all{{/h-if}}
-                              {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"
+                           {{#h-if @index '==' 0}} price__icon_all{{/h-if}}
+                           {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"
                         ></div>
                      {{/if}}
                   </div>
@@ -138,9 +143,14 @@
                           class="price-card__btn btn"
                   >Подключить
                   </button>
-                  <div class="link" data-view="tariff_card_{{dataView}}_start"
-                       onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">Подробнее
-                  </div>
+                  {{#h-if id '===' 'vse'}}
+                     <a href="/internetvse" class="link" data-view="tariff_card_{{dataView}}_start">Подробнее</a>
+                  {{else}}
+                     <div class="link" data-view="tariff_card_{{dataView}}_start"
+                          onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">Подробнее
+                     </div>
+                  {{/h-if}}
+
                </div>
             </div>
          {{/each}}
