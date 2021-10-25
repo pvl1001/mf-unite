@@ -4,14 +4,14 @@
 
    &__text {
       color: #fff;
-      width: 55%;
-      white-space: nowrap;
+      max-width: 646px;
+      margin-top: -30px;
 
       h1 {
          font-size: 52px;
          line-height: 56px;
          font-weight: 700;
-         margin-bottom: 15px;
+         margin-bottom: 8px;
          display: flex;
          flex-direction: column;
 
@@ -20,29 +20,28 @@
             line-height: 48px;
          }
 
-         @media (max-width: 935px) {
+         @media (max-width: 767px) {
             font-size: 36px;
             line-height: 40px;
          }
 
-         @media (max-width: 415px) {
-            //nobr {
-            //   white-space: pre-wrap;
-            //}
+         @media (max-width: 375px) {
+            font-size: 34px;
+            line-height: 36px;
          }
+
       }
 
       p {
-         font-size: 15px;
+         font-size: 16px;
          line-height: 24px;
-         margin-bottom: 45px;
-         font-weight: 500;
+         margin-bottom: 25px;
+         font-weight: 700;
       }
 
    }
 
    &__img-wrapp {
-      width: 55%;
       height: 100%;
       align-self: center;
       white-space: nowrap;
@@ -50,18 +49,16 @@
       position: relative;
       display: flex;
       align-items: flex-end;
-      justify-content: center;
+      margin-left: 7%;
    }
 
    &__img {
-      width: 100%;
-      max-width: 430px;
+      height: 100%;
    }
 
    .section-row {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       height: 386px;
       overflow: hidden;
    }
@@ -75,87 +72,37 @@
       align-items: center;
    }
 
-   @media (max-width: 1920px) {
-      &__text {
 
-         p {
-            margin-bottom: 30px;
-         }
-      }
-   }
-
-   @media (max-width: 1279px) {
+   @media (max-width: 1100px) {
+      position: relative;
 
       .section-row {
-         margin-right: -30px;
+         align-items: normal;
+         height: 420px;
       }
 
       &__text {
-         margin-right: 0;
-
-         p {
-            max-width: 343px;
-         }
-      }
-
-      &__img {
-         max-width: 412px;
-         margin-right: 21px;
-      }
-
-   }
-
-   @media (max-width: 1023px) {
-      .section-row {
-         align-items: flex-start;
-         justify-content: center;
-         height: auto;
-         flex-wrap: wrap;
-         padding-top: 56px;
-         margin-right: 0;
-         overflow: visible;
-      }
-
-      &__text {
-         width: 100%;
-         margin-top: 0;
-         text-align: center;
-         min-width: 0;
-         margin-bottom: 31px;
-         z-index: 1;
-         white-space: normal;
+         margin-top: 42px;
+         max-width: 416px;
 
          h1 {
-            display: block;
+            margin-bottom: 25px;
          }
+      }
 
-         p {
-            max-width: none;
-            font-size: 16px;
-            line-height: 24px;
-         }
+      &__img-wrapp {
+         position: absolute;
+         right: 17px;
+         bottom: 0;
+         height: auto;
+         margin-left: 0;
+         align-self: flex-end;
+         width: 50%;
+         justify-content: center;
       }
 
       &__img {
-         max-width: 321px;
-         margin-right: -77px;
-      }
-
-      &__sale {
-         font-size: 24px;
-         line-height: 29px;
-         padding: 2px 7px 2px 7px;
-         left: 17px;
-         top: 18px;
-
-         &:after {
-            top: 40px;
-            font-size: 19px;
-         }
-      }
-
-      &__btns {
-         justify-content: center;
+         max-width: 388px;
       }
    }
 
@@ -163,26 +110,36 @@
       &__text {
          padding: 0 16px;
          margin-bottom: 21px;
+         margin-top: 0;
+         max-width: 340px;
 
          h1 {
             font-size: 30px;
             line-height: 36px;
+            margin-bottom: 15px;
          }
 
          p {
-            font-size: 15px;
-            padding: 0 20px;
+            margin-bottom: 13px;
          }
       }
 
       .section-row {
          padding-top: 33px;
          margin: 0 -16px;
+         flex-wrap: wrap;
+         height: auto;
+      }
+
+      &__img-wrapp {
+         position: static;
+         width: 100%;
       }
 
       &__img {
-         max-width: 213px;
-         margin-right: 0;
+         max-width: 374px;
+         width: 100%;
+         padding: 0 9px 0 16px;
       }
    }
 
