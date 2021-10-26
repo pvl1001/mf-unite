@@ -13,7 +13,7 @@
          <div class="modal-content">
 
             <div class="tariff-modal__title wrapp" data-view="modal_{{dataView}}_start">
-               <h1>Объединяй! {{name}}</h1>
+               <h1>#ДляДома {{name}}</h1>
             </div>
 
             <div class="tariff-modal__container">
@@ -65,7 +65,7 @@
                               <div class="dop-options-card__option">
                                  <div>
 
-                                    <h3
+                                    <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
                                        {{#h-if id '!==' 'eq-almond'}}
                                        onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
                                        {{else}}
@@ -78,34 +78,36 @@
 
                                  </div>
 
-                                 {{#if plan}}
-                                    <p>Рассрочка</p>
-                                 {{else}}
-                                    <p>Аренда</p>
-                                 {{/if}}
+                                 {{#h-if ../id '!==' 'turbo'}}
+                                    {{#if plan}}
+                                       <p>Рассрочка</p>
+                                       <div class="dop-options-card__option-radio option-radio">
 
-                                 {{#if plan}}
-                                    <div class="dop-options-card__option-radio option-radio">
+                                          <label class="option-radio__radio-btn">
+                                             <input name="radio-{{../id}}-{{@index}}"
+                                                    id="radio36-id-{{../id}}-{{@index}}"
+                                                    type="radio" value="{{plan.[36]}}" checked disabled>
+                                             <label for="radio36-id-{{../id}}-{{@index}}"></label>
+                                             <span>36 мес</span>
+                                          </label>
 
-                                       <label class="option-radio__radio-btn">
-                                          <input name="radio-{{../id}}-{{@index}}" id="radio36-id-{{../id}}-{{@index}}"
-                                                 type="radio" value="{{plan.[36]}}" checked disabled>
-                                          <label for="radio36-id-{{../id}}-{{@index}}"></label>
-                                          <span>36 мес</span>
-                                       </label>
-
-                                       <label class="option-radio__radio-btn">
-                                          <input name="radio-{{../id}}-{{@index}}" id="radio24-id-{{../id}}-{{@index}}"
-                                                 type="radio" value="{{plan.[24]}}" disabled>
-                                          <label for="radio24-id-{{../id}}-{{@index}}"></label>
-                                          <span>24 мес</span>
-                                       </label>
-                                    </div>
-                                 {{/if}}
+                                          <label class="option-radio__radio-btn">
+                                             <input name="radio-{{../id}}-{{@index}}"
+                                                    id="radio24-id-{{../id}}-{{@index}}"
+                                                    type="radio" value="{{plan.[24]}}" disabled>
+                                             <label for="radio24-id-{{../id}}-{{@index}}"></label>
+                                             <span>24 мес</span>
+                                          </label>
+                                       </div>
+                                    {{else}}
+                                       <p>Аренда</p>
+                                    {{/if}}
+                                 {{/h-if}}
                               </div>
 
                               <div class="dop-options-card__price">
-                                 <div class="price">
+                                 {{#if price}}
+                                    <div class="price">
                                     <span class="price__current">
                                        {{#if plan}}
                                           {{plan.[36]}}
@@ -113,11 +115,13 @@
                                           {{price}}
                                        {{/if}}
                                     </span> <span> ₽</span>
-                                    <span class="price__month"> в месяц</span>
-                                 </div>
+                                       <span class="price__month"> в месяц</span>
+                                    </div>
+                                 {{/if}}
 
                                  <label class="switch">
                                     <input type="checkbox"
+                                       {{#unless price}}checked{{/unless}}
                                        {{#h-if price '===' '0'}}checked{{/h-if}}
                                        {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
                                     <span class="round"></span>
@@ -156,18 +160,7 @@
                         {{/h-if}}
                      {{/each}}
 
-
                   </ul>
-
-                  <div class="tariff-modal__download-pdf download-pdf">
-                     <a href="#" class="download-pdf__icon">
-                        <img src="img/svg/download-pdf.svg" alt="img">
-                     </a>
-                     <div class="download-pdf__text">
-                        <a href="#">Скачать подробную информацию о тарифе</a>
-                        <span>(PDF, 0.4 MB)</span>
-                     </div>
-                  </div>
 
                </div>
 

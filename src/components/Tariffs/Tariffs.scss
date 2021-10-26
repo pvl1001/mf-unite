@@ -97,14 +97,23 @@
       display: flex !important;
       flex-direction: column;
 
+      &__title-marks {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+      }
+
       &__title-mark {
-         margin: 0 0 0 auto;
+         &:not(:first-child) {
+            margin-top: 8px;
+         }
       }
 
       &__title {
          height: 77px;
          display: flex;
          align-items: center;
+         justify-content: space-between;
          position: relative;
          color: #fff;
          background-color: var(--mf-green);
@@ -193,6 +202,22 @@
                margin-bottom: 0;
             }
          }
+      }
+
+      &__options {
+         margin-top: -8px;
+      }
+
+      &__option {
+         font-size: 15px;
+
+         &.icon-router:before {
+            content: url('../img/svg/Router_3.svg');
+            display: inline-block;
+            margin-right: 13px;
+            transform: translateY(9px);
+         }
+
       }
 
       .block-tv {

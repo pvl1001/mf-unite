@@ -5,6 +5,8 @@ export default function (text) {
       case 'Популярное':
          return 'fiolet'
       case 'Акция':
+         return 'orange-light'
+      case 'Роутер в подарок':
          return 'orange'
    }
 

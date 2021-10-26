@@ -878,12 +878,12 @@ form {
    font-size: 12px;
    line-height: 1;
    border-radius: 2px;
-   padding: 5px 9px;
+   padding: 4px 8px;
    color: #fff;
 
-   span {
-      margin-bottom: -1px;
-   }
+   //span {
+   //   margin-bottom: -1px;
+   //}
 
    &_blue {
       background-color: var(--mf-blue);
@@ -899,6 +899,10 @@ form {
 
    &_orange {
       background-color: var(--mf-orange);
+   }
+
+   &_orange-light {
+      background-color: var(--mf-orange-light);
    }
 
 }

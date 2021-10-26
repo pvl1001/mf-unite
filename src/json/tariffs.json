@@ -4,7 +4,7 @@
       "tariffId": 4271,
       "dataView": "internet",
       "name": "Интернет",
-      "mark": "Акция",
+      "marks": ["Акция"],
       "sale": "Скидка 40% на SIM-карты",
       "infoProgress": [
          {
@@ -190,1000 +190,31 @@
       ]
    },
    {
-      "id": "plustv",
-      "tariffId":  4272,
-      "dataView": "plusTV",
-      "name": "ПлюсТВ",
-      "mark": "",
-      "web": "Безлимитный интернет",
+      "id": "turbo",
+      "tariffId": 4276,
+      "dataView": "turbo",
+      "name": "Турбо",
+      "marks": ["Акция", "Роутер в подарок"],
       "sale": "Скидка 40% на SIM-карты",
       "infoProgress": [
          {
             "title": "Домашний&nbsp;<br>интернет",
-            "value": "100 Мбит/с"
+            "value": "500 Мбит/с"
          }
       ],
-      "tv": [
-         {
-            "group": "HD",
-            "groupData": [
-               {
-                  "id": 6,
-                  "name": "Animal Planet HD"
-               },
-               {
-                  "id": 14,
-                  "name": "Discovery Channel HD"
-               },
-               {
-                  "id": 18,
-                  "name": "Europa Plus TV"
-               },
-               {
-                  "id": 19,
-                  "name": "Eurosport 1 HD"
-               },
-               {
-                  "id": 20,
-                  "name": "FOX HD"
-               },
-               {
-                  "id": 23,
-                  "name": "Fightbox HD"
-               },
-               {
-                  "id": 28,
-                  "name": "KBS World"
-               },
-               {
-                  "id": 29,
-                  "name": "Kаzаkh TV"
-               },
-               {
-                  "id": 30,
-                  "name": "MEZZO LIVE HD"
-               },
-               {
-                  "id": 32,
-                  "name": "MTV HD"
-               },
-               {
-                  "id": 34,
-                  "name": "MTV Live HD"
-               },
-               {
-                  "id": 39,
-                  "name": "National Geographic HD"
-               },
-               {
-                  "id": 44,
-                  "name": "Paramount Comedy HD"
-               },
-               {
-                  "id": 45,
-                  "name": "RT"
-               },
-               {
-                  "id": 47,
-                  "name": "RTG HD"
-               },
-               {
-                  "id": 48,
-                  "name": "RTД HD"
-               },
-               {
-                  "id": 51,
-                  "name": "SOCHI LIVE"
-               },
-               {
-                  "id": 52,
-                  "name": "Science Channel HD"
-               },
-               {
-                  "id": 54,
-                  "name": "Sony Channel HD"
-               },
-               {
-                  "id": 56,
-                  "name": "TLC HD"
-               },
-               {
-                  "id": 59,
-                  "name": "Travel and Adventure HD"
-               },
-               {
-                  "id": 73,
-                  "name": "В мире животных"
-               },
-               {
-                  "id": 82,
-                  "name": "Еда Премиум"
-               },
-               {
-                  "id": 83,
-                  "name": "ЖАРА"
-               },
-               {
-                  "id": 90,
-                  "name": "Известия"
-               },
-               {
-                  "id": 91,
-                  "name": "КИНО ТВ HD"
-               },
-               {
-                  "id": 94,
-                  "name": "Капитан Фантастика"
-               },
-               {
-                  "id": 96,
-                  "name": "Киноужас"
-               },
-               {
-                  "id": 103,
-                  "name": "МИР PREMIUM"
-               },
-               {
-                  "id": 119,
-                  "name": "Мульт HD"
-               },
-               {
-                  "id": 127,
-                  "name": "Наша Сибирь"
-               },
-               {
-                  "id": 147,
-                  "name": "Россия HD"
-               },
-               {
-                  "id": 150,
-                  "name": "Русский роман HD"
-               },
-               {
-                  "id": 153,
-                  "name": "СТС Kids"
-               },
-               {
-                  "id": 169,
-                  "name": "Телеканал 360°"
-               },
-               {
-                  "id": 175,
-                  "name": "Хабар 24"
-               }
-            ]
-         },
-         {
-            "group": "Для детей",
-            "groupData": [
-               {
-                  "id": 5,
-                  "name": "ANI"
-               },
-               {
-                  "id": 25,
-                  "name": "Gulli Girl"
-               },
-               {
-                  "id": 40,
-                  "name": "Nick Jr."
-               },
-               {
-                  "id": 41,
-                  "name": "Nickelodeon"
-               },
-               {
-                  "id": 58,
-                  "name": "Tiji"
-               },
-               {
-                  "id": 72,
-                  "name": "В гостях у сказки"
-               },
-               {
-                  "id": 77,
-                  "name": "Детский мир"
-               },
-               {
-                  "id": 93,
-                  "name": "Канал Disney"
-               },
-               {
-                  "id": 94,
-                  "name": "Капитан Фантастика"
-               },
-               {
-                  "id": 95,
-                  "name": "Карусель"
-               },
-               {
-                  "id": 118,
-                  "name": "Мульт"
-               },
-               {
-                  "id": 119,
-                  "name": "Мульт HD"
-               },
-               {
-                  "id": 120,
-                  "name": "Мультиландия"
-               },
-               {
-                  "id": 145,
-                  "name": "Радость моя"
-               },
-               {
-                  "id": 151,
-                  "name": "Рыжий"
-               },
-               {
-                  "id": 153,
-                  "name": "СТС Kids"
-               },
-               {
-                  "id": 174,
-                  "name": "Уникум"
-               }
-            ]
-         },
-         {
-            "group": "Спорт",
-            "groupData": [
-               {
-                  "id": 16,
-                  "name": "E TV"
-               },
-               {
-                  "id": 19,
-                  "name": "Eurosport 1 HD"
-               },
-               {
-                  "id": 22,
-                  "name": "FastnFunBox"
-               },
-               {
-                  "id": 23,
-                  "name": "Fightbox HD"
-               },
-               {
-                  "id": 84,
-                  "name": "ЖИВИ!"
-               },
-               {
-                  "id": 106,
-                  "name": "Матч ТВ"
-               },
-               {
-                  "id": 109,
-                  "name": "Мир Баскетбола"
-               },
-               {
-                  "id": 158,
-                  "name": "Старт"
-               },
-               {
-                  "id": 166,
-                  "name": "ТОЧКА ОТРЫВА"
-               }
-            ]
-         },
-         {
-            "group": "Кино",
-            "groupData": [
-               {
-                  "id": 20,
-                  "name": "FOX HD"
-               },
-               {
-                  "id": 44,
-                  "name": "Paramount Comedy HD"
-               },
-               {
-                  "id": 54,
-                  "name": "Sony Channel HD"
-               },
-               {
-                  "id": 55,
-                  "name": "Sony Turbo"
-               },
-               {
-                  "id": 63,
-                  "name": "Zee Russia"
-               },
-               {
-                  "id": 91,
-                  "name": "КИНО ТВ HD"
-               },
-               {
-                  "id": 96,
-                  "name": "Киноужас"
-               },
-               {
-                  "id": 101,
-                  "name": "Любимое кино"
-               },
-               {
-                  "id": 111,
-                  "name": "Мир сериала"
-               },
-               {
-                  "id": 123,
-                  "name": "НТВ Сериал"
-               },
-               {
-                  "id": 125,
-                  "name": "НТВ Хит"
-               },
-               {
-                  "id": 129,
-                  "name": "Наше новое кино"
-               },
-               {
-                  "id": 140,
-                  "name": "Победа"
-               },
-               {
-                  "id": 142,
-                  "name": "Продвижение"
-               },
-               {
-                  "id": 149,
-                  "name": "Русский бестселлер"
-               },
-               {
-                  "id": 150,
-                  "name": "Русский роман HD"
-               }
-            ]
-         },
-         {
-            "group": "Развлекательные",
-            "groupData": [
-               {
-                  "id": 1,
-                  "name": "2X2"
-               },
-               {
-                  "id": 2,
-                  "name": "7tv"
-               },
-               {
-                  "id": 3,
-                  "name": "8 Канал"
-               },
-               {
-                  "id": 21,
-                  "name": "Fashionbox"
-               },
-               {
-                  "id": 26,
-                  "name": "HGTV"
-               },
-               {
-                  "id": 28,
-                  "name": "KBS World"
-               },
-               {
-                  "id": 29,
-                  "name": "Kаzаkh TV"
-               },
-               {
-                  "id": 43,
-                  "name": "Outdoor Channel"
-               },
-               {
-                  "id": 53,
-                  "name": "Shopping Live"
-               },
-               {
-                  "id": 56,
-                  "name": "TLC HD"
-               },
-               {
-                  "id": 57,
-                  "name": "TVM Channel"
-               },
-               {
-                  "id": 62,
-                  "name": "World Fashion Channel"
-               },
-               {
-                  "id": 73,
-                  "name": "В мире животных"
-               },
-               {
-                  "id": 75,
-                  "name": "Время"
-               },
-               {
-                  "id": 81,
-                  "name": "Еда"
-               },
-               {
-                  "id": 82,
-                  "name": "Еда Премиум"
-               },
-               {
-                  "id": 92,
-                  "name": "Калейдоскоп ТВ"
-               },
-               {
-                  "id": 99,
-                  "name": "Кухня ТВ"
-               },
-               {
-                  "id": 103,
-                  "name": "МИР PREMIUM"
-               },
-               {
-                  "id": 112,
-                  "name": "Морской"
-               },
-               {
-                  "id": 115,
-                  "name": "Мужской"
-               },
-               {
-                  "id": 124,
-                  "name": "НТВ Стиль"
-               },
-               {
-                  "id": 126,
-                  "name": "Национальное телевидение Чувашии"
-               },
-               {
-                  "id": 128,
-                  "name": "Наша Тема"
-               },
-               {
-                  "id": 130,
-                  "name": "Ностальгия"
-               },
-               {
-                  "id": 131,
-                  "name": "О!КИНО"
-               },
-               {
-                  "id": 134,
-                  "name": "Открытый мир"
-               },
-               {
-                  "id": 136,
-                  "name": "Охотник и рыболов HD"
-               },
-               {
-                  "id": 141,
-                  "name": "Про Бизнес"
-               },
-               {
-                  "id": 154,
-                  "name": "Сарафан"
-               },
-               {
-                  "id": 159,
-                  "name": "Супер"
-               },
-               {
-                  "id": 168,
-                  "name": "Театр"
-               },
-               {
-                  "id": 172,
-                  "name": "Телекафе"
-               },
-               {
-                  "id": 173,
-                  "name": "Точка ТВ"
-               },
-               {
-                  "id": 175,
-                  "name": "Хабар 24"
-               },
-               {
-                  "id": 177,
-                  "name": "Ю"
-               },
-               {
-                  "id": 178,
-                  "name": "Ювелирочка"
-               }
-            ]
-         },
-         {
-            "group": "Новости",
-            "groupData": [
-               {
-                  "id": 7,
-                  "name": "Arirang"
-               },
-               {
-                  "id": 13,
-                  "name": "Deutsche Welle"
-               },
-               {
-                  "id": 24,
-                  "name": "France 24"
-               },
-               {
-                  "id": 38,
-                  "name": "NHK World-Japan"
-               },
-               {
-                  "id": 45,
-                  "name": "RT"
-               },
-               {
-                  "id": 46,
-                  "name": "RT Arabic"
-               },
-               {
-                  "id": 68,
-                  "name": "БелРос"
-               },
-               {
-                  "id": 69,
-                  "name": "Беларусь 24"
-               },
-               {
-                  "id": 71,
-                  "name": "Большая Азия"
-               },
-               {
-                  "id": 79,
-                  "name": "Дума ТВ"
-               },
-               {
-                  "id": 80,
-                  "name": "Евроновости"
-               },
-               {
-                  "id": 90,
-                  "name": "Известия"
-               },
-               {
-                  "id": 100,
-                  "name": "ЛДПР ТВ"
-               },
-               {
-                  "id": 108,
-                  "name": "Мир 24"
-               },
-               {
-                  "id": 110,
-                  "name": "Мир Белогорья"
-               },
-               {
-                  "id": 113,
-                  "name": "Москва24"
-               },
-               {
-                  "id": 126,
-                  "name": "Национальное телевидение Чувашии"
-               },
-               {
-                  "id": 144,
-                  "name": "РБК "
-               },
-               {
-                  "id": 147,
-                  "name": "Россия HD"
-               },
-               {
-                  "id": 161,
-                  "name": "ТНВ"
-               },
-               {
-                  "id": 162,
-                  "name": "ТНВ-Планета"
-               },
-               {
-                  "id": 169,
-                  "name": "Телеканал 360°"
-               },
-               {
-                  "id": 170,
-                  "name": "Телеканал 360° Новости"
-               },
-               {
-                  "id": 179,
-                  "name": "Югра"
-               }
-            ]
-         },
-         {
-            "group": "Музыкальные",
-            "groupData": [
-               {
-                  "id": 4,
-                  "name": "9 Волна"
-               },
-               {
-                  "id": 8,
-                  "name": "BRIDGE TV CLASSIC"
-               },
-               {
-                  "id": 9,
-                  "name": "BRIDGE TV HITS"
-               },
-               {
-                  "id": 10,
-                  "name": "Bridge TV"
-               },
-               {
-                  "id": 11,
-                  "name": "Bridge TV Русский хит"
-               },
-               {
-                  "id": 18,
-                  "name": "Europa Plus TV"
-               },
-               {
-                  "id": 30,
-                  "name": "MEZZO LIVE HD"
-               },
-               {
-                  "id": 31,
-                  "name": "MTV Dance"
-               },
-               {
-                  "id": 32,
-                  "name": "MTV HD"
-               },
-               {
-                  "id": 33,
-                  "name": "MTV Hits"
-               },
-               {
-                  "id": 34,
-                  "name": "MTV Live HD"
-               },
-               {
-                  "id": 35,
-                  "name": "MTV Rocks"
-               },
-               {
-                  "id": 36,
-                  "name": "Music Box Gold"
-               },
-               {
-                  "id": 37,
-                  "name": "Music Box Russia"
-               },
-               {
-                  "id": 49,
-                  "name": "RU.TV"
-               },
-               {
-                  "id": 60,
-                  "name": "VH1 European"
-               },
-               {
-                  "id": 61,
-                  "name": "Vh1 Classic"
-               },
-               {
-                  "id": 74,
-                  "name": "Восток ТВ"
-               },
-               {
-                  "id": 83,
-                  "name": "ЖАРА"
-               },
-               {
-                  "id": 102,
-                  "name": "Ля-минор"
-               },
-               {
-                  "id": 104,
-                  "name": "Майдан"
-               },
-               {
-                  "id": 116,
-                  "name": "Муз ТВ"
-               },
-               {
-                  "id": 117,
-                  "name": "Музыка Первого"
-               },
-               {
-                  "id": 132,
-                  "name": "О2ТВ"
-               },
-               {
-                  "id": 165,
-                  "name": "ТНТ MUSIC"
-               }
-            ]
-         },
-         {
-            "group": "Познавательные",
-            "groupData": [
-               {
-                  "id": 6,
-                  "name": "Animal Planet HD"
-               },
-               {
-                  "id": 12,
-                  "name": "DTX"
-               },
-               {
-                  "id": 14,
-                  "name": "Discovery Channel HD"
-               },
-               {
-                  "id": 15,
-                  "name": "Docubox"
-               },
-               {
-                  "id": 17,
-                  "name": "English Club TV"
-               },
-               {
-                  "id": 27,
-                  "name": "ID Xtra"
-               },
-               {
-                  "id": 29,
-                  "name": "Kаzаkh TV"
-               },
-               {
-                  "id": 39,
-                  "name": "National Geographic HD"
-               },
-               {
-                  "id": 42,
-                  "name": "Ocean-TV"
-               },
-               {
-                  "id": 43,
-                  "name": "Outdoor Channel"
-               },
-               {
-                  "id": 47,
-                  "name": "RTG HD"
-               },
-               {
-                  "id": 48,
-                  "name": "RTД HD"
-               },
-               {
-                  "id": 50,
-                  "name": "Russian Travel Guide"
-               },
-               {
-                  "id": 51,
-                  "name": "SOCHI LIVE"
-               },
-               {
-                  "id": 52,
-                  "name": "Science Channel HD"
-               },
-               {
-                  "id": 59,
-                  "name": "Travel and Adventure HD"
-               },
-               {
-                  "id": 64,
-                  "name": "Zоопарк"
-               },
-               {
-                  "id": 65,
-                  "name": "Авто Плюс"
-               },
-               {
-                  "id": 70,
-                  "name": "Бобёр"
-               },
-               {
-                  "id": 73,
-                  "name": "В мире животных"
-               },
-               {
-                  "id": 76,
-                  "name": "ДИКИЙ"
-               },
-               {
-                  "id": 78,
-                  "name": "Доктор"
-               },
-               {
-                  "id": 85,
-                  "name": "Живая планета"
-               },
-               {
-                  "id": 86,
-                  "name": "Загородная жизнь"
-               },
-               {
-                  "id": 87,
-                  "name": "Загородный"
-               },
-               {
-                  "id": 89,
-                  "name": "Здоровье"
-               },
-               {
-                  "id": 97,
-                  "name": "Ключ"
-               },
-               {
-                  "id": 98,
-                  "name": "Конный мир"
-               },
-               {
-                  "id": 105,
-                  "name": "Мама"
-               },
-               {
-                  "id": 112,
-                  "name": "Морской"
-               },
-               {
-                  "id": 114,
-                  "name": "Моя Планета"
-               },
-               {
-                  "id": 122,
-                  "name": "НТВ Право"
-               },
-               {
-                  "id": 126,
-                  "name": "Национальное телевидение Чувашии"
-               },
-               {
-                  "id": 127,
-                  "name": "Наша Сибирь"
-               },
-               {
-                  "id": 128,
-                  "name": "Наша Тема"
-               },
-               {
-                  "id": 135,
-                  "name": "Охота и Рыбалка"
-               },
-               {
-                  "id": 138,
-                  "name": "Первый Вегетарианский"
-               },
-               {
-                  "id": 139,
-                  "name": "Первый образовательный"
-               },
-               {
-                  "id": 143,
-                  "name": "Пёс и Ко"
-               },
-               {
-                  "id": 156,
-                  "name": "Синергия ТВ"
-               },
-               {
-                  "id": 157,
-                  "name": "Союз"
-               },
-               {
-                  "id": 163,
-                  "name": "ТНОМЕР"
-               },
-               {
-                  "id": 167,
-                  "name": "Тайны галактики"
-               },
-               {
-                  "id": 171,
-                  "name": "Телеканал Совета Федерации \"Вместе РФ\""
-               },
-               {
-                  "id": 175,
-                  "name": "Хабар 24"
-               },
-               {
-                  "id": 176,
-                  "name": "Центральное телевидение (ЦТВ)"
-               }
-            ]
-         },
-         {
-            "group": "Федеральные",
-            "groupData": [
-               {
-                  "id": 66,
-                  "name": "Архыз 24"
-               },
-               {
-                  "id": 67,
-                  "name": "Башкирское спутниковое телевидение"
-               },
-               {
-                  "id": 88,
-                  "name": "Звезда"
-               },
-               {
-                  "id": 95,
-                  "name": "Карусель"
-               },
-               {
-                  "id": 106,
-                  "name": "Матч ТВ"
-               },
-               {
-                  "id": 107,
-                  "name": "Мир"
-               },
-               {
-                  "id": 113,
-                  "name": "Москва24"
-               },
-               {
-                  "id": 116,
-                  "name": "Муз ТВ"
-               },
-               {
-                  "id": 121,
-                  "name": "НТВ"
-               },
-               {
-                  "id": 133,
-                  "name": "ОТР"
-               },
-               {
-                  "id": 137,
-                  "name": "ПЯТНИЦА"
-               },
-               {
-                  "id": 146,
-                  "name": "Россия - 24"
-               },
-               {
-                  "id": 147,
-                  "name": "Россия HD"
-               },
-               {
-                  "id": 148,
-                  "name": "Россия-К"
-               },
-               {
-                  "id": 152,
-                  "name": "СПАС"
-               },
-               {
-                  "id": 155,
-                  "name": "Своё ТВ"
-               },
-               {
-                  "id": 160,
-                  "name": "ТВ Центр"
-               },
-               {
-                  "id": 161,
-                  "name": "ТНВ"
-               },
-               {
-                  "id": 164,
-                  "name": "ТНТ"
-               },
-               {
-                  "id": 169,
-                  "name": "Телеканал 360°"
-               },
-               {
-                  "id": 179,
-                  "name": "Югра"
-               }
-            ]
-         }
-      ],
-      "tvLength": "156 каналов",
       "price": 500,
       "rentDevice": [
          {
-            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
-            "price": 99
+            "text": "Аренда ТВ-приставки",
+            "price": "0"
          },
          {
             "text": "Аренда Android TV",
             "price": 199
+         },
+         {
+            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
+            "price": "0"
          }
       ],
       "infoModal": [
@@ -1194,23 +225,7 @@
                {
                   "name": "Скорость",
                   "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
-                  "value": "100 Мбит/с"
-               },
-               {
-                  "name": "Трафик",
-                  "description": "",
-                  "value": "Безлимитно"
-               }
-            ]
-         },
-         {
-            "title": "ТВ",
-            "icon": "TV_bold.svg",
-            "options": [
-               {
-                  "name": "Мегафон ТВ",
-                  "description": "",
-                  "value": "156 каналов"
+                  "value": "500 Мбит/с"
                },
                {
                   "name": "Трафик",
@@ -1222,78 +237,10 @@
       ],
       "equipments": [
          {
-            "id": "eq-android-tv",
-            "name": "Android TV",
-            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
-            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
-            "params": [
-               {
-                  "icon": "fiolet_googleplay.svg",
-                  "text": "1000+ приложений в Google Play"
-               },
-               {
-                  "icon": "fiolet_4k.svg",
-                  "text": "Поддержка 4K UHD и HDR"
-               },
-               {
-                  "icon": "fiolet_voice-message.svg",
-                  "text": "Голосовое управление"
-               },
-               {
-                  "icon": "fiolet_video.svg",
-                  "text": "Google Chromecast"
-               }
-            ],
-            "img": "pristavka.png",
-            "price": 199,
-            "dataView": "androidtv",
-            "plan": null
-         },
-         {
-            "id": "eq-FR100-1",
-            "name": "Wi-Fi роутер FR100-1",
-            "speed": "(100 Мбит/с)",
-            "mark": "РАССРОЧКА",
-            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
-            "params": [
-               {
-                  "icon": "fiolet_speed.svg",
-                  "text": "Скорость до 100 Мбит/с"
-               },
-               {
-                  "icon": "fiolet_hertz.svg",
-                  "text": "Диапазон частот 2,4 и 5 ГГц"
-               },
-               {
-                  "icon": "fiolet_mobile-internet.svg",
-                  "text": "Возможность подключения 4G"
-               },
-               {
-                  "icon": "fiolet_zone.svg",
-                  "text": "Зона покрытия до 70 м<sup>2</sup>"
-               },
-               {
-                  "icon": "fiolet_settings.svg",
-                  "text": "Лёгкость настройки"
-               },
-               {
-                  "icon": "fiolet_block.svg",
-                  "text": "Родительский контроль"
-               }
-            ],
-            "img": "fr100.png",
-            "price": 55,
-            "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
-         },
-         {
             "id": "eq-FR1000-2",
             "name": "Wi-Fi роутер FR1000-2",
             "speed": "(1 Гбит/с)",
-            "mark": "РАССРОЧКА",
+            "mark": "",
             "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
             "params": [
                {
@@ -1322,43 +269,9 @@
                }
             ],
             "img": "fr1000-2.png",
-            "price": 88,
+            "price": null,
             "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
-         },
-         {
-            "id": "eq-MFTV",
-            "name": "ТВ-приставка МегаФон ТВ",
-            "mark": "РАССРОЧКА",
-            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
-            "params": [
-               {
-                  "icon": "fiolet_umnyj-dom.svg",
-                  "text": "Работает везде, где есть интернет"
-               },
-               {
-                  "icon": "fiolet_4k.svg",
-                  "text": "Поддерживает видео UHD и HD"
-               },
-               {
-                  "icon": "fiolet_wi-fi.svg",
-                  "text": "Подключается через Wi‑Fi"
-               },
-               {
-                  "icon": "fiolet_pult.svg",
-                  "text": "Управляется Bluetooth‑пультом"
-               }
-            ],
-            "img": "tv_new.png",
-            "price": 99,
-            "dataView": "mftv",
-            "plan": {
-               "24": 239,
-               "36": 159
-            }
+            "plan": ""
          }
       ]
    },
@@ -1367,7 +280,7 @@
       "tariffId":  4273,
       "dataView": "vse",
       "name": "Всё",
-      "mark": "Популярное",
+      "marks": ["Акция"],
       "sale": "Скидка 40% на SIM-карты",
       "infoProgress": [
          {
@@ -2389,194 +1302,6 @@
                   "name": "Мегафон ТВ",
                   "description": "",
                   "value": "188 каналов"
-               },
-               {
-                  "name": "Трафик",
-                  "description": "",
-                  "value": "Безлимитно"
-               }
-            ]
-         }
-      ],
-      "equipments": [
-         {
-            "id": "eq-android-tv",
-            "name": "Android TV",
-            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
-            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
-            "params": [
-               {
-                  "icon": "fiolet_googleplay.svg",
-                  "text": "1000+ приложений в Google Play"
-               },
-               {
-                  "icon": "fiolet_4k.svg",
-                  "text": "Поддержка 4K UHD и HDR"
-               },
-               {
-                  "icon": "fiolet_voice-message.svg",
-                  "text": "Голосовое управление"
-               },
-               {
-                  "icon": "fiolet_video.svg",
-                  "text": "Google Chromecast"
-               }
-            ],
-            "img": "pristavka.png",
-            "price": 199,
-            "dataView": "androidtv",
-            "plan": null
-         },
-         {
-            "id": "eq-FR100-1",
-            "name": "Wi-Fi роутер FR100-1",
-            "speed": "(100 Мбит/с)",
-            "mark": "РАССРОЧКА",
-            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
-            "params": [
-               {
-                  "icon": "fiolet_speed.svg",
-                  "text": "Скорость до 100 Мбит/с"
-               },
-               {
-                  "icon": "fiolet_hertz.svg",
-                  "text": "Диапазон частот 2,4 и 5 ГГц"
-               },
-               {
-                  "icon": "fiolet_mobile-internet.svg",
-                  "text": "Возможность подключения 4G"
-               },
-               {
-                  "icon": "fiolet_zone.svg",
-                  "text": "Зона покрытия до 70 м<sup>2</sup>"
-               },
-               {
-                  "icon": "fiolet_settings.svg",
-                  "text": "Лёгкость настройки"
-               },
-               {
-                  "icon": "fiolet_block.svg",
-                  "text": "Родительский контроль"
-               }
-            ],
-            "img": "fr100.png",
-            "price": 55,
-            "dataView": "fr100",
-            "plan": {
-               "24": 149,
-               "36": 99
-            }
-         },
-         {
-            "id": "eq-FR1000-2",
-            "name": "Wi-Fi роутер FR1000-2",
-            "speed": "(1 Гбит/с)",
-            "mark": "РАССРОЧКА",
-            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
-            "params": [
-               {
-                  "icon": "fiolet_speed.svg",
-                  "text": "Скорость до 1 Гбит/с"
-               },
-               {
-                  "icon": "fiolet_hertz.svg",
-                  "text": "Диапазон частот 2,4 и 5 ГГц"
-               },
-               {
-                  "icon": "fiolet_mobile-internet.svg",
-                  "text": "Возможность подключения 4G"
-               },
-               {
-                  "icon": "fiolet_zone.svg",
-                  "text": "Зона покрытия более 70 м<sup>2</sup>"
-               },
-               {
-                  "icon": "fiolet_router.svg",
-                  "text": "4 внешние антенны MU‑MIMO"
-               },
-               {
-                  "icon": "fiolet_block.svg",
-                  "text": "Родительский контроль"
-               }
-            ],
-            "img": "fr1000-2.png",
-            "price": 88,
-            "dataView": "fr1000",
-            "plan": {
-               "24": 199,
-               "36": 129
-            }
-         },
-         {
-            "id": "eq-MFTV",
-            "name": "ТВ-приставка МегаФон ТВ",
-            "mark": "РАССРОЧКА",
-            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
-            "params": [
-               {
-                  "icon": "fiolet_umnyj-dom.svg",
-                  "text": "Работает везде, где есть интернет"
-               },
-               {
-                  "icon": "fiolet_4k.svg",
-                  "text": "Поддерживает видео UHD и HD"
-               },
-               {
-                  "icon": "fiolet_wi-fi.svg",
-                  "text": "Подключается через Wi‑Fi"
-               },
-               {
-                  "icon": "fiolet_pult.svg",
-                  "text": "Управляется Bluetooth‑пультом"
-               }
-            ],
-            "img": "tv_new.png",
-            "price": 99,
-            "dataView": "mftv",
-            "plan": {
-               "24": 239,
-               "36": 159
-            }
-         }
-      ]
-   },
-   {
-      "id": "speed",
-      "tariffId":  4274,
-      "dataView": "speed",
-      "name": "Скоростной",
-      "mark": "Самый быстрый",
-      "sale": "Скидка 40% на SIM-карты",
-      "infoProgress": [
-         {
-            "title": "Домашний&nbsp;<br>интернет",
-            "value": "500 Мбит/с"
-         }
-      ],
-      "price": 750,
-      "rentDevice": [
-         {
-            "text": "Аренда ТВ-приставки",
-            "price": 159
-         },
-         {
-            "text": "Аренда Android TV",
-            "price": 199
-         },
-         {
-            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
-            "price": 99
-         }
-      ],
-      "infoModal": [
-         {
-            "title": "Домашний интернет",
-            "icon": "wi-fi_bold.svg",
-            "options": [
-               {
-                  "name": "Скорость",
-                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
-                  "value": "500 Мбит/с"
                },
                {
                   "name": "Трафик",
@@ -4097,6 +2822,1366 @@
                   "name": "Мегафон ТВ",
                   "description": "",
                   "value": "250 каналов"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         }
+      ],
+      "equipments": [
+         {
+            "id": "eq-android-tv",
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": null
+         },
+         {
+            "id": "eq-FR100-1",
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "id": "eq-FR1000-2",
+            "name": "Wi-Fi роутер FR1000-2",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000-2.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "id": "eq-MFTV",
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv",
+            "plan": {
+               "24": 239,
+               "36": 159
+            }
+         }
+      ]
+   },
+   {
+      "id": "plustv",
+      "tariffId":  4272,
+      "dataView": "plusTV",
+      "name": "ПлюсТВ",
+      "web": "Безлимитный интернет",
+      "sale": "Скидка 40% на SIM-карты",
+      "infoProgress": [
+         {
+            "title": "Домашний&nbsp;<br>интернет",
+            "value": "100 Мбит/с"
+         }
+      ],
+      "tv": [
+         {
+            "group": "HD",
+            "groupData": [
+               {
+                  "id": 6,
+                  "name": "Animal Planet HD"
+               },
+               {
+                  "id": 14,
+                  "name": "Discovery Channel HD"
+               },
+               {
+                  "id": 18,
+                  "name": "Europa Plus TV"
+               },
+               {
+                  "id": 19,
+                  "name": "Eurosport 1 HD"
+               },
+               {
+                  "id": 20,
+                  "name": "FOX HD"
+               },
+               {
+                  "id": 23,
+                  "name": "Fightbox HD"
+               },
+               {
+                  "id": 28,
+                  "name": "KBS World"
+               },
+               {
+                  "id": 29,
+                  "name": "Kаzаkh TV"
+               },
+               {
+                  "id": 30,
+                  "name": "MEZZO LIVE HD"
+               },
+               {
+                  "id": 32,
+                  "name": "MTV HD"
+               },
+               {
+                  "id": 34,
+                  "name": "MTV Live HD"
+               },
+               {
+                  "id": 39,
+                  "name": "National Geographic HD"
+               },
+               {
+                  "id": 44,
+                  "name": "Paramount Comedy HD"
+               },
+               {
+                  "id": 45,
+                  "name": "RT"
+               },
+               {
+                  "id": 47,
+                  "name": "RTG HD"
+               },
+               {
+                  "id": 48,
+                  "name": "RTД HD"
+               },
+               {
+                  "id": 51,
+                  "name": "SOCHI LIVE"
+               },
+               {
+                  "id": 52,
+                  "name": "Science Channel HD"
+               },
+               {
+                  "id": 54,
+                  "name": "Sony Channel HD"
+               },
+               {
+                  "id": 56,
+                  "name": "TLC HD"
+               },
+               {
+                  "id": 59,
+                  "name": "Travel and Adventure HD"
+               },
+               {
+                  "id": 73,
+                  "name": "В мире животных"
+               },
+               {
+                  "id": 82,
+                  "name": "Еда Премиум"
+               },
+               {
+                  "id": 83,
+                  "name": "ЖАРА"
+               },
+               {
+                  "id": 90,
+                  "name": "Известия"
+               },
+               {
+                  "id": 91,
+                  "name": "КИНО ТВ HD"
+               },
+               {
+                  "id": 94,
+                  "name": "Капитан Фантастика"
+               },
+               {
+                  "id": 96,
+                  "name": "Киноужас"
+               },
+               {
+                  "id": 103,
+                  "name": "МИР PREMIUM"
+               },
+               {
+                  "id": 119,
+                  "name": "Мульт HD"
+               },
+               {
+                  "id": 127,
+                  "name": "Наша Сибирь"
+               },
+               {
+                  "id": 147,
+                  "name": "Россия HD"
+               },
+               {
+                  "id": 150,
+                  "name": "Русский роман HD"
+               },
+               {
+                  "id": 153,
+                  "name": "СТС Kids"
+               },
+               {
+                  "id": 169,
+                  "name": "Телеканал 360°"
+               },
+               {
+                  "id": 175,
+                  "name": "Хабар 24"
+               }
+            ]
+         },
+         {
+            "group": "Для детей",
+            "groupData": [
+               {
+                  "id": 5,
+                  "name": "ANI"
+               },
+               {
+                  "id": 25,
+                  "name": "Gulli Girl"
+               },
+               {
+                  "id": 40,
+                  "name": "Nick Jr."
+               },
+               {
+                  "id": 41,
+                  "name": "Nickelodeon"
+               },
+               {
+                  "id": 58,
+                  "name": "Tiji"
+               },
+               {
+                  "id": 72,
+                  "name": "В гостях у сказки"
+               },
+               {
+                  "id": 77,
+                  "name": "Детский мир"
+               },
+               {
+                  "id": 93,
+                  "name": "Канал Disney"
+               },
+               {
+                  "id": 94,
+                  "name": "Капитан Фантастика"
+               },
+               {
+                  "id": 95,
+                  "name": "Карусель"
+               },
+               {
+                  "id": 118,
+                  "name": "Мульт"
+               },
+               {
+                  "id": 119,
+                  "name": "Мульт HD"
+               },
+               {
+                  "id": 120,
+                  "name": "Мультиландия"
+               },
+               {
+                  "id": 145,
+                  "name": "Радость моя"
+               },
+               {
+                  "id": 151,
+                  "name": "Рыжий"
+               },
+               {
+                  "id": 153,
+                  "name": "СТС Kids"
+               },
+               {
+                  "id": 174,
+                  "name": "Уникум"
+               }
+            ]
+         },
+         {
+            "group": "Спорт",
+            "groupData": [
+               {
+                  "id": 16,
+                  "name": "E TV"
+               },
+               {
+                  "id": 19,
+                  "name": "Eurosport 1 HD"
+               },
+               {
+                  "id": 22,
+                  "name": "FastnFunBox"
+               },
+               {
+                  "id": 23,
+                  "name": "Fightbox HD"
+               },
+               {
+                  "id": 84,
+                  "name": "ЖИВИ!"
+               },
+               {
+                  "id": 106,
+                  "name": "Матч ТВ"
+               },
+               {
+                  "id": 109,
+                  "name": "Мир Баскетбола"
+               },
+               {
+                  "id": 158,
+                  "name": "Старт"
+               },
+               {
+                  "id": 166,
+                  "name": "ТОЧКА ОТРЫВА"
+               }
+            ]
+         },
+         {
+            "group": "Кино",
+            "groupData": [
+               {
+                  "id": 20,
+                  "name": "FOX HD"
+               },
+               {
+                  "id": 44,
+                  "name": "Paramount Comedy HD"
+               },
+               {
+                  "id": 54,
+                  "name": "Sony Channel HD"
+               },
+               {
+                  "id": 55,
+                  "name": "Sony Turbo"
+               },
+               {
+                  "id": 63,
+                  "name": "Zee Russia"
+               },
+               {
+                  "id": 91,
+                  "name": "КИНО ТВ HD"
+               },
+               {
+                  "id": 96,
+                  "name": "Киноужас"
+               },
+               {
+                  "id": 101,
+                  "name": "Любимое кино"
+               },
+               {
+                  "id": 111,
+                  "name": "Мир сериала"
+               },
+               {
+                  "id": 123,
+                  "name": "НТВ Сериал"
+               },
+               {
+                  "id": 125,
+                  "name": "НТВ Хит"
+               },
+               {
+                  "id": 129,
+                  "name": "Наше новое кино"
+               },
+               {
+                  "id": 140,
+                  "name": "Победа"
+               },
+               {
+                  "id": 142,
+                  "name": "Продвижение"
+               },
+               {
+                  "id": 149,
+                  "name": "Русский бестселлер"
+               },
+               {
+                  "id": 150,
+                  "name": "Русский роман HD"
+               }
+            ]
+         },
+         {
+            "group": "Развлекательные",
+            "groupData": [
+               {
+                  "id": 1,
+                  "name": "2X2"
+               },
+               {
+                  "id": 2,
+                  "name": "7tv"
+               },
+               {
+                  "id": 3,
+                  "name": "8 Канал"
+               },
+               {
+                  "id": 21,
+                  "name": "Fashionbox"
+               },
+               {
+                  "id": 26,
+                  "name": "HGTV"
+               },
+               {
+                  "id": 28,
+                  "name": "KBS World"
+               },
+               {
+                  "id": 29,
+                  "name": "Kаzаkh TV"
+               },
+               {
+                  "id": 43,
+                  "name": "Outdoor Channel"
+               },
+               {
+                  "id": 53,
+                  "name": "Shopping Live"
+               },
+               {
+                  "id": 56,
+                  "name": "TLC HD"
+               },
+               {
+                  "id": 57,
+                  "name": "TVM Channel"
+               },
+               {
+                  "id": 62,
+                  "name": "World Fashion Channel"
+               },
+               {
+                  "id": 73,
+                  "name": "В мире животных"
+               },
+               {
+                  "id": 75,
+                  "name": "Время"
+               },
+               {
+                  "id": 81,
+                  "name": "Еда"
+               },
+               {
+                  "id": 82,
+                  "name": "Еда Премиум"
+               },
+               {
+                  "id": 92,
+                  "name": "Калейдоскоп ТВ"
+               },
+               {
+                  "id": 99,
+                  "name": "Кухня ТВ"
+               },
+               {
+                  "id": 103,
+                  "name": "МИР PREMIUM"
+               },
+               {
+                  "id": 112,
+                  "name": "Морской"
+               },
+               {
+                  "id": 115,
+                  "name": "Мужской"
+               },
+               {
+                  "id": 124,
+                  "name": "НТВ Стиль"
+               },
+               {
+                  "id": 126,
+                  "name": "Национальное телевидение Чувашии"
+               },
+               {
+                  "id": 128,
+                  "name": "Наша Тема"
+               },
+               {
+                  "id": 130,
+                  "name": "Ностальгия"
+               },
+               {
+                  "id": 131,
+                  "name": "О!КИНО"
+               },
+               {
+                  "id": 134,
+                  "name": "Открытый мир"
+               },
+               {
+                  "id": 136,
+                  "name": "Охотник и рыболов HD"
+               },
+               {
+                  "id": 141,
+                  "name": "Про Бизнес"
+               },
+               {
+                  "id": 154,
+                  "name": "Сарафан"
+               },
+               {
+                  "id": 159,
+                  "name": "Супер"
+               },
+               {
+                  "id": 168,
+                  "name": "Театр"
+               },
+               {
+                  "id": 172,
+                  "name": "Телекафе"
+               },
+               {
+                  "id": 173,
+                  "name": "Точка ТВ"
+               },
+               {
+                  "id": 175,
+                  "name": "Хабар 24"
+               },
+               {
+                  "id": 177,
+                  "name": "Ю"
+               },
+               {
+                  "id": 178,
+                  "name": "Ювелирочка"
+               }
+            ]
+         },
+         {
+            "group": "Новости",
+            "groupData": [
+               {
+                  "id": 7,
+                  "name": "Arirang"
+               },
+               {
+                  "id": 13,
+                  "name": "Deutsche Welle"
+               },
+               {
+                  "id": 24,
+                  "name": "France 24"
+               },
+               {
+                  "id": 38,
+                  "name": "NHK World-Japan"
+               },
+               {
+                  "id": 45,
+                  "name": "RT"
+               },
+               {
+                  "id": 46,
+                  "name": "RT Arabic"
+               },
+               {
+                  "id": 68,
+                  "name": "БелРос"
+               },
+               {
+                  "id": 69,
+                  "name": "Беларусь 24"
+               },
+               {
+                  "id": 71,
+                  "name": "Большая Азия"
+               },
+               {
+                  "id": 79,
+                  "name": "Дума ТВ"
+               },
+               {
+                  "id": 80,
+                  "name": "Евроновости"
+               },
+               {
+                  "id": 90,
+                  "name": "Известия"
+               },
+               {
+                  "id": 100,
+                  "name": "ЛДПР ТВ"
+               },
+               {
+                  "id": 108,
+                  "name": "Мир 24"
+               },
+               {
+                  "id": 110,
+                  "name": "Мир Белогорья"
+               },
+               {
+                  "id": 113,
+                  "name": "Москва24"
+               },
+               {
+                  "id": 126,
+                  "name": "Национальное телевидение Чувашии"
+               },
+               {
+                  "id": 144,
+                  "name": "РБК "
+               },
+               {
+                  "id": 147,
+                  "name": "Россия HD"
+               },
+               {
+                  "id": 161,
+                  "name": "ТНВ"
+               },
+               {
+                  "id": 162,
+                  "name": "ТНВ-Планета"
+               },
+               {
+                  "id": 169,
+                  "name": "Телеканал 360°"
+               },
+               {
+                  "id": 170,
+                  "name": "Телеканал 360° Новости"
+               },
+               {
+                  "id": 179,
+                  "name": "Югра"
+               }
+            ]
+         },
+         {
+            "group": "Музыкальные",
+            "groupData": [
+               {
+                  "id": 4,
+                  "name": "9 Волна"
+               },
+               {
+                  "id": 8,
+                  "name": "BRIDGE TV CLASSIC"
+               },
+               {
+                  "id": 9,
+                  "name": "BRIDGE TV HITS"
+               },
+               {
+                  "id": 10,
+                  "name": "Bridge TV"
+               },
+               {
+                  "id": 11,
+                  "name": "Bridge TV Русский хит"
+               },
+               {
+                  "id": 18,
+                  "name": "Europa Plus TV"
+               },
+               {
+                  "id": 30,
+                  "name": "MEZZO LIVE HD"
+               },
+               {
+                  "id": 31,
+                  "name": "MTV Dance"
+               },
+               {
+                  "id": 32,
+                  "name": "MTV HD"
+               },
+               {
+                  "id": 33,
+                  "name": "MTV Hits"
+               },
+               {
+                  "id": 34,
+                  "name": "MTV Live HD"
+               },
+               {
+                  "id": 35,
+                  "name": "MTV Rocks"
+               },
+               {
+                  "id": 36,
+                  "name": "Music Box Gold"
+               },
+               {
+                  "id": 37,
+                  "name": "Music Box Russia"
+               },
+               {
+                  "id": 49,
+                  "name": "RU.TV"
+               },
+               {
+                  "id": 60,
+                  "name": "VH1 European"
+               },
+               {
+                  "id": 61,
+                  "name": "Vh1 Classic"
+               },
+               {
+                  "id": 74,
+                  "name": "Восток ТВ"
+               },
+               {
+                  "id": 83,
+                  "name": "ЖАРА"
+               },
+               {
+                  "id": 102,
+                  "name": "Ля-минор"
+               },
+               {
+                  "id": 104,
+                  "name": "Майдан"
+               },
+               {
+                  "id": 116,
+                  "name": "Муз ТВ"
+               },
+               {
+                  "id": 117,
+                  "name": "Музыка Первого"
+               },
+               {
+                  "id": 132,
+                  "name": "О2ТВ"
+               },
+               {
+                  "id": 165,
+                  "name": "ТНТ MUSIC"
+               }
+            ]
+         },
+         {
+            "group": "Познавательные",
+            "groupData": [
+               {
+                  "id": 6,
+                  "name": "Animal Planet HD"
+               },
+               {
+                  "id": 12,
+                  "name": "DTX"
+               },
+               {
+                  "id": 14,
+                  "name": "Discovery Channel HD"
+               },
+               {
+                  "id": 15,
+                  "name": "Docubox"
+               },
+               {
+                  "id": 17,
+                  "name": "English Club TV"
+               },
+               {
+                  "id": 27,
+                  "name": "ID Xtra"
+               },
+               {
+                  "id": 29,
+                  "name": "Kаzаkh TV"
+               },
+               {
+                  "id": 39,
+                  "name": "National Geographic HD"
+               },
+               {
+                  "id": 42,
+                  "name": "Ocean-TV"
+               },
+               {
+                  "id": 43,
+                  "name": "Outdoor Channel"
+               },
+               {
+                  "id": 47,
+                  "name": "RTG HD"
+               },
+               {
+                  "id": 48,
+                  "name": "RTД HD"
+               },
+               {
+                  "id": 50,
+                  "name": "Russian Travel Guide"
+               },
+               {
+                  "id": 51,
+                  "name": "SOCHI LIVE"
+               },
+               {
+                  "id": 52,
+                  "name": "Science Channel HD"
+               },
+               {
+                  "id": 59,
+                  "name": "Travel and Adventure HD"
+               },
+               {
+                  "id": 64,
+                  "name": "Zоопарк"
+               },
+               {
+                  "id": 65,
+                  "name": "Авто Плюс"
+               },
+               {
+                  "id": 70,
+                  "name": "Бобёр"
+               },
+               {
+                  "id": 73,
+                  "name": "В мире животных"
+               },
+               {
+                  "id": 76,
+                  "name": "ДИКИЙ"
+               },
+               {
+                  "id": 78,
+                  "name": "Доктор"
+               },
+               {
+                  "id": 85,
+                  "name": "Живая планета"
+               },
+               {
+                  "id": 86,
+                  "name": "Загородная жизнь"
+               },
+               {
+                  "id": 87,
+                  "name": "Загородный"
+               },
+               {
+                  "id": 89,
+                  "name": "Здоровье"
+               },
+               {
+                  "id": 97,
+                  "name": "Ключ"
+               },
+               {
+                  "id": 98,
+                  "name": "Конный мир"
+               },
+               {
+                  "id": 105,
+                  "name": "Мама"
+               },
+               {
+                  "id": 112,
+                  "name": "Морской"
+               },
+               {
+                  "id": 114,
+                  "name": "Моя Планета"
+               },
+               {
+                  "id": 122,
+                  "name": "НТВ Право"
+               },
+               {
+                  "id": 126,
+                  "name": "Национальное телевидение Чувашии"
+               },
+               {
+                  "id": 127,
+                  "name": "Наша Сибирь"
+               },
+               {
+                  "id": 128,
+                  "name": "Наша Тема"
+               },
+               {
+                  "id": 135,
+                  "name": "Охота и Рыбалка"
+               },
+               {
+                  "id": 138,
+                  "name": "Первый Вегетарианский"
+               },
+               {
+                  "id": 139,
+                  "name": "Первый образовательный"
+               },
+               {
+                  "id": 143,
+                  "name": "Пёс и Ко"
+               },
+               {
+                  "id": 156,
+                  "name": "Синергия ТВ"
+               },
+               {
+                  "id": 157,
+                  "name": "Союз"
+               },
+               {
+                  "id": 163,
+                  "name": "ТНОМЕР"
+               },
+               {
+                  "id": 167,
+                  "name": "Тайны галактики"
+               },
+               {
+                  "id": 171,
+                  "name": "Телеканал Совета Федерации \"Вместе РФ\""
+               },
+               {
+                  "id": 175,
+                  "name": "Хабар 24"
+               },
+               {
+                  "id": 176,
+                  "name": "Центральное телевидение (ЦТВ)"
+               }
+            ]
+         },
+         {
+            "group": "Федеральные",
+            "groupData": [
+               {
+                  "id": 66,
+                  "name": "Архыз 24"
+               },
+               {
+                  "id": 67,
+                  "name": "Башкирское спутниковое телевидение"
+               },
+               {
+                  "id": 88,
+                  "name": "Звезда"
+               },
+               {
+                  "id": 95,
+                  "name": "Карусель"
+               },
+               {
+                  "id": 106,
+                  "name": "Матч ТВ"
+               },
+               {
+                  "id": 107,
+                  "name": "Мир"
+               },
+               {
+                  "id": 113,
+                  "name": "Москва24"
+               },
+               {
+                  "id": 116,
+                  "name": "Муз ТВ"
+               },
+               {
+                  "id": 121,
+                  "name": "НТВ"
+               },
+               {
+                  "id": 133,
+                  "name": "ОТР"
+               },
+               {
+                  "id": 137,
+                  "name": "ПЯТНИЦА"
+               },
+               {
+                  "id": 146,
+                  "name": "Россия - 24"
+               },
+               {
+                  "id": 147,
+                  "name": "Россия HD"
+               },
+               {
+                  "id": 148,
+                  "name": "Россия-К"
+               },
+               {
+                  "id": 152,
+                  "name": "СПАС"
+               },
+               {
+                  "id": 155,
+                  "name": "Своё ТВ"
+               },
+               {
+                  "id": 160,
+                  "name": "ТВ Центр"
+               },
+               {
+                  "id": 161,
+                  "name": "ТНВ"
+               },
+               {
+                  "id": 164,
+                  "name": "ТНТ"
+               },
+               {
+                  "id": 169,
+                  "name": "Телеканал 360°"
+               },
+               {
+                  "id": 179,
+                  "name": "Югра"
+               }
+            ]
+         }
+      ],
+      "tvLength": "156 каналов",
+      "price": 500,
+      "rentDevice": [
+         {
+            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
+            "price": 99
+         },
+         {
+            "text": "Аренда Android TV",
+            "price": 199
+         }
+      ],
+      "infoModal": [
+         {
+            "title": "Домашний интернет",
+            "icon": "wi-fi_bold.svg",
+            "options": [
+               {
+                  "name": "Скорость",
+                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
+                  "value": "100 Мбит/с"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         },
+         {
+            "title": "ТВ",
+            "icon": "TV_bold.svg",
+            "options": [
+               {
+                  "name": "Мегафон ТВ",
+                  "description": "",
+                  "value": "156 каналов"
+               },
+               {
+                  "name": "Трафик",
+                  "description": "",
+                  "value": "Безлимитно"
+               }
+            ]
+         }
+      ],
+      "equipments": [
+         {
+            "id": "eq-android-tv",
+            "name": "Android TV",
+            "mark": "ГОД СЕРИАЛОВ В ПОДАРОК",
+            "text": "Играйте в игры, смотрите видео, слушайте музыку и общайтесь с друзьями без каких-либо ограничений. Наслаждайтесь реалистичным качеством картинки.",
+            "params": [
+               {
+                  "icon": "fiolet_googleplay.svg",
+                  "text": "1000+ приложений в Google Play"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддержка 4K UHD и HDR"
+               },
+               {
+                  "icon": "fiolet_voice-message.svg",
+                  "text": "Голосовое управление"
+               },
+               {
+                  "icon": "fiolet_video.svg",
+                  "text": "Google Chromecast"
+               }
+            ],
+            "img": "pristavka.png",
+            "price": 199,
+            "dataView": "androidtv",
+            "plan": null
+         },
+         {
+            "id": "eq-FR100-1",
+            "name": "Wi-Fi роутер FR100-1",
+            "speed": "(100 Мбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Мощный Wi-Fi роутер для стабильного интернета в любом уголке вашего дома. Привезем и настроим бесплатно.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 100 Мбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия до 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_settings.svg",
+                  "text": "Лёгкость настройки"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr100.png",
+            "price": 55,
+            "dataView": "fr100",
+            "plan": {
+               "24": 149,
+               "36": 99
+            }
+         },
+         {
+            "id": "eq-FR1000-2",
+            "name": "Wi-Fi роутер FR1000-2",
+            "speed": "(1 Гбит/с)",
+            "mark": "РАССРОЧКА",
+            "text": "Высокоскоростной Wi‑Fi‑роутер для стабильного интернета. Ловит по всему дому. Бесплатная доставка и настройка.",
+            "params": [
+               {
+                  "icon": "fiolet_speed.svg",
+                  "text": "Скорость до 1 Гбит/с"
+               },
+               {
+                  "icon": "fiolet_hertz.svg",
+                  "text": "Диапазон частот 2,4 и 5 ГГц"
+               },
+               {
+                  "icon": "fiolet_mobile-internet.svg",
+                  "text": "Возможность подключения 4G"
+               },
+               {
+                  "icon": "fiolet_zone.svg",
+                  "text": "Зона покрытия более 70 м<sup>2</sup>"
+               },
+               {
+                  "icon": "fiolet_router.svg",
+                  "text": "4 внешние антенны MU‑MIMO"
+               },
+               {
+                  "icon": "fiolet_block.svg",
+                  "text": "Родительский контроль"
+               }
+            ],
+            "img": "fr1000-2.png",
+            "price": 88,
+            "dataView": "fr1000",
+            "plan": {
+               "24": 199,
+               "36": 129
+            }
+         },
+         {
+            "id": "eq-MFTV",
+            "name": "ТВ-приставка МегаФон ТВ",
+            "mark": "РАССРОЧКА",
+            "text": "Управляйте эфиром, перематывайте, ставьте на паузу – смотрите как удобно и когда удобно.",
+            "params": [
+               {
+                  "icon": "fiolet_umnyj-dom.svg",
+                  "text": "Работает везде, где есть интернет"
+               },
+               {
+                  "icon": "fiolet_4k.svg",
+                  "text": "Поддерживает видео UHD и HD"
+               },
+               {
+                  "icon": "fiolet_wi-fi.svg",
+                  "text": "Подключается через Wi‑Fi"
+               },
+               {
+                  "icon": "fiolet_pult.svg",
+                  "text": "Управляется Bluetooth‑пультом"
+               }
+            ],
+            "img": "tv_new.png",
+            "price": 99,
+            "dataView": "mftv",
+            "plan": {
+               "24": 239,
+               "36": 159
+            }
+         }
+      ]
+   },
+   {
+      "id": "speed",
+      "tariffId":  4274,
+      "dataView": "speed",
+      "name": "Скоростной",
+      "marks": ["Самый быстрый"],
+      "sale": "Скидка 40% на SIM-карты",
+      "infoProgress": [
+         {
+            "title": "Домашний&nbsp;<br>интернет",
+            "value": "500 Мбит/с"
+         }
+      ],
+      "price": 750,
+      "rentDevice": [
+         {
+            "text": "Аренда ТВ-приставки",
+            "price": 159
+         },
+         {
+            "text": "Аренда Android TV",
+            "price": 199
+         },
+         {
+            "text": "Аренда Wi-Fi роутера <nobr>(1 Гбит/с)</nobr>",
+            "price": 99
+         }
+      ],
+      "infoModal": [
+         {
+            "title": "Домашний интернет",
+            "icon": "wi-fi_bold.svg",
+            "options": [
+               {
+                  "name": "Скорость",
+                  "description": "Максимальная скорость интернет-соединения, предусмотренная тарифом.",
+                  "value": "500 Мбит/с"
                },
                {
                   "name": "Трафик",

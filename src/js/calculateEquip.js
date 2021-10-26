@@ -21,7 +21,7 @@ $( '.about-tariff-modal' )
 
 
          if (equipment.plan) {
-            const inputsSelector =  'input[type="radio"]'
+            const inputsSelector = 'input[type="radio"]'
             window.cardPlan = new CardPlan( cardProps, inputsSelector )
             this[tariff.id].push( cardPlan )
             cardPlan.addEvents()
@@ -64,7 +64,10 @@ class CardRent {
          const cards = parentModal.querySelectorAll( '.dop-options-card' )
          const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector( '.switch input' ).checked )
          this.totalPriceTempl.textContent = cardsSwitchOn
-            .map( card => this.filterNum( card.querySelector( '.price__current' ).textContent ) )
+            .map( card => card.querySelector( '.price__current' )
+               ? this.filterNum( card.querySelector( '.price__current' ).textContent )
+               : 0
+            )
             .reduce( (a, b) => a + b, this.totalPrice )
          this.isDescription( cardsSwitchOn )
       }
