@@ -5,9 +5,11 @@ import './plugins/jquery.validate'
 import 'bootstrap'
 import 'select2'
 import 'popper.js'
-// import './plugins/datepicker'
+
 
 $( function () {
+   $('.slider').css('opacity', '1')
+
 
    // select выбор времени modal
    $('#selectTime').select2({
@@ -15,6 +17,7 @@ $( function () {
       placeholder: 'Время',
       width: '100%'
    })
+
 
    // слайдер
    $( '.tariffs .slider' ).slick( {
@@ -42,6 +45,7 @@ $( function () {
          }
       ]
    } );
+
 
    // слайдер
    $( '.equipments .slider' ).slick( {
@@ -73,13 +77,16 @@ $( function () {
       ]
    } );
 
+
    // маска
    $( 'input[name="phone"]' ).mask( '+7(000)000-00-00', {placeholder: "+7(   )   -  -  "} );
+
 
    // валидация формы
    $.validator.addMethod( "select", function (value) { // валидация address
          return setAddress.address === value
    } )
+
 
    // popper tippy
    tippy( '.price__icon_all', {
@@ -92,6 +99,7 @@ $( function () {
       hideOnClick: false,
       // trigger: 'click'
    } )
+
 
    tippy( '.price__icon_vse', {
       content: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
