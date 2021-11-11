@@ -53,7 +53,7 @@ function getDataOrder() {
    const price = prop.sendOrder.priceEquip ? prop.sendOrder.priceEquip.textContent.trim() + '₽' : ''
    const nameEquip = prop.sendOrder.nameEquip || ''
    const address = prop.dataAddress.address ? `По адресу ${prop.dataAddress.address}` : ''
-   const tariffName = prop.sendOrder.tariffName || 'Объединяй! Для своих'
+   const tariffName = prop.sendOrder.tariffName || '#ДляДома Для своих'
    const tariffId =  +prop.sendOrder.tariffId || 5330
 
    return {

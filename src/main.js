@@ -15,7 +15,7 @@ import '@babel/polyfill'
 import './js/plugins_config' // настройки плагинов
 import './js/script' // прочее
 import './js/toPlug' // плавный скролл
-import './js/order' // валидация заявки на подключение
+import './js/order' // валидация заявки на подключение (отправка данных на сервер)
 import './js/calcRadio' // расчеты по переключателям
 import './js/analytics' // аналитика
 import './js/moreTariff' // Кнопка "подробнее" о тарифе
