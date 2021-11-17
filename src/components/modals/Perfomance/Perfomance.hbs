@@ -45,7 +45,7 @@
                </picture>
             </div>
 
-            {{#h-if mark '===' 'РАССРОЧКА'}}
+            {{#if plan}}
                <div class="performance__radio">
                   <p class="performance__radio-title">
                      Рассрочка
@@ -67,7 +67,7 @@
                      </label>
                   </div>
                </div>
-            {{/h-if}}
+            {{/if}}
 
             <div class="modal-order">
                <div class="modal-order__text">
