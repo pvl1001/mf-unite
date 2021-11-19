@@ -39,5 +39,6 @@ document.addEventListener( "DOMContentLoaded", function () {
 } )
 
 window.analytics = eventLabel => {
-   gtag('event', 'click', {'event_category': 'EventHomeMF','event_label': 'click_button_' + eventLabel })
+   console.log(eventLabel)
+   gtag('event', 'click', {'event_category': 'EventHomeMF','event_label': eventLabel })
 }

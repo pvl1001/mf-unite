@@ -1,4 +1,4 @@
 window.moreTariff = (id, i, eventLabel) => {
    openModal(id, i)
-   analytics(eventLabel)
+   analytics('click_button_' + eventLabel)
 }

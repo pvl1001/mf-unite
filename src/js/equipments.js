@@ -4,7 +4,7 @@ equipments = {
       modal.classList.add( 'hide-price' )
 
       openModal( id, i )
-      analytics( eventLabel )
+      analytics( 'click_button_' + eventLabel )
 
       $( id ).on( 'hidden.bs.modal', () => {
          modal.classList.remove( 'hide-price' )
