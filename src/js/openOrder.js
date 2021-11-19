@@ -5,7 +5,7 @@ window.openOrder = (eventLabel, priceEquipSelector, nameEquip, tariffId , tariff
 
    const eventLabelText = () => {
       if (eventLabel === 'connect') {
-         analytics( 'click_button_order_connect_turbo' )
+         analytics( 'click_button_connect_turbo' )
          return `click_button_connect_send_turbo`
       }
       analytics( 'click_button_order_' + eventLabel )
