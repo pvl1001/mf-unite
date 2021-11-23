@@ -48,10 +48,15 @@
                   >Заказать
                   </button>
 
-                  <div class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
-                     Подробнее
-                  </div>
-
+                  {{#h-if id '===' 'eq-almond'}}
+                     <div class="link" data-toggle="modal" data-target="#modalAlmond" onclick="openEqAlmond()">
+                        Подробнее
+                     </div>
+                  {{else}}
+                     <div class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
+                        Подробнее
+                     </div>
+                  {{/h-if}}
                </div>
             </div>
          {{/each}}

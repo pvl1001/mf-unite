@@ -8,7 +8,7 @@ export default function (title, value) {
    }
 
    if (title === 'Домашний&nbsp;<br>интернет') {
-      return value === '100 Мбит/с' ? '50%' : value === '200 Мбит/с' ? '75%' : '100%'
+      return widthProgressBar( value, 5 )
    }
 
    if (title === 'ТВ') {

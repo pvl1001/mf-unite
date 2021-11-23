@@ -1,6 +1,7 @@
 <!--Подробнее Модемы-->
 {{#each equipments}}
-   <div class="modal performance" id="{{id}}" data-view="modal_{{dataView}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+   {{#h-if id '!==' 'eq-almond'}}
+      <div class="modal performance" id="{{id}}" data-view="modal_{{dataView}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
          <div class="modal-content">
@@ -88,6 +89,7 @@
          </div>
       </div>
    </div>
+   {{/h-if}}
 {{/each}}
 {{#with unite}}
    <div class="modal performance" id="{{id}}" data-view="modal_vezde" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

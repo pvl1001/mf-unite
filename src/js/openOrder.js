@@ -1,7 +1,7 @@
 import prop from "./prop";
 
 // при открытии окна присвоить атрибут кнопке "отправить"
-window.openOrder = (eventLabel, priceEquipSelector, nameEquip, tariffId , tariffName ) => {
+window.openOrder = (eventLabel, priceEquipSelector, nameEquip, tariffId, tariffName) => {
 
    const eventLabelText = () => {
       if (eventLabel === 'connect') {
@@ -13,9 +13,16 @@ window.openOrder = (eventLabel, priceEquipSelector, nameEquip, tariffId , tariff
    }
 
 
+   if (nameEquip && nameEquip[0] === '#') {
+      const modal = document.querySelector( nameEquip )
+      nameEquip = Array.from( modal.querySelectorAll( 'input[type="checkbox"]:checked' ) )
+         .map( input => input.dataset.equipName ).join()
+   }
+
+
    prop.sendOrder = {
       eventLabel: eventLabelText(),
-      priceEquip: document.querySelector( priceEquipSelector ),
+      priceEquip: priceEquipSelector ? +document.querySelector( priceEquipSelector ).textContent : '',
       nameEquip,
       tariffId,
       tariffName

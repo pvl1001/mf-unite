@@ -27,6 +27,7 @@ $( '#orderForm' ).validate( {
    },
    submitHandler: function () {
       const dataOrder = getDataOrder.call( this )
+      // console.log( dataOrder )
       getResponseOrder( dataOrder )
          .then( (data) => resultOrderText( data, dataOrder ) )
          .then( () => nextForm( '.order-thx', '.requisition' ) )
@@ -37,7 +38,7 @@ $( '#orderForm' ).validate( {
 // сброс валидации формы при закрытии окна
 $( '#order' ).on( 'hide.bs.modal', function () {
    nextForm( '.requisition', '.order-thx' )
-   $( '#orderForm' ).trigger('reset').validate().resetForm()
+   $( '#orderForm' ).trigger( 'reset' ).validate().resetForm()
 } )
 
 async function getResponseOrder(data) {
@@ -50,11 +51,11 @@ async function getResponseOrder(data) {
 
 // сформировать объект заявки для отправки
 function getDataOrder() {
-   const price = prop.sendOrder.priceEquip ? prop.sendOrder.priceEquip.textContent.trim() + '₽' : ''
+   const price = prop.sendOrder.priceEquip ? prop.sendOrder.priceEquip + '₽' : ''
    const nameEquip = prop.sendOrder.nameEquip || ''
    const address = prop.dataAddress.address ? `По адресу ${prop.dataAddress.address}` : ''
-   const tariffName = prop.sendOrder.tariffName || '#ДляДома Для своих'
-   const tariffId =  +prop.sendOrder.tariffId || 5330
+   const tariffName = prop.sendOrder.tariffName || '#ДляДома Турбо'
+   const tariffId = +prop.sendOrder.tariffId || 4276
 
    return {
       form_name: 'express_form_ccmp_short',
@@ -74,10 +75,11 @@ function getDataOrder() {
 
 // обработка полученного кода
 function resultOrderText(data, dataOrder) {
+   // console.log(prop.sendOrder.eventLabel)
    if (data.code === '200') {
       gtag( 'event', 'click', {'event_category': 'EventHomeMF', 'event_label': prop.sendOrder.eventLabel} )
       gtag( 'event', 'requestLandingSend', {'event_category': 'order'} )
-      if (typeof ym !== 'undefined') {
+      if (ym !== undefined) {
          ym( 66149989, 'reachGoal', 'zayavka_megafon' )
          ym( 66149989, 'reachGoal', prop.sendOrder.eventLabel )
       }
@@ -116,9 +118,6 @@ function resultOrderText(data, dataOrder) {
 
 // изменить текст модального окна результата заявки
 function setResultTextOrder(title, text) {
-   const $title = document.querySelector( '.order-thx__title' )
-   const $text = document.querySelector( '.order-thx__text' )
-
-   $title.textContent = title
-   $text.textContent = text
+   document.querySelector( '.order-thx__title' ).textContent = title
+   document.querySelector( '.order-thx__text' ).textContent = text
 }
