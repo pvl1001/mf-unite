@@ -26,6 +26,7 @@ import './js/validate_address' // "проверить возможность п�
 import './js/equipments' // открытие модального окна с оборудованием (скрыть кнопку заказать)
 import './js/calculateEquip' // расчеты карточек доп. опций
 import './js/calculateModalEquip' // окно с оборудованием рассрочка
+import './js/collapseChannels' // загрузка тв-каналов
 
 // build all img
 function requireAll(r) { r.keys().forEach(r); }

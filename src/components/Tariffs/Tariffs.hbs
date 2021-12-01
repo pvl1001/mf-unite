@@ -48,9 +48,8 @@
                               <div>
                                  <div class="block-progress__desc desk-channels">
                                     <div class="block-progress__desc_icon tv"></div>
-                                    <a href="#collapseChannel{{@index}}"
-                                       data-toggle="collapse"
-                                       data-target=".multi-collapse">
+                                    <a {{#if tvId}}data-tv-id="{{tvId}}"{{/if}}
+                                       data-toggle="collapse">
                                        {{tvLength}}
                                     </a>
                                  </div>
@@ -63,39 +62,9 @@
                            </div>
 
                            <div data-toggle="collapse"
-                                class="collapse multi-collapse collapse-channel"
-                                id="collapseChannel{{@index}}">
+                                class="collapse multi-collapse collapse-channel">
 
-                              <ul class="collapse-channel__channels">
-                                 <li class="collapse-channel__channel-group">
-                                    {{#each ../tariffs.[3].tv}}
-                                       <a href="#collapseChannelGroup1{{@index}}"
-                                          data-toggle="collapse"
-                                          class="collapse-channel__group-toggle"
-                                          aria-controls="collapse_{{../id}}_{{@index}}"
-                                          data-target=".multi-collapse-gr{{@index}}"
-                                          aria-expanded="false"
-                                       >
-                                          <div class="collapse-channel__group-wrapper">
-                                             <span class="collapse-channel__group-name">{{group}}</span>
-                                             <span class="collapse-channel__group-count">
-                                                {{countChannel ../tv @index}}
-                                             </span>
-                                          </div>
-                                       </a>
-                                       <ul
-                                          class="collapse-channel__group-list collapse multi-collapse-gr{{@index}}"
-                                          id="collapse_{{../id}}_{{@index}}">
-                                          {{#each groupData}}
-                                             <li class="collapse-channel__group-channelName {{#if
-                                                (activeName name ../.. @../index)}}text-green{{/if}}">
-                                                {{name}}
-                                             </li>
-                                          {{/each}}
-                                       </ul>
-                                    {{/each}}
-                                 </li>
-                              </ul>
+                              <ul class="collapse-channel__channels"></ul>
                            </div>
                         </div>
                      {{/if}}
