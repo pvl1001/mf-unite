@@ -15,32 +15,20 @@ allChannels.forEach( channels => channels.addEventListener( 'click', handlerChan
 function handlerChannels() {
    allChannels.forEach( (el, i) => {
 
-      if (once) {
-         const tvId = el.dataset.tvId
-
-         return getChannels( tvId )
-            .then( data => preRenderChannels(data, i, tvId) )
-            .catch( err => console.error( 'Error response getChannels', err ) )
-      }
-
+      once && getChannels( el.dataset.tvId )
+         .then( data => renderChannels( data, i, el.dataset.tvId ) )
+         .catch( err => console.error( 'Error response getChannels', err ) )
    } )
+
    !once && $( '.multi-collapse' ).collapse( 'toggle' )
 }
 
 
-function preRenderChannels(data, i, tvId) {
+function renderChannels(data, i, tvId) {
    arrChannels.push( data.packages[tvId] )
 
    if (arrChannels.length === allChannels.length) {
       const maximum = arrChannels.find( el => el.name === "ДляДома Максимум" )
-      renderChannels( maximum ).then( $( '.multi-collapse' ).collapse( 'show' ) )
-
-      once = false
-   }
-}
-
-function renderChannels(maximum) {
-   return new Promise( response => {
       const arrListChannels = document.querySelectorAll( '.collapse-channel__channels' )
 
       arrListChannels.forEach( (ul, i) => {
@@ -75,9 +63,11 @@ function renderChannels(maximum) {
          }
       } )
 
-      response()
-   } )
+      $( '.multi-collapse' ).collapse( 'show' )
+      once = false
+   }
 }
+
 
 function greenText(maximum, current) {
    return current.find( el => el.id === maximum.id ) ? 'text-green' : ''
