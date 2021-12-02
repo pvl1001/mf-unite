@@ -50,7 +50,7 @@ export class CardAlmond {
 
    eventBtnOrderSend() {
       $( '#order' ).modal( 'show' )
-      openOrder( 'almond', '#modalAlmond .new-price', 'Умный дом' )
+      openOrder( {label: 'almond', block: 'equipment'}, '#modalAlmond .new-price', 'Умный дом' )
    }
 
    cntPlus() {

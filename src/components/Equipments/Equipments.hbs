@@ -41,7 +41,7 @@
                      {{/if}}
                   </div>
                   <button data-view="block_{{dataView}}"
-                          onclick="openOrder('{{dataView}}', '.card_{{id}} .new-price', '{{name}}')"
+                          onclick="openOrder({label: '{{dataView}}', block: 'equipment'}, '.card_{{id}} .new-price', '{{name}}')"
                           data-toggle="modal"
                           data-target="#order"
                           class="price-card__btn btn"

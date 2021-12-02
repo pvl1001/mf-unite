@@ -82,7 +82,7 @@
                        type="button"
                        data-toggle="modal"
                        data-target="#order"
-                       onclick="openOrder('{{dataView}}', '#{{id}} .modal-order__text span', '{{name}}')"
+                       onclick="openOrder({label: '{{dataView}}', block: 'equipment'}, '#{{id}} .modal-order__text span', '{{name}}')"
                >Заказать
                </button>
             </div>
@@ -136,7 +136,7 @@
                        data-toggle="modal"
                        data-target="#order"
                        onclick="openOrder(
-                          '{{dataView}}',
+                          {label: '{{dataView}}'},
                           '#{{id}} .modal-order__text span',
                           '{{name}}',
                           {{tariffId}},
