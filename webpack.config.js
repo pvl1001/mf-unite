@@ -7,7 +7,9 @@ const
    {CleanWebpackPlugin} = require( 'clean-webpack-plugin' ),
    MiniCssExtractPlugin = require( 'mini-css-extract-plugin' ),
    CssMinimizerPlugin = require( 'css-minimizer-webpack-plugin' ),
-   TerserPlugin = require( 'terser-webpack-plugin' )
+   TerserPlugin = require( 'terser-webpack-plugin' ),
+   glob = require('glob'),
+   PurgecssPlugin = require('purgecss-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -31,6 +33,10 @@ const getFiles = (dir, files_) => {
    return Array.from( new Set( [...files_] ) )
 }
 
+const PATHS = {
+   src: path.join(__dirname, 'src')
+}
+
 module.exports = {
    mode: 'development',
    entry: { // точка входы
@@ -38,7 +44,7 @@ module.exports = {
    },
    context: path.win32.resolve( __dirname, 'src' ),
    output: { // точка вывода
-      filename: 'bundle.js',
+      filename: '[name].bundle.js',
       path: path.win32.resolve( __dirname, 'dist' )
    },
    devServer: { // сервер
@@ -77,6 +83,10 @@ module.exports = {
       new MiniCssExtractPlugin( {
          filename: 'style.css', // css на выходе
       } ),
+      new PurgecssPlugin({
+         paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+         safelist: require('./safelistCSS')
+      }),
       new CleanWebpackPlugin(),
    ],
    module: {
@@ -101,7 +111,7 @@ module.exports = {
             }
          },
          {
-            test: /\.(png|jpg|gif|svg)$/,
+            test: /\.(png|jpg|gif|svg|webp)$/,
             loader: 'file-loader',
             options: {
                name: '[path][name].[ext]',
@@ -120,6 +130,9 @@ module.exports = {
       ]
    },
    optimization: {
+      // splitChunks: {
+      //    chunks: 'all',
+      // },
       minimizer: [  // минимизировать
          new CssMinimizerPlugin(), // css
          new TerserPlugin() // js

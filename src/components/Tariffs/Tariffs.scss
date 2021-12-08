@@ -56,7 +56,7 @@
             display: inline-block;
             width: 10px;
             height: 100%;
-            background: url('../img/svg/arrow.svg') center / contain no-repeat;
+            background: url('../img//svg/arrow.svg') center / contain no-repeat;
             transform: rotate(180deg);
          }
       }
@@ -214,7 +214,7 @@
          font-size: 15px;
 
          &.icon-router:before {
-            content: url('../img/svg/Router_3.svg');
+            content: url('../img//svg/Router_3.svg');
             display: inline-block;
             margin-right: 13px;
             transform: translateY(9px);
@@ -241,19 +241,19 @@
             cursor: pointer;
 
             &_amediateka {
-               background-image: url('../img/svg/amediateka.svg');
+               background-image: url('../img//svg/amediateka.svg');
             }
 
             &_start {
-               background-image: url('../img/svg/start.svg');
+               background-image: url('../img//svg/start.svg');
             }
 
             &_more {
-               background-image: url('../img/svg/more.svg');
+               background-image: url('../img//svg/more.svg');
             }
 
             &_mf-tv {
-               background-image: url('../img/svg/mf_tv.svg');
+               background-image: url('../img//svg/mf_tv.svg');
             }
          }
       }

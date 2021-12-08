@@ -3,20 +3,11 @@ import './plugins/slick'
 import './plugins/jquery.mask'
 import './plugins/jquery.validate'
 import 'bootstrap'
-import 'select2'
 import 'popper.js'
 
 
 $( function () {
    $('.slider').css('opacity', '1')
-
-
-   // select выбор времени modal
-   $('#selectTime').select2({
-      minimumResultsForSearch : Infinity,
-      placeholder: 'Время',
-      width: '100%'
-   })
 
 
    // слайдер

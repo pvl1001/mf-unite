@@ -1,14 +1,5 @@
 // css
-import './fonts/fonts.css'
-import './scss/bootstrap.css'
-import './scss/colors.scss'
-import './scss/null.scss'
-import './scss/slick.css'
-import './scss/template.scss'
-import 'select2/dist/css/select2.css'
-import 'normalize.css'
 import './scss/style.scss'
-// import './scss/datepicker.css'
 
 // script
 import '@babel/polyfill'

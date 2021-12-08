@@ -16,15 +16,13 @@
 
 
 :focus,
-:active {
-  outline: none;
-}
-
+:active,
 a:focus,
-a:active {
+a:active,
+input:focus-visible,
+button:focus {
   outline: none;
 }
-
 
 nav,
 footer,
@@ -95,10 +93,6 @@ p {
   font-size: inherit;
   font-weight: 400;
   margin: 0;
-}
-
-button:focus {
-  outline: none;
 }
 
 label {

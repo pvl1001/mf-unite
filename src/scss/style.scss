@@ -1,10 +1,11 @@
-@import 'bootstrap';
+@import '../fonts/fonts.css';
+@import '~bootstrap';
 @import 'null';
 @import 'slick';
-//@import 'datepicker';
 @import 'colors';
 @import 'template';
-@import 'tail-select';
+@import '~normalize.css';
+
 
 // components
 @import '../components/Nav/Nav';

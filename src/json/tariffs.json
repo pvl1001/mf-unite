@@ -71,7 +71,7 @@
                   "text": "Google Chromecast"
                }
             ],
-            "img": "pristavka.png",
+            "img": "pristavka.webp",
             "price": 199,
             "dataView": "androidtv",
             "plan": {
@@ -111,7 +111,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr100.png",
+            "img": "fr100.webp",
             "price": 55,
             "dataView": "fr100",
             "plan": {
@@ -151,7 +151,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr1000-2.png",
+            "img": "fr1000-2.webp",
             "price": 88,
             "dataView": "fr1000",
             "plan": {
@@ -169,7 +169,7 @@
                "Объедините устройства в умный дом",
                "Получайте сигналы, если в дом кто-то проникнет"
             ],
-            "img": "almond.png",
+            "img": "almond.webp",
             "price": "от 229",
             "icons": [
                {
@@ -194,7 +194,7 @@
                {
                   "id": "almond-0",
                   "name": "Роутер Almond 3",
-                  "img": "Almond-3_about.png",
+                  "img": "Almond-3_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -217,7 +217,7 @@
                {
                   "id": "almond-1",
                   "name": "Роутер Almond 3S",
-                  "img": "Almond-3S_about.png",
+                  "img": "Almond-3S_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -250,7 +250,7 @@
                {
                   "id": "sensor-0",
                   "name": "Wi-Fi камера",
-                  "img": "Wi-Fi-kamera_about.png",
+                  "img": "Wi-Fi-kamera_about.webp",
                   "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
                   "price": 120,
                   "totalPrice": 0,
@@ -260,7 +260,7 @@
                {
                   "id": "sensor-1",
                   "name": "Датчик движения",
-                  "img": "Datchik-dvizheniya_about.png",
+                  "img": "Datchik-dvizheniya_about.webp",
                   "desc": "Будьте в курсе любых передвижений в доме",
                   "price": 50,
                   "totalPrice": 0,
@@ -270,7 +270,7 @@
                {
                   "id": "sensor-2",
                   "name": "Датчик открытия и закрытия",
-                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.webp",
                   "desc": "Будьте в курсе всех незваных гостей",
                   "price": 50,
                   "totalPrice": 0,
@@ -280,7 +280,7 @@
                {
                   "id": "sensor-3",
                   "name": "Датчик протечки воды",
-                  "img": "Datchik-protechki-vody_about.png",
+                  "img": "Datchik-protechki-vody_about.webp",
                   "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
                   "price": 50,
                   "totalPrice": 0,
@@ -370,7 +370,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr1000-2.png",
+            "img": "fr1000-2.webp",
             "price": null,
             "dataView": "fr1000",
             "plan": ""
@@ -467,7 +467,7 @@
                   "text": "Google Chromecast"
                }
             ],
-            "img": "pristavka.png",
+            "img": "pristavka.webp",
             "price": 199,
             "dataView": "androidtv",
             "plan": {
@@ -507,7 +507,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr100.png",
+            "img": "fr100.webp",
             "price": 55,
             "dataView": "fr100",
             "plan": {
@@ -547,7 +547,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr1000-2.png",
+            "img": "fr1000-2.webp",
             "price": 88,
             "dataView": "fr1000",
             "plan": {
@@ -578,7 +578,7 @@
                   "text": "Управляется Bluetooth‑пультом"
                }
             ],
-            "img": "tv_new.png",
+            "img": "tv_new.webp",
             "price": 99,
             "dataView": "mftv",
             "plan": {
@@ -675,7 +675,7 @@
                   "text": "Google Chromecast"
                }
             ],
-            "img": "pristavka.png",
+            "img": "pristavka.webp",
             "price": 199,
             "dataView": "androidtv",
             "plan": {
@@ -715,7 +715,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr100.png",
+            "img": "fr100.webp",
             "price": 55,
             "dataView": "fr100",
             "plan": {
@@ -755,7 +755,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr1000-2.png",
+            "img": "fr1000-2.webp",
             "price": 88,
             "dataView": "fr1000",
             "plan": {
@@ -786,7 +786,7 @@
                   "text": "Управляется Bluetooth‑пультом"
                }
             ],
-            "img": "tv_new.png",
+            "img": "tv_new.webp",
             "price": 99,
             "dataView": "mftv",
             "plan": {
@@ -804,7 +804,7 @@
                "Объедините устройства в умный дом",
                "Получайте сигналы, если в дом кто-то проникнет"
             ],
-            "img": "almond.png",
+            "img": "almond.webp",
             "price": "от 229",
             "icons": [
                {
@@ -829,7 +829,7 @@
                {
                   "id": "almond-0",
                   "name": "Роутер Almond 3",
-                  "img": "Almond-3_about.png",
+                  "img": "Almond-3_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -852,7 +852,7 @@
                {
                   "id": "almond-1",
                   "name": "Роутер Almond 3S",
-                  "img": "Almond-3S_about.png",
+                  "img": "Almond-3S_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -885,7 +885,7 @@
                {
                   "id": "sensor-0",
                   "name": "Wi-Fi камера",
-                  "img": "Wi-Fi-kamera_about.png",
+                  "img": "Wi-Fi-kamera_about.webp",
                   "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
                   "price": 120,
                   "totalPrice": 0,
@@ -895,7 +895,7 @@
                {
                   "id": "sensor-1",
                   "name": "Датчик движения",
-                  "img": "Datchik-dvizheniya_about.png",
+                  "img": "Datchik-dvizheniya_about.webp",
                   "desc": "Будьте в курсе любых передвижений в доме",
                   "price": 50,
                   "totalPrice": 0,
@@ -905,7 +905,7 @@
                {
                   "id": "sensor-2",
                   "name": "Датчик открытия и закрытия",
-                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.webp",
                   "desc": "Будьте в курсе всех незваных гостей",
                   "price": 50,
                   "totalPrice": 0,
@@ -915,7 +915,7 @@
                {
                   "id": "sensor-3",
                   "name": "Датчик протечки воды",
-                  "img": "Datchik-protechki-vody_about.png",
+                  "img": "Datchik-protechki-vody_about.webp",
                   "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
                   "price": 50,
                   "totalPrice": 0,
@@ -1010,7 +1010,7 @@
                   "text": "Google Chromecast"
                }
             ],
-            "img": "pristavka.png",
+            "img": "pristavka.webp",
             "price": 199,
             "dataView": "androidtv",
             "plan": {
@@ -1050,7 +1050,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr100.png",
+            "img": "fr100.webp",
             "price": 55,
             "dataView": "fr100",
             "plan": {
@@ -1090,7 +1090,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr1000-2.png",
+            "img": "fr1000-2.webp",
             "price": 88,
             "dataView": "fr1000",
             "plan": {
@@ -1121,7 +1121,7 @@
                   "text": "Управляется Bluetooth‑пультом"
                }
             ],
-            "img": "tv_new.png",
+            "img": "tv_new.webp",
             "price": 99,
             "dataView": "mftv",
             "plan": {
@@ -1139,7 +1139,7 @@
                "Объедините устройства в умный дом",
                "Получайте сигналы, если в дом кто-то проникнет"
             ],
-            "img": "almond.png",
+            "img": "almond.webp",
             "price": "от 229",
             "icons": [
                {
@@ -1164,7 +1164,7 @@
                {
                   "id": "almond-0",
                   "name": "Роутер Almond 3",
-                  "img": "Almond-3_about.png",
+                  "img": "Almond-3_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -1187,7 +1187,7 @@
                {
                   "id": "almond-1",
                   "name": "Роутер Almond 3S",
-                  "img": "Almond-3S_about.png",
+                  "img": "Almond-3S_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -1220,7 +1220,7 @@
                {
                   "id": "sensor-0",
                   "name": "Wi-Fi камера",
-                  "img": "Wi-Fi-kamera_about.png",
+                  "img": "Wi-Fi-kamera_about.webp",
                   "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
                   "price": 120,
                   "totalPrice": 0,
@@ -1230,7 +1230,7 @@
                {
                   "id": "sensor-1",
                   "name": "Датчик движения",
-                  "img": "Datchik-dvizheniya_about.png",
+                  "img": "Datchik-dvizheniya_about.webp",
                   "desc": "Будьте в курсе любых передвижений в доме",
                   "price": 50,
                   "totalPrice": 0,
@@ -1240,7 +1240,7 @@
                {
                   "id": "sensor-2",
                   "name": "Датчик открытия и закрытия",
-                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.webp",
                   "desc": "Будьте в курсе всех незваных гостей",
                   "price": 50,
                   "totalPrice": 0,
@@ -1250,7 +1250,7 @@
                {
                   "id": "sensor-3",
                   "name": "Датчик протечки воды",
-                  "img": "Datchik-protechki-vody_about.png",
+                  "img": "Datchik-protechki-vody_about.webp",
                   "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
                   "price": 50,
                   "totalPrice": 0,
@@ -1331,7 +1331,7 @@
                   "text": "Google Chromecast"
                }
             ],
-            "img": "pristavka.png",
+            "img": "pristavka.webp",
             "price": 199,
             "dataView": "androidtv",
             "plan": {
@@ -1371,7 +1371,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr100.png",
+            "img": "fr100.webp",
             "price": 55,
             "dataView": "fr100",
             "plan": {
@@ -1411,7 +1411,7 @@
                   "text": "Родительский контроль"
                }
             ],
-            "img": "fr1000-2.png",
+            "img": "fr1000-2.webp",
             "price": 88,
             "dataView": "fr1000",
             "plan": {
@@ -1429,7 +1429,7 @@
                "Объедините устройства в умный дом",
                "Получайте сигналы, если в дом кто-то проникнет"
             ],
-            "img": "almond.png",
+            "img": "almond.webp",
             "price": "от 229",
             "icons": [
                {
@@ -1454,7 +1454,7 @@
                {
                   "id": "almond-0",
                   "name": "Роутер Almond 3",
-                  "img": "Almond-3_about.png",
+                  "img": "Almond-3_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -1477,7 +1477,7 @@
                {
                   "id": "almond-1",
                   "name": "Роутер Almond 3S",
-                  "img": "Almond-3S_about.png",
+                  "img": "Almond-3S_about.webp",
                   "params": [
                      {
                         "icon": "speed-2_w.svg",
@@ -1510,7 +1510,7 @@
                {
                   "id": "sensor-0",
                   "name": "Wi-Fi камера",
-                  "img": "Wi-Fi-kamera_about.png",
+                  "img": "Wi-Fi-kamera_about.webp",
                   "desc": "Наблюдайте за происходящим дома в реальном времени, где бы вы ни были",
                   "price": 120,
                   "totalPrice": 0,
@@ -1520,7 +1520,7 @@
                {
                   "id": "sensor-1",
                   "name": "Датчик движения",
-                  "img": "Datchik-dvizheniya_about.png",
+                  "img": "Datchik-dvizheniya_about.webp",
                   "desc": "Будьте в курсе любых передвижений в доме",
                   "price": 50,
                   "totalPrice": 0,
@@ -1530,7 +1530,7 @@
                {
                   "id": "sensor-2",
                   "name": "Датчик открытия и закрытия",
-                  "img": "Datchik-otkrytiya-i-zakrytiya_about.png",
+                  "img": "Datchik-otkrytiya-i-zakrytiya_about.webp",
                   "desc": "Будьте в курсе всех незваных гостей",
                   "price": 50,
                   "totalPrice": 0,
@@ -1540,7 +1540,7 @@
                {
                   "id": "sensor-3",
                   "name": "Датчик протечки воды",
-                  "img": "Datchik-protechki-vody_about.png",
+                  "img": "Datchik-protechki-vody_about.webp",
                   "desc": "Узнавайте даже о незаметных протечках, чтобы вовремя их устранять",
                   "price": 50,
                   "totalPrice": 0,
