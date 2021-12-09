@@ -3,5 +3,6 @@ module.exports = [
    /^tv-icons_/,
    /^modalAlmond__banner_/,
    /^tippy/,
+   /_maximum*/,
    'collapsing'
 ]
