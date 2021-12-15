@@ -42,7 +42,7 @@ $( '#order' ).on( 'hide.bs.modal', function () {
 } )
 
 async function getResponseOrder(data) {
-   return await $.ajax( {
+   return $.ajax( {
       url: 'https://home.megafon.ru/form/mail-sender',
       method: 'POST',
       data
