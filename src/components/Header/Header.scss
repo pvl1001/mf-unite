@@ -5,12 +5,13 @@
    &__text {
       color: #fff;
       width: 55%;
+      white-space: nowrap;
 
       h1 {
          font-size: 52px;
          line-height: 56px;
          font-weight: 700;
-         margin-bottom: 8px;
+         margin-bottom: 15px;
          display: flex;
          flex-direction: column;
 
@@ -24,17 +25,18 @@
             line-height: 40px;
          }
 
-         @media (max-width: 375px) {
-            font-size: 34px;
-            line-height: 36px;
+         @media (max-width: 415px) {
+            //nobr {
+            //   white-space: pre-wrap;
+            //}
          }
       }
 
       p {
-         font-size: 16px;
+         font-size: 15px;
          line-height: 24px;
-         margin-bottom: 25px;
-         font-weight: 700;
+         margin-bottom: 45px;
+         font-weight: 500;
       }
 
    }
