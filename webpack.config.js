@@ -27,7 +27,7 @@ const getFiles = (dir, files_) => {
          const splitName = name.split( '/' )
          splitName.splice( -1, 1 )
          const dirFolder = splitName.join( '/' )
-         files_.push( path.win32.join( __dirname, dirFolder ) )
+         files_.push( path.join( __dirname, dirFolder ) )
       }
    }
    return Array.from( new Set( [...files_] ) )
@@ -42,13 +42,13 @@ module.exports = {
    entry: { // точка входы
       main: './main.js'
    },
-   context: path.win32.resolve( __dirname, 'src' ),
+   context: path.resolve( __dirname, 'src' ),
    output: { // точка вывода
       filename: '[name].bundle.js',
-      path: path.win32.resolve( __dirname, 'dist' )
+      path: path.resolve( __dirname, 'dist' )
    },
    devServer: { // сервер
-      contentBase: path.win32.join( __dirname, 'dist' ),
+      contentBase: path.join( __dirname, 'dist' ),
       port: 3000,
       open: false,
       overlay: true,
@@ -57,7 +57,7 @@ module.exports = {
    resolve: {
       extensions: ['.css', '.scss', '.js', '.json'],
       alias: {
-         '@': path.win32.resolve( __dirname, 'src' ) // корневая папка
+         '@': path.resolve( __dirname, 'src' ) // корневая папка
       }
    },
    plugins: [
