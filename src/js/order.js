@@ -51,11 +51,12 @@ async function getResponseOrder(data) {
 
 // сформировать объект заявки для отправки
 function getDataOrder() {
+   const address = prop.dataAddress.address ? `По адресу ${prop.dataAddress.address} ` : ''
+   const tariffName = prop.sendOrder.tariffName ? `${prop.sendOrder.tariffName} ` : '#ДляДома Турбо '
+   const nameEquip = prop.sendOrder.nameEquip ? `${prop.sendOrder.nameEquip} ` : ''
    const price = prop.sendOrder.priceEquip ? prop.sendOrder.priceEquip + '₽' : ''
-   const nameEquip = prop.sendOrder.nameEquip || ''
-   const address = prop.dataAddress.address ? `По адресу ${prop.dataAddress.address}` : ''
-   const tariffName = prop.sendOrder.tariffName || '#ДляДома Турбо'
    const tariffId = +prop.sendOrder.tariffId || 4276
+   const comment = address + tariffName + nameEquip + price
 
    return {
       form_name: 'express_form_ccmp_short',
@@ -64,10 +65,10 @@ function getDataOrder() {
       clientPhone: this.currentElements[0].value,
       clientAddress: prop.dataAddress.address || '',
       house_guid: prop.dataAddress.house_guid || '',
-      tariffId,
-      tariffName,
+      tariffId: tariffId,
+      tariffName: tariffName.trim(),
       clientSite: window.location.host + window.location.pathname,
-      comment: `${address} ${tariffName} ${nameEquip} ${price}`,
+      comment: comment.trim(),
       calltracking_params: ct( 'calltracking_params', 'g96m2c8n' ) ? ct( 'calltracking_params', 'g96m2c8n' ).sessionId : ''
    }
 
