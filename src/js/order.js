@@ -81,7 +81,7 @@ function resultOrderText(data, dataOrder) {
       gtag( 'event', 'click', {'event_category': 'EventHomeMF', 'event_label': prop.sendOrder.eventLabel} )
       gtag( 'event', 'requestLandingSend', {'event_category': 'order'} )
       if (ym !== undefined) {
-         ym( 66149989, 'reachGoal', 'zayavka_megafon' )
+         ym( 57533086, 'reachGoal', prop.sendOrder.eventLabel )
          ym( 66149989, 'reachGoal', prop.sendOrder.eventLabel )
       }
 
