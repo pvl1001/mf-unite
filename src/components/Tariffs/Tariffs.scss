@@ -12,15 +12,6 @@
       opacity: 0;
       margin: 0 -10px;
 
-      &__card {
-         &_maximum {
-            .card__title,
-            .info-progress-bar__line_active {
-               background-color: #444189;
-            }
-         }
-      }
-
       .slick-track, .slick-list {
          display: flex;
       }
@@ -93,291 +84,143 @@
       background: #FFFFFF;
       box-shadow: 0 0 12px rgba(51, 51, 51, .2);
       border-radius: 10px;
-      padding-bottom: 15px;
+      padding: 16px;
       border: 0;
       height: 100%;
       display: flex !important;
       flex-direction: column;
 
-      &__title-marks {
-         display: flex;
-         flex-direction: column;
-         align-items: flex-end;
-      }
-
-      &__title-mark {
-         &:not(:first-child) {
-            margin-top: 8px;
-         }
+      &__green-box {
+         background-color: var(--mf-green-light);
+         height: 88px;
+         border-radius: 8px;
+         padding: 12px;
+         margin-bottom: 13px;
       }
 
       &__title {
-         height: 77px;
          display: flex;
-         align-items: center;
          justify-content: space-between;
-         position: relative;
-         color: #fff;
-         background-color: var(--mf-green);
-         border-radius: 10px 10px 0 0;
-
-         &_vse {
-            cursor: auto !important;
-            text-decoration: none !important;
-         }
-
-         h2 {
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 28px;
-            letter-spacing: .5px;
-            cursor: pointer;
-            margin-bottom: -1px;
-
-            &:hover {
-               text-decoration: underline;
-               text-decoration-thickness: 1px;
-            }
-
-            @media (max-width: 1279px) {
-               font-size: 18px;
-            }
-         }
-
+         align-items: center;
+         margin-bottom: 4px;
       }
 
-      &__info {
+      &__tariff-name {
+         font-size: 15px;
+         line-height: 24px;
+      }
+
+      &__marks {
+         font-size: 12px;
+         line-height: 16px;
+         font-weight: 400;
+         color: var(--mf-green);
+      }
+
+      &__new-price {
+         font-size: 32px;
+         font-weight: 600;
+      }
+
+      .params {
          display: flex;
          flex-direction: column;
-         flex-grow: 1;
-         padding: 38px 0 40px;
-         margin-bottom: 23px;
-         position: relative;
-
-         &:after {
-            content: '';
-            height: 1px;
-            background-color: #DDD;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-         }
+         justify-content: center;
+         margin-bottom: 17px;
       }
 
-      &__info-title {
-         font-size: 15px;
-         font-weight: 500;
-         line-height: 1;
-      }
-
-      &__block-progress {
-         flex-grow: 1;
-         margin-bottom: 38px;
-      }
-
-      .block-progress {
-
-         &__desc {
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-end;
-
-            &.desk-channels {
-               margin-bottom: 0;
-            }
-
-            &.desk-channels a {
-               color: #333;
-               border-bottom: 1px dashed;
-               margin-bottom: -1px;
-
-               &:hover {
-                  text-decoration: none;
-                  border-bottom-style: solid;
-               }
-            }
-
-            &:last-child {
-               margin-bottom: 0;
-            }
-         }
-      }
-
-      &__options {
-         margin-top: -8px;
-      }
-
-      &__option {
-         font-size: 15px;
-
-         &.icon-router:before {
-            content: url('../img//svg/Router_3.svg');
-            display: inline-block;
-            margin-right: 13px;
-            transform: translateY(9px);
-         }
-
-      }
-
-      .block-tv {
-         &__title {
-            margin-bottom: 11px;
-         }
-      }
-
-      .tv-icons {
+      .params__item {
          display: flex;
+         align-items: center;
+         font-size: 20px;
+         line-height: 28px;
+         margin-bottom: 3px;
 
-         &__icon {
-            height: 48px;
-            width: 48px;
-            border-radius: 10px;
-            background-position: center / cover;
-            background-repeat: no-repeat;
-            margin-right: 9px;
-            cursor: pointer;
+         &:last-child {
+            margin-bottom: 0;
+         }
 
-            &_amediateka {
-               background-image: url('../img//svg/amediateka.svg');
-            }
+      }
 
-            &_start {
-               background-image: url('../img//svg/start.svg');
-            }
+      .params__tv {
+         border-bottom: 1px dashed;
+         cursor: pointer;
 
-            &_more {
-               background-image: url('../img//svg/more.svg');
-            }
-
-            &_mf-tv {
-               background-image: url('../img//svg/mf_tv.svg');
-            }
+         &:hover {
+            text-decoration: none;
+            border-bottom-style: solid;
          }
       }
 
-      &__price {
+      .params__icon {
+         display: inline-flex;
+         width: 32px;
+         height: 32px;
+         margin-right: 12px;
+
+         svg, path {
+            fill: var(--mf-green);
+         }
+
+         svg {
+            margin: auto;
+         }
+      }
+
+      &__btns {
          display: flex;
          flex-direction: column;
          align-items: center;
-
-         .link {
-            font-size: 15px;
-         }
       }
 
-      .price {
-         display: block;
-         height: 20px;
-         margin-bottom: 9px;
-
-         &__icon {
-            height: 20px;
-            vertical-align: middle;
-            transform: translateY(-6px);
-         }
-      }
-
-   }
-
-   .card-wrapper {
-      $paddingCardX: 32px;
-      padding-left: $paddingCardX;
-      padding-right: $paddingCardX;
-   }
-
-   .info-progress-bar {
-      margin-bottom: 18px;
-
-      &:last-child {
-         margin-bottom: 0;
-      }
-
-      &__text {
+      &__about-btn {
          font-size: 15px;
-         line-height: 1;
-         margin-bottom: 5px;
-         display: flex;
-         justify-content: space-between;
-      }
+         line-height: 24px;
+         color: var(--mf-blue);
+         text-align: center;
+         margin-bottom: 7px;
+         cursor: pointer;
 
-      &__text-name {
-         br {
-            display: none;
-
-            @media (min-width: 1280px) and (max-width: 1350px) {
-               display: block;
-            }
+         &:hover {
+            text-decoration: underline;
          }
       }
 
-      &__text-value {
-         display: flex;
-         align-items: flex-end;
-         white-space: nowrap;
-
-         .icon-infinity {
-            margin-right: 2px;
-         }
+      &__connect-btn {
+         height: 32px;
+         padding: 0 32px;
       }
 
-      &__line {
-         height: 12px;
-         border-radius: 6px;
-         background-color: #EDEDED;
-         overflow: hidden;
-
-         &_active {
-            width: 50%;
-            height: 100%;
-            background-color: var(--mf-green);
-            border-radius: 6px;
-         }
+      &__info-icon {
+         margin-left: 14px;
+         vertical-align: text-bottom;
+         cursor: pointer;
       }
+
    }
 
+   .card.card__maximum {
+      .params__icon svg, path {
+         fill: var(--mf-premium)
+      }
 
-   @media (max-width: 1920px) {
-      .card {
-         padding-bottom: 18px;
+      .card__connect-btn {
+         background-color: var(--mf-premium);
 
-         &__title {
-            height: 61px;
-         }
-
-         &__info {
-            padding: 30px 0 32px;
-            margin-bottom: 23px;
-         }
-
-         &__block-progress {
-            margin-bottom: 30px;
+         &:hover {
+            background-color: var(--mf-premium-hov);
          }
       }
 
-      .card-wrapper {
-         $paddingCardX: 16px;
-         padding-left: $paddingCardX;
-         padding-right: $paddingCardX;
-      }
    }
+
 
    @media (max-width: 1023px) {
       padding: 78px 0 34px;
-
-      &__title {
-         margin-bottom: 40px;
-      }
    }
 
    @media (max-width: 767px) {
       padding: 56px 0 34px;
-
-      &__title {
-         margin-bottom: 25px;
-      }
 
       .slider {
          margin: 0 -8px;
@@ -393,5 +236,7 @@
          }
       }
    }
+
 }
+
 

@@ -675,11 +675,12 @@ form {
 .tippy-box {
    border-radius: 0;
    font-size: 15px;
+   line-height: 24px;
    font-weight: 400;
-   //width: 100vh;
+   text-align: center;
 
    .tippy-content {
-      padding: 10px 16px;
+      padding: 28px;
    }
 
    @media (max-width: 1150px) {

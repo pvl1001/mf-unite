@@ -80,26 +80,21 @@ $( function () {
 
 
    // popper tippy
-   tippy( '.price__icon_all', {
+   const tippyOptions = {
       content: 'Для участия в <span class="link" onclick="toPlug(`.faq`)">Акции</span> необходимо быть абонентом МегаФон и подключить услугу ДляДома',
       interactive: true,
       placement: 'auto',
-      maxWidth: '80vw',
+      maxWidth: 225,
       allowHTML: true,
       theme: 'light',
       hideOnClick: false,
       // trigger: 'click'
-   } )
+   }
 
+   tippy( '.price__icon_all', tippyOptions)
 
-   tippy( '.price__icon_vse', {
+   tippy( '.price__icon_vse', { ...tippyOptions,
       content: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
-      interactive: true,
-      placement: window.innerWidth > 767 ? 'right' : 'auto',
-      maxWidth: '80vw',
-      allowHTML: true,
-      theme: 'light',
-      hideOnClick: false
    } )
 
 } )
