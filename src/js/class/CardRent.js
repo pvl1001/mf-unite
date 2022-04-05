@@ -50,8 +50,8 @@ export class CardRent {
 
    isDescription(cardsSwitchOn) {
       cardsSwitchOn.length
-         ? this.description.style.visibility = 'visible'
-         : this.description.style.visibility = 'hidden'
+         ? this.description.style.display = 'inline'
+         : this.description.style.display = 'none'
    }
 
 }

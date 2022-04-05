@@ -392,7 +392,12 @@
       font-size: 20px;
       line-height: 28px;
       font-weight: 500;
-      visibility: hidden;
+      display: none;
+   }
+
+   &__info-icon {
+      vertical-align: baseline;
+      margin-left: 5px;
    }
 
    &__btn-close {
