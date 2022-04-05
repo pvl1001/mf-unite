@@ -11,7 +11,7 @@ $( '.about-tariff-modal' )
       tariff.equipments.forEach( (equipment, i) => {
          const switchCardSelector = '.switch input'
          const priceSelector = '.price__current'
-         const totalPriceSelector = '.tariff-modal__price .price__current'
+         const totalPriceSelector = '.tariff-modal__price-current'
          const descriptionSelector = '.tariff-modal__price-desc'
          const cardProps = {
             tariff,

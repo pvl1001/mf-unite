@@ -4,7 +4,8 @@
    font-weight: 500;
 
    &_maximum {
-      .tariff-modal__title {
+      .tariff-modal__title,
+      .tariff-modal__footer {
          background-color: #444189;
       }
    }
@@ -351,96 +352,46 @@
 
    // footer
    &__footer {
-      padding-top: 37px;
-      padding-bottom: 30px;
-      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      background-color: var(--mf-green);
+      color: #fff;
    }
 
-   &__price {
-      margin-bottom: 18px;
-
-      > * {
-         vertical-align: middle;
-      }
+   &__footer-price {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
    }
 
-   .price {
+   &__price-old {}
 
-      > * {
-         margin-right: 4px;
-      }
+   &__price-current {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 600;
+   }
 
-      &__old {
-         font-size: 20px;
-         line-height: 28px;
-         position: relative;
-
-         &:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 49%;
-            height: 2px;
-            width: 100%;
-            background-color: #ff0000;
-         }
-      }
-
-      &__current,
-      &__month {
-         font-size: 32px;
-         line-height: 28px;
-         font-weight: 600;
-      }
-
-      &__icon {
-         width: 24px;
-         height: 24px;
-         transform: translateY(-2px);
-         margin-left: 8px;
-      }
-
-      @media (max-width: 1023px) {
-         > * {
-            margin-right: 2px;
-         }
-
-         &__old {
-            font-size: 18px;
-            line-height: 24px;
-         }
-
-         &__current,
-         &__month {
-            font-size: 26px;
-         }
-
-         &__icon {
-            width: 16px;
-            height: 16px;
-            transform: translateY(-1px);
-            margin-left: 6px;
-         }
-      }
-
-      @media (max-width: 767px) {
-         &__current,
-         &__month {
-            font-size: 22px;
-         }
-      }
+   &__price-month,
+   &__footer-title,
+   &__price-desc {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
    }
 
    &__price-btn {
-      padding: 0 67px;
-      margin-bottom: 10px;
+      width: 130px;
    }
 
    &__price-desc {
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 400;
-      padding-left: 5px;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
       visibility: hidden;
    }
 
@@ -460,6 +411,10 @@
 
 
    @media (max-width: 1023px) {
+      .modal-dialog {
+         padding: 0;
+      }
+
       .wrapp {
          padding-left: 48px;
          padding-right: 48px;
@@ -472,10 +427,6 @@
       .modal-close {
          top: 27px;
          right: 65px;
-      }
-
-      &__price {
-         margin-bottom: 12px;
       }
 
    }
@@ -529,6 +480,18 @@
          }
       }
 
+      &__price-month,
+      &__price-desc {
+         font-size: 12px;
+         line-height: 16px;
+         font-weight: 400;
+      }
+
+      &__footer-title {
+         font-size: 15px;
+         line-height: 24px;
+      }
+
    }
 
    @media (max-width: 510px) {
@@ -539,5 +502,12 @@
       .modal-close {
          right: 16px;
       }
+
+      &__block-price {
+         width: 100%;
+         margin-right: 20px;
+         margin-bottom: 6px;
+      }
+
    }
 }

@@ -68,10 +68,10 @@
 
                                     <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
                                        {{#h-if id '!==' 'eq-almond'}}
-                                        onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                                       onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
                                        {{else}}
-                                        data-toggle="modal" data-target="#modalAlmond"
-                                        onclick="openAlmond({{@../index}}, '{{dataView}}')"
+                                       data-toggle="modal" data-target="#modalAlmond"
+                                       onclick="openAlmond({{@../index}}, '{{dataView}}')"
                                        {{/h-if}}
                                     >{{{name}}}
                                        <nobr>{{speed}}</nobr>
@@ -168,33 +168,38 @@
             </div>
 
             <div class="tariff-modal__footer wrapp">
-               <div class="tariff-modal__price price">
-                  {{#if oldPrice}}
-                     <span class="price__old">{{oldPrice}} ₽</span>
-                  {{/if}}
-                  <span class="price__current">{{price}}</span>
-                  <span class="price__month"> ₽ в месяц</span>
-                  {{#if iconInfo}}
-                     <div class="price__icon
-                        {{#h-if @index '==' 0}} price__icon_all{{/h-if}}
-                        {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"
-                     ></div>
-                  {{/if}}
+               <div class="tariff-modal__block-price">
+                  <h3 class="tariff-modal__footer-title">#ДляДома {{name}}</h3>
+                  <div class="tariff-modal__price">
+                     {{!--                  {{#if oldPrice}}--}}
+                     {{!--                     <span class="tariff-modal__price-old">{{oldPrice}}</span>--}}
+                     {{!--                  {{/if}}--}}
+                     <span class="tariff-modal__price-current">{{price}}</span>
+                     <span class="tariff-modal__price-month"> в месяц</span>
+                     <nobr class="tariff-modal__price-desc">с учетом выбранных опций</nobr>
+                     {{!--                  {{#if iconInfo}}--}}
+                     {{!--                     <div class="price__icon--}}
+                     {{!--                        {{#h-if @index '==' 0}} price__icon_all{{/h-if}}--}}
+                     {{!--                        {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"--}}
+                     {{!--                     ></div>--}}
+                     {{!--                  {{/if}}--}}
+                  </div>
                </div>
 
-               <button type="button"
-                       class="tariff-modal__price-btn btn"
-                       data-toggle="modal"
-                       data-target="#order"
-                       data-view="modal_{{dataView}}_end"
-                       onclick="openOrder(
-                          {label: '{{dataView}}'},
-                          '',
-                          '#{{id}}',
-                          '{{tariffId}}',
-                          '#ДляДома {{name}}')">Заказать
+               <button
+                  type="button"
+                  class="tariff-modal__price-btn btn{{#h-if id '!==' 'maximum'}} btn-fiolet{{/h-if}}"
+                  data-toggle="modal"
+                  data-target="#order"
+                  data-view="modal_{{dataView}}_end"
+                  onclick="openOrder(
+                     {label: '{{dataView}}'},
+                     '',
+                     '#{{id}}',
+                     '{{tariffId}}',
+                     '#ДляДома {{name}}')">
+                  Заказать
                </button>
-               <p class="tariff-modal__price-desc">с учетом выбранных опций</p>
             </div>
 
          </div>

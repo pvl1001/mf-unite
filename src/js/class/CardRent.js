@@ -17,15 +17,15 @@ export class CardRent {
          const cardsSwitchOn = Array.from( cards ).filter( card => card.querySelector( '.switch input' ).checked )
          const sumCards = this.isCardsSwitchOn( cardsSwitchOn )
 
-         this.totalPriceTempl.textContent = sumCards + this.totalPrice
+         this.totalPriceTempl.textContent = sumCards + this.totalPrice + ' ₽'
          this.sumOldPrice( sumCards )
          this.isDescription( cardsSwitchOn )
       }
    }
 
    sumOldPrice(sumCards) {
-      const salePrice = this.modal.querySelector( '.tariff-modal__price .price__old' )
-      if (this.oldPrice) salePrice.textContent = this.oldPrice + sumCards
+      const salePrice = this.modal.querySelector( '.tariff-modal__price-old' )
+      if (this.oldPrice && salePrice) salePrice.textContent = this.oldPrice + sumCards + ' ₽'
    }
 
    isCardsSwitchOn(switches) {
