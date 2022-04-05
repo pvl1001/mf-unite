@@ -41,19 +41,6 @@
       &::-webkit-scrollbar {
          width: 0;
       }
-
-      > * {
-         $br: 10px;
-         overflow: hidden;
-
-         &:first-child {
-            border-radius: $br $br 0 0;
-         }
-
-         &:last-child {
-            border-radius: 0 0 $br $br;
-         }
-      }
    }
 
    .wrapp {
@@ -68,6 +55,7 @@
       display: flex;
       align-items: center;
       font-weight: 700;
+      border-radius: 10px 10px 0 0;
    }
 
    &__container {
@@ -154,7 +142,7 @@
    // дополнительные опции
    &__dop-options {
       padding-top: 48px;
-      padding-bottom: 54px;
+      padding-bottom: 32px;
    }
 
    &__dop-options-title {
@@ -162,7 +150,7 @@
    }
 
    &__dop-options-cards {
-      margin-bottom: 37px;
+      margin-bottom: 0;
    }
 
 
@@ -360,6 +348,7 @@
       padding-bottom: 16px;
       background-color: var(--mf-green);
       color: #fff;
+      border-radius: 0 0 10px 10px;
    }
 
    &__footer-price {
@@ -495,6 +484,12 @@
       &__footer-title {
          font-size: 15px;
          line-height: 24px;
+      }
+
+      &__footer-container {
+         position: sticky;
+         bottom: 0;
+         background-color: #777777;
       }
 
    }
