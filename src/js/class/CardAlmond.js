@@ -9,8 +9,8 @@ export class CardAlmond {
       this.index = props.i
 
       this.$counter = this.$modal.querySelector( '.counter' )
-      this.counterPlus = this.$counter.querySelector( '.counter__plus' )
-      this.counterMinus = this.$counter.querySelector( '.counter__minus' )
+      this.$counterPlus = this.$counter.querySelector( '.counter__plus' )
+      this.$counterMinus = this.$counter.querySelector( '.counter__minus' )
       this.$switch = this.$modal.querySelector( '.switch input' )
       this.$btnSend = document.querySelector( '.modalAlmond__price-btn' )
       this.$btnSendOrder = document.querySelector( '.js-modalAlmond-btn' )
@@ -26,8 +26,8 @@ export class CardAlmond {
    }
 
    addEvents() {
-      this.counterPlus.addEventListener( 'click', () => this.cntPlus() )
-      this.counterMinus.addEventListener( 'click', () => this.cntMinus() )
+      this.$counterPlus.addEventListener( 'click', () => this.cntPlus() )
+      this.$counterMinus.addEventListener( 'click', () => this.cntMinus() )
       this.$switch.addEventListener( 'change', () => this.switchStatus() )
 
       if(this.index === 0) {
@@ -46,11 +46,21 @@ export class CardAlmond {
       $switch.checked = true
       modalCardsAlmond[0].sumTotalPrice() // произвести расчет карточек в окне "Подробнее о тарифе"
       $( '#modalAlmond' ).modal( 'hide' )
+      this.activeOptionCardBorder()
+   }
+
+   activeOptionCardBorder() {
+      const $card = document.querySelector( '.tariff-modal.show .dop-options-card_almond' )
+      const $switch = $card.querySelector( '.switch input' )
+
+      $switch.checked
+         ? $card.classList.add( 'active' )
+         : $card.classList.remove( 'active' )
    }
 
    eventBtnOrderSend() {
       $( '#order' ).modal( 'show' )
-      openOrder( {label: 'almond', block: 'equipment'}, '#modalAlmond .new-price', 'Умный дом' )
+      openOrder( { label: 'almond', block: 'equipment' }, '#modalAlmond .new-price', 'Умный дом' )
    }
 
    cntPlus() {
@@ -119,6 +129,7 @@ export class CardAlmond {
       $switch.checked = false
       $price.textContent = this.data.startPrice + ' '
       modalCardsAlmond[0].sumTotalPrice()
+      this.activeOptionCardBorder()
    }
 
    changeBtnSend() {

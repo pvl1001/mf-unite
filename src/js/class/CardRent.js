@@ -29,10 +29,19 @@ export class CardRent {
    }
 
    isCardsSwitchOn(switches) {
+      this.activeBorder()
       return switches
-         .map( card => this.filterNum(
-            card.querySelector( '.price__current' ) ? card.querySelector( '.price__current' ).textContent : '0') )
-         .reduce( (a, b) => a + b, 0 )
+         .map( card => this.filterNum( card.querySelector( '.price__current' )
+            ? card.querySelector( '.price__current' ).textContent
+            : '0'
+         ) )
+         .reduce( ( a, b ) => a + b, 0 )
+   }
+
+   activeBorder() {
+      this.switchCard.checked
+         ? this.card.classList.add( 'active' )
+         : this.card.classList.remove( 'active' )
    }
 
    addEvents() {

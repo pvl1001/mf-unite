@@ -771,13 +771,9 @@ form {
    align-items: center;
    font-size: 12px;
    line-height: 1;
-   border-radius: 2px;
-   padding: 4px 8px;
+   border-radius: 8px;
+   padding: 6px 12px;
    color: #fff;
-
-   //span {
-   //   margin-bottom: -1px;
-   //}
 
    &_blue {
       background-color: var(--mf-blue);
@@ -815,7 +811,7 @@ form {
       line-height: 20px;
 
       &:first-child {
-         margin-right: 18px;
+         margin-right: 32px;
       }
    }
 

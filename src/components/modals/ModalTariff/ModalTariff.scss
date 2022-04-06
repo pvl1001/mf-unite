@@ -156,20 +156,35 @@
 
    // карточка опции
    .dop-options-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 152px;
       background-color: #fff;
       box-shadow: 0 0 12px #00000033;
       border-radius: 10px;
-      padding: 31px;
-      display: flex;
+      padding: 28px 30px;
       margin-bottom: 20px;
+      border: 2px solid transparent;
+      position: relative;
 
       &:last-child {
          margin-bottom: 0;
       }
 
+      &.active {
+         border-color: var(--mf-green);
+      }
+
+      &__container {
+         display: flex;
+         align-items: center;
+         flex-grow: 1;
+      }
+
       &__img {
          flex: 0 0 84px;
-         height: 70px;
+         height: 57px;
          font-size: 0;
          white-space: nowrap;
          margin-right: 30px;
@@ -198,7 +213,7 @@
 
          p {
             line-height: 20px;
-            margin-bottom: 4px;
+            margin-bottom: 10px;
          }
 
          h3 {
@@ -206,7 +221,7 @@
             color: var(--mf-blue);
             font-size: 15px;
             line-height: 20px;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
             cursor: pointer;
 
             &:hover {
@@ -323,11 +338,12 @@
       }
 
       &__mark {
-         position: absolute;
-         left: 0;
-         top: -1px;
-         background-color: var(--mf-orange);
-         padding: 4px 8px;
+         width: 100%;
+         margin-top: -12px;
+
+         .mark {
+            background-color: var(--mf-orange);
+         }
       }
    }
 
@@ -404,6 +420,72 @@
    }
 
 
+   @media (min-width: 1024px) and (max-width: 1279px) {
+      &__dop-options-cards {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 20px;
+      }
+
+      .dop-options-card {
+         padding: 22px 28px 15px;
+         margin-bottom: 0;
+
+         &__container {
+            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            grid-gap: 30px 40px;
+         }
+
+         &__img,
+         &__option {
+            margin-bottom: 0;
+         }
+
+         &__img {
+            margin-right: 20px;
+            grid-area: 1 / 1 / 2 / 2;
+         }
+
+         &__option {
+            padding-right: 0;
+            grid-area: 1 / 2 / 2 / 3;
+         }
+
+         &__price {
+            width: 100%;
+            margin-left: 0;
+            align-self: end;
+            grid-area: 2 / 1 / 3 / 3;
+
+            label {
+               width: inherit;
+            }
+
+            .switch {
+               margin-left: auto;
+            }
+         }
+
+         &__mark {
+            position: absolute;
+            top: 24px;
+         }
+
+         &__sim {
+            margin-bottom: 30px;
+
+            p {
+               max-width: none;
+            }
+         }
+      }
+
+   }
+
+
    @media (max-width: 1023px) {
       .modal-dialog {
          padding: 0;
@@ -414,13 +496,17 @@
          padding-right: 48px;
       }
 
+      &__dop-options-cards {
+         display: block;
+      }
+
       &__title {
          height: 86px;
       }
 
       .modal-close {
          top: 27px;
-         right: 65px;
+         right: 16px;
       }
 
    }
@@ -436,8 +522,11 @@
       }
 
       .dop-options-card {
-         flex-wrap: wrap;
          padding: 22px 16px;
+
+         &__container {
+            flex-wrap: wrap;
+         }
 
          &__img, &__option {
             margin-bottom: 30px;

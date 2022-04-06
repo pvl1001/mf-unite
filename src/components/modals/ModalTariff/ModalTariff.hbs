@@ -47,67 +47,71 @@
 
                <div class="tariff-modal__dop-options wrapp">
                   <h2 class="tariff-modal__dop-options-title">Дополнительные опции:</h2>
-
                   <ul class="tariff-modal__dop-options-cards">
 
                      {{#each equipments}}
                         {{#h-if id '!==' 'equipment-sim'}}
                            <li id="card-{{../id}}-{{id}}"
                                class="tariff-modal__dop-options-card dop-options-card
-                                  {{#h-if id '===' 'eq-almond'}} dop-options-card_almond{{/h-if}}
-                                  {{#if plan}} dop-options-card__option_plan{{/if}}">
-                              <div class="dop-options-card__img">
-                                 {{#h-if name '===' 'Android TV'}}
-                                    <div class="dop-options-card__mark mark">Акция</div>
-                                 {{/h-if}}
-                                 <img src="img/pic/{{img}}" alt="{{img}}">
-                              </div>
+                              {{#h-if id '===' 'eq-almond'}} dop-options-card_almond{{/h-if}}">
 
-                              <div class="dop-options-card__option">
-                                 <div>
+                              {{#h-if name '===' 'Android TV'}}
+                                 <div class="dop-options-card__mark"><span class="mark">Акция</span></div>
+                              {{/h-if}}
 
-                                    <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
-                                       {{#h-if id '!==' 'eq-almond'}}
-                                       onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
-                                       {{else}}
-                                       data-toggle="modal" data-target="#modalAlmond"
-                                       onclick="openAlmond({{@../index}}, '{{dataView}}')"
-                                       {{/h-if}}
-                                    >{{{name}}}
-                                       <nobr>{{speed}}</nobr>
-                                    </h3>
+                              <div class="dop-options-card__container
 
+                                 {{#if plan}} dop-options-card__option_plan{{/if}}">
+
+                                 <div class="dop-options-card__img">
+                                    <img src="img/pic/{{img}}" alt="{{img}}">
                                  </div>
 
-                                 {{#h-if ../id '!==' 'turbo'}}
-                                    <p>{{planTitle price id plan}}</p>
-                                 {{/h-if}}
+                                 <div class="dop-options-card__option">
+                                    <div>
 
-                                 {{#if plan}}
-                                    <div class="dop-options-card__option-radio option-radio">
+                                       <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
+                                          {{#h-if id '!==' 'eq-almond'}}
+                                          onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                                          {{else}}
+                                          data-toggle="modal" data-target="#modalAlmond"
+                                          onclick="openAlmond({{@../index}}, '{{dataView}}')"
+                                          {{/h-if}}
+                                       >{{{name}}}
+                                          <nobr>{{speed}}</nobr>
+                                       </h3>
 
-                                       <label class="option-radio__radio-btn">
-                                          <input name="radio-{{../id}}-{{@index}}"
-                                                 id="radio36-id-{{../id}}-{{@index}}"
-                                                 type="radio" value="{{plan.[36]}}" checked disabled>
-                                          <label for="radio36-id-{{../id}}-{{@index}}"></label>
-                                          <span>36 мес</span>
-                                       </label>
-
-                                       <label class="option-radio__radio-btn">
-                                          <input name="radio-{{../id}}-{{@index}}"
-                                                 id="radio24-id-{{../id}}-{{@index}}"
-                                                 type="radio" value="{{plan.[24]}}" disabled>
-                                          <label for="radio24-id-{{../id}}-{{@index}}"></label>
-                                          <span>24 мес</span>
-                                       </label>
                                     </div>
-                                 {{/if}}
-                              </div>
 
-                              <div class="dop-options-card__price">
-                                 {{#if price}}
-                                    <div class="price">
+                                    {{#h-if ../id '!==' 'turbo'}}
+                                       <p>{{planTitle price id plan}}</p>
+                                    {{/h-if}}
+
+                                    {{#if plan}}
+                                       <div class="dop-options-card__option-radio option-radio">
+
+                                          <label class="option-radio__radio-btn">
+                                             <input name="radio-{{../id}}-{{@index}}"
+                                                    id="radio36-id-{{../id}}-{{@index}}"
+                                                    type="radio" value="{{plan.[36]}}" checked disabled>
+                                             <label for="radio36-id-{{../id}}-{{@index}}"></label>
+                                             <span>36 мес</span>
+                                          </label>
+
+                                          <label class="option-radio__radio-btn">
+                                             <input name="radio-{{../id}}-{{@index}}"
+                                                    id="radio24-id-{{../id}}-{{@index}}"
+                                                    type="radio" value="{{plan.[24]}}" disabled>
+                                             <label for="radio24-id-{{../id}}-{{@index}}"></label>
+                                             <span>24 мес</span>
+                                          </label>
+                                       </div>
+                                    {{/if}}
+                                 </div>
+
+                                 <div class="dop-options-card__price">
+                                    {{#if price}}
+                                       <div class="price">
                                     <span class="price__current">
                                        {{#if plan}}
                                           {{plan.[36]}}
@@ -115,18 +119,19 @@
                                           {{price}}
                                        {{/if}}
                                     </span> <span> ₽</span>
-                                       <span class="price__month"> в месяц</span>
-                                    </div>
-                                 {{/if}}
+                                          <span class="price__month"> в месяц</span>
+                                       </div>
+                                    {{/if}}
 
-                                 <label class="switch">
-                                    <input type="checkbox"
-                                           data-equip-name="{{dataView}}"
-                                       {{#unless price}}checked{{/unless}}
-                                       {{#h-if price '===' '0'}}checked{{/h-if}}
-                                       {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
-                                    <span class="round"></span>
-                                 </label>
+                                    <label class="switch">
+                                       <input type="checkbox"
+                                              data-equip-name="{{dataView}}"
+                                          {{#unless price}}checked{{/unless}}
+                                          {{#h-if price '===' '0'}}checked{{/h-if}}
+                                          {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
+                                       <span class="round"></span>
+                                    </label>
+                                 </div>
                               </div>
 
                            </li>
@@ -162,7 +167,6 @@
                      {{/each}}
 
                   </ul>
-
                </div>
 
             </div>
