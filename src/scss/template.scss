@@ -25,7 +25,7 @@ a.btn,
 .btn {
    height: 48px;
    border-radius: 24px;
-   padding: 0 50px;
+   padding: 0 32px;
    font-size: 15px;
    font-weight: 500;
    line-height: 1;
@@ -33,6 +33,7 @@ a.btn,
    display: inline-flex;
    justify-content: center;
    align-items: center;
+   flex-shrink: 0;
    transition: 0s;
    background-color: var(--mf-green);
 
@@ -248,7 +249,7 @@ h1 {
 
 h2 {
    font-size: 32px;
-   font-weight: 700;
+   font-weight: 600;
    line-height: 40px;
 }
 
@@ -332,11 +333,18 @@ input[type="radio"] {
 .switch {
    position: relative;
    display: inline-block;
-   width: 40px;
-   height: 20px;
    box-sizing: border-box;
    flex-shrink: 0;
-   margin-right: 18px;
+   //margin-left: 14px;
+   //margin-right: 0;
+   height: 28px;
+   width: 48px;
+
+   & input:checked + span:before {
+      left: calc(100% - 26px + 1px);
+   }
+
+
 
    input {
       display: none;
@@ -357,14 +365,14 @@ input[type="radio"] {
    span:before {
       content: '';
       position: absolute;
-      height: 18px;
-      width: 18px;
       left: -1px;
-      top: calc(50% - 9px);
       background-color: #fff;
       transition: .3s;
       border: 1px solid #33333327;
       box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .05), 0 3px 3px 0 rgba(0, 0, 0, .05);
+      height: 26px;
+      width: 26px;
+      top: calc(50% - 26px / 2);
    }
 
    input:checked + span {
@@ -376,7 +384,7 @@ input[type="radio"] {
    }
 
    input:checked + span:before {
-      left: calc(100% - 18px + 1px);
+      left: calc(100% - 26px + 1px);
    }
 
    /* Rounded sliders */
@@ -393,39 +401,40 @@ input[type="radio"] {
    white-space: nowrap;
 
    > span {
-      font-size: 12px;
-      line-height: 14px;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+      vertical-align: middle;
+
+      &:last-child {
+         vertical-align: middle;
+      }
    }
 
    .old-price {
-      font-size: 15px;
+      font-size: 20px;
+      line-height: 28px;
       font-weight: 500;
-      color: #7F7F7F;
+      color: #999999;
       position: relative;
+      margin-right: 2px;
 
       &:before {
          content: '';
          position: absolute;
          left: 0;
-         top: 49%;
+         top: calc(50% - 1px);
          height: 2px;
          width: 100%;
-         background-color: #ff0000;
+         background-color: #EB5A40;
       }
    }
 
    .new-price,
    .new-price + span {
-      font-size: 20px;
-      line-height: 18px;
-      font-weight: 500;
-   }
-
-   .new-price {
-
-      + span {
-
-      }
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 600;
    }
 
    &__icon {
@@ -650,15 +659,21 @@ form {
 .autocomplete-suggestions {
    background-color: #fff;
    border: 1px solid #ccc;
+   border-radius: 8px;
    cursor: default;
    overflow: auto;
+   margin-top: 4px;
+   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
 
    .autocomplete-suggestion {
-      padding: 5px;
+      padding: 9px 12px;
       overflow: hidden;
       border-bottom: 1px solid #e1e1e1;
-      margin-bottom: 4px;
       line-height: 22px;
+
+      &:last-child {
+         border-bottom: none;
+      }
 
       &:hover {
          background-color: #57068c;
@@ -668,6 +683,14 @@ form {
       strong {
          font-weight: normal;
          color: #3399FF;
+      }
+   }
+
+   @media (max-width: 1023px) {
+      .autocomplete-suggestion {
+         font-size: 12px;
+         line-height: 16px;
+         padding: 8px 12px;
       }
    }
 }
@@ -823,4 +846,12 @@ form {
       margin-right: 20px;
    }
 
+}
+
+.d-mobile {
+   display: none !important;
+
+   @media (max-width: 767px) {
+      display: block !important;
+   }
 }

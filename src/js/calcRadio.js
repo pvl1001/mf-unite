@@ -12,7 +12,7 @@ window.calcRadio = {
    sum(id, index) {
       this.switch = $( id + ' .item-option .switch input' ) // все switch
       this.totalPrice = $( id + ' .new-price' ) // общая цена
-      this.priceSwitch = $( id + ' .item-option__num' ) // switch цена
+      this.priceSwitch = $( id + ' .switch-price span' ) // switch цена
       this.switchBanner = $( '.banner-for-their .switch input' )
       this.priceBanner = $( '.banner-for-their .item-option__num' )
       let sumBanner = +counter.val() * +this.priceBanner.text()
