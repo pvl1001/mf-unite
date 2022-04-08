@@ -382,6 +382,12 @@
       margin-top: 8px;
    }
 
+   .price {
+      > * {
+         vertical-align: middle;
+      }
+   }
+
 
    @media (max-width: 1279px) {
 
