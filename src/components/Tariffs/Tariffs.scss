@@ -7,21 +7,6 @@
       margin-bottom: 37px;
    }
 
-   .slider {
-      transition: .2s;
-      opacity: 0;
-      margin: 0 -10px;
-
-      .slick-track, .slick-list {
-         display: flex;
-      }
-
-      .slick-slide > div {
-         height: 100%;
-         padding: 10px;
-      }
-   }
-
    .collapse-channel {
       font-size: 15px;
 
@@ -221,20 +206,6 @@
 
    @media (max-width: 767px) {
       padding: 56px 0 34px;
-
-      .slider {
-         margin: 0 -8px;
-
-         .slick-list {
-            overflow: visible;
-            padding: 0 24px;
-            margin-left: -24px;
-         }
-
-         .slick-slide > div {
-            padding: 8px;
-         }
-      }
    }
 
 }

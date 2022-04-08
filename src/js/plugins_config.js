@@ -7,39 +7,9 @@ import 'popper.js'
 
 
 $( function () {
-   $('.slider').css('opacity', '1')
+   $( '.slider' ).css( 'opacity', '1' )
 
-
-   // слайдер
-   $( '.tariffs .slider' ).slick( {
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      dots: true,
-      responsive: [
-         {
-            breakpoint: 1280,
-            settings: {
-               slidesToShow: 3,
-            }
-         }, {
-            breakpoint: 1024,
-            settings: {
-               slidesToShow: 2,
-            }
-         }, {
-            breakpoint: 768,
-            settings: {
-               slidesToShow: 1,
-               arrows: false,
-            }
-         }
-      ]
-   } );
-
-
-   // слайдер
-   $( '.equipments .slider' ).slick( {
+   const sliderConfig = {
       infinite: false,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -66,16 +36,22 @@ $( function () {
             }
          }
       ]
-   } );
+   }
+
+   // слайдер tariffs
+   $( '.tariffs .slider' ).slick( sliderConfig )
+
+   // слайдер equipments
+   $( '.equipments .slider' ).slick( sliderConfig )
 
 
    // маска
-   $( 'input[name="phone"]' ).mask( '+7(000)000-00-00', {placeholder: "+7(   )   -  -  "} );
+   $( 'input[name="phone"]' ).mask( '+7(000)000-00-00', { placeholder: "+7(   )   -  -  " } )
 
 
    // валидация формы
-   $.validator.addMethod( "select", function (value) { // валидация address
-         return setAddress.address === value
+   $.validator.addMethod( "select", function ( value ) { // валидация address
+      return setAddress.address === value
    } )
 
 

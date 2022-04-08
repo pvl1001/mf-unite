@@ -61,7 +61,9 @@ export const arrCardsAlmond = Array.from( document.querySelectorAll( '.modalAbou
 
 // снять переключатель карточки almond, если оборудование не выбрано (при закрытии окна)
 $( '.modalAlmond' ).on( 'hidden.bs.modal', function () {
-   if (arrCardsAlmond[prop.currentModalIndex] && arrCardsAlmond[prop.currentModalIndex].data.totalPrice === 0) {
-      arrCardsAlmond[prop.currentModalIndex].disabledTotalPrice()
+   if ( prop.currentModalIndex !== data.length - 1 ) {
+      if ( arrCardsAlmond[prop.currentModalIndex] && arrCardsAlmond[prop.currentModalIndex].data.totalPrice === 0 ) {
+         arrCardsAlmond[prop.currentModalIndex].disabledTotalPrice()
+      }
    }
 } )
