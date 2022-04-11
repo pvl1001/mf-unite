@@ -57,7 +57,6 @@ $( function () {
 
    // popper tippy
    const tippyOptions = {
-      content: 'Для участия в <span class="link" onclick="toPlug(`.faq`)">Акции</span> необходимо быть абонентом МегаФон и подключить услугу ДляДома',
       interactive: true,
       placement: 'auto',
       maxWidth: 225,
@@ -67,7 +66,9 @@ $( function () {
       // trigger: 'click'
    }
 
-   tippy( '.price__icon_all', tippyOptions)
+   tippy( '.price__icon_all', { ...tippyOptions,
+      content: 'Для участия в <span class="link" onclick="toPlug(`.faq`)">Акции</span> необходимо быть абонентом МегаФон и подключить услугу ДляДома',
+   })
 
    tippy( '.price__icon_vse', { ...tippyOptions,
       content: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',

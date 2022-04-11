@@ -335,8 +335,6 @@ input[type="radio"] {
    display: inline-block;
    box-sizing: border-box;
    flex-shrink: 0;
-   //margin-left: 14px;
-   //margin-right: 0;
    height: 28px;
    width: 48px;
 
@@ -446,6 +444,7 @@ input[type="radio"] {
 }
 
 .slider {
+   opacity: 0;
    margin: 0 -10px;
 
    &__card {
@@ -687,7 +686,6 @@ form {
 
 .autocomplete-suggestions {
    background-color: #fff;
-   border: 1px solid #ccc;
    border-radius: 8px;
    cursor: default;
    overflow: auto;
@@ -878,7 +876,7 @@ form {
 }
 
 .d-mobile {
-   display: none !important;
+   display: none;
 
    @media (max-width: 767px) {
       display: block !important;
