@@ -4,114 +4,114 @@
         aria-labelledby="exampleModalLabel"
         aria-hidden="true">
 
-      <div class="tariff-modal__btn-close modal-dialog">
-         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-      </div>
 
       <div class="modal-dialog modal-dialog-centered" role="document">
 
          <div class="modal-content">
 
-            <div class="tariff-modal__title wrapp" data-view="modal_{{dataView}}_start">
-               <h1>#ДляДома {{name}}</h1>
-            </div>
+            <div class="modal-scroll">
+               <div class="tariff-modal__btn-close modal-dialog">
+                  <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="tariff-modal__title wrapp" data-view="modal_{{dataView}}_start">
+                  <h1>#ДляДома {{name}}</h1>
+               </div>
+               <div class="tariff-modal__container">
 
-            <div class="tariff-modal__container">
-
-               <ul class="tariff-modal__items">
-                  {{#each infoModal}}
-                     <li class="tariff-modal__item item-modal wrapp">
-                        <div class="item-modal__title">
-                           <div class="item-modal__title-icon">
-                              <img src="img/svg/{{icon}}" alt="{{icon}}">
+                  <ul class="tariff-modal__items">
+                     {{#each infoModal}}
+                        <li class="tariff-modal__item item-modal wrapp">
+                           <div class="item-modal__title">
+                              <div class="item-modal__title-icon">
+                                 <img src="img/svg/{{icon}}" alt="{{icon}}">
+                              </div>
+                              <h2>{{title}}</h2>
                            </div>
-                           <h2>{{title}}</h2>
-                        </div>
 
-                        <ul class="item-modal__options">
-                           {{#each options}}
-                              <li class="item-modal__option option-item">
-                                 <div class="option-item__text">
-                                    <p class="option-item__text-name">{{name}}</p>
-                                    {{#if description}}
-                                       <p class="option-item__text-desc">{{description}}</p>
-                                    {{/if}}
-                                 </div>
-                                 <p class="option-item__value">{{value}}</p>
-                              </li>
-                           {{/each}}
-                        </ul>
-                     </li>
-                  {{/each}}
-               </ul>
+                           <ul class="item-modal__options">
+                              {{#each options}}
+                                 <li class="item-modal__option option-item">
+                                    <div class="option-item__text">
+                                       <p class="option-item__text-name">{{name}}</p>
+                                       {{#if description}}
+                                          <p class="option-item__text-desc">{{description}}</p>
+                                       {{/if}}
+                                    </div>
+                                    <p class="option-item__value">{{value}}</p>
+                                 </li>
+                              {{/each}}
+                           </ul>
+                        </li>
+                     {{/each}}
+                  </ul>
 
-               <div class="tariff-modal__dop-options wrapp">
-                  <h2 class="tariff-modal__dop-options-title">Дополнительные опции:</h2>
-                  <ul class="tariff-modal__dop-options-cards">
+                  <div class="tariff-modal__dop-options wrapp">
+                     <h2 class="tariff-modal__dop-options-title">Дополнительные опции:</h2>
+                     <ul class="tariff-modal__dop-options-cards">
 
-                     {{#each equipments}}
-                        {{#h-if id '!==' 'equipment-sim'}}
-                           <li id="card-{{../id}}-{{id}}"
-                               class="tariff-modal__dop-options-card dop-options-card
+                        {{#each equipments}}
+                           {{#h-if id '!==' 'equipment-sim'}}
+                              <li id="card-{{../id}}-{{id}}"
+                                  class="tariff-modal__dop-options-card dop-options-card
                               {{#h-if id '===' 'eq-almond'}} dop-options-card_almond{{/h-if}}">
 
-                              {{#h-if name '===' 'Android TV'}}
-                                 <div class="dop-options-card__mark"><span class="mark">Акция</span></div>
-                              {{/h-if}}
+                                 {{#h-if name '===' 'Android TV'}}
+                                    <div class="dop-options-card__mark"><span class="mark">Акция</span></div>
+                                 {{/h-if}}
 
-                              <div class="dop-options-card__container
+                                 <div class="dop-options-card__container
 
                                  {{#if plan}} dop-options-card__option_plan{{/if}}">
 
-                                 <div class="dop-options-card__img">
-                                    <img src="img/pic/{{img}}" alt="{{img}}">
-                                 </div>
-
-                                 <div class="dop-options-card__option">
-                                    <div>
-
-                                       <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
-                                          {{#h-if id '!==' 'eq-almond'}}
-                                          onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
-                                          {{else}}
-                                          data-toggle="modal" data-target="#modalAlmond"
-                                          onclick="openAlmond({{@../index}}, '{{dataView}}')"
-                                          {{/h-if}}
-                                       >{{{name}}}
-                                          <nobr>{{speed}}</nobr>
-                                       </h3>
-
+                                    <div class="dop-options-card__img">
+                                       <img src="img/pic/{{img}}" alt="{{img}}">
                                     </div>
 
-                                    {{#h-if ../id '!==' 'turbo'}}
-                                       <p>{{planTitle price id plan}}</p>
-                                    {{/h-if}}
+                                    <div class="dop-options-card__option">
+                                       <div>
 
-                                    {{#if plan}}
-                                       <div class="dop-options-card__option-radio option-radio">
+                                          <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
+                                             {{#h-if id '!==' 'eq-almond'}}
+                                             onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                                             {{else}}
+                                             data-toggle="modal" data-target="#modalAlmond"
+                                             onclick="openAlmond({{@../index}}, '{{dataView}}')"
+                                             {{/h-if}}
+                                          >{{{name}}}
+                                             <nobr>{{speed}}</nobr>
+                                          </h3>
 
-                                          <label class="option-radio__radio-btn">
-                                             <input name="radio-{{../id}}-{{@index}}"
-                                                    id="radio36-id-{{../id}}-{{@index}}"
-                                                    type="radio" value="{{plan.[36]}}" checked disabled>
-                                             <label for="radio36-id-{{../id}}-{{@index}}"></label>
-                                             <span>36 мес</span>
-                                          </label>
-
-                                          <label class="option-radio__radio-btn">
-                                             <input name="radio-{{../id}}-{{@index}}"
-                                                    id="radio24-id-{{../id}}-{{@index}}"
-                                                    type="radio" value="{{plan.[24]}}" disabled>
-                                             <label for="radio24-id-{{../id}}-{{@index}}"></label>
-                                             <span>24 мес</span>
-                                          </label>
                                        </div>
-                                    {{/if}}
-                                 </div>
 
-                                 <div class="dop-options-card__price">
-                                    {{#if price}}
-                                       <div class="price">
+                                       {{#h-if ../id '!==' 'turbo'}}
+                                          <p>{{planTitle price id plan}}</p>
+                                       {{/h-if}}
+
+                                       {{#if plan}}
+                                          <div class="dop-options-card__option-radio option-radio">
+
+                                             <label class="option-radio__radio-btn">
+                                                <input name="radio-{{../id}}-{{@index}}"
+                                                       id="radio36-id-{{../id}}-{{@index}}"
+                                                       type="radio" value="{{plan.[36]}}" checked disabled>
+                                                <label for="radio36-id-{{../id}}-{{@index}}"></label>
+                                                <span>36 мес</span>
+                                             </label>
+
+                                             <label class="option-radio__radio-btn">
+                                                <input name="radio-{{../id}}-{{@index}}"
+                                                       id="radio24-id-{{../id}}-{{@index}}"
+                                                       type="radio" value="{{plan.[24]}}" disabled>
+                                                <label for="radio24-id-{{../id}}-{{@index}}"></label>
+                                                <span>24 мес</span>
+                                             </label>
+                                          </div>
+                                       {{/if}}
+                                    </div>
+
+                                    <div class="dop-options-card__price">
+                                       {{#if price}}
+                                          <div class="price">
                                     <span class="price__current">
                                        {{#if plan}}
                                           {{plan.[36]}}
@@ -119,99 +119,105 @@
                                           {{price}}
                                        {{/if}}
                                     </span> <span> ₽</span>
-                                          <span class="price__month"> в месяц</span>
-                                       </div>
-                                    {{/if}}
+                                             <span class="price__month"> в месяц</span>
+                                          </div>
+                                       {{/if}}
+
+                                       <label class="switch">
+                                          <input type="checkbox"
+                                                 data-equip-name="{{dataView}}"
+                                             {{#unless price}}checked{{/unless}}
+                                             {{#h-if price '===' '0'}}checked{{/h-if}}
+                                             {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
+                                          <span class="round"></span>
+                                       </label>
+                                    </div>
+                                 </div>
+
+                              </li>
+                           {{else}}
+                              <li id="card-{{../id}}-{{id}}" class="tariff-modal__dop-options-card dop-options-card">
+                                 <div class="dop-options-card__sim">
+                                    <p>SIM-карта с тарифом
+                                       <span data-toggle="modal" data-target="#tariff-all"> «Без переплат. Всё»</span>
+                                       Скидка 40% на абонентскую плату
+                                    </p>
+                                    <div class="tariff-modal__counter counter">
+                                       <div class="counter__minus">&minus;</div>
+                                       <input type="text" readonly value="1">
+                                       <div class="counter__plus">+</div>
+                                    </div>
+                                 </div>
+
+                                 <div class="dop-options-card__price">
+                                    <div class="price">
+                                       <span class="price__old">{{oldPrice}} ₽</span>
+                                       <span class="price__current">{{price}}</span> <span> ₽</span>
+                                       <span class="price__month"> в месяц</span>
+                                    </div>
 
                                     <label class="switch">
-                                       <input type="checkbox"
-                                              data-equip-name="{{dataView}}"
-                                          {{#unless price}}checked{{/unless}}
-                                          {{#h-if price '===' '0'}}checked{{/h-if}}
-                                          {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
+                                       <input type="checkbox" data-equip-name="SIM">
                                        <span class="round"></span>
                                     </label>
                                  </div>
-                              </div>
 
-                           </li>
-                        {{else}}
-                           <li id="card-{{../id}}-{{id}}" class="tariff-modal__dop-options-card dop-options-card">
-                              <div class="dop-options-card__sim">
-                                 <p>SIM-карта с тарифом
-                                    <span data-toggle="modal" data-target="#tariff-all"> «Без переплат. Всё»</span>
-                                    Скидка 40% на абонентскую плату
-                                 </p>
-                                 <div class="tariff-modal__counter counter">
-                                    <div class="counter__minus">&minus;</div>
-                                    <input type="text" readonly value="1">
-                                    <div class="counter__plus">+</div>
-                                 </div>
-                              </div>
+                              </li>
+                           {{/h-if}}
+                        {{/each}}
 
-                              <div class="dop-options-card__price">
-                                 <div class="price">
-                                    <span class="price__old">{{oldPrice}} ₽</span>
-                                    <span class="price__current">{{price}}</span> <span> ₽</span>
-                                    <span class="price__month"> в месяц</span>
-                                 </div>
-
-                                 <label class="switch">
-                                    <input type="checkbox" data-equip-name="SIM">
-                                    <span class="round"></span>
-                                 </label>
-                              </div>
-
-                           </li>
-                        {{/h-if}}
-                     {{/each}}
-
-                  </ul>
-               </div>
-
-            </div>
-
-            <div class="tariff-modal__footer-container">
-               <div class="tariff-modal__footer wrapp">
-                  <div class="tariff-modal__block-price">
-                     <h3 class="tariff-modal__footer-title">#ДляДома {{name}}</h3>
-                     <div class="tariff-modal__price">
-                        <span class="tariff-modal__price-current">{{price}}</span>
-                        <span class="tariff-modal__price-month"> в месяц</span>
-                        <nobr>
-                           <span class="tariff-modal__price-desc">с учетом выбранных опций</span>
-                           {{#if iconInfo}}
-                              <svg class="tariff-modal__info-icon
-                        {{#h-if @index '==' 0}} price__icon_all{{/h-if}}
-                                 {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"
-                                   viewBox="2 17 16 16" width="16px" height="16px" fill="#ffffff"
-                                   xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                       d="M9 30H11V24H9V30ZM10 22C9.8 22 9.5 21.9 9.3 21.7C9.1 21.5 9 21.3 9 21C9 20.7 9.1 20.5 9.3 20.3C9.5 20.1 9.8 20 10 20C10.2 20 10.5 20.1 10.7 20.3C10.9 20.5 11 20.7 11 21C11 21.3 10.9 21.5 10.7 21.7C10.6 21.9 10.3 22 10 22ZM10 18C6.1 18 3 21.1 3 25C3 28.9 6.1 32 10 32C13.9 32 17 28.9 17 25C17 21.1 13.9 18 10 18ZM10 33C5.6 33 2 29.4 2 25C2 20.6 5.6 17 10 17C14.4 17 18 20.6 18 25C18 29.4 14.4 33 10 33Z"
-                                       fill="#ffffff">
-                                 </path>
-                              </svg>
-                           {{/if}}
-                        </nobr>
-                     </div>
+                     </ul>
+                     {{!--                  <div class="test"></div>--}}
                   </div>
 
-                  <button
-                     type="button"
-                     class="tariff-modal__price-btn btn{{#h-if id '!==' 'maximum'}} btn-fiolet{{/h-if}}"
-                     data-toggle="modal"
-                     data-target="#order"
-                     data-view="modal_{{dataView}}_end"
-                     onclick="openOrder(
-                        {label: '{{dataView}}'},
-                        '',
-                        '#{{id}}',
-                        '{{tariffId}}',
-                        '#ДляДома {{name}}')">
-                     Заказать
-                  </button>
+               </div>
+               <div class="tariff-modal__footer-container">
+                  <div class="tariff-modal__footer wrapp">
+                     <div class="tariff-modal__block-price">
+                        <h3 class="tariff-modal__footer-title">#ДляДома {{name}}</h3>
+                        <div class="tariff-modal__price">
+                           <span class="tariff-modal__price-current">{{price}}</span>
+                           <span class="tariff-modal__price-month"> в месяц</span>
+                           <nobr>
+                              <span class="tariff-modal__price-desc">с учетом выбранных опций</span>
+                              {{#if iconInfo}}
+                                 <svg class="tariff-modal__info-icon
+                        {{#h-if @index '==' 0}} price__icon_all{{/h-if}}
+                                    {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"
+                                      viewBox="2 17 16 16" width="16px" height="16px" fill="#ffffff"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M9 30H11V24H9V30ZM10 22C9.8 22 9.5 21.9 9.3 21.7C9.1 21.5 9 21.3 9 21C9 20.7 9.1 20.5 9.3 20.3C9.5 20.1 9.8 20 10 20C10.2 20 10.5 20.1 10.7 20.3C10.9 20.5 11 20.7 11 21C11 21.3 10.9 21.5 10.7 21.7C10.6 21.9 10.3 22 10 22ZM10 18C6.1 18 3 21.1 3 25C3 28.9 6.1 32 10 32C13.9 32 17 28.9 17 25C17 21.1 13.9 18 10 18ZM10 33C5.6 33 2 29.4 2 25C2 20.6 5.6 17 10 17C14.4 17 18 20.6 18 25C18 29.4 14.4 33 10 33Z"
+                                          fill="#ffffff">
+                                    </path>
+                                 </svg>
+                              {{/if}}
+                           </nobr>
+                        </div>
+                     </div>
+
+                     <button
+                        type="button"
+                        class="tariff-modal__price-btn btn{{#h-if id '!==' 'maximum'}} btn-fiolet{{/h-if}}"
+                        data-toggle="modal"
+                        data-target="#order"
+                        data-view="modal_{{dataView}}_end"
+                        onclick="openOrder(
+                           {label: '{{dataView}}'},
+                           '',
+                           '#{{id}}',
+                           '{{tariffId}}',
+                           '#ДляДома {{name}}')">
+                        Заказать
+                     </button>
+                  </div>
                </div>
             </div>
+
+
+
+{{!--            <div class="test"></div>--}}
+
 
          </div>
 

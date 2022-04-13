@@ -93,6 +93,7 @@
       &__tariff-name {
          font-size: 15px;
          line-height: 24px;
+         font-weight: 500;
       }
 
       &__marks {
@@ -119,6 +120,7 @@
          align-items: center;
          font-size: 20px;
          line-height: 28px;
+         font-weight: 500;
          margin-bottom: 3px;
 
          &:last-child {
@@ -161,6 +163,7 @@
       &__about-btn {
          font-size: 15px;
          line-height: 24px;
+         font-weight: 500;
          color: var(--mf-blue);
          text-align: center;
          margin-bottom: 7px;
@@ -185,6 +188,10 @@
    }
 
    .card.card__maximum {
+      .card__green-box {
+         background-color: var(--mf-premium-light);
+      }
+
       .params__icon svg, path {
          fill: var(--mf-premium)
       }
