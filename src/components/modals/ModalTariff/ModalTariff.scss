@@ -57,11 +57,12 @@
    .modal-content {
       display: block;
       padding: 0;
-      overflow: visible;
       background-color: transparent;
       height: 100vh;
+      overflow-x: hidden;
       overflow-y: auto;
       border-radius: 0 0 10px 10px;
+      transform: translate(0);
 
       &:before {
          content: '';
