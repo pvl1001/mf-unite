@@ -537,6 +537,8 @@
 
          h2 {
             text-align: center;
+            font-size: 28px;
+            line-height: 36px;
          }
       }
 
@@ -625,19 +627,6 @@
 
       &__unite {
          padding: 50px 36px 60px;
-      }
-
-      &__to-plug {
-
-         h2 {
-            text-align: center;
-            font-size: 28px;
-            line-height: 36px;
-         }
-
-         p {
-            padding-right: 0;
-         }
       }
 
       &__params-title {
