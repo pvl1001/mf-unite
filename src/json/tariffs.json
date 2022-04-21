@@ -4,12 +4,12 @@
       "tariffId": 4271,
       "dataView": "internet",
       "name": "Интернет",
-      "marks": ["Акция"],
+      "marks": null,
       "sale": "Скидка 40% на SIM-карты",
       "speed":  100,
-      "oldPrice": 399,
-      "price": 250,
-      "iconInfo": true,
+      "oldPrice": null,
+      "price": 399,
+      "iconInfo": false,
       "rentDevice": [
          {
             "text": "Аренда ТВ-приставки",
