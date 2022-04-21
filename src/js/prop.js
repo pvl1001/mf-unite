@@ -1,4 +1,5 @@
 export default {
+   pageName: '#ДляДома',
    flagValid: null,
    setAddress: {},
    dataAddress: {},

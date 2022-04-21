@@ -1,4 +1,3 @@
-window.moreTariff = (id, i, eventLabel) => {
+window.moreTariff = (id, i) => {
    openModal(id, i)
-   analytics('click_button_' + eventLabel)
 }

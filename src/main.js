@@ -19,6 +19,9 @@ import './js/calculateEquip' // расчеты карточек доп. опци
 import './js/calculateModalEquip' // окно с оборудованием рассрочка
 import './js/collapseChannels' // загрузка тв-каналов
 
+// components
+import './components/Nav/Nav.js'
+
 // build all img
 function requireAll(r) { r.keys().forEach(r); }
 requireAll(require.context('/img/', true));

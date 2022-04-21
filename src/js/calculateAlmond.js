@@ -10,10 +10,9 @@ export const renderAlmond = () => {
 
 
 // открытие окна almond в тарифах
-window.openAlmond = (index, dataView) => {
+window.openAlmond = (index) => {
    prop.currentModalIndex = index
    renderAlmond()
-   analytics(`click_button_details_${dataView}`)
 }
 
 

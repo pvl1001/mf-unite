@@ -167,7 +167,6 @@
                         {{/each}}
 
                      </ul>
-                     {{!--                  <div class="test"></div>--}}
                   </div>
 
                </div>
@@ -204,7 +203,7 @@
                         data-view="modal_{{dataView}}_end"
                         onclick="openOrder(
                            {label: '{{dataView}}'},
-                           '',
+                           '#{{id}} .tariff-modal__price-current',
                            '#{{id}}',
                            '{{tariffId}}',
                            '#ДляДома {{name}}')">
@@ -213,11 +212,6 @@
                   </div>
                </div>
             </div>
-
-
-
-{{!--            <div class="test"></div>--}}
-
 
          </div>
 

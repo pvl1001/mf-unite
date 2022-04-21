@@ -80,7 +80,6 @@ export class CardAlmond {
 
    switchStatus(boolean = false) {
       if (boolean) return this.performance.status = this.$switch.checked = true
-      // debugger
       this.performance.status = this.$switch.checked
       this.sumCard()
    }

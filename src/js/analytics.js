@@ -1,79 +1,55 @@
-const widthDesktop = 1024
-const widthTablet = 700
+import prop from "@/js/prop";
 
-// Аналитика просмотр блоков
-window.eventFired = []
-
-function setDataView(lazyBlock, device) {
-   gtag('event', device, {
-      'event_category': 'EventHomeMF_ViewBlock',
-      'event_label': lazyBlock,
-      'non_interaction': true
-   })
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-
-   const imageObserver = new IntersectionObserver(entries => {
-
-      entries.forEach((entry) => {
-
-         if (entry.isIntersecting) {
-            const lazyBlock = entry.target.getAttribute('data-view')
-            const widthW = window.innerWidth
-
-            if (eventFired.indexOf(lazyBlock) === -1) {
-               eventFired.push(lazyBlock)
-               if (widthW > widthDesktop) return setDataView(lazyBlock, 'desktop')
-               if (widthW > widthTablet) return setDataView(lazyBlock, 'tablet')
-               setDataView(lazyBlock, 'mobile')
-            }
-
-         }
-      })
-   })
-
-   const arr = document.querySelectorAll('[data-view]')
-   arr.forEach((v) => {
-      imageObserver.observe(v)
-   })
-})
-
+typeof VK !== 'undefined' && VK.Goal( 'view_content' )
 
 // Аналитика скролла страницы в %
-const paramsScroll = [100, 80, 60, 40, 20]
+const paramsScroll = [ 100 ]
 const usedParamsScroll = []
 
-function setDataScroll(scroll, device) {
-   dataLayer.push({
-      'event': 'addEvents_useNavigations',
-      'event_id': 'd-v474-e1',
-      'event_cat': `Scrolling - ${device}`,
-      'event_name': 'Scroll',
-      'event_param': scroll + '%'
+window.addEventListener( 'scroll', () => {
+   const height = (document.body.scrollHeight - window.innerHeight) / 100
+   const scroll = Math.round( window.scrollY / height / 5 ) * 5
+
+   paramsScroll.forEach( param => {
+      if ( usedParamsScroll.indexOf( param ) === -1 && scroll === param ) {
+         usedParamsScroll.push( param )
+         typeof VK !== 'undefined' && VK.Goal( 'page_view' )
+      }
+   } )
+
+} )
+
+export function analytics( goal ) {
+   typeof VK !== 'undefined' && VK.Goal( goal )
+   const _tmr = window._tmr || (window._tmr = [])
+   _tmr.push( { "type": "reachGoal", "id": 3239443, "goal": goal } )
+}
+
+
+export function setPixelData(leadInfoData) {
+   window.advcake_data = window.advcake_data || []
+   window.advcake_data.push({
+      pageType: 6,
+      user: {
+         email: '',
+         type: ''
+      },
+      leadInfo: {
+         ...leadInfoData,
+         leadid: '',
+         coupon: ''
+      }
    })
 }
 
-window.addEventListener('scroll', () => {
-   const height = (document.body.scrollHeight - window.innerHeight) / 100
-   const scroll = Math.round(window.scrollY / height / 5) * 5
-   const widthW = window.innerWidth
+export function postRegister(data) {
+   const ct_site_id = '37410'
 
-   paramsScroll.forEach(param => {
-      if (usedParamsScroll.indexOf(param) === -1 && scroll === param) {
-         usedParamsScroll.push(param)
-
-         if (widthW > widthDesktop) return setDataScroll(param, 'Desktop')
-         if (widthW > widthTablet) return setDataScroll(param, 'Tablet')
-         setDataScroll(scroll, 'Mobile')
+   $.ajax( {
+         url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/' + ct_site_id + '/register/',
+         dataType: 'json',
+         type: 'POST',
+         data
       }
-   })
-
-})
-
-
-// Аналитика событий по клику
-window.analytics = eventLabel => {
-   // console.log(eventLabel)
-   gtag('event', 'click', {'event_category': 'EventHomeMF', 'event_label': eventLabel})
+   )
 }

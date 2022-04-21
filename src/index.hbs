@@ -1,33 +1,71 @@
 <!doctype html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport"
-         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="shortcut icon" href="#" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css"
    />
    <title>MF</title>
-   <!-- Global site tag (gtag.js) - Google Analytics -->    <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23688716-34"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-         dataLayer.push( arguments );
-      }
-
-      gtag( 'js', new Date() );
-      gtag( 'config', 'UA-23688716-34', {
-         'custom_map': {
-            'dimension1': 'inh',
-            'dimension2': 'clientId'
-         }
-      } );
+   <!-- VK pixel -->
+   <script type="text/javascript">!function () {
+      var t = document.createElement( "script" );
+      t.type = "text/javascript", t.async = !0, t.src = 'https://vk.com/js/api/openapi.js?169', t.onload = function () {
+         VK.Retargeting.Init( "VK-RTRG-1223493-6RRBC" ), VK.Retargeting.Hit()
+      }, document.head.appendChild( t )
+   }();</script>
+   <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1223493-6RRBC" style="position:fixed; left:-999px;" alt=""/>
+   </noscript>
+   <script type="text/javascript" id="advcakeAsync">
+      (function ( a ) {
+         var b = a.createElement( "script" );
+         b.async = 1;
+         b.src = "//code.cake001.ru/";
+         a = a.getElementsByTagName( "script" )[0];
+         a.parentNode.insertBefore( b, a )
+      })( document );
    </script>
+   <script>
+      window.advcake_data = window.advcake_data || [];
+      window.advcake_data.push({
+         pageType: 2,
+      });
+   </script>
+   <!-- / VK pixel -->
 </head>
 <body>
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+   var _tmr = window._tmr || (window._tmr = []);
+   _tmr.push( { id: "3239443", type: "pageView", start: (new Date()).getTime() } );
+   (function ( d, w, id ) {
+      if ( d.getElementById( id ) ) return;
+      var ts = d.createElement( "script" );
+        ts.type = "text/javascript";
+        ts.async = true;
+        ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () {
+            var s = d.getElementsByTagName( "script" )[0];
+            s.parentNode.insertBefore( ts, s );
+        };
+        if ( w.opera == "[object Opera]" ) {
+            d.addEventListener( "DOMContentLoaded", f, false );
+        } else {
+            f();
+        }
+    })( document, window, "topmailru-code" );
+</script>
+<noscript>
+    <div>
+        <img src="https://top-fwz1.mail.ru/counter?id=3239443;js=na" style="border:0;position:absolute;left:-9999px;"
+             alt="Top.Mail.Ru"/>
+    </div>
+</noscript>
+<!-- //Rating Mail.ru counter -->
+
 
 {{> Nav}}
 {{> Header}}
@@ -54,18 +92,6 @@
 
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
-
-
-
-<!-- Google Tag Manager -->
-<script>
-   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MS5JPJK');
-</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS5JPJK"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 
 <!-- Yandex.Metrika counter -->
