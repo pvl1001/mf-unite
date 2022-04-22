@@ -4,6 +4,7 @@ import './plugins/jquery.mask'
 import './plugins/jquery.validate'
 import 'bootstrap'
 import 'popper.js'
+import tippy from './plugins/tippy'
 
 
 $( function () {
