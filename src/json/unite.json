@@ -3,8 +3,9 @@
    "name": "4G Wi-Fi роутер",
    "dataView": "vezde_ntv",
    "img": "router_info.webp",
-   "price": 200,
+   "routerPrice": 200,
    "priceSale": 960,
+   "price": 1400,
    "icons": [
       {
          "icon": "fiolet_speed.svg",

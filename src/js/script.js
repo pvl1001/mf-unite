@@ -8,8 +8,7 @@ $( document ).on( 'show.bs.modal', '.modal', function (event) {
 } )
 
 
-window.openModal = (id, index) => {
-   calcRadio.sum( id, index )
+window.openModal = (id) => {
    $( id ).modal( 'show' )
 }
 

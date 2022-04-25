@@ -152,7 +152,7 @@
                                           Технические характеристики
                                        </nobr>
                                     </p>
-                                    <p class="switch-price"><span>{{../unite.price}}</span> ₽ в месяц</p>
+                                    <p class="switch-price"><span>{{../unite.routerPrice}}</span> ₽ в месяц</p>
                                  </div>
                               </div>
 
@@ -163,18 +163,16 @@
                                 data-view="block_{{../unite.dataView}}"
                                 onclick="openOrder(
                                    {label: '{{../unite.dataView}}'},
-                                   '#unite .item-option__num',
+                                   '#unite .new-price',
                                    '{{../unite.name}}',
                                    {{../unite.tariffId}},
                                    '{{../unite.tariffName}}'
-                                   )">Отправить
-                              заявку
+                                   )">Отправить заявку
                            </div>
                            <div class="price">
-                              <span class="old-price">1600 ₽</span>
+                              <span class="old-price">{{price}} ₽</span>
                               <span>
                                  <span class="new-price">{{../unite.priceSale}}</span>
-                                 <span> ₽</span>
                                  <span>в месяц</span>
                               </span>
 
