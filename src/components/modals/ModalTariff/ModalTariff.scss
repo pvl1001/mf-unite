@@ -4,11 +4,43 @@
    font-weight: 500;
    overflow: hidden;
 
+   .modal-content {
+      display: block;
+      padding: 0;
+      background-color: transparent;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      border-radius: 0 0 10px 10px;
+      transform: translate(0);
+      white-space: nowrap;
+      font-size: 0;
+
+      &:before {
+         content: '';
+         display: inline-block;
+         height: 100%;
+         vertical-align: middle;
+      }
+
+      // firefox
+      scrollbar-width: none; /* толщина */
+
+      /* ползунок скроллбара */
+      &::-webkit-scrollbar-thumb,
+      &::-webkit-scrollbar {
+         width: 0;
+      }
+   }
+
    .modal-scroll {
       width: 100%;
       display: inline-block;
       vertical-align: middle;
       position: relative;
+      white-space: normal;
+      font-size: initial;
+
 
       &:before {
          content: "";
@@ -54,32 +86,6 @@
       margin: 0 auto;
    }
 
-   .modal-content {
-      display: block;
-      padding: 0;
-      background-color: transparent;
-      height: 100vh;
-      overflow-x: hidden;
-      overflow-y: auto;
-      border-radius: 0 0 10px 10px;
-      transform: translate(0);
-
-      &:before {
-         content: '';
-         display: inline-block;
-         height: 100%;
-         vertical-align: middle;
-      }
-
-      // firefox
-      scrollbar-width: none; /* толщина */
-
-      /* ползунок скроллбара */
-      &::-webkit-scrollbar-thumb,
-      &::-webkit-scrollbar {
-         width: 0;
-      }
-   }
 
    .wrapp {
       padding-left: 78px;
@@ -95,9 +101,6 @@
       align-items: center;
       font-weight: 700;
       border-radius: 10px 10px 0 0;
-   }
-
-   &__container {
    }
 
    &__items {
