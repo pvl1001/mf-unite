@@ -295,7 +295,7 @@
       "sale": "Скидка 40% на SIM-карты",
       "speed":  200,
       "tvId": 6,
-      "tvLength": "188 каналов",
+      "tvLength": "165 каналов",
       "oldPrice": 550,
       "price": 275,
       "iconInfo": true,
@@ -337,7 +337,7 @@
                {
                   "name": "Мегафон ТВ",
                   "description": "",
-                  "value": "188 каналов"
+                  "value": "165 каналов"
                },
                {
                   "name": "Трафик",
@@ -584,7 +584,7 @@
       "sale": "Скидка 40% на SIM-карты",
       "speed":  500,
       "tvId":  7,
-      "tvLength": "250 каналов",
+      "tvLength": "235 каналов",
       "price": 950,
       "rentDevice": [
          {
@@ -624,7 +624,7 @@
                {
                   "name": "Мегафон ТВ",
                   "description": "",
-                  "value": "250 каналов"
+                  "value": "235 каналов"
                },
                {
                   "name": "Трафик",
