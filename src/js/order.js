@@ -96,11 +96,7 @@ function resultOrderText(data, dataOrder) {
       }
 
       if (dataOrder.calltracking_params) {
-         setPixelData( {
-            id: data.message_id,
-            name: `Заявка ${ prop.pageName }`,
-            totalPrice: prop.sendOrder.priceEquip,
-         } )
+         setPixelData( data.message_id )
 
          postRegister({
             fio: dataOrder.clientName,

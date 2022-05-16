@@ -26,7 +26,7 @@ export function analytics( goal ) {
 }
 
 
-export function setPixelData(leadInfoData) {
+export function setPixelData(id) {
    window.advcake_data = window.advcake_data || []
    window.advcake_data.push({
       pageType: 6,
@@ -35,7 +35,9 @@ export function setPixelData(leadInfoData) {
          type: ''
       },
       leadInfo: {
-         ...leadInfoData,
+         id,
+         name: `Заявка`,
+         totalPrice: 0,
          leadid: '',
          coupon: ''
       }
