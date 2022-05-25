@@ -1,4 +1,4 @@
-import tariffs from '../json/tariffs.json'
+import tariffs from '../data/tariffs.js'
 import {CardRent} from './class/CardRent'
 import {CardPlan} from './class/CardPlan'
 import {CardSim} from './class/CardSim'

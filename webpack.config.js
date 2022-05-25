@@ -70,13 +70,13 @@ module.exports = {
          filename: 'index.html', // html на выходе
          template: './index.hbs', // шаблон
          templateParameters() { // данные шаблона
-            const jsonFiles = fs.readdirSync( 'src/json' )
-            const jsonProps = {}
-            jsonFiles.forEach( file => {
+            const dataFiles = fs.readdirSync( 'src/data' )
+            const props = {}
+            dataFiles.forEach( file => {
                const fileName = file.split( '.' )[0]
-               jsonProps[fileName] = require( './src/json/' + file )
+               props[fileName] = require( './src/data/' + file )
             } )
-            return jsonProps
+            return props
          },
          minify: isProd, // минимизировать html
       } ),

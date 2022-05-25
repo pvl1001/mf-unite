@@ -1,4 +1,4 @@
-import unite from '../json/unite.json'
+import unite from '../data/unite.js'
 
 
 window.calcRadio = {
