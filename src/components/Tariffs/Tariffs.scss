@@ -145,9 +145,9 @@
          height: 32px;
          margin-right: 12px;
 
-         svg, path {
-            fill: var(--mf-green);
-         }
+         //svg, path {
+         //   fill: var(--mf-green);
+         //}
 
          svg {
             margin: auto;
@@ -192,9 +192,9 @@
          background-color: var(--mf-premium-light);
       }
 
-      .params__icon svg, path {
-         fill: var(--mf-premium)
-      }
+      //.params__icon svg, path {
+      //   fill: var(--mf-premium)
+      //}
 
       .card__connect-btn {
          background-color: var(--mf-premium);

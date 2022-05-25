@@ -1,26 +1,28 @@
 <header class="header">
-   <div class="wrapper">
-      <div class="section-row">
+   <div class="wrapper header__wrapper">
+      <div class="header__row">
          <div class="header__text">
             <h1>
-               Цена меньше
-               <nobr>с каждым днём</nobr>
+               Домашний
+               <nobr>интернет, ТВ и связь</nobr>
             </h1>
-            <p>Подключай интернет и ТВ</p>
+            <p>В тарифах «Объединяй!»</p>
             <div class="header__btns">
-               <button onclick="openOrder({label: 'connect'})"
+               <button onclick="openOrder({label:'connect'})"
                        type="button"
-                       class="btn btn-fiolet"
+                       class="header__btn btn btn-fiolet"
                        data-view="first_banner"
                        data-target="#order"
                        data-toggle="modal"
                >Подключить
                </button>
+               <span data-target="#for-their" data-toggle="modal"
+                     class="header__about">Узнать подробнее</span>
             </div>
          </div>
-         <picture class="header__img-wrapp">
-            <source srcset="img/pic/head_banner_mob.webp" media="(max-width: 767px)">
-            <img class="header__img" src="img/pic/head_banner_desktop.webp" alt="главный баннер"/>
+         <picture class="header__img-container">
+            <source srcset="img/pic/head_banner_mob.png" media="(max-width: 1023px)">
+            <img class="header__img" src="img/pic/head_banner_desktop.png" alt="главный баннер"/>
          </picture>
       </div>
    </div>
