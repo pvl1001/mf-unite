@@ -1,5 +1,5 @@
 import './plugins/jquery.autocomplete'
-import './plugins/slick'
+import './plugins/slick.min'
 import './plugins/jquery.mask'
 import './plugins/jquery.validate'
 import 'bootstrap'
@@ -14,6 +14,7 @@ $( function () {
       infinite: false,
       slidesToShow: 4,
       slidesToScroll: 1,
+      centerPadding: 20,
       dots: true,
       responsive: [
          {

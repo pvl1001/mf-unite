@@ -60,7 +60,8 @@
       bottom: 0;
    }
 
-   &_maximum {
+   &_maximum,
+   &_premium {
       .tariff-modal__title,
       .tariff-modal__footer {
          background-color: #444189;

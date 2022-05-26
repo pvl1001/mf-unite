@@ -1,5 +1,6 @@
 module.exports = [
    {
+      group: "#ДляДома",
       id: "internet",
       tariffId: 4271,
       dataView: "internet",
@@ -289,6 +290,7 @@ module.exports = [
       ]
    },
    {
+      group: "#ДляДома",
       id: "vse",
       tariffId: 4273,
       dataView: "vse",
@@ -499,6 +501,7 @@ module.exports = [
       ]
    },
    {
+      group: "#ДляДома",
       id: "turbo",
       tariffId: 4276,
       dataView: "turbo",
@@ -585,6 +588,7 @@ module.exports = [
       ]
    },
    {
+      group: "#ДляДома",
       id: "maximum",
       tariffId: 4275,
       dataView: "maximum",
@@ -911,6 +915,7 @@ module.exports = [
       ]
    },
    {
+      group: "Объединяй!",
       id: "for-their",
       tariffId: 5330,
       dataView: "their",
@@ -1309,6 +1314,7 @@ module.exports = [
       ]
    },
    {
+      group: "Объединяй!",
       id: "two-web",
       tariffId: 5328,
       dataView: "dvainet",
@@ -1646,6 +1652,7 @@ module.exports = [
       ]
    },
    {
+      group: "Объединяй!",
       id: "hit",
       tariffId: 5329,
       dataView: "hit",
@@ -2035,6 +2042,7 @@ module.exports = [
       ]
    },
    {
+      group: "Объединяй!",
       id: "films",
       tariffId: 5331,
       dataView: "films",
@@ -2419,7 +2427,8 @@ module.exports = [
       ]
    },
    {
-      id: "premium",
+      group: "Объединяй!",
+      id: "maximum",
       tariffId: 5347,
       dataView: "premium",
       name: "Премиум",
@@ -2826,6 +2835,7 @@ module.exports = [
       ]
    },
    {
+      group: "Объединяй!",
       id: "economic",
       tariffId: 5327,
       dataView: "econom",
@@ -3196,6 +3206,7 @@ module.exports = [
       ]
    },
    {
+      group: "Объединяй!",
       id: "around",
       tariffId: 3981,
       dataView: "vezde",

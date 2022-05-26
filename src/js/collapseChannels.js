@@ -1,74 +1,77 @@
 const allChannels = document.querySelectorAll( '[data-tv-id]' )
-const arrChannels = []
-let once = true
+const promises = []
 
-
-async function getChannels(id) {
-   return await fetch( `https://home.megafon.ru/billing/bt/json/gettvchannelsbygroup?pack_id=${id}` )
-      .then( res => res.json() )
+async function getChannels( id ) {
+   const response = await fetch( `https://home.megafon.ru/billing/bt/json/gettvchannelsbygroup?pack_id=${ id }` )
+   return response.json()
 }
 
 
-allChannels.forEach( channels => channels.addEventListener( 'click', handlerChannels ) )
+allChannels.forEach( channels => channels.addEventListener( 'click', clickHandler ) )
 
+async function clickHandler() {
+   if ( !promises.length ) {
+      allChannels.forEach( ( el ) => {
+         promises.push( getChannels( el.dataset.tvId ) )
+      } )
+   }
 
-function handlerChannels() {
-   allChannels.forEach( (el, i) => {
+   renderChannels( await Promise.all( promises ) )
 
-      once && getChannels( el.dataset.tvId )
-         .then( data => renderChannels( data, i, el.dataset.tvId ) )
-         .catch( err => console.error( 'Error response getChannels', err ) )
-   } )
-
-   !once && $( '.multi-collapse' ).collapse( 'toggle' )
+   $( '.multi-collapse' ).collapse( 'toggle' )
 }
 
 
-function renderChannels(data, i, tvId) {
-   arrChannels.push( data.packages[tvId] )
+function renderChannels( data ) {
+   const $arrListChannels = document.querySelectorAll( '.collapse-channel__channels' )
+   const $currentChannels = document.querySelectorAll( '[data-tv-id]' )
+   const normalizeData = data.map( d => Object.values( d.packages )[0] )
+   const filterData = Array.from( $currentChannels )
+      .map( ch => normalizeData.find( p => p.id == ch.dataset.tvId ) )
 
-   if (arrChannels.length === allChannels.length) {
-      const maximum = arrChannels.find( el => el.name === "ДляДома Максимум" )
-      const arrListChannels = document.querySelectorAll( '.collapse-channel__channels' )
+   const allChannels = [ ...filterData ].sort( ( a, b ) => {
+      const reduceA = Object.values( a.channels ).reduce( ( a, b ) => a + b.length, 0 )
+      const reduceB = Object.values( b.channels ).reduce( ( a, b ) => a + b.length, 0 )
+      return reduceB - reduceA
+   } )[0]
 
-      arrListChannels.forEach( (ul, i) => {
-         const currentChannel = arrChannels.find( el => el.id === +allChannels[i].dataset.tvId )
+   $arrListChannels.forEach( ul => {
+      const currentData = filterData.find( el => el.id == ul.dataset.ulTvId )
 
-         for (let channels in maximum.channels) {
-            const multiCollapse = channels.split( ' ' ).join( '' )
-
+      if (ul.children.length === 0) {
+         for ( let channelGroup in allChannels.channels ) {
+            const multiCollapse = channelGroup.replace( ' ', '' )
             const addEl = document.createElement( 'li' )
+
             addEl.className = 'collapse-channel__channel-group'
             addEl.innerHTML = `<a data-toggle="collapse"
-                                  class="collapse-channel__group-toggle"
-                                  data-target=".${multiCollapse}"
-                                  aria-expanded="false"
-                               >
-                                  <div class="collapse-channel__group-wrapper">
-                                     <span class="collapse-channel__group-name">${channels}</span>
-                                     <span class="collapse-channel__group-count">${currentChannel.channels[channels].length}</span>
-                                  </div>
-                               </a>
-                               <ul class="collapse-channel__group-list collapse ${multiCollapse}"></ul>`
+                               class="collapse-channel__group-toggle"
+                               data-target=".${ multiCollapse }"
+                               aria-expanded="false"
+                            >
+                               <div class="collapse-channel__group-wrapper">
+                                  <span class="collapse-channel__group-name">${ channelGroup }</span>
+                                  <span class="collapse-channel__group-count">${ currentData.channels[channelGroup].length }</span>
+                               </div>
+                            </a>
+                            <ul class="collapse-channel__group-list collapse ${ multiCollapse }"></ul>`
 
-            maximum.channels[channels].forEach( (channel) => {
+            allChannels.channels[channelGroup].forEach( ( channel ) => {
                const ul = addEl.querySelector( '.collapse-channel__group-list' )
                const li = document.createElement( 'li' )
-               li.className = `collapse-channel__group-channelName ${greenText( channel, currentChannel.channels[channels] )}`
+               li.className = `collapse-channel__group-channelName ${ greenText( channel, currentData.channels[channelGroup] ) }`
                li.textContent = channel.name
                ul.appendChild( li )
             } )
             ul.appendChild( addEl )
 
          }
-      } )
+      }
+   } )
 
-      $( '.multi-collapse' ).collapse( 'show' )
-      once = false
-   }
 }
 
 
-function greenText(maximum, current) {
+function greenText( maximum, current ) {
    return current.find( el => el.id === maximum.id ) ? 'text-green' : ''
 }

@@ -4,5 +4,6 @@ module.exports = [
    /^modalAlmond__banner_/,
    /^tippy/,
    /_maximum*/,
+   /_premium*/,
    'collapsing'
 ]

@@ -21,6 +21,7 @@ import './js/collapseChannels' // загрузка тв-каналов
 
 // components
 import './components/Nav/Nav.js'
+import './components/Tabs/Tabs.js'
 
 // build all img
 function requireAll(r) { r.keys().forEach(r); }

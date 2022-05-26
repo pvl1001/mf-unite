@@ -103,6 +103,16 @@
          color: var(--mf-green);
       }
 
+      &__price {
+         > span {
+            vertical-align: middle;
+         }
+
+         .old-price {
+            font-size: 15px;
+         }
+      }
+
       &__new-price {
          font-size: 32px;
          font-weight: 600;
@@ -187,14 +197,11 @@
 
    }
 
-   .card.card__maximum {
+   .card.card__maximum,
+   .card.card__premium {
       .card__green-box {
          background-color: var(--mf-premium-light);
       }
-
-      //.params__icon svg, path {
-      //   fill: var(--mf-premium)
-      //}
 
       .card__connect-btn {
          background-color: var(--mf-premium);

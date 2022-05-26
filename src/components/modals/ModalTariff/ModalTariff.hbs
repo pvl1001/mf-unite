@@ -37,7 +37,10 @@
                                           <p class="option-item__text-desc">{{description}}</p>
                                        {{/if}}
                                     </div>
-                                    <p class="option-item__value">{{value}}</p>
+                                    <p class="option-item__value">
+                                       {{value}}{{#h-if name '===' 'Мегафон ТВ'}}{{#each ../../mftv}},<br>
+                                       {{name}}{{/each}}{{/h-if}}
+                                    </p>
                                  </li>
                               {{/each}}
                            </ul>
