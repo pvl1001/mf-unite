@@ -104,6 +104,8 @@
       }
 
       &__price {
+         white-space: nowrap;
+
          > span {
             vertical-align: middle;
          }
@@ -190,7 +192,7 @@
       }
 
       &__info-icon {
-         margin-left: 14px;
+         margin-left: 5px;
          vertical-align: text-bottom;
          cursor: pointer;
       }
