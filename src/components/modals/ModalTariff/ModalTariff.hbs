@@ -34,7 +34,7 @@
                                     <div class="option-item__text">
                                        <p class="option-item__text-name">{{name}}</p>
                                        {{#if description}}
-                                          <p class="option-item__text-desc">{{description}}</p>
+                                          <p class="option-item__text-desc">{{{description}}}</p>
                                        {{/if}}
                                     </div>
                                     <p class="option-item__value">
@@ -47,6 +47,9 @@
                         </li>
                      {{/each}}
                   </ul>
+
+                  {{#h-if mftv.length '===' 2}}{{> BannerMFTVStart}}{{/h-if}}
+                  {{#h-if mftv.length '===' 4}}{{> BannerMFTVAll}}{{/h-if}}
 
                   <div class="tariff-modal__dop-options wrapp">
                      <h2 class="tariff-modal__dop-options-title">Дополнительные опции:</h2>
@@ -184,8 +187,8 @@
                               <span class="tariff-modal__price-desc">с учетом выбранных опций</span>
                               {{#if iconInfo}}
                                  <svg class="tariff-modal__info-icon
-                        {{#h-if @index '==' 0}} price__icon_all{{/h-if}}
-                                    {{#h-if id '===' 'vse'}} price__icon_vse{{/h-if}}"
+                                    {{#h-if id '===' "for-their"}} js-tippy{{/h-if}}
+                                    {{#h-if id '===' 'vse'}} js-tippy-vse{{/h-if}}"
                                       viewBox="2 17 16 16" width="16px" height="16px" fill="#ffffff"
                                       xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -200,7 +203,7 @@
 
                      <button
                         type="button"
-                        class="tariff-modal__price-btn btn{{#h-if id '!==' 'maximum'}} btn-fiolet{{/h-if}}"
+                        class="tariff-modal__price-btn btn {{modalTariffBtn id}}"
                         data-toggle="modal"
                         data-target="#order"
                         data-view="modal_{{dataView}}_end"

@@ -2428,7 +2428,7 @@ module.exports = [
    },
    {
       group: "Объединяй!",
-      id: "maximum",
+      id: "premium",
       tariffId: 5347,
       dataView: "premium",
       name: "Премиум",
