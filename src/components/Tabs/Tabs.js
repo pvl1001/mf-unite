@@ -1,5 +1,8 @@
 window.onload = () => {
    const $tabs = document.getElementById( 'tabs' )
+   const $select = document.getElementById( 'select' )
+   const $select_current = document.getElementById( 'select_current' )
+   const $select_list = $select.querySelectorAll( 'li' )
    const $tabsItems = $tabs.querySelectorAll( 'li' )
    const $title = document.getElementById( 'tariffs_title' )
    const slider = '#tariffs-slider'
@@ -9,21 +12,10 @@ window.onload = () => {
       item.addEventListener( 'click', clickHandler )
    } )
 
-
-   function clickHandler() {
-      const activeTab = Array.from( $tabsItems ).find( item => item.classList.contains( 'active' ) )
-
-      activeTab.classList.remove( 'active' )
-
-      const tabId = this.id.replace( 'tab-', '' )
-
-      $( '.multi-collapse' ).collapse( 'hide' )
+   function filterSlider( ctx ) {
+      const tabId = ctx.dataset.tabId
 
       $( slider ).slick( 'slickUnfilter' )
-
-      if ( !this.classList.contains( 'active' ) ) {
-         this.classList.add( 'active' )
-      }
 
       if ( tabId === 'all' ) {
          $title.textContent = 'Все тарифы'
@@ -33,11 +25,38 @@ window.onload = () => {
             return this.dataset.group === tabId
          } )
       }
-
    }
 
+
+   function clickHandler() {
+      const activeTab = Array.from( $tabsItems ).find( item => item.classList.contains( 'active' ) )
+
+      activeTab.classList.remove( 'active' )
+
+      $( '.multi-collapse' ).collapse( 'hide' )
+
+      if ( !this.classList.contains( 'active' ) ) {
+         this.classList.add( 'active' )
+      }
+
+      filterSlider( this )
+   }
+
+
+   function openSelect() {
+      !$select.classList.contains( 'open' )
+         ? $select.classList.add( 'open' )
+         : $select.classList.remove( 'open' )
+   }
+
+   $select_current.addEventListener( 'click', openSelect )
+
+   $select_list.forEach( $selectItem => {
+      $selectItem.addEventListener( 'click', function () {
+         $select_current.innerHTML = this.innerHTML
+         filterSlider( this )
+         openSelect()
+      } )
+   } )
+
 }
-
-
-
-

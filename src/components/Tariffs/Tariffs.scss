@@ -4,7 +4,7 @@
    overflow: hidden;
 
    &__title {
-      margin-bottom: 37px;
+      margin-bottom: 27px;
    }
 
    .collapse-channel {
@@ -216,10 +216,6 @@
 
    @media (max-width: 1023px) {
       padding: 78px 0 34px;
-   }
-
-   @media (max-width: 767px) {
-      padding: 56px 0 34px;
    }
 
 }

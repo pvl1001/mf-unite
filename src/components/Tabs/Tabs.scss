@@ -1,28 +1,37 @@
 .tabs {
+   height: 80px;
    display: flex;
    justify-content: center;
    position: sticky;
-   top: -25px;
+   top: -35px;
    z-index: 100;
-   margin-top: -65px;
+   margin-top: -80px;
    transform: translateY(50%);
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 24px;
 
    &__container {
       display: grid;
-      grid-template-columns: repeat(3, 315px);
+      grid-template-columns: repeat(3, minmax(0, 315px));
       border-radius: 8px;
       overflow: hidden;
       margin: 0;
       box-shadow: 0 8px 28px 0 #00000033;
+
+      @media (max-width: 767px) {
+         display: none;
+      }
    }
 
    &__item {
       background-color: #fff;
-      padding: 14px;
-      text-align: center;
+      padding: 0 14px;
       border: 2px solid transparent;
-      max-width: 315px;
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
 
    &__item:not(:last-child) {
@@ -39,10 +48,79 @@
 
    svg {
       margin-right: 16px;
+      flex-shrink: 0;
    }
 
    .active {
       pointer-events: none;
       border-bottom-color: var(--mf-green);
+   }
+
+   &__select {
+      display: none;
+
+      @media (max-width: 767px) {
+         display: initial;
+      }
+   }
+
+}
+
+
+.select {
+   background-color: #fff;
+   width: 100%;
+   border-radius: 8px;
+   box-shadow: 0 8px 28px 0 #00000033;
+   height: fit-content;
+   overflow: hidden;
+
+   &.open {
+      .select__current:after {
+         transform: rotate(180deg);
+      }
+
+      .select__list {
+         display: initial;
+      }
+   }
+
+   &__current {
+      height: 80px;
+      border-right-color: transparent !important;
+      position: relative;
+      cursor: pointer;
+      pointer-events: initial !important;
+      justify-content: initial;
+
+      &:hover {
+         background-color: initial !important;
+      }
+
+      &:after {
+         content: url("../img/svg/arrow_list.svg");
+         position: absolute;
+         width: 40px;
+         height: 40px;
+         right: 0;
+      }
+   }
+
+   &__list {
+      display: none;
+      margin: 0;
+   }
+
+   &__item {
+      height: 80px;
+      border-width: 1px;
+      border-right-color: transparent !important;
+      border-bottom-color: #d8d8d8;
+      justify-content: initial;
+
+
+      &:last-child {
+         border-bottom-color: transparent;
+      }
    }
 }
