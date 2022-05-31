@@ -7,17 +7,19 @@
       <div class="modal-content requisition">
          <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
 
-         <h2>Заявка на подключение</h2>
-         <form class="needs-validation" id="orderForm">
+         <h2 class="order-modal__title">Заявка на подключение</h2>
+         <p class="order-modal__description">Отправьте заявку, чтобы подключить тариф</p>
+
+         <form class="order-modal__form" id="orderForm">
             <div class="order-modal__inputs">
                <div class="order-modal__input">
-                  <div class="order-modal__input-title">Контактный номер</div>
-                  <input type="text" name="phone" id="validationCustom01">
+<!--                  <div class="order-modal__input-title">Контактный номер</div>-->
+                  <input type="text" name="phone" id="validationCustom01" placeholder="Телефон*">
                </div>
 
                <div class="order-modal__input">
-                  <div class="order-modal__input-title">Имя</div>
-                  <input type="text" name="name" id="validationCustom02">
+<!--                  <div class="order-modal__input-title">Имя</div>-->
+                  <input type="text" name="name" id="validationCustom02" placeholder="Имя*">
                </div>
             </div>
 
