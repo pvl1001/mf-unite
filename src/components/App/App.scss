@@ -1,11 +1,11 @@
 .app {
-   margin: 0 0 80px;
+   margin: 133px 0 80px;
 
    &__container {
       display: flex;
       justify-content: space-between;
       padding: 40px 56px;
-      background: transparent linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0% 0% no-repeat padding-box;
+      background: transparent linear-gradient(90deg, #BD4EBF 0%, #731982 50%, #444189 79%, #444189 100%) 0 0 no-repeat padding-box;
       border-radius: 10px;
       position: relative;
    }
@@ -45,12 +45,12 @@
          }
 
          .google-play {
-            background: url('../img//svg/google_play.svg') center / cover no-repeat;
+            background: url('../img/svg/google_play.svg') center / cover no-repeat;
 
          }
 
          .apple-store {
-            background: url('../img//svg/app_store.svg') center / cover no-repeat;
+            background: url('../img/svg/app_store.svg') center / cover no-repeat;
          }
       }
    }
