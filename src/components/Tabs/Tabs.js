@@ -25,6 +25,8 @@ window.onload = () => {
             return this.dataset.group === tabId
          } )
       }
+      $( slider ).slick( 'slickGoTo', 0 )
+
    }
 
 
