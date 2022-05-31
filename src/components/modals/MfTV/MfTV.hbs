@@ -1,5 +1,5 @@
 {{#each tariffs}}
-   <div class="modal tariff-modal mftv mftv_{{id}}" id="mftv-{{id}}" tabindex="-1" role="dialog"
+   <div class="modal tariff-all mftv mftv_{{id}}" id="mftv-{{id}}" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true">
 
@@ -16,11 +16,11 @@
             </div>
 
 
-            <div class="tariff-modal__container">
+            <div class="mftv__container">
 
                <ul class="tariff-modal__items">
                   {{#each mftv}}
-                     <li class="tariff-modal__item item-modal wrapp">
+                     <li class="mftv__item item-modal wrapp">
 
                         <img src="img/svg/mftv_{{icon}}.svg"
                              class="item-modal__logo item-modal__logo_{{icon}}">

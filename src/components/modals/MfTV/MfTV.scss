@@ -33,6 +33,14 @@
          border-top: 1px solid #DDDDDD;
       }
    }
+   
+   &__container {
+      background-color: #f1f1f1;
+   }
+
+   &__item {
+      margin: 8px 0;
+   }
 
    &__faq-btn {
       width: 200px;
