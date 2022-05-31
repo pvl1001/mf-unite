@@ -48,7 +48,7 @@ $( function () {
 
 
    // маска
-   $( 'input[name="phone"]' ).mask( '+7(000)000-00-00', { placeholder: "+7(   )   -  -  " } )
+   $( 'input[name="phone"]' ).mask( '+7(000)000-00-00', { placeholder: "Телефон*" } )
 
 
    // валидация формы

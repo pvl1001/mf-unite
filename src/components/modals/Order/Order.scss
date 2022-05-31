@@ -2,6 +2,17 @@
    &__btn {
       width: 170px;
       justify-content: center;
+
+      svg {
+         margin-right: -15px;
+         flex-shrink: 0;
+         width: 25px;
+
+         path {
+            fill: #fff;
+
+         }
+      }
    }
 
    .modal-content {
@@ -17,9 +28,13 @@
       max-width: 812px;
    }
 
+   &__title {
+      margin-bottom: 32px;
+   }
+
    &__description {
       font-weight: 400;
-      margin-bottom: 32px;
+      //margin-bottom: 32px;
    }
 
    &__form {
@@ -29,7 +44,7 @@
    &__inputs {
       display: flex;
       gap: 0 8px;
-      margin-bottom: 30px;
+      margin-bottom: 16px;
    }
 
    &__input {
@@ -40,15 +55,6 @@
          font-weight: 500;
          margin-bottom: 10px;
       }
-
-      input {
-         width: 100%;
-      }
-   }
-
-   .order-modal__input_address {
-      max-width: 480px;
-      margin-bottom: 40px;
 
       input {
          width: 100%;
@@ -119,95 +125,6 @@
 
       #btnFormCheck {
          display: none;
-      }
-   }
-
-   .order-date {
-      display: none;
-
-      .order-modal__input {
-         display: flex;
-         align-items: center;
-      }
-
-      h2 {
-         margin-bottom: 5px;
-      }
-
-      h2 + p {
-         font-size: 15px;
-         font-weight: 400;
-         margin-bottom: 25px;
-      }
-
-      .tail-select {
-         height: 50px;
-         font-size: 15px;
-         font-weight: 500;
-         font-family: 'MegaFon Graphik LC', sans-serif;
-
-         .select-label {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            border-radius: 0;
-            background: url('../img/svg/arrow-select.svg') calc(100% - 20px) 50% / 12px no-repeat;
-            border: 1px solid #ddd;
-
-            &:hover {
-               border: 1px solid #ddd;
-            }
-
-            .label-inner {
-               height: 100%;
-               line-height: 48px;
-               padding: 0 0 0 26px;
-            }
-         }
-
-         &.active .select-label {
-            border: 1px solid #ddd;
-            box-shadow: none;
-         }
-
-         .dropdown-inner {
-            max-height: none !important;
-         }
-
-         .select-dropdown {
-            margin-top: 10px;
-            border-radius: 0;
-            box-shadow: none;
-         }
-
-         .dropdown-optgroup {
-            padding: 0 20px;
-         }
-
-         .dropdown-option:first-child:before {
-            display: none;
-         }
-
-         .dropdown-option:not(:first-child) {
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
-
-            &.selected {
-               color: var(--mf-green);
-               font-weight: 500;
-
-               &:before {
-                  right: 0;
-                  left: auto;
-                  height: 100%;
-                  background: url('../img/svg/check.svg') center / 15px no-repeat;
-               }
-            }
-
-            &:last-child {
-               border-bottom: 0;
-            }
-         }
       }
    }
 

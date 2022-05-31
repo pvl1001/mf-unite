@@ -65,6 +65,10 @@ button.btn:disabled {
    &:hover {
       cursor: auto;
    }
+
+   svg path {
+      fill: rgba(51, 51, 51, .5)
+   }
 }
 
 button.back {
@@ -185,7 +189,7 @@ label {
 }
 
 input {
-   height: 48px;
+   height: 60px;
    padding: 0 24px;
    border: 1px solid #DDDDDD;
    border-radius: 12px;
