@@ -14,7 +14,7 @@
                   <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="tariff-modal__title wrapp" data-view="modal_{{dataView}}_start">
-                  <h1>#ДляДома {{name}}</h1>
+                  <h1>{{group}} {{name}}</h1>
                </div>
                <div class="tariff-modal__container">
 
@@ -179,7 +179,7 @@
                <div class="tariff-modal__footer-container">
                   <div class="tariff-modal__footer wrapp">
                      <div class="tariff-modal__block-price">
-                        <h3 class="tariff-modal__footer-title">#ДляДома {{name}}</h3>
+                        <h3 class="tariff-modal__footer-title">{{group}} {{name}}</h3>
                         <div class="tariff-modal__price">
                            <span class="tariff-modal__price-current">{{price}}</span>
                            <span class="tariff-modal__price-month"> в месяц</span>
@@ -212,7 +212,7 @@
                            priceEquipSelector: '#{{id}} .tariff-modal__price-current',
                            nameEquip: '#{{id}}',
                            tariffId: '{{tariffId}}',
-                           tariffName: '#ДляДома {{name}}'
+                           tariffName: '{{group}} {{name}}'
                         })"
                      >Заказать
                      </button>

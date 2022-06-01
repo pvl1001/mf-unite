@@ -1,7 +1,29 @@
 .order-modal {
+
+   &__title {
+      margin-bottom: 32px;
+      letter-spacing: .5px;
+   }
+
+   &__description {
+      display: none;
+   }
+
+   &__with-tariff {
+      .order-modal__title {
+         margin-bottom: 6px;
+      }
+
+      .order-modal__description {
+         display: initial;
+         font-weight: 400;
+         margin-bottom: 32px;
+      }
+   }
+
    &__btn {
-      width: 170px;
-      justify-content: center;
+      height: 60px;
+      border-radius: 30px;
 
       svg {
          margin-right: -15px;
@@ -18,23 +40,10 @@
    .modal-content {
       padding: 56px 56px 40px;
       text-align: center;
-
-      &__title {
-         margin-bottom: 15px;
-      }
    }
 
    .modal-dialog {
       max-width: 812px;
-   }
-
-   //&__title {
-   //   margin-bottom: 32px;
-   //}
-
-   &__description {
-      font-weight: 400;
-      margin-bottom: 32px;
    }
 
    &__form {
@@ -49,6 +58,7 @@
 
    &__input {
       width: 50%;
+      position: relative;
 
       &-title {
          font-size: 15px;
@@ -58,6 +68,42 @@
 
       input {
          width: 100%;
+         position: relative;
+
+         &:focus,
+         &.not-empty,
+         &.valid {
+            padding-top: 17px;
+
+            + label {
+               bottom: 23px;
+               font-size: 12px;
+            }
+         }
+
+      }
+
+      input + label {
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         font-size: 15px;
+         font-weight: 400;
+         line-height: 24px;
+         padding: 0 16px;
+         color: #999 !important;
+         display: flex !important;
+         align-items: center;
+         cursor: text;
+         transition: .2s;
+         pointer-events: none;
+
+         &:after {
+            content: '*';
+            color: var(--mf-red);
+         }
       }
    }
 
@@ -137,7 +183,8 @@
       text-align: center;
 
       &__title {
-         margin-bottom: 3px;
+         letter-spacing: .5px;
+         margin-bottom: 4px;
       }
 
       &__text {

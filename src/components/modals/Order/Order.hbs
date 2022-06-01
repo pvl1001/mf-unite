@@ -1,5 +1,5 @@
 <!--Заказать-->
-<div class="modal order-modal" id="order" tabindex="-1" role="dialog"
+<div class="modal order-modal order-modal__with-tariff" id="order" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
@@ -14,19 +14,23 @@
             <div class="order-modal__inputs">
 
                <div class="order-modal__input">
-                  <input type="text" name="name" id="validationCustom01" placeholder="Имя*">
+                  <input type="text" name="name" required>
+                  <label class="input-label">Имя</label>
                </div>
                <div class="order-modal__input">
-                  <input type="text" name="phone" id="validationCustom02" placeholder="Телефон*">
+                  <input type="text" name="phone" minlength="16">
+                  <label class="input-label">Телефон</label>
                </div>
             </div>
 
             <button
                disabled
                type="submit"
+               name="submitBtn"
                class="order-modal__btn btn"
                data-view="modal_order"
-            >Отправить <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M8 13l3-3-3-3 1-1 4 4-4 4z"></path></svg></button>
+            ><span id="order_btn_text">Отправить</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M8 13l3-3-3-3 1-1 4 4-4 4z"></path></svg>
+            </button>
          </form>
       </div>
 

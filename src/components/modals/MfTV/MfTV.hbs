@@ -61,9 +61,9 @@
                      class="mftv__faq-btn btn"
                      onclick="openOrder({
                         eventLabel: {label: '{{dataView}}'},
-                        priceEquipSelector: '.slider__card_{{id}} .new-price',
+                        priceEquipSelector: '#{{id}} .tariff-modal__price-current',
                         tariffId: '{{tariffId}}',
-                        tariffName: 'Объединяй! {{name}}'
+                        tariffName: '{{group}} {{name}}'
                      })"
                      data-target="#order"
                      data-toggle="modal"

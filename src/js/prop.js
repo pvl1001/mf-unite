@@ -1,5 +1,8 @@
 export default {
-   pageName: '#ДляДома',
+   defaultTariff: {
+      id: 5330,
+      name: 'Объединяй! Для своих',
+   },
    flagValid: null,
    setAddress: {},
    dataAddress: {},

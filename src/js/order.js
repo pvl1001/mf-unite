@@ -1,56 +1,71 @@
 import prop from "./prop";
 import { analytics, postRegister, setPixelData } from "@/js/analytics";
 
+const form = document.forms.orderForm
+const inputs = [ form.name, form.phone ]
 const errorMessage = {
    title: 'Сервис временно не доступен',
    text: 'Пожалуйста, свяжитесь с нами по телефону, либо попробуйте позднее'
 }
 
 
-const validator = $( '#orderForm' )
-   .on( 'input', function () {
-      const btn = this.querySelector('button')
-      validator.form()
-         ? btn.disabled = false
-         : btn.disabled = true
-   } )
-   .validate( {
-      rules: {
-         phone: {
-            required: true,
-            minlength: 16,
-         },
-         name: 'required',
-      },
-      messages: {
-         phone: {
-            required: '',
-            minlength: ''
-         },
-         name: {
-            required: ''
-         },
-      },
-      submitHandler() {
-         const dataOrder = getDataOrder.call(this)
-         getResponseOrder(dataOrder)
-            .then((data) => resultOrderText(data, dataOrder))
-            .then(() => nextForm('.order-thx', '.requisition'))
-            .then(() => this.submitButton.disabled = true )
-            .catch(err => {
-               setResultTextOrder( errorMessage )
-               nextForm( '.order-thx', '.requisition' )
-               console.log(err)
-            })
-      }
-   } )
+inputs.forEach( input => input.addEventListener( 'input', validation.bind( this ) ) )
 
+form.addEventListener( 'submit', function ( e ) {
+   e.preventDefault()
+   const dataOrder = getDataOrder.call( this )
+   getResponseOrder( dataOrder )
+      .then( ( data ) => resultOrderText( data, dataOrder ) )
+      .then( () => nextForm( '.order-thx', '.requisition' ) )
+      .then( () => this.submitBtn.disabled = true )
+      .catch( err => {
+         setResultTextOrder( errorMessage )
+         nextForm( '.order-thx', '.requisition' )
+         console.log( err )
+      } )
+} )
 
 // сброс валидации формы при закрытии окна
 $( '#order' ).on( 'hide.bs.modal', function () {
    nextForm( '.requisition', '.order-thx' )
-   $( '#orderForm' ).trigger( 'reset' ).validate().resetForm()
+   resetForm()
 } )
+
+
+function doDisabledBtn( isValid ) {
+   const form = document.forms.orderForm
+   const btn = form.submitBtn
+   isValid
+      ? btn.disabled = false
+      : btn.disabled = true
+}
+
+function resetForm() {
+   form.reset()
+   inputs.forEach( input => input.classList = [] )
+}
+
+function validation( { target } ) {
+   const boolean = target.name === 'name'
+      ? target.value
+      : target.value.length === 16
+
+   target.value
+      ? target.classList.add( 'not-empty' )
+      : target.classList.remove( 'not-empty' )
+
+
+   if ( boolean ) {
+      target.classList.remove( 'error' )
+      target.classList.add( 'valid' )
+   } else {
+      target.classList.remove( 'valid' )
+      target.classList.add( 'error' )
+   }
+
+   const isValid = inputs.every( el => el.classList.contains( 'valid' ) )
+   doDisabledBtn( isValid )
+}
 
 function getResponseOrder( data ) {
    return $.ajax( {
@@ -63,17 +78,17 @@ function getResponseOrder( data ) {
 // сформировать объект заявки для отправки
 function getDataOrder() {
    const address = prop.dataAddress.address ? `По адресу ${ prop.dataAddress.address }` : ''
-   const tariffName = prop.sendOrder.tariffName ? `${ prop.sendOrder.tariffName }` : `${ prop.pageName } Турбо`
+   const tariffName = prop.sendOrder.tariffName ? `${ prop.sendOrder.tariffName }` : prop.defaultTariff.name
    const nameEquip = prop.sendOrder.nameEquip ? `${ prop.sendOrder.nameEquip }` : ''
-   const tariffId = +prop.sendOrder.tariffId || 4276
+   const tariffId = +prop.sendOrder.tariffId || prop.defaultTariff.id
    const comment = `${ address } ${ tariffName } ${ nameEquip } ${ prop.sendOrder.priceEquip }`
       .replace( / +/g, ' ' ).trim()
 
    return {
       form_name: 'express_form_ccmp_short',
       city: document.getElementById( 'city' ).textContent,
-      clientName: this.currentElements[0].value,
-      clientPhone: this.currentElements[1].value,
+      clientName: this.name.value,
+      clientPhone: this.phone.value,
       clientAddress: prop.dataAddress.address || '',
       house_guid: prop.dataAddress.house_guid || '',
       clientSite: window.location.host + window.location.pathname,
@@ -87,13 +102,12 @@ function getDataOrder() {
 
 // обработка полученного кода
 function resultOrderText( data, dataOrder ) {
-
    if ( data.code === '200' ) {
       analytics( 'lead' )
 
       if ( typeof ym !== 'undefined' ) {
+
          ym( 57533086, 'reachGoal', prop.sendOrder.eventLabel )
-         ym( 66149989, 'reachGoal', prop.sendOrder.eventLabel )
       }
 
       if ( dataOrder.calltracking_params ) {
