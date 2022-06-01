@@ -8,12 +8,15 @@
             </h1>
             <p>В тарифах «Объединяй!»</p>
             <div class="header__btns">
-               <button onclick="openOrder({label:'connect'})"
-                       type="button"
-                       class="header__btn btn btn-fiolet"
-                       data-view="first_banner"
-                       data-target="#order"
-                       data-toggle="modal"
+               <button
+                  onclick="openOrder({
+                     eventLabel: {label:'connect'},
+                  })"
+                  type="button"
+                  class="header__btn btn btn-fiolet"
+                  data-view="first_banner"
+                  data-target="#order"
+                  data-toggle="modal"
                >Подключить
                </button>
                <span data-target="#for-their" data-toggle="modal"

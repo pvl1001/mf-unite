@@ -53,11 +53,10 @@
                <button
                   data-view="block_{{dataView}}"
                   onclick="openOrder({
-                     label: '{{dataView}}',
-                     block: 'equipment'
-                     },
-                     '.card_{{id}} .new-price',
-                     '{{name}}')"
+                     eventLabel: { label: '{{dataView}}', block: 'equipment' },
+                     priceEquipSelector: '.card_{{id}} .new-price',
+                     nameEquip: '{{name}}'
+                  })"
                   data-toggle="modal"
                   data-target="#order"
                   class="equipments-card__btn btn btn-fiolet">

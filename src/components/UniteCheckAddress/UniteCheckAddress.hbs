@@ -38,7 +38,7 @@
             <button class="btn"
                     data-toggle="modal"
                     data-target="#order"
-                    onclick="openOrder({label: 'address_success'})"
+                    onclick="openOrder( { eventLabel: { label: 'address_success' } } )"
             >Отправить заявку
             </button>
          </div>
@@ -159,15 +159,17 @@
                            </div>
                         </div>
                         <div class="unite-order">
-                           <div data-toggle="modal" data-target="#order" class="btn"
-                                data-view="block_{{../unite.dataView}}"
-                                onclick="openOrder(
-                                   {label: '{{../unite.dataView}}'},
-                                   '#unite .new-price',
-                                   '{{../unite.name}}',
-                                   {{../unite.tariffId}},
-                                   '{{../unite.tariffName}}'
-                                   )">Отправить заявку
+                           <div
+                              data-toggle="modal" data-target="#order" class="btn"
+                              data-view="block_{{../unite.dataView}}"
+                              onclick="openOrder({
+                                 eventLabel: {label: '{{../unite.dataView}}'},
+                                 priceEquipSelector: '#unite .new-price',
+                                 nameEquip: '{{../unite.name}}',
+                                 tariffId: {{../unite.tariffId}},
+                                 tariffName: '{{../unite.tariffName}}'
+                              })"
+                           >Отправить заявку
                            </div>
                            <div class="price">
                               <span class="old-price">{{price}} ₽</span>

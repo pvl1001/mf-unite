@@ -207,13 +207,14 @@
                         data-toggle="modal"
                         data-target="#order"
                         data-view="modal_{{dataView}}_end"
-                        onclick="openOrder(
-                           {label: '{{dataView}}'},
-                           '#{{id}} .tariff-modal__price-current',
-                           '#{{id}}',
-                           '{{tariffId}}',
-                           '#ДляДома {{name}}')">
-                        Заказать
+                        onclick="openOrder({
+                           eventLabel: {label: '{{dataView}}'},
+                           priceEquipSelector: '#{{id}} .tariff-modal__price-current',
+                           nameEquip: '#{{id}}',
+                           tariffId: '{{tariffId}}',
+                           tariffName: '#ДляДома {{name}}'
+                        })"
+                     >Заказать
                      </button>
                   </div>
                </div>

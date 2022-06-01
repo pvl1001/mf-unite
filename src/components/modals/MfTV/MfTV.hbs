@@ -56,17 +56,19 @@
 
                   </div>
 
-                  <button type="button"
-                          class="mftv__faq-btn btn"
-                          onclick="openOrder(
-                             {label: '{{dataView}}'},
-                             '.slider__card_{{id}} .new-price',
-                             '',
-                             '{{tariffId}}',
-                             'Объединяй! {{name}}')"
-                          data-target="#order"
-                          data-toggle="modal"
-                          data-view="mftv_{{id}}_end">Подключить
+                  <button
+                     type="button"
+                     class="mftv__faq-btn btn"
+                     onclick="openOrder({
+                        eventLabel: {label: '{{dataView}}'},
+                        priceEquipSelector: '.slider__card_{{id}} .new-price',
+                        tariffId: '{{tariffId}}',
+                        tariffName: 'Объединяй! {{name}}'
+                     })"
+                     data-target="#order"
+                     data-toggle="modal"
+                     data-view="mftv_{{id}}_end"
+                  >Подключить
                   </button>
 
                </div>

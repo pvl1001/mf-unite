@@ -60,7 +60,11 @@ export class CardAlmond {
 
    eventBtnOrderSend() {
       $( '#order' ).modal( 'show' )
-      openOrder( { label: 'almond', block: 'equipment' }, '#modalAlmond .new-price', 'Умный дом' )
+      openOrder( {
+         eventLabel: { label: 'almond', block: 'equipment' },
+         priceEquipSelector: '#modalAlmond .new-price',
+         nameEquip: 'Умный дом'
+      })
    }
 
    cntPlus() {

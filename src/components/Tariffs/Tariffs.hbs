@@ -148,12 +148,12 @@
 
                   <button class="card__connect-btn btn"
                           data-view="tariff_card_{{dataView}}_end"
-                          onclick="openOrder(
-                             {label: '{{dataView}}'},
-                             '.card__{{id}} .card__new-price',
-                             '',
-                             '{{tariffId}}',
-                             '#ДляДома {{name}}')"
+                          onclick="openOrder({
+                             eventLabel: {label: '{{dataView}}'},
+                             priceEquipSelector: '.card__{{id}} .card__new-price',
+                             tariffId: '{{tariffId}}',
+                             tariffName: '#ДляДома {{name}}'
+                          })"
                           data-toggle="modal"
                           data-target="#order">Подключить
                   </button>
