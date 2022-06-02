@@ -1,61 +1,55 @@
-import prop from "./prop";
+import prop from "../../../js/prop";
 import { analytics, postRegister, setPixelData } from "@/js/analytics";
 
-const form = document.forms.orderForm
-const inputs = [ form.name, form.phone ]
+
+const $form = document.forms.orderForm
+const $inputs = [ $form.name, $form.phone ]
 const errorMessage = {
    title: 'Сервис временно не доступен',
    text: 'Пожалуйста, свяжитесь с нами по телефону, либо попробуйте позднее'
 }
 
 
-inputs.forEach( input => input.addEventListener( 'input', validation.bind( this ) ) )
+$form.addEventListener( 'submit', submitHandler.bind( this ) )
+$inputs.forEach( input => input.addEventListener( 'input', validation.bind( this ) ) )
+$( '#order' ).on( 'hide.bs.modal', hideModalHandler)
 
-form.addEventListener( 'submit', function ( e ) {
-   e.preventDefault()
-   const dataOrder = getDataOrder.call( this )
-   getResponseOrder( dataOrder )
-      .then( ( data ) => resultOrderText( data, dataOrder ) )
-      .then( () => nextForm( '.order-thx', '.requisition' ) )
-      .then( () => this.submitBtn.disabled = true )
-      .catch( err => {
-         setResultTextOrder( errorMessage )
-         nextForm( '.order-thx', '.requisition' )
-         console.log( err )
-      } )
-} )
 
-// сброс валидации формы при закрытии окна
-$( '#order' ).on( 'hide.bs.modal', function () {
+function hideModalHandler() { // сброс валидации формы при закрытии окна
    nextForm( '.requisition', '.order-thx' )
    resetForm()
-} )
+}
 
-
-function doDisabledBtn( isValid ) {
-   const form = document.forms.orderForm
-   const btn = form.submitBtn
-   isValid
-      ? btn.disabled = false
-      : btn.disabled = true
+function disabledBtn() {
+   $form.submitBtn.disabled = !$form.checkValidity()
 }
 
 function resetForm() {
-   form.reset()
-   inputs.forEach( input => input.classList = [] )
+   $form.reset()
+   $inputs.forEach( input => input.classList = [] )
+}
+
+function submitHandler( context ) {
+   context.preventDefault()
+   const { target } = context
+   const dataOrder = getDataOrder.call( target )
+   getResponseOrder( dataOrder )
+      .then( ( data ) => resultOrderText( data, dataOrder ) )
+      .then( () => nextForm( '.order-thx', '.requisition' ) )
+      .then( () => target.submitBtn.disabled = true )
+      .catch( err => {
+         setResultTextOrder( errorMessage )
+         nextForm( '.order-thx', '.requisition' )
+         console.error( err )
+      } )
 }
 
 function validation( { target } ) {
-   const boolean = target.name === 'name'
-      ? target.value
-      : target.value.length === 16
-
    target.value
       ? target.classList.add( 'not-empty' )
       : target.classList.remove( 'not-empty' )
 
-
-   if ( boolean ) {
+   if ( target.validity.valid ) {
       target.classList.remove( 'error' )
       target.classList.add( 'valid' )
    } else {
@@ -63,8 +57,7 @@ function validation( { target } ) {
       target.classList.add( 'error' )
    }
 
-   const isValid = inputs.every( el => el.classList.contains( 'valid' ) )
-   doDisabledBtn( isValid )
+   disabledBtn()
 }
 
 function getResponseOrder( data ) {
@@ -75,8 +68,7 @@ function getResponseOrder( data ) {
    } )
 }
 
-// сформировать объект заявки для отправки
-function getDataOrder() {
+function getDataOrder() { // сформировать объект заявки для отправки
    const address = prop.dataAddress.address ? `По адресу ${ prop.dataAddress.address }` : ''
    const tariffName = prop.sendOrder.tariffName ? `${ prop.sendOrder.tariffName }` : prop.defaultTariff.name
    const nameEquip = prop.sendOrder.nameEquip ? `${ prop.sendOrder.nameEquip }` : ''
@@ -100,8 +92,7 @@ function getDataOrder() {
 
 }
 
-// обработка полученного кода
-function resultOrderText( data, dataOrder ) {
+function resultOrderText( data, dataOrder ) { // обработка полученного кода
    if ( data.code === '200' ) {
       analytics( 'lead' )
 
@@ -136,11 +127,15 @@ function resultOrderText( data, dataOrder ) {
    setResultTextOrder( errorMessage )
 }
 
-// изменить текст модального окна результата заявки
-function setResultTextOrder( { title, text } ) {
+function setResultTextOrder( { title, text } ) { // изменить текст модального окна результата заявки
    const $title = document.querySelector( '.order-thx__title' )
    const $text = document.querySelector( '.order-thx__text' )
 
    $title.textContent = title
    $text.textContent = text
+}
+
+function nextForm( open, close ) {
+   $( close ).css( 'display', 'none' )
+   $( open ).css( 'display', 'flex' )
 }

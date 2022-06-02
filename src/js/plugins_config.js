@@ -1,7 +1,7 @@
 import './plugins/jquery.autocomplete'
 import './plugins/slick.min'
 import './plugins/jquery.mask'
-// import './plugins/jquery.validate'
+import './plugins/jquery.validate'
 import 'bootstrap'
 import 'popper.js'
 import tippy from './plugins/tippy'
@@ -52,9 +52,9 @@ $( function () {
 
 
    // валидация формы
-   // $.validator.addMethod( "select", function ( value ) { // валидация address
-   //    return setAddress.address === value
-   // } )
+   $.validator.addMethod( "select", function ( value ) { // валидация address
+      return setAddress.address === value
+   } )
 
 
    // popper tippy

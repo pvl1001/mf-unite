@@ -63,10 +63,6 @@
       height: 100%;
    }
 
-   &__btn {
-      width: 200px;
-   }
-
    &__btns {
       display: flex;
       align-items: center;
@@ -185,10 +181,6 @@
    }
 
    @media (max-width: 350px) {
-      &__btn {
-         width: 155px;
-      }
-
       &__text h1 {
          white-space: normal;
       }
