@@ -1,6 +1,6 @@
 module.exports = {
    id: "eq-unite",
-   name: "4G Wi-Fi роутер",
+   name: "4G Wi-Fi-роутер",
    dataView: "vezde_ntv",
    img: "router_info.webp",
    routerPrice: 200,

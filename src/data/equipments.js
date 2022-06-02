@@ -52,7 +52,7 @@ module.exports = [
             color: "var(--mf-blue)"
          }
       ],
-      text: "Мощный Wi-Fi роутер для стабильного интернета...",
+      text: "Мощный Wi-Fi-роутер для стабильного интернета...",
       params: [
          {
             icon: "fiolet_speed.svg",
@@ -189,7 +189,7 @@ module.exports = [
             color: "var(--mf-blue)"
          }
       ],
-      text: "Wi-Fi роутер Almond с системой охраны дома...",
+      text: "Wi-Fi-роутер Almond с системой охраны дома...",
       params: [
          "Настройте за несколько секунд",
          "Управляйте Wi-Fi через приложение",
