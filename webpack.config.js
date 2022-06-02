@@ -4,24 +4,24 @@ const
    path = require( 'path' ),
    webpack = require( "webpack" ),
    HTMLWebpackPlugin = require( 'html-webpack-plugin' ),
-   {CleanWebpackPlugin} = require( 'clean-webpack-plugin' ),
+   { CleanWebpackPlugin } = require( 'clean-webpack-plugin' ),
    MiniCssExtractPlugin = require( 'mini-css-extract-plugin' ),
    CssMinimizerPlugin = require( 'css-minimizer-webpack-plugin' ),
    TerserPlugin = require( 'terser-webpack-plugin' ),
-   glob = require('glob'),
-   PurgecssPlugin = require('purgecss-webpack-plugin')
+   glob = require( 'glob' ),
+   PurgecssPlugin = require( 'purgecss-webpack-plugin' )
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
 // получить вложенные папки
-const getFiles = (dir, files_) => {
+const getFiles = ( dir, files_ ) => {
 
    files_ = files_ || []
    const files = fs.readdirSync( dir )
-   for (let i in files) {
+   for ( let i in files ) {
       const name = dir + '/' + files[i]
-      if (fs.statSync( name ).isDirectory()) {
+      if ( fs.statSync( name ).isDirectory() ) {
          getFiles( name, files_ )
       } else {
          const splitName = name.split( '/' )
@@ -30,11 +30,11 @@ const getFiles = (dir, files_) => {
          files_.push( path.join( __dirname, dirFolder ) )
       }
    }
-   return Array.from( new Set( [...files_] ) )
+   return Array.from( new Set( [ ...files_ ] ) )
 }
 
 const PATHS = {
-   src: path.join(__dirname, 'src')
+   src: path.join( __dirname, 'src' )
 }
 
 module.exports = {
@@ -55,7 +55,7 @@ module.exports = {
       stats: 'errors-only',
    },
    resolve: {
-      extensions: ['.css', '.scss', '.js', '.json'],
+      extensions: [ '.css', '.scss', '.js', '.json' ],
       alias: {
          '@': path.resolve( __dirname, 'src' ) // корневая папка
       }
@@ -73,8 +73,8 @@ module.exports = {
             const dataFiles = fs.readdirSync( 'src/data' )
             const props = {}
             dataFiles.forEach( file => {
-               const fileName = file.split( '.' )[0]
-               props[fileName] = require( './src/data/' + file )
+               const fileName = file.replace( '.js', '' )
+               if ( fileName !== 'modules' ) props[fileName] = require( './src/data/' + file )
             } )
             return props
          },
@@ -83,10 +83,10 @@ module.exports = {
       new MiniCssExtractPlugin( {
          filename: 'style.css', // css на выходе
       } ),
-      new PurgecssPlugin({
-         paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
-         safelist: require('./safelistCSS')
-      }),
+      new PurgecssPlugin( {
+         paths: glob.sync( `${ PATHS.src }/**/*`, { nodir: true } ),
+         safelist: require( './safelistCSS' )
+      } ),
       new CleanWebpackPlugin(),
    ],
    module: {
@@ -101,7 +101,7 @@ module.exports = {
          },
          {
             test: /\.(sa|sc|c)ss$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+            use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader' ],
          },
          {
             test: /\.(woff|woff2)$/,
@@ -123,7 +123,7 @@ module.exports = {
             use: {
                loader: 'babel-loader',
                options: {
-                  presets: ['@babel/preset-env']
+                  presets: [ '@babel/preset-env' ]
                }
             }
          }

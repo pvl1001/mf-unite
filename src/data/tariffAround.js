@@ -7,5 +7,6 @@ module.exports = {
    tvLength: "61 канал",
    min: 2100,
    oldPrice: null,
-   price: 1400
+   price: 1400,
+   link: 'https://home.megafon.ru/uploads/manuals/Alcatel%20hh71.pdf'
 }
