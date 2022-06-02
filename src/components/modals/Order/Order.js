@@ -27,6 +27,7 @@ function disabledBtn() {
 function resetForm() {
    $form.reset()
    $inputs.forEach( input => input.classList = [] )
+   disabledBtn()
 }
 
 function submitHandler( context ) {
