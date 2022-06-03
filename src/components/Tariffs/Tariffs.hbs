@@ -25,7 +25,7 @@
 
                         {{#if iconInfo}}
                            <svg class="card__info-icon
-                                    {{#h-if id '===' "for-their"}} js-tippy{{/h-if}}
+                                    {{#h-if id '===' "their"}} js-tippy{{/h-if}}
                               {{#h-if id '===' 'vse'}} js-tippy-vse{{/h-if}}"
                                 viewBox="2 17 16 16" width="16px" height="16px" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -135,20 +135,20 @@
 
 
                   {{#h-if id '===' 'vse'}}
-                     <a href="/internetvse" class="card__about-btn" data-view="tariff_card_{{dataView}}_start">Все
+                     <a href="/internetvse" class="card__about-btn" data-view="tariff_card_{{id}}_start">Все
                         условия тарифа</a>
                   {{else}}
                      <span class="card__about-btn"
-                           onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
+                           onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{id}}')">
                                Все условия тарифа
                             </span>
                   {{/h-if}}
 
                   <button
                      class="card__connect-btn btn"
-                     data-view="tariff_card_{{dataView}}_end"
+                     data-view="tariff_card_{{id}}_end"
                      onclick="openOrder({
-                        eventLabel: {label: '{{dataView}}'},
+                        eventLabel: {label: '{{id}}'},
                         priceEquipSelector: '.card__{{id}} .card__new-price',
                         tariffId: '{{tariffId}}',
                         tariffName: '{{group}} {{name}}'

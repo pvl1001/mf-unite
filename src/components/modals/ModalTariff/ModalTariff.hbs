@@ -13,7 +13,7 @@
                <div class="tariff-modal__btn-close modal-dialog">
                   <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
                </div>
-               <div class="tariff-modal__title wrapp" data-view="modal_{{dataView}}_start">
+               <div class="tariff-modal__title wrapp" data-view="modal_{{id}}_start">
                   <h1>{{group}} {{name}}</h1>
                </div>
                <div class="tariff-modal__container">
@@ -78,10 +78,10 @@
 
                                           <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
                                              {{#h-if id '!==' 'eq-almond'}}
-                                             onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{dataView}}')"
+                                             onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{id}}')"
                                              {{else}}
                                              data-toggle="modal" data-target="#modalAlmond"
-                                             onclick="openAlmond({{@../index}}, '{{dataView}}')"
+                                             onclick="openAlmond({{@../index}}, '{{id}}')"
                                              {{/h-if}}
                                           >{{{name}}}
                                              <nobr>{{speed}}</nobr>
@@ -131,7 +131,7 @@
 
                                        <label class="switch">
                                           <input type="checkbox"
-                                                 data-equip-name="{{dataView}}"
+                                                 data-equip-name="{{id}}"
                                              {{#unless price}}checked{{/unless}}
                                              {{#h-if price '===' '0'}}checked{{/h-if}}
                                              {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
@@ -187,7 +187,7 @@
                               <span class="tariff-modal__price-desc">с учетом выбранных опций</span>
                               {{#if iconInfo}}
                                  <svg class="tariff-modal__info-icon
-                                    {{#h-if id '===' "for-their"}} js-tippy{{/h-if}}
+                                    {{#h-if id '===' "their"}} js-tippy{{/h-if}}
                                     {{#h-if id '===' 'vse'}} js-tippy-vse{{/h-if}}"
                                       viewBox="2 17 16 16" width="16px" height="16px" fill="#ffffff"
                                       xmlns="http://www.w3.org/2000/svg">
@@ -206,9 +206,9 @@
                         class="tariff-modal__price-btn btn {{modalTariffBtn id}}"
                         data-toggle="modal"
                         data-target="#order"
-                        data-view="modal_{{dataView}}_end"
+                        data-view="modal_{{id}}_end"
                         onclick="openOrder({
-                           eventLabel: {label: '{{dataView}}'},
+                           eventLabel: {label: '{{id}}'},
                            priceEquipSelector: '#{{id}} .tariff-modal__price-current',
                            nameEquip: '#{{id}}',
                            tariffId: '{{tariffId}}',

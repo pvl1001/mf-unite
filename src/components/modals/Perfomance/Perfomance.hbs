@@ -1,7 +1,7 @@
 <!--Подробнее Модемы-->
 {{#each equipments}}
    {{#h-if id '!==' 'eq-almond'}}
-      <div class="modal performance" id="{{id}}" data-view="modal_{{dataView}}" tabindex="-1" role="dialog"
+      <div class="modal performance" id="{{id}}" data-view="modal_{{id}}" tabindex="-1" role="dialog"
            aria-labelledby="exampleModalLabel"
            aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered" role="document">
@@ -85,7 +85,7 @@
                      data-toggle="modal"
                      data-target="#order"
                      onclick="openOrder({
-                        eventLabel: {label: '{{dataView}}', block: 'equipment'},
+                        eventLabel: {label: '{{id}}', block: 'equipment'},
                         priceEquipSelector: '#{{id}} .modal-order__text span',
                         nameEquip: '{{name}}'
                      })"
@@ -144,7 +144,7 @@
                   data-toggle="modal"
                   data-target="#order"
                   onclick="openOrder({
-                     eventLabel: {label: '{{dataView}}'},
+                     eventLabel: {label: '{{id}}'},
                      priceEquipSelector: '#{{id}} .modal-order__text span',
                      nameEquip: '{{name}}',
                      tariffId: {{tariffId}},

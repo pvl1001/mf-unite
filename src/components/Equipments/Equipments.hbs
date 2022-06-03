@@ -44,16 +44,16 @@
                            Подробнее
                         </span>
                   {{else}}
-                     <span class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{dataView}}')">
+                     <span class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{id}}')">
                            Подробнее
                         </span>
                   {{/h-if}}
                </p>
 
                <button
-                  data-view="block_{{dataView}}"
+                  data-view="block_{{id}}"
                   onclick="openOrder({
-                     eventLabel: { label: '{{dataView}}', block: 'equipment' },
+                     eventLabel: { label: '{{id}}', block: 'equipment' },
                      priceEquipSelector: '.card_{{id}} .new-price',
                      nameEquip: '{{name}}'
                   })"
