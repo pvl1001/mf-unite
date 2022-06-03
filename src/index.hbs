@@ -1,21 +1,30 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
+   <meta charset="UTF-8">
+   <meta name="viewport"
+         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="shortcut icon" href="#" type="image/x-icon">
    <title>MF</title>
-   <!-- VK pixel -->
-   <script type="text/javascript">!function () {
-      var t = document.createElement( "script" );
-      t.type = "text/javascript", t.async = !0, t.src = 'https://vk.com/js/api/openapi.js?169', t.onload = function () {
-         VK.Retargeting.Init( "VK-RTRG-1223493-6RRBC" ), VK.Retargeting.Hit()
-      }, document.head.appendChild( t )
-   }();</script>
-   <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1223493-6RRBC" style="position:fixed; left:-999px;" alt=""/>
-   </noscript>
+   <!-- Andata-->
+   <script type="application/javascript">
+      (function ( a, n, da, ta ) {
+         a.andataVersion = '1.0';
+         a.andataHost = n;
+         var p = '//';
+         n += '/i/_auto/';
+         var s = '/dp.js';
+         var js = document.createElement( ta );
+         js.charset = "UTF-8";
+         js.async = 1;
+         js.src = p + n + da + s;
+         var js2 = document.getElementsByTagName( ta )[0];
+         js2.parentNode.insertBefore( js, js2 );
+      })( window, 'mdeploy.andata.ru', 'megafon_cuqis', 'script' );
+   </script>
+   <!-- /Andata-->
+   <!-- Advcake -->
    <script type="text/javascript" id="advcakeAsync">
       (function ( a ) {
          var b = a.createElement( "script" );
@@ -27,42 +36,13 @@
    </script>
    <script>
       window.advcake_data = window.advcake_data || [];
-      window.advcake_data.push({
-         pageType: 2,
-      });
+      window.advcake_data.push( {
+         pageType: 1,
+      } );
    </script>
-   <!-- / VK pixel -->
+   <!-- /Advcake -->
 </head>
 <body>
-<!-- Rating Mail.ru counter -->
-<script type="text/javascript">
-   var _tmr = window._tmr || (window._tmr = []);
-   _tmr.push( { id: "3239443", type: "pageView", start: (new Date()).getTime() } );
-   (function ( d, w, id ) {
-      if ( d.getElementById( id ) ) return;
-      var ts = d.createElement( "script" );
-        ts.type = "text/javascript";
-        ts.async = true;
-        ts.id = id;
-        ts.src = "https://top-fwz1.mail.ru/js/code.js";
-        var f = function () {
-            var s = d.getElementsByTagName( "script" )[0];
-            s.parentNode.insertBefore( ts, s );
-        };
-        if ( w.opera == "[object Opera]" ) {
-            d.addEventListener( "DOMContentLoaded", f, false );
-        } else {
-            f();
-        }
-    })( document, window, "topmailru-code" );
-</script>
-<noscript>
-    <div>
-        <img src="https://top-fwz1.mail.ru/counter?id=3239443;js=na" style="border:0;position:absolute;left:-9999px;"
-             alt="Top.Mail.Ru"/>
-    </div>
-</noscript>
-<!-- //Rating Mail.ru counter -->
 
 
 {{> Nav}}
@@ -93,44 +73,64 @@
 
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<script type="text/javascript">
+   (function ( m, e, t, r, i, k, a ) {
+      m[i] = m[i] || function () {
+         (m[i].a = m[i].a || []).push( arguments )
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement( t ), a = e.getElementsByTagName( t )[0], k.async = 1, k.src = r, a.parentNode.insertBefore( k, a )
+   })
+   ( window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym" );
 
-   ym(57533086, "init", {
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true,
-      ecommerce:"dataLayer"
-   });
+   ym( 57533086, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+      ecommerce: "dataLayer"
+   } );
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/57533086" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(66149989, "init", {
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true,
-      ecommerce:"dataLayer"
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/66149989" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+   <div><img src="https://mc.yandex.ru/watch/57533086" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 
 <!-- calltouch -->
 <script type="text/javascript">
-   (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)};s.type="text/javascript";s.async=true;s.src="https://mod.calltouch.ru/init.js?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","g96m2c8n");
+   (function ( w, d, n, c ) {
+      w.CalltouchDataObject = n;
+      w[n] = function () {
+         w[n]["callbacks"].push( arguments )
+      };
+      if ( !w[n]["callbacks"] ) {
+         w[n]["callbacks"] = []
+      }
+      w[n]["loaded"] = false;
+      if ( typeof c !== "object" ) {
+         c = [ c ]
+      }
+      w[n]["counters"] = c;
+      for ( var i = 0; i < c.length; i += 1 ) {
+         p( c[i] )
+      }
+
+      function p( cId ) {
+         var a = d.getElementsByTagName( "script" )[0], s = d.createElement( "script" ), i = function () {
+            a.parentNode.insertBefore( s, a )
+         };
+         s.type = "text/javascript";
+         s.async = true;
+         s.src = "https://mod.calltouch.ru/init.js?id=" + cId;
+         if ( w.opera == "[object Opera]" ) {
+            d.addEventListener( "DOMContentLoaded", i, false )
+         } else {
+            i()
+         }
+      }
+   })( window, document, "ct", "g96m2c8n" );
 </script>
-<!-- calltouch -->
+<!-- /calltouch -->
 
 </body>
 </html>

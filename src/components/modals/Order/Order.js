@@ -1,5 +1,5 @@
 import prop from "../../../js/prop";
-import { analytics, postRegister, setPixelData } from "@/js/analytics";
+import { postRegister, setAdvcakeData } from "@/js/analytics";
 
 
 const $form = document.forms.orderForm
@@ -95,15 +95,14 @@ function getDataOrder() { // сформировать объект заявки 
 
 function resultOrderText( data, dataOrder ) { // обработка полученного кода
    if ( data.code === '200' ) {
-      analytics( 'lead' )
+      // analytics( 'lead' )
 
       if ( typeof ym !== 'undefined' ) {
-
          ym( 57533086, 'reachGoal', prop.sendOrder.eventLabel )
       }
 
       if ( dataOrder.calltracking_params ) {
-         setPixelData( data.message_id )
+         setAdvcakeData( data.message_id )
 
          postRegister( {
             fio: dataOrder.clientName,

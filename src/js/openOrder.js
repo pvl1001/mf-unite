@@ -1,5 +1,5 @@
 import prop from "./prop";
-import { analytics } from "@/js/analytics";
+// import { analytics } from "@/js/analytics/analytics";
 
 
 function setModalOrderTitle( tariff ) {
@@ -21,8 +21,7 @@ function setModalOrderTitle( tariff ) {
 
 // при открытии окна присвоить атрибут кнопке "отправить"
 window.openOrder = ( { eventLabel, priceEquipSelector, nameEquip = '', tariffId, tariffName } ) => {
-   analytics( 'initiate_checkout' )
-
+   // analytics( 'initiate_checkout' )
    setModalOrderTitle( tariffName )
 
    const eventLabelText = () => {
