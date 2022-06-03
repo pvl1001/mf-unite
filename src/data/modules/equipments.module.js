@@ -240,7 +240,8 @@ module.exports = {
             price: 229,
             totalPrice: 0,
             cnt: 1,
-            status: false
+            status: false,
+            link: 'https://moscow.home.megafon.ru/uploads/docs/2021/almond3.pdf'
          },
          {
             id: "almond-1",
@@ -271,7 +272,8 @@ module.exports = {
             price: 339,
             totalPrice: 0,
             cnt: 1,
-            status: false
+            status: false,
+            link: 'https://moscow.home.megafon.ru/uploads/manuals/Almond%203S.pdf'
          }
       ],
       sensors: [
@@ -387,6 +389,7 @@ module.exports = {
       ],
       img: "router_info.webp",
       price: 200,
-      dataView: "router-4g"
+      dataView: "router-4g",
+      link: 'https://home.megafon.ru/uploads/manuals/Alcatel%20hh71.pdf'
    }
 }
