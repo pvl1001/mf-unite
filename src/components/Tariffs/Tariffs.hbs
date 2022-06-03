@@ -10,7 +10,7 @@
             <div class="card slider__card card__{{id}}" data-group="{{group}}">
                <div class="card__green-box">
                   <div class="card__title">
-                     <h5 class="card__tariff-name">{{name}}</h5>
+                     <h5 class="card__tariff-name">{{group}} {{name}}</h5>
                      <p class="card__marks">{{#each marks}} #{{this}}{{/each}}</p>
                   </div>
 
@@ -24,9 +24,7 @@
                         <span>/мес</span>
 
                         {{#if iconInfo}}
-                           <svg class="card__info-icon
-                                    {{#h-if id '===' "their"}} js-tippy{{/h-if}}
-                              {{#h-if id '===' 'vse'}} js-tippy-vse{{/h-if}}"
+                           <svg class="card__info-icon js-tippy-{{id}}"
                                 viewBox="2 17 16 16" width="16px" height="16px" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd"

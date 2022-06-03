@@ -6,6 +6,12 @@ import 'bootstrap'
 import 'popper.js'
 import tippy from './plugins/tippy'
 
+const tariffs = require( '../data/tariffs' )
+const iconsInfo = tariffs.filter( tariff => tariff.iconInfo ).map( tariff => ({
+   id: tariff.id,
+   content: tariff.iconInfo
+}) )
+
 
 $( function () {
    $( '.slider' ).css( 'opacity', '1' )
@@ -68,17 +74,7 @@ $( function () {
       // trigger: 'click'
    }
 
-   // tippy( '.price__icon_all', { ...tippyOptions,
-   //    content: 'Для участия в <span class="link" onclick="toPlug(`.faq`)">Акции</span> необходимо быть абонентом МегаФон и подключить услугу ДляДома',
-   // })
-
-   tippy( '.js-tippy-vse', { ...tippyOptions,
-      content: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
-   } )
-
-   tippy( '.js-tippy', { ...tippyOptions,
-      content: '<span class="link" onclick="toPlug(`.faq`)">Скидка</span> на абонентскую плату действует 3 месяца после подключения',
-   } )
+   iconsInfo.forEach( ( { id, content } ) => tippy( `.js-tippy-${ id }`, { ...tippyOptions, content } ) )
 
 } )
 

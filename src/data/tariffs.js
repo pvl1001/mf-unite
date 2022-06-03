@@ -147,7 +147,7 @@ module.exports = [
       tvLength: "193 каналов",
       oldPrice: 1300,
       price: 650,
-      iconInfo: true,
+      iconInfo: `<span class="link" onclick="toPlug({scrollTo: '.faq', collapse: '#collapse00'})">Скидка</span> на абонентскую плату действует 3 месяца после подключения`,
       youtube: true,
       get infoModal() {
          return [
@@ -202,7 +202,7 @@ module.exports = [
       tvLength: "193 каналов",
       oldPrice: 550,
       price: 275,
-      iconInfo: true,
+      iconInfo: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
       get infoModal() {
          return [
             {
@@ -235,9 +235,10 @@ module.exports = [
       id: "turbo",
       tariffId: 4276,
       name: "Турбо",
-      marks: [ "Акция", "Роутер в подарок" ],
+      marks: [ "Акция" ],
       speed: 500,
       price: 500,
+      iconInfo: `Wi-Fi-роутер <span onclick="toPlug({scrollTo: '.faq', collapse: '#collapse02', px: 72*2})" class="link">в подарок</span>`,
       get infoModal() {
          return [
             {

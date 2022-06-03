@@ -24,7 +24,7 @@
          <div class="unite-address__offer">
             <h3 id="offer_title"></h3>
             <p>Но по адресу <b>г Москва, Москворецкая наб, д 1</b> доступно
-               <span onclick="toPlug('#unite')" class="underline">специальное предложение</span>
+               <span onclick="toPlug({scrollTo: '#unite'})" class="underline">специальное предложение</span>
                на беспроводной интернет или вы можете попробовать
                <nobr class="link" onclick="hideResult()">изменить адрес</nobr>
                .
@@ -168,7 +168,7 @@
                                  nameEquip: '{{../unite.name}}',
                                  tariffId: {{../unite.tariffId}},
                                  tariffName: '{{../unite.tariffName}}'
-                              })"
+                                 })"
                            >Отправить заявку
                            </div>
                            <div class="price">

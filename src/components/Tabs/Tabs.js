@@ -42,7 +42,11 @@ window.onload = () => {
 
       filterSlider( this )
 
-      toPlug('.tariffs', -50, 200)
+      toPlug( {
+         scrollTo: '.tariffs',
+         px: -50,
+         ms: 200
+      } )
    }
 
    function openSelect() {

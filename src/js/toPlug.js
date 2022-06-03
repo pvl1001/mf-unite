@@ -1,4 +1,4 @@
-window.toPlug = (scrollTo, px = 0, ms = 500) => {
+window.toPlug = ( { scrollTo, collapse, px = 0, ms = 500 } ) => {
    $( '.modal' ).modal( 'hide' )
    $( 'html,body' ).animate( {
       scrollTop:
@@ -7,8 +7,8 @@ window.toPlug = (scrollTo, px = 0, ms = 500) => {
       duration: ms
    } )
       .promise().done( () => {
-      if (scrollTo === '.faq') {
-         $( '#collapse00' ).collapse( 'show' )
+      if ( collapse ) {
+         $( collapse ).collapse( 'show' )
       }
    } )
 }
