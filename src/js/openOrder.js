@@ -23,7 +23,7 @@ function setModalOrderTitle( tariff ) {
 window.openOrder = ( { eventLabel, priceEquipSelector, nameEquip = '', tariffId, tariffName } ) => {
    analytics( 'initiate_checkout' )
 
-   setModalOrderTitle( tariffName, eventLabel )
+   setModalOrderTitle( tariffName )
 
    const eventLabelText = () => {
       if ( eventLabel.label === 'connect' ) {
