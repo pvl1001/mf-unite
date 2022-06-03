@@ -62,6 +62,11 @@ window.onload = () => {
          $select_current.innerHTML = this.innerHTML
          filterSlider( this )
          openSelect()
+         toPlug( {
+            scrollTo: '.tariffs',
+            px: -50,
+            ms: 200
+         } )
       } )
    } )
 
