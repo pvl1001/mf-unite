@@ -29,7 +29,6 @@ window.onload = () => {
 
    }
 
-
    function clickHandler() {
       const activeTab = Array.from( $tabsItems ).find( item => item.classList.contains( 'active' ) )
 
@@ -42,8 +41,9 @@ window.onload = () => {
       }
 
       filterSlider( this )
-   }
 
+      toPlug('.tariffs', -50, 200)
+   }
 
    function openSelect() {
       !$select.classList.contains( 'open' )
