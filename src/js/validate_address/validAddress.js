@@ -12,8 +12,6 @@ export const validAddress = (data) => {
       }
 
       if (data.result === 0) {
-         !$('#offer_title').text() && $('#offer_title').text(
-            'К сожалению, мы пока не можем подключить ваш дом к домашнему интернету.' )
          calcRadio.sum( '#unite', 0 )
          showResultMainCheck( 'hide', 'show', '.unite-address__offer b' )
       }
