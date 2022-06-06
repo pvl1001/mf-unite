@@ -284,7 +284,7 @@ module.exports = {
                icon: home_web.icon,
                options: [
                   { ...home_web.speed, value: this.speed + " Мбит/с" },
-                  { ...home_web.traffic, value: "30 ГБ" }
+                  home_web.traffic
                ]
             },
             {
