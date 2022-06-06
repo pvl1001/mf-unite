@@ -1,4 +1,4 @@
-//  z-index modals
+//  z-index _modals
 $( document ).on( 'show.bs.modal', '.modal', function (event) {
    let zIndex = 1040 + (10 * $( '.modal:visible' ).length);
    $( this ).css( 'z-index', zIndex );
