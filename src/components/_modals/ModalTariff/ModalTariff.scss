@@ -92,6 +92,10 @@
       padding-right: 78px;
    }
 
+   &__container {
+      padding-bottom: 80px;
+   }
+
    &__title {
       height: 106px;
       flex-shrink: 0;
@@ -184,7 +188,7 @@
    // дополнительные опции
    &__dop-options {
       padding-top: 48px;
-      padding-bottom: 32px;
+      padding-bottom: 28px;
    }
 
    &__dop-options-title {
