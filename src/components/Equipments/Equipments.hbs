@@ -7,7 +7,7 @@
          {{#each  equipments}}
             <div class="slider__card equipments-card card card_{{id}}">
 
-               <div>
+               <div class="equipments-card__marks">
                   {{#each mark}}
                      <div class="mark__container">
                         <div class="equipments-card__mark mark" style="background-color: {{color}};">{{text}}</div>
@@ -38,17 +38,25 @@
                   <span>в месяц</span>
                </div>
 
-               <p class="equipments-card__text">{{text}}
-                  {{#h-if id '===' 'almond'}}
-                     <span class="link" data-toggle="modal" data-target="#modalAlmond" onclick="openEqAlmond()">
-                           Подробнее
-                        </span>
-                  {{else}}
-                     <span class="link" onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{id}}')">
-                           Подробнее
-                        </span>
-                  {{/h-if}}
-               </p>
+               <p class="equipments-card__text" title="{{text}}">{{text}}</p>
+
+               {{#h-if id '===' 'almond'}}
+                  <p class="equipments-card__more">
+                     <span
+                        class=" link"
+                        data-toggle="modal"
+                        data-target="#modalAlmond"
+                        onclick="openEqAlmond()"
+                     >Подробнее</span>
+                  </p>
+               {{else}}
+                  <p class="equipments-card__more">
+                     <span
+                        class="link"
+                        onclick="moreTariff('#{{id}}', {{@index}}, 'details_{{id}}')"
+                     >Подробнее</span>
+                  </p>
+               {{/h-if}}
 
                <button
                   data-view="block_{{id}}"
@@ -56,7 +64,7 @@
                      eventLabel: { label: '{{id}}', block: 'equipment' },
                      priceEquipSelector: '.card_{{id}} .new-price',
                      nameEquip: '{{name}}'
-                  })"
+                     })"
                   data-toggle="modal"
                   data-target="#order"
                   class="equipments-card__btn btn btn-fiolet">
