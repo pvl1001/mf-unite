@@ -22,7 +22,8 @@
          </div>
 
          <div class="unite-address__offer">
-            <h3><!--noindex-->К сожалению, мы пока не можем подключить ваш дом к домашнему интернету.<!--/noindex--></h3>
+            <h3><!--noindex-->К сожалению, мы пока не можем подключить ваш дом к домашнему интернету.
+               <!--/noindex--></h3>
             <p>Но по адресу <b>г Москва, Москворецкая наб, д 1</b> доступно
                <span onclick="toPlug({scrollTo: '#unite'})" class="underline">специальное предложение</span>
                на беспроводной интернет или вы можете попробовать
@@ -57,8 +58,8 @@
 
             <div class="unite__box">
 
-               {{#with tariffAround}}
-                  <h2 class="unite__params-title">Объединяй! {{name}}</h2>
+               {{#with tariffVezde}}
+                  <h2 class="unite__params-title">{{group}} {{name}}</h2>
                   <div class="unite__box-container">
                      <div class="unite__params">
                         <div class="unite-info">
@@ -88,7 +89,7 @@
                                        </svg>
                                     </div>
                                     <p>
-                                       <nobr>{{webTraffic}}</nobr>
+                                       <nobr>{{web}} ГБ</nobr>
                                     </p>
                                  </div>
                               </div>
@@ -112,7 +113,7 @@
                                           </g>
                                        </svg>
                                     </div>
-                                    <p>{{webSpeed}} Мбит/с</p>
+                                    <p>{{speed}} Мбит/с</p>
                                  </div>
                                  <div class="unite-info__desc">
                                     <div class="unite-info__desc_icon">
@@ -125,7 +126,6 @@
                                              d="M24.74 7H19.59L20.89 4.39L19.11 3.5L17.36 7H14.64L12.89 3.5L11.1 4.39L12.41 7H7.26C6.39621 7.00264 5.56854 7.34695 4.95775 7.95775C4.34695 8.56854 4.00264 9.39621 4 10.26V21.74C4.00264 22.6038 4.34695 23.4315 4.95775 24.0423C5.56854 24.6531 6.39621 24.9974 7.26 25H24.75C25.1768 25 25.5994 24.9159 25.9937 24.7526C26.388 24.5893 26.7463 24.3499 27.0481 24.0481C27.3499 23.7463 27.5893 23.388 27.7526 22.9937C27.9159 22.5994 28 22.1768 28 21.75V10.26C27.9974 9.39621 27.6531 8.56854 27.0423 7.95775C26.4315 7.34695 25.6038 7.00264 24.74 7ZM26 21.75C26 22.0815 25.8683 22.3995 25.6339 22.6339C25.3995 22.8683 25.0815 23 24.75 23H7.26C6.92664 22.9974 6.60767 22.8638 6.37194 22.6281C6.1362 22.3923 6.00261 22.0734 6 21.74V10.26C6.00261 9.92664 6.1362 9.60767 6.37194 9.37193C6.60767 9.1362 6.92664 9.00261 7.26 9H24.74C25.0734 9.00261 25.3923 9.1362 25.6281 9.37193C25.8638 9.60767 25.9974 9.92664 26 10.26V21.75Z"
                                              fill="#00B956"/>
                                        </svg>
-
                                     </div>
                                     <p>{{tvLength}}</p>
                                  </div>
@@ -137,7 +137,7 @@
                               <div class="unite-checkbox__hire item-option">
                                  <label>
                                     <div class="switch">
-                                       <input checked onchange="calcRadio.sum('#unite', 0)" type="checkbox">
+                                       <input checked onchange="calcRadio.sum('#unite')" type="checkbox">
                                        <span class="round"></span>
                                     </div>
                                  </label>
@@ -147,37 +147,35 @@
                                        <span class="mr-1">Аренда 4G Wi-Fi-роутера</span>
                                        <nobr
                                           class="unite__link-params"
-                                          data-target="#{{../unite.id}}"
+                                          data-target="#{{../router_4g.id}}"
                                           data-toggle="modal">
                                           Технические характеристики
                                        </nobr>
                                     </p>
-                                    <p class="switch-price"><span>{{../unite.routerPrice}}</span> ₽ в месяц</p>
+                                    <p class="switch-price"><span>{{equipments.[0].price}}</span> ₽ в месяц</p>
                                  </div>
                               </div>
-
                            </div>
                         </div>
                         <div class="unite-order">
                            <div
                               data-toggle="modal" data-target="#order" class="btn"
-                              data-view="block_{{../unite.id}}"
+                              data-view="block_{{equipments.[0].id}}"
                               onclick="openOrder({
-                                 eventLabel: {label: '{{../unite.dataView}}'},
+                                 eventLabel: {label: '{{id}}_ntv'},
                                  priceEquipSelector: '#unite .new-price',
-                                 nameEquip: '{{../unite.name}}',
-                                 tariffId: {{../unite.tariffId}},
-                                 tariffName: '{{../unite.tariffName}}'
+                                 nameEquip: '{{equipments.[0].name}}',
+                                 tariffId: {{tariffId}},
+                                 tariffName: '{{group}} {{name}} со скидкой 40%'
                                  })"
                            >Отправить заявку
                            </div>
                            <div class="price">
                               <span class="old-price">{{price}} ₽</span>
                               <span>
-                                 <span class="new-price">{{../unite.priceSale}}</span>
+                                 <span class="new-price">{{priceWithSale}}</span>
                                  <span>в месяц</span>
                               </span>
-
                            </div>
                         </div>
                      </div>

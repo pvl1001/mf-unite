@@ -1,6 +1,6 @@
 <!--Подробнее Модемы-->
 {{#each equipments}}
-   {{#h-if id '!==' 'eq-almond'}}
+   {{#h-if id '!==' 'almond'}}
       <div class="modal performance" id="{{id}}" data-view="modal_{{id}}" tabindex="-1" role="dialog"
            aria-labelledby="exampleModalLabel"
            aria-hidden="true">
@@ -97,7 +97,7 @@
       </div>
    {{/h-if}}
 {{/each}}
-{{#with unite}}
+{{#with router_4g}}
    <div class="modal performance" id="{{id}}" data-view="modal_vezde" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -112,7 +112,7 @@
                   <h3>Характеристики роутера:</h3>
 
                   <ul>
-                     {{#each icons}}
+                     {{#each params}}
                         <li>
                            <img src="img/svg/{{icon}}" alt="{{icon}}">
                            <p>{{{text}}}</p>
@@ -136,7 +136,7 @@
 
             <div class="modal-order">
                <div class="modal-order__text">
-                  <p><span>{{routerPrice}}</span> ₽ в месяц</p>
+                  <p><span>{{price}}</span> ₽ в месяц</p>
                </div>
                <button
                   class="btn"
@@ -147,8 +147,8 @@
                      eventLabel: {label: '{{dataView}}'},
                      priceEquipSelector: '#{{id}} .modal-order__text span',
                      nameEquip: '{{name}}',
-                     tariffId: {{tariffId}},
-                     tariffName: '{{tariffName}}'
+                     tariffId: {{../tariffVezde.tariffId}},
+                     tariffName: '{{../tariffVezde.group}} {{../tariffVezde.name}} со скидкой 40%'
                      })"
                >Заказать
                </button>

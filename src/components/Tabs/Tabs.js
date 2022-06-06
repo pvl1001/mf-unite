@@ -65,7 +65,7 @@ window.onload = () => {
          toPlug( {
             scrollTo: '.tariffs',
             px: -50,
-            ms: 200
+            ms: 275
          } )
       } )
    } )

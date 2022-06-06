@@ -12,7 +12,7 @@ export const validAddress = (data) => {
       }
 
       if (data.result === 0) {
-         calcRadio.sum( '#unite', 0 )
+         calcRadio.sum( '#unite' )
          showResultMainCheck( 'hide', 'show', '.unite-address__offer b' )
       }
 

@@ -25,7 +25,7 @@ window.openEqAlmond = () => {
 
 // создать массив с данными для almond
 export const data = require( '../data/tariffs.js' )
-   .map( tariff => tariff.equipments.find( el => el.id === 'eq-almond' ) )
+   .map( tariff => tariff.equipments.find( el => el.id === 'almond' ) )
    .map( (el, i) => {
       if (el) {
          return {
@@ -39,7 +39,7 @@ export const data = require( '../data/tariffs.js' )
 
 
 // добавить объект almond для оборудования
-const eqAlmond = require('../data/equipments.js').find( el => el.id === 'eq-almond')
+const eqAlmond = require('../data/equipments.js').find( el => el.id === 'almond')
 data.push({
    index: data.length,
    startPrice: eqAlmond.price,

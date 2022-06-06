@@ -56,10 +56,10 @@
                      <ul class="tariff-modal__dop-options-cards">
 
                         {{#each equipments}}
-                           {{#h-if id '!==' 'equipment-sim'}}
+                           {{#h-if id '!==' 'sim'}}
                               <li id="card-{{../id}}-{{id}}"
                                   class="tariff-modal__dop-options-card dop-options-card
-                              {{#h-if id '===' 'eq-almond'}} dop-options-card_almond{{/h-if}}">
+                              {{#h-if id '===' 'almond'}} dop-options-card_almond{{/h-if}}">
 
                                  {{#h-if name '===' 'Android TV'}}
                                     <div class="dop-options-card__mark"><span class="mark">Акция</span></div>
@@ -77,7 +77,7 @@
                                        <div>
 
                                           <h3 {{#h-if ../id '===' 'turbo'}}class="mb-0" {{/h-if}}
-                                             {{#h-if id '!==' 'eq-almond'}}
+                                             {{#h-if id '!==' 'almond'}}
                                              onclick="equipments.open('#{{id}}', {{@index}}, 'details_{{id}}')"
                                              {{else}}
                                              data-toggle="modal" data-target="#modalAlmond"
@@ -134,7 +134,7 @@
                                                  data-equip-name="{{id}}"
                                              {{#unless price}}checked{{/unless}}
                                              {{#h-if price '===' '0'}}checked{{/h-if}}
-                                             {{#h-if id '===' 'eq-unite'}}checked{{/h-if}}>
+                                             {{#h-if id '===' 'router-4g'}}checked{{/h-if}}>
                                           <span class="round"></span>
                                        </label>
                                     </div>

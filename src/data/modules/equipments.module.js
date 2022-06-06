@@ -1,6 +1,6 @@
 module.exports = {
    android_tv: {
-      id: "eq-android-tv",
+      id: "androidtv",
       name: "Android TV",
       mark: [
          {
@@ -33,7 +33,6 @@ module.exports = {
       ],
       img: "pristavka.webp",
       price: 199,
-      dataView: "androidtv",
       plan: {
          "24": 249,
          "36": 169
@@ -41,7 +40,7 @@ module.exports = {
       link: 'https://home.megafon.ru/uploads/manuals/ATV_KM8.pdf'
    },
    fr100: {
-      id: "eq-FR100-1",
+      id: "fr100",
       name: "Роутер FR100-1",
       speed: "(100 Мбит/с)",
       mark: [
@@ -83,7 +82,6 @@ module.exports = {
       ],
       img: "fr100.webp",
       price: 55,
-      dataView: "fr100",
       plan: {
          "24": 149,
          "36": 99
@@ -91,7 +89,7 @@ module.exports = {
       link: 'https://home.megafon.ru/uploads/manuals/MegaFon%20FR100.pdf'
    },
    fr1000: {
-      id: "eq-FR1000-2",
+      id: "fr10002",
       name: "Роутер FR1000-2",
       speed: "(1 Гбит/с)",
       mark: [
@@ -133,7 +131,6 @@ module.exports = {
       ],
       img: "fr1000-2.webp",
       price: 88,
-      dataView: "fr10002",
       plan: {
          "24": 199,
          "36": 129
@@ -141,7 +138,7 @@ module.exports = {
       link: 'https://home.megafon.ru/uploads/manuals/MegaFon%20FR1000-2.pdf'
    },
    mftv: {
-      id: "eq-MFTV",
+      id: "mftv",
       name: "ТВ-приставка МегаФон ТВ",
       mark: [
          {
@@ -170,7 +167,6 @@ module.exports = {
       ],
       img: "tv_new.webp",
       price: 99,
-      dataView: "mftv",
       plan: {
          "24": 239,
          "36": 159
@@ -178,7 +174,7 @@ module.exports = {
       link: 'https://home.megafon.ru/uploads/manuals/MegaFon%20M8S%20PRO.pdf'
    },
    almond: {
-      id: "eq-almond",
+      id: "almond",
       name: `Роутер Almond с функцией <nobr>Умный дом</nobr>`,
       mark: [
          {
@@ -217,7 +213,6 @@ module.exports = {
             text: "Получайте сигналы,<br> если в дом кто-то проникнет"
          }
       ],
-      dataView: "almond",
       routers: [
          {
             id: "almond-0",
@@ -358,12 +353,12 @@ module.exports = {
       ]
    },
    sim: {
-      id: "equipment-sim",
+      id: "sim",
       oldPrice: 650,
       price: 390
    },
    router_4g: {
-      id: "eq-unite",
+      id: "router-4g",
       name: "4G Wi-Fi-роутер",
       params: [
          {
@@ -389,7 +384,6 @@ module.exports = {
       ],
       img: "router_info.webp",
       price: 200,
-      dataView: "router-4g",
       link: 'https://home.megafon.ru/uploads/manuals/Alcatel%20hh71.pdf'
    }
 }

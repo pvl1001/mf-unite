@@ -52,7 +52,7 @@
    }
 
    .active {
-      pointer-events: none;
+      cursor: pointer;
       border-bottom-color: var(--mf-green);
    }
 

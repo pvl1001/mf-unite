@@ -29,7 +29,7 @@ $( '.about-tariff-modal' )
             window.cardPlan = new CardPlan( cardProps, inputsSelector )
             this[tariff.id].push( cardPlan )
             cardPlan.addEvents()
-         } else if (equipment.id === 'equipment-sim') {
+         } else if (equipment.id === 'sim') {
             const counterSelector = '.counter'
             const minusSelector = '.counter__minus'
             const plusSelector = '.counter__plus'
@@ -37,7 +37,7 @@ $( '.about-tariff-modal' )
             window.cardSim = new CardSim( cardProps, propsSim )
             this[tariff.id].push( cardSim )
             cardSim.addEvents()
-         } else if (equipment.id === 'eq-almond') {
+         } else if (equipment.id === 'almond') {
             window.cardAlmond = new CardRent( cardProps )
             this[tariff.id].push( cardAlmond )
             cardAlmond.addEvents()

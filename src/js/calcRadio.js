@@ -1,4 +1,4 @@
-import unite from '../data/unite.js'
+import vezde from '../data/tariffVezde'
 
 
 window.calcRadio = {
@@ -12,10 +12,9 @@ window.calcRadio = {
       this.totalPrice = $( id + ' .new-price' ) // общая цена
       this.oldPrice = $( id + ' .old-price' ) // цена без скидки
 
-      this.switch[0].checked && arrSwitchVal.push(unite.routerPrice)
-
-      this.sumPrice = arrSwitchVal.reduce( ( a, b ) => a + b, unite.priceSale )
-      this.sumOldPrice = arrSwitchVal.reduce( ( a, b ) => a + b, unite.price )
+      this.switch[0].checked && arrSwitchVal.push(vezde.equipments[0].price)
+      this.sumPrice = arrSwitchVal.reduce( ( a, b ) => a + b, vezde.priceWithSale )
+      this.sumOldPrice = arrSwitchVal.reduce( ( a, b ) => a + b, vezde.price )
 
       this.totalPrice.text( this.sumPrice + ' ₽' )
       this.oldPrice.text( this.sumOldPrice + ' ₽' )
