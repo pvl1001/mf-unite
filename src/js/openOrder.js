@@ -43,7 +43,7 @@ window.openOrder = ( { eventLabel, priceEquipSelector, nameEquip = '', tariffId,
 
    prop.sendOrder = {
       eventLabel: eventLabelText(),
-      priceEquip: priceEquipSelector ? document.querySelector( priceEquipSelector ).textContent : '',
+      priceEquip: priceEquipSelector ? document.querySelector( priceEquipSelector ).textContent.replace(' ₽', '') + ' ₽' : '',
       nameEquip,
       tariffId,
       tariffName
