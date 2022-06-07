@@ -20,6 +20,7 @@ import './js/collapseChannels' // загрузка тв-каналов
 // components
 import './components/Nav/Nav.js'
 import './components/Tabs/Tabs.js'
+import './components/Footer/Footer.js'
 import './components/_modals/Order/Order.js' // валидация заявки на подключение
 
 // build all img
