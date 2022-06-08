@@ -1,10 +1,6 @@
-window.onload = () => {
+window.addEventListener( 'DOMContentLoaded', () => {
    const $tabs = document.getElementById( 'tabs' )
-   const $select = document.getElementById( 'select' )
-   const $select_current = document.getElementById( 'select_current' )
-   const $select_list = $select.querySelectorAll( 'li' )
    const $tabsItems = $tabs.querySelectorAll( 'li' )
-   const $title = document.getElementById( 'tariffs_title' )
    const slider = '#tariffs-slider'
 
 
@@ -17,14 +13,12 @@ window.onload = () => {
 
       $( slider ).slick( 'slickUnfilter' )
 
-      if ( tabId === 'all' ) {
-         $title.textContent = 'Все тарифы'
-      } else {
+      if ( tabId !== 'all' ) {
          $( slider ).slick( 'slickFilter', function () {
-            $title.textContent = 'Тарифы ' + tabId
             return this.dataset.group === tabId
          } )
       }
+
       $( slider ).slick( 'slickGoTo', 0 )
 
    }
@@ -44,30 +38,8 @@ window.onload = () => {
 
       toPlug( {
          scrollTo: '.tariffs',
-         px: -50,
          ms: 200
       } )
    }
 
-   function openSelect() {
-      !$select.classList.contains( 'open' )
-         ? $select.classList.add( 'open' )
-         : $select.classList.remove( 'open' )
-   }
-
-   $select_current.addEventListener( 'click', openSelect )
-
-   $select_list.forEach( $selectItem => {
-      $selectItem.addEventListener( 'click', function () {
-         $select_current.innerHTML = this.innerHTML
-         filterSlider( this )
-         openSelect()
-         toPlug( {
-            scrollTo: '.tariffs',
-            px: -50,
-            ms: 275
-         } )
-      } )
-   } )
-
-}
+} )

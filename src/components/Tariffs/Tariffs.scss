@@ -1,10 +1,19 @@
 .tariffs {
-   background-color: #EDEDED;
-   padding: 72px 0 34px;
+   padding: 62px 0 34px;
    overflow: hidden;
 
    &__title {
       margin-bottom: 27px;
+
+      span {
+         color: var(--mf-blue);
+         border-bottom: 1px dashed var(--mf-blue);
+         cursor: pointer;
+
+         &:hover {
+            border-style: solid;
+         }
+      }
    }
 
    .collapse-channel {
