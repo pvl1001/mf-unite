@@ -32,6 +32,137 @@ module.exports = {
          almond
       ]
    },
+   plus: {
+      group: "#ДляДома",
+      id: "plus",
+      tariffId: 4271,
+      name: "Плюс ТВ",
+      marks: null,
+      speed: 100,
+      oldPrice: null,
+      price: 399,
+      iconInfo: false,
+      get infoModal() {
+         return [
+            {
+               title: mobile.title,
+               icon: mobile.icon,
+               options: [
+                  { ...mobile.speed, value: this.speed + " Мбит/с" },
+                  mobile.traffic
+               ]
+            }
+         ]
+      },
+      equipments: [
+         android_tv,
+         fr100,
+         fr1000,
+         almond
+      ]
+   },
+   vse: {
+      group: "#ДляДома",
+      id: "vse",
+      tariffId: 4273,
+      name: "Всё",
+      marks: [ "Акция" ],
+      speed: 200,
+      tvId: 6,
+      tvLength: "193 каналов",
+      oldPrice: 550,
+      price: 275,
+      iconInfo: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
+      get infoModal() {
+         return [
+            {
+               title: home_web.title,
+               icon: home_web.icon,
+               options: [
+                  { ...home_web.speed, value: this.speed + " Мбит/с" },
+                  home_web.traffic
+               ]
+            },
+            {
+               title: tv.title,
+               icon: tv.icon,
+               options: [
+                  { ...tv.mftv, value: this.tvLength },
+                  tv.traffic
+               ]
+            }
+         ]
+      },
+      equipments: [
+         android_tv,
+         fr100,
+         fr1000,
+         mftv
+      ]
+   },
+   turbo: {
+      group: "#ДляДома",
+      id: "turbo",
+      tariffId: 4276,
+      name: "Турбо",
+      marks: [ "Акция" ],
+      speed: 500,
+      price: 500,
+      iconInfo: `Wi-Fi-роутер <span onclick="toPlug({scrollTo: '.faq', collapse: '#collapse02', px: 72*2})" class="link">в подарок</span>`,
+      get infoModal() {
+         return [
+            {
+               title: home_web.title,
+               icon: home_web.icon,
+               options: [
+                  { ...home_web.speed, value: this.speed + " Мбит/с" },
+                  home_web.traffic
+               ]
+            }
+         ]
+      },
+      equipments: [ { ...fr1000, price: '', plan: null } ],
+      dop_params: [ 'Wi-Fi роутер в подарок' ]
+   },
+   maximum:  {
+      group: "#ДляДома",
+      id: "maximum",
+      tariffId: 4275,
+      name: "Максимум",
+      marks: null,
+      speed: 500,
+      tvId: 7,
+      tvLength: "264 каналов",
+      price: 950,
+      get infoModal() {
+         return [
+            {
+               title: home_web.title,
+               icon: home_web.icon,
+               options: [
+                  { ...home_web.speed, value: this.speed + " Мбит/с" },
+                  home_web.traffic
+               ]
+            },
+            {
+               title: tv.title,
+               icon: tv.icon,
+               options: [
+                  { ...tv.mftv, value: this.tvLength },
+                  tv.traffic
+               ]
+            }
+         ]
+      },
+      equipments: [
+         android_tv,
+         { ...fr100, price: 10, plan: null },
+         { ...fr1000, price: 10, plan: null },
+         { ...mftv, price: 10, plan: null },
+         almond
+      ]
+   },
+
    dvainet: {
       group: "Объединяй!",
       id: "dvainet",
@@ -188,70 +319,11 @@ module.exports = {
          { ...mftv, price: '0', plan: null },
          almond,
          sim
+      ],
+      dop_params: [
+         'Аренда роутера за 0 ₽',
+         'Безлимитный мобильный интернет на соц. сети и Youtube'
       ]
-   },
-
-   vse: {
-      group: "#ДляДома",
-      id: "vse",
-      tariffId: 4273,
-      name: "Всё",
-      marks: [ "Акция" ],
-      speed: 200,
-      tvId: 6,
-      tvLength: "193 каналов",
-      oldPrice: 550,
-      price: 275,
-      iconInfo: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
-      get infoModal() {
-         return [
-            {
-               title: home_web.title,
-               icon: home_web.icon,
-               options: [
-                  { ...home_web.speed, value: this.speed + " Мбит/с" },
-                  home_web.traffic
-               ]
-            },
-            {
-               title: tv.title,
-               icon: tv.icon,
-               options: [
-                  { ...tv.mftv, value: this.tvLength },
-                  tv.traffic
-               ]
-            }
-         ]
-      },
-      equipments: [
-         android_tv,
-         fr100,
-         fr1000,
-         mftv
-      ]
-   },
-   turbo: {
-      group: "#ДляДома",
-      id: "turbo",
-      tariffId: 4276,
-      name: "Турбо",
-      marks: [ "Акция" ],
-      speed: 500,
-      price: 500,
-      iconInfo: `Wi-Fi-роутер <span onclick="toPlug({scrollTo: '.faq', collapse: '#collapse02', px: 72*2})" class="link">в подарок</span>`,
-      get infoModal() {
-         return [
-            {
-               title: home_web.title,
-               icon: home_web.icon,
-               options: [
-                  { ...home_web.speed, value: this.speed + " Мбит/с" },
-                  home_web.traffic
-               ]
-            }
-         ]
-      },
-      equipments: [ { ...fr1000, price: '', plan: null } ]
    },
    econom: {
       group: "Объединяй!",
@@ -354,44 +426,6 @@ module.exports = {
          mftv,
          almond,
          sim
-      ]
-   },
-   maximum: {
-      group: "#ДляДома",
-      id: "maximum",
-      tariffId: 4275,
-      name: "Максимум",
-      marks: null,
-      speed: 500,
-      tvId: 7,
-      tvLength: "264 каналов",
-      price: 950,
-      get infoModal() {
-         return [
-            {
-               title: home_web.title,
-               icon: home_web.icon,
-               options: [
-                  { ...home_web.speed, value: this.speed + " Мбит/с" },
-                  home_web.traffic
-               ]
-            },
-            {
-               title: tv.title,
-               icon: tv.icon,
-               options: [
-                  { ...tv.mftv, value: this.tvLength },
-                  tv.traffic
-               ]
-            }
-         ]
-      },
-      equipments: [
-         android_tv,
-         { ...fr100, price: 10, plan: null },
-         { ...fr1000, price: 10, plan: null },
-         { ...mftv, price: 10, plan: null },
-         almond
       ]
    },
    vezde: {
@@ -505,6 +539,10 @@ module.exports = {
          { ...mftv, price: '0', plan: null },
          almond,
          sim
+      ],
+      dop_params: [
+         'Аренда роутера и ТВ-приставки за 0 ₽',
+         'Безлимитный мобильный интернет на соц. сети и Youtube'
       ]
    },
 }

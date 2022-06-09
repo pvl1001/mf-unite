@@ -3,14 +3,8 @@ import './plugins/slick.min'
 import './plugins/jquery.mask'
 import './plugins/jquery.validate'
 import 'bootstrap'
-import 'popper.js'
-import tippy from './plugins/tippy'
-
-const tariffs = require( '../data/tariffs' )
-const iconsInfo = tariffs.filter( tariff => tariff.iconInfo ).map( tariff => ({
-   id: tariff.id,
-   content: tariff.iconInfo
-}) )
+// import 'popper.js'
+// import tippy from './plugins/tippy'
 
 
 $( function () {
@@ -61,20 +55,6 @@ $( function () {
    $.validator.addMethod( "select", function ( value ) { // валидация address
       return setAddress.address === value
    } )
-
-
-   // popper tippy
-   const tippyOptions = {
-      interactive: true,
-      placement: 'bottom',
-      maxWidth: 225,
-      allowHTML: true,
-      theme: 'light',
-      hideOnClick: false,
-      // trigger: 'click'
-   }
-
-   iconsInfo.forEach( ( { id, content } ) => tippy( `.js-tippy-${ id }`, { ...tippyOptions, content } ) )
 
 } )
 

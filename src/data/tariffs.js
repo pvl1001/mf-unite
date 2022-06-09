@@ -1,5 +1,5 @@
 const {
-   internet, premium, dvainet, hit, their, vse, turbo, econom, films, maximum, vezde
+   internet, premium, dvainet, hit, their, vse, turbo, econom, films, maximum
 } = require( "./modules/tariffs.module" )
 
 module.exports = [
@@ -12,6 +12,5 @@ module.exports = [
    econom,
    films,
    maximum,
-   vezde,
    premium,
 ]
