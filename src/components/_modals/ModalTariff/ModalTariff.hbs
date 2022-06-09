@@ -184,7 +184,12 @@
                <div class="tariff-modal__footer-container">
                   <div class="tariff-modal__footer wrapp">
                      <div class="tariff-modal__block-price">
-                        <h3 class="tariff-modal__footer-title">{{group}} {{name}}</h3>
+                        <h3 class="tariff-modal__footer-title">{{group}} <span class="tariff-modal__tariff-name">
+                           {{name}}
+                           <div class="tariff-modal__sale-banner sale-banner">Скидка<br>навсегда!</div>
+                        </span>
+
+                        </h3>
                         <div class="tariff-modal__price">
                            <span class="tariff-modal__price-current">{{price}}</span>
                            <span class="tariff-modal__price-month"> в месяц</span>

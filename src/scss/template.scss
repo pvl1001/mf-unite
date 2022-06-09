@@ -397,7 +397,7 @@ input[type="radio"] {
    }
 
    .slick-arrow {
-      $arrow_position: -46px;
+      $arrow_position: 0;
 
       font-size: 0;
       width: 40px;
@@ -405,7 +405,7 @@ input[type="radio"] {
       border-radius: 50%;
       background: #731982 url('../img/svg/arrow_slider.svg') center / 10px no-repeat;
       position: absolute;
-      top: calc(50% - 36px);
+      bottom: -14px;
       z-index: 1;
 
       &:not(.slick-disabled):hover {
@@ -422,6 +422,7 @@ input[type="radio"] {
       }
 
       &.slick-disabled {
+         pointer-events: none;
          opacity: .3;
       }
    }
@@ -460,34 +461,6 @@ input[type="radio"] {
       }
    }
 
-   @media (max-width: 1530px) {
-      .slick-arrow {
-         $arrow_position: -45px;
-
-         &.slick-prev {
-            left: $arrow_position;
-         }
-
-         &.slick-next {
-            right: $arrow_position;
-         }
-      }
-   }
-
-   @media (max-width: 1279px) {
-      .slick-arrow {
-         $arrow_position: -42px;
-
-         &.slick-prev {
-            left: $arrow_position;
-         }
-
-         &.slick-next {
-            right: $arrow_position;
-         }
-      }
-   }
-
    @media (max-width: 1023px) {
       margin: 0 -48px;
 
@@ -501,18 +474,6 @@ input[type="radio"] {
 
       .slick-track, .slick-list {
          border-radius: 0;
-      }
-
-      .slick-arrow {
-         $arrow_position: -36px;
-
-         &.slick-prev {
-            left: $arrow_position;
-         }
-
-         &.slick-next {
-            right: $arrow_position;
-         }
       }
    }
 

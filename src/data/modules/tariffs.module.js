@@ -9,10 +9,11 @@ module.exports = {
       tariffId: 4271,
       name: "Интернет",
       marks: null,
+      old_price: 399,
       speed: 100,
-      oldPrice: null,
-      price: 399,
-      iconInfo: false,
+      get price() {
+         return Math.ceil(this.old_price * 0.7)
+      },
       get infoModal() {
          return [
             {
@@ -38,10 +39,11 @@ module.exports = {
       tariffId: 4271,
       name: "Плюс ТВ",
       marks: null,
+      old_price: 399,
       speed: 100,
-      oldPrice: null,
-      price: 399,
-      iconInfo: false,
+      get price() {
+         return Math.ceil(this.old_price * 0.7)
+      },
       get infoModal() {
          return [
             {
@@ -69,10 +71,17 @@ module.exports = {
       marks: [ "Акция" ],
       speed: 200,
       tvId: 6,
+      old_price: 275,
       tvLength: "193 каналов",
-      oldPrice: 550,
-      price: 275,
-      iconInfo: 'С учетом <a href="/internetvse">скидки</a> 50% с 61 месяца',
+      equipments: [
+         android_tv,
+         fr100,
+         fr1000,
+         mftv
+      ],
+      get price() {
+         return Math.ceil(this.old_price * 0.7)
+      },
       get infoModal() {
          return [
             {
@@ -92,13 +101,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [
-         android_tv,
-         fr100,
-         fr1000,
-         mftv
-      ]
+      }
    },
    turbo: {
       group: "#ДляДома",
@@ -106,9 +109,13 @@ module.exports = {
       tariffId: 4276,
       name: "Турбо",
       marks: [ "Акция" ],
+      old_price: 500,
       speed: 500,
-      price: 500,
-      iconInfo: `Wi-Fi-роутер <span onclick="toPlug({scrollTo: '.faq', collapse: '#collapse02', px: 72*2})" class="link">в подарок</span>`,
+      equipments: [ { ...fr1000, price: '', plan: null } ],
+      dop_params: [ 'Wi-Fi роутер в подарок' ],
+      get price() {
+         return Math.ceil(this.old_price * 0.7)
+      },
       get infoModal() {
          return [
             {
@@ -120,9 +127,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [ { ...fr1000, price: '', plan: null } ],
-      dop_params: [ 'Wi-Fi роутер в подарок' ]
+      }
    },
    maximum:  {
       group: "#ДляДома",
@@ -132,8 +137,18 @@ module.exports = {
       marks: null,
       speed: 500,
       tvId: 7,
+      old_price: 950,
       tvLength: "264 каналов",
-      price: 950,
+      equipments: [
+         android_tv,
+         { ...fr100, price: 10, plan: null },
+         { ...fr1000, price: 10, plan: null },
+         { ...mftv, price: 10, plan: null },
+         almond
+      ],
+      get price() {
+         return Math.ceil(this.old_price * 0.7)
+      },
       get infoModal() {
          return [
             {
@@ -153,14 +168,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [
-         android_tv,
-         { ...fr100, price: 10, plan: null },
-         { ...fr1000, price: 10, plan: null },
-         { ...mftv, price: 10, plan: null },
-         almond
-      ]
+      }
    },
 
    dvainet: {
@@ -172,10 +180,11 @@ module.exports = {
       speed: 200,
       web: 30,
       min: 1200,
+      old_price: 700,
       tvId: null,
-      oldPrice: null,
-      price: 700,
-      iconInfo: false,
+      get price() {
+         return Math.ceil(this.old_price * 0.5)
+      },
       get infoModal() {
          return [
             {
@@ -217,10 +226,19 @@ module.exports = {
       web: 30,
       min: 1500,
       tvId: 2,
+      old_price: 850,
       tvLength: "193 каналов",
-      oldPrice: null,
-      price: 850,
-      iconInfo: false,
+      equipments: [
+         android_tv,
+         fr100,
+         fr1000,
+         mftv,
+         almond,
+         sim
+      ],
+      get price() {
+         return Math.ceil(this.old_price * 0.5)
+      },
       get infoModal() {
          return [
             {
@@ -251,15 +269,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [
-         android_tv,
-         fr100,
-         fr1000,
-         mftv,
-         almond,
-         sim
-      ]
+      }
    },
    their: {
       group: "Объединяй!",
@@ -275,11 +285,23 @@ module.exports = {
          mir
       ],
       tvId: 3,
+      old_price: 650,
       tvLength: "193 каналов",
-      oldPrice: 1300,
-      price: 650,
-      iconInfo: `<span class="link" onclick="toPlug({scrollTo: '.faq', collapse: '#collapse00'})">Скидка</span> на абонентскую плату действует 3 месяца после подключения`,
-      youtube: true,
+      equipments: [
+         android_tv,
+         { ...fr100, price: '0', plan: null },
+         { ...fr1000, price: '0', plan: null },
+         { ...mftv, price: '0', plan: null },
+         almond,
+         sim
+      ],
+      dop_params: [
+         'Аренда роутера за 0 ₽',
+         'Безлимитный мобильный интернет на соц. сети и Youtube'
+      ],
+      get price() {
+         return Math.ceil(this.old_price * 0.5)
+      },
       get infoModal() {
          return [
             {
@@ -311,19 +333,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [
-         android_tv,
-         { ...fr100, price: '0', plan: null },
-         { ...fr1000, price: '0', plan: null },
-         { ...mftv, price: '0', plan: null },
-         almond,
-         sim
-      ],
-      dop_params: [
-         'Аренда роутера за 0 ₽',
-         'Безлимитный мобильный интернет на соц. сети и Youtube'
-      ]
+      }
    },
    econom: {
       group: "Объединяй!",
@@ -335,10 +345,19 @@ module.exports = {
       web: 20,
       min: 700,
       tvId: 1,
+      old_price: 650,
       tvLength: "66 каналов",
-      oldPrice: null,
-      price: 650,
-      iconInfo: false,
+      equipments: [
+         android_tv,
+         fr100,
+         fr1000,
+         mftv,
+         almond,
+         sim
+      ],
+      get price() {
+         return Math.ceil(this.old_price * 0.5)
+      },
       get infoModal() {
          return [
             {
@@ -368,15 +387,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [
-         android_tv,
-         fr100,
-         fr1000,
-         mftv,
-         almond,
-         sim
-      ]
+      }
    },
    films: {
       group: "Объединяй!",
@@ -392,10 +403,19 @@ module.exports = {
          mir
       ],
       tvId: null,
+      old_price: 850,
       tvLength: null,
-      oldPrice: null,
-      price: 850,
-      iconInfo: false,
+      equipments: [
+         android_tv,
+         fr100,
+         fr1000,
+         mftv,
+         almond,
+         sim
+      ],
+      get price() {
+         return Math.ceil(this.old_price * 0.5)
+      },
       get infoModal() {
          return [
             {
@@ -418,15 +438,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [
-         android_tv,
-         fr100,
-         fr1000,
-         mftv,
-         almond,
-         sim
-      ]
+      }
    },
    vezde: {
       group: "Объединяй!",
@@ -439,13 +451,12 @@ module.exports = {
       min: 2100,
       sale: null,
       tvId: 1,
+      old_price: 1400,
       tvLength: "66 каналов",
-      oldPrice: null,
-      price: 1400,
-      get priceWithSale() {
-         return this.price * 0.6
+      equipments: [ router_4g ],
+      get price() {
+         return Math.ceil(this.old_price * 0.5)
       },
-      iconInfo: false,
       get infoModal() {
          return [
             {
@@ -476,8 +487,7 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [ router_4g ]
+      }
    },
    premium: {
       group: "Объединяй!",
@@ -495,11 +505,23 @@ module.exports = {
          more
       ],
       tvId: 4,
+      old_price: 1900,
       tvLength: "264 каналов",
-      oldPrice: null,
-      price: 1900,
-      iconInfo: false,
-      youtube: true,
+      equipments: [
+         android_tv,
+         { ...fr100, price: '0', plan: null },
+         { ...fr1000, price: '0', plan: null },
+         { ...mftv, price: '0', plan: null },
+         almond,
+         sim
+      ],
+      dop_params: [
+         'Аренда роутера и ТВ-приставки за 0 ₽',
+         'Безлимитный мобильный интернет на соц. сети и Youtube'
+      ],
+      get price() {
+         return Math.ceil(this.old_price * 0.5)
+      },
       get infoModal() {
          return [
             {
@@ -531,18 +553,6 @@ module.exports = {
                ]
             }
          ]
-      },
-      equipments: [
-         android_tv,
-         { ...fr100, price: '0', plan: null },
-         { ...fr1000, price: '0', plan: null },
-         { ...mftv, price: '0', plan: null },
-         almond,
-         sim
-      ],
-      dop_params: [
-         'Аренда роутера и ТВ-приставки за 0 ₽',
-         'Безлимитный мобильный интернет на соц. сети и Youtube'
-      ]
+      }
    },
 }

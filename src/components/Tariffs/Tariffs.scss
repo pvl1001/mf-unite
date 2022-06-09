@@ -77,8 +77,8 @@
       position: static;
       background: #FFFFFF;
       box-shadow: 0 0 12px rgba(51, 51, 51, .2);
-      border-radius: 10px;
-      padding: 16px;
+      border-radius: 16px;
+      padding: 16px 16px 12px;
       border: 0;
       height: 100%;
       display: flex !important;
@@ -88,13 +88,6 @@
          position: relative;
          border-bottom: 1px solid #EDEDED;
          padding-bottom: 12px;
-      }
-
-      &__body {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         margin-bottom: 17px;
       }
 
       &__tariff-icon {
@@ -151,6 +144,7 @@
       }
 
       .params {
+         flex-grow: 1;
          padding: 16px 0 12px;
 
          &__item:not(:last-child) {
@@ -161,6 +155,7 @@
             color: #999999;
             font-weight: 400;
             line-height: 24px;
+            letter-spacing: .5px;
          }
 
          &__value {
@@ -193,12 +188,13 @@
       }
 
       .dop-params {
+         min-height: 210px;
 
          &__title {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
 
             &:before, &:after {
                content: '';
@@ -214,10 +210,11 @@
             align-items: center;
             font-size: 15px;
             line-height: 24px;
+            min-height: 48px;
          }
 
          &__item:not(:last-child) {
-            margin-bottom: 18px;
+            margin-bottom: 6px;
          }
 
          &__icon {
@@ -237,10 +234,13 @@
          display: flex;
          justify-content: center;
          gap: 0 8px;
+         margin-top: 16px;
 
-         &_4 {
-            justify-content: space-between;
-            gap: initial;
+         &__item {
+            cursor: pointer;
+            img {
+               width: 100%;
+            }
          }
       }
 
@@ -248,6 +248,14 @@
          display: flex;
          flex-direction: column;
          align-items: center;
+         margin-top: 16px;
+      }
+
+      &__connect-btn {
+         height: 48px;
+         width: 100%;
+         padding: 0 32px;
+         margin-bottom: 12px;
       }
 
       &__about-btn {
@@ -256,17 +264,11 @@
          font-weight: 500;
          color: var(--mf-blue);
          text-align: center;
-         margin-bottom: 7px;
          cursor: pointer;
 
          &:hover {
             text-decoration: underline;
          }
-      }
-
-      &__connect-btn {
-         height: 32px;
-         padding: 0 32px;
       }
 
       &__info-icon {
@@ -277,7 +279,8 @@
 
    }
 
-   .card.card__maximum, .card.card__premium {
+   .card.card__premium {
+      border: 2px solid var(--mf-fiolet);
       .card__connect-btn {
          background-color: var(--mf-premium);
 
